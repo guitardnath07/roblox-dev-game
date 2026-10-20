@@ -1,0 +1,58 @@
+--!strict
+-- Produits développeur (Robux) et potions. Jamais de Pièces à vendre, jamais de « Jackpot » payant.
+-- `productId` = 0 : à remplir après création sur Roblox.
+-- shortcut: montants et durées proposés (CLAUDE.md ne liste que les familles de produits).
+
+export type PotionStat = "luck" | "coins" | "rollSpeed"
+
+export type Potion = {
+	id: string,
+	displayName: string,
+	stat: PotionStat,
+	multiplier: number,
+	durationSeconds: number,
+}
+
+export type ProductKind = "amber" | "fossils" | "potion"
+
+export type Product = {
+	id: string,
+	displayName: string,
+	productId: number,
+	kind: ProductKind,
+	amount: number, -- Ambre / Fossiles reçus, ou nombre de potions
+	potionId: string?, -- seulement si kind == "potion"
+}
+
+-- stylua: ignore
+local Potions: { Potion } = {
+	{ id = "luck_potion", displayName = "Potion de Chance", stat = "luck", multiplier = 2, durationSeconds = 15 * 60 },
+	{ id = "super_luck_potion", displayName = "Super Potion de Chance", stat = "luck", multiplier = 3, durationSeconds = 15 * 60 },
+	{ id = "coins_potion", displayName = "Potion de Pièces", stat = "coins", multiplier = 2, durationSeconds = 15 * 60 },
+	{ id = "speed_potion", displayName = "Potion de Vitesse", stat = "rollSpeed", multiplier = 1.5, durationSeconds = 15 * 60 },
+}
+
+-- stylua: ignore
+local Products: { Product } = {
+	{ id = "amber_small", displayName = "Poignée d'Ambre", productId = 0, kind = "amber", amount = 100 },
+	{ id = "amber_medium", displayName = "Bocal d'Ambre", productId = 0, kind = "amber", amount = 600 },
+	{ id = "amber_large", displayName = "Coffre d'Ambre", productId = 0, kind = "amber", amount = 2_000 },
+	{ id = "fossils_small", displayName = "Sachet de Fossiles", productId = 0, kind = "fossils", amount = 100 },
+	{ id = "fossils_medium", displayName = "Caisse de Fossiles", productId = 0, kind = "fossils", amount = 600 },
+	{ id = "fossils_large", displayName = "Musée de Fossiles", productId = 0, kind = "fossils", amount = 2_000 },
+	{ id = "luck_potion_x3", displayName = "3 Potions de Chance", productId = 0, kind = "potion", amount = 3, potionId = "luck_potion" },
+	{ id = "super_luck_potion_x3", displayName = "3 Super Potions de Chance", productId = 0, kind = "potion", amount = 3, potionId = "super_luck_potion" },
+	{ id = "coins_potion_x3", displayName = "3 Potions de Pièces", productId = 0, kind = "potion", amount = 3, potionId = "coins_potion" },
+}
+
+for _, potion in Potions do
+	table.freeze(potion)
+end
+for _, product in Products do
+	table.freeze(product)
+end
+
+return table.freeze({
+	potions = table.freeze(Potions),
+	products = table.freeze(Products),
+})

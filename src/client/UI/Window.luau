@@ -1,0 +1,214 @@
+--!strict
+-- Fenêtre modale « page de carnet » : fond assombri, panneau parchemin, titre, bouton fermer (44 px),
+-- et une zone de contenu. Chaque fenêtre a son Maid : tout est libéré à la fermeture.
+
+local Kit = require(script.Parent.Kit)
+local Theme = require(script.Parent.Theme)
+
+local Window = {}
+
+export type Window = {
+	holder: Frame,
+	content: Frame,
+	maid: Kit.Maid,
+	setTitle: (text: string) -> (),
+	close: () -> (),
+	closed: boolean,
+}
+
+export type Options = {
+	style: ("parchment" | "cartoon")?, -- « cartoon » : panneau bleu nuit, onglet de titre penché (Sac, Boutique)
+	accent: Color3?, -- couleur de la bordure et de l'onglet en style cartoon
+	aspect: number?, -- largeur / hauteur du panneau
+	height: number?, -- part de la hauteur de l'écran
+	onClose: (() -> ())?,
+	zIndex: number?,
+}
+
+-- Ouvre une fenêtre dans `root` (le cadre racine mis à l'échelle de l'écran).
+function Window.open(root: Instance, title: string, opts: Options?): Window
+	local o: Options = opts or {}
+	local maid = Kit.maid()
+	local z = o.zIndex or 1
+
+	local overlay = Kit.new("TextButton", {
+		Name = "WindowOverlay",
+		AutoButtonColor = false,
+		Text = "",
+		BackgroundColor3 = Theme.Black,
+		BackgroundTransparency = 1,
+		Size = UDim2.fromScale(1, 1),
+		ZIndex = z,
+		Parent = root,
+	})
+	maid:add(overlay)
+	Kit.tween(overlay, 0.2, { BackgroundTransparency = 0.45 })
+
+	local cartoon = o.style == "cartoon"
+	local accent = o.accent or Theme.Cyan
+	local holder, body = Kit.panel(overlay, {
+		AnchorPoint = Vector2.new(0.5, 0.5),
+		Position = UDim2.fromScale(0.5, 0.5),
+		Size = UDim2.fromScale(0.97, o.height or 0.92),
+	}, if cartoon then Theme.Navy else nil, 0.04)
+	Kit.aspect(holder, o.aspect or 1.75, true)
+	Kit.limit(holder, nil, Vector2.new(980, 560))
+	local pop = Kit.new("UIScale", { Scale = 0.9, Parent = holder })
+	Kit.tween(pop, 0.3, { Scale = 1 }, Enum.EasingStyle.Back)
+
+	local titleLabel: TextLabel
+	local content: Frame
+	if cartoon then
+		-- Panneau bleu nuit, bordure épaisse de la couleur d'accent, onglet de titre penché qui déborde en haut.
+		local stroke = body:FindFirstChildOfClass("UIStroke") :: UIStroke
+		stroke.Color = accent
+		stroke.Thickness = 5
+		local gradient = body:FindFirstChildOfClass("UIGradient") :: UIGradient
+		gradient.Color = ColorSequence.new(Color3.new(1, 1, 1), Color3.fromRGB(150, 160, 200))
+		body.ClipsDescendants = false
+		local tab = Kit.new("Frame", {
+			BackgroundColor3 = accent,
+			Position = UDim2.fromScale(0.02, -0.07),
+			Size = UDim2.fromScale(0.36, 0.14),
+			Rotation = -3,
+			ZIndex = 3,
+			Parent = body,
+		})
+		Kit.corner(tab, 0.3)
+		Kit.stroke(tab, Theme.Outline, 4)
+		Kit.new("UIGradient", {
+			Rotation = 90,
+			Color = ColorSequence.new(Color3.new(1, 1, 1), Color3.fromRGB(190, 190, 190)),
+			Parent = tab,
+		})
+		titleLabel = Kit.title(tab, title, {
+			Position = UDim2.fromScale(0.05, 0.08),
+			Size = UDim2.fromScale(0.9, 0.84),
+			TextColor3 = Theme.White,
+			TextStrokeColor3 = Theme.Outline,
+			TextStrokeTransparency = 0,
+			ZIndex = 4,
+		}, 34)
+		content = Kit.new("Frame", {
+			Name = "Content",
+			BackgroundColor3 = Theme.NavyDeep,
+			BackgroundTransparency = 0.15,
+			Position = UDim2.fromScale(0.02, 0.1),
+			Size = UDim2.fromScale(0.96, 0.87),
+			Parent = body,
+		})
+		Kit.corner(content, 0.03)
+		Kit.new("UIPadding", {
+			PaddingTop = UDim.new(0.02, 0),
+			PaddingBottom = UDim.new(0.02, 0),
+			PaddingLeft = UDim.new(0.012, 0),
+			PaddingRight = UDim.new(0.012, 0),
+			Parent = content,
+		})
+	else
+		titleLabel = Kit.title(body, title, {
+			Position = UDim2.fromScale(0.03, 0.02),
+			Size = UDim2.fromScale(0.75, 0.12),
+			TextXAlignment = Enum.TextXAlignment.Left,
+		}, 34)
+
+		-- Trait de séparation « encre ».
+		Kit.new("Frame", {
+			BackgroundColor3 = Theme.InkSoft,
+			BackgroundTransparency = 0.5,
+			BorderSizePixel = 0,
+			Position = UDim2.fromScale(0.03, 0.15),
+			Size = UDim2.new(0.94, 0, 0, 2),
+			Parent = body,
+		})
+
+		content = Kit.new("Frame", {
+			Name = "Content",
+			BackgroundTransparency = 1,
+			Position = UDim2.fromScale(0.025, 0.18),
+			Size = UDim2.fromScale(0.95, 0.79),
+			Parent = body,
+		})
+	end
+
+	local win: Window = {
+		holder = holder,
+		content = content,
+		maid = maid,
+		closed = false,
+		setTitle = function(text: string)
+			titleLabel.Text = text
+		end,
+		close = function() end,
+	}
+
+	win.close = function()
+		if win.closed then
+			return
+		end
+		win.closed = true
+		if o.onClose then
+			o.onClose()
+		end
+		-- Sortie animée (0,18 s) puis libération de tout ce que l'écran a branché.
+		Kit.tween(overlay, 0.18, { BackgroundTransparency = 1 })
+		Kit.tween(pop, 0.18, { Scale = 0.9 }, Enum.EasingStyle.Quint, Enum.EasingDirection.In)
+		task.delay(0.18, function()
+			maid:clean()
+		end)
+	end
+
+	local closeHolder = Kit.new("Frame", {
+		BackgroundTransparency = 1,
+		AnchorPoint = if cartoon then Vector2.new(0.5, 0.5) else Vector2.new(1, 0),
+		-- Cartoon : gros X rouge à cheval sur le coin, comme dans les simulateurs.
+		Position = if cartoon then UDim2.fromScale(0.985, 0.02) else UDim2.fromScale(0.985, 0.015),
+		Size = UDim2.fromScale(0.13, 0.13),
+		ZIndex = 5,
+		Parent = body,
+	})
+	Kit.aspect(closeHolder, 1, true)
+	Kit.button(closeHolder, "X", { color = Theme.Lava, maid = maid, onClick = win.close, maxText = 30 })
+
+	return win
+end
+
+export type DialogButton = { text: string, color: Color3?, onClick: (() -> ())? }
+
+-- Petite boîte de confirmation par-dessus tout. Chaque bouton ferme la boîte puis appelle son action.
+function Window.dialog(root: Instance, title: string, message: string, buttons: { DialogButton }): Window
+	local win = Window.open(root, title, { aspect = 1.6, height = 0.62, zIndex = 20 })
+	Kit.label(win.content, message, {
+		Size = UDim2.fromScale(1, 0.62),
+		TextColor3 = Theme.Ink,
+		Font = Theme.BodyFont,
+	}, 24)
+	local row = Kit.new("Frame", {
+		BackgroundTransparency = 1,
+		Position = UDim2.fromScale(0, 0.7),
+		Size = UDim2.fromScale(1, 0.28),
+		Parent = win.content,
+	})
+	Kit.list(row, true, 0.04, Enum.HorizontalAlignment.Center, Enum.VerticalAlignment.Center)
+	for i, b in buttons do
+		local slot = Kit.new("Frame", {
+			BackgroundTransparency = 1,
+			LayoutOrder = i,
+			Size = UDim2.fromScale(math.min(0.45, 0.9 / #buttons), 1),
+			Parent = row,
+		})
+		Kit.button(slot, b.text, {
+			color = b.color,
+			maid = win.maid,
+			onClick = function()
+				win.close()
+				if b.onClick then
+					b.onClick()
+				end
+			end,
+		})
+	end
+	return win
+end
+
+return Window
