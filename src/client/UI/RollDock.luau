@@ -195,12 +195,30 @@ function RollDock.create(root: Frame)
 			Parent = dock,
 		})
 	end
-	local auto = surface(holder("Auto", 0, 0, 112, 44), "▶  AUTO", nil)
-	local luck = surface(holder("Luck", 120, 0, 168, 44), "🍀 Chance x1", function()
+	-- Auto et Masquer : ronds, de part et d'autre de LANCER.
+	local function round(button: TextButton): TextButton
+		local corner = button:FindFirstChildOfClass("UICorner")
+		if corner then
+			corner.CornerRadius = UDim.new(0.5, 0)
+		end
+		Kit.aspect(button, 1)
+		return button
+	end
+	local auto = round(surface(holder("Auto", 36, 96, 72, 72), "▶\nAUTO", nil))
+	-- Chance : sous le bouton des Lancers Dorés (CurrencyController), coin haut droit.
+	local luckHolder = Kit.new("Frame", {
+		Name = "Luck",
+		BackgroundTransparency = 1,
+		AnchorPoint = Vector2.new(1, 0),
+		Position = UDim2.new(1, -8, 0, 116),
+		Size = UDim2.fromOffset(132, 44),
+		Parent = root,
+	})
+	local luck = surface(luckHolder, "🍀 Chance x1", function()
 		UIController:Open("LuckBreakdown")
 	end)
 	luck.TextColor3 = Color3.fromHex("#A9EC52")
-	local hide = surface(holder("Hide", 296, 0, 144, 44), "◉  MASQUER", nil)
+	local hide = round(surface(holder("Hide", 332, 96, 72, 72), "◉\nMASQUER", nil))
 	local rollArea = holder("Roll", 122, 48, 194, 142)
 	local stage = Kit.new("Frame", {
 		BackgroundTransparency = 1,
@@ -264,11 +282,11 @@ function RollDock.create(root: Frame)
 	local function toggles()
 		local enabled = SettingsController:Get("AutoRoll")
 		auto.Text = if not SettingsController:AutoRollUnlocked()
-			then "🔒 AUTO"
-			elseif enabled then "Ⅱ  AUTO"
-			else "▶  AUTO"
+			then "🔒\nAUTO"
+			elseif enabled then "Ⅱ\nAUTO"
+			else "▶\nAUTO"
 		auto.TextColor3 = if enabled then Theme.Leaf else Theme.White
-		hide.Text = if SettingsController:Get("HideReveal") then "◉  MASQUÉ" else "◉  MASQUER"
+		hide.Text = if SettingsController:Get("HideReveal") then "◉\nMASQUÉ" else "◉\nMASQUER"
 		hide.TextColor3 = if SettingsController:Get("HideReveal") then CYAN else Theme.White
 	end
 	SettingsController:OnChanged(toggles)
