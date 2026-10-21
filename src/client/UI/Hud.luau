@@ -1,19 +1,20 @@
 --!strict
 -- HUD principal (mobile d'abord) :
 --   haut : bandeau d'événement, Réglages (les monnaies ont leur barre fine : CurrencyController) ;
---   gauche : Boutique, Rebirth, Paléo-Encyclopédie, Quêtes, Échange ;
---   bas : gros bouton LANCER (couleur du dé équipé, anneau de recharge), Sac à gauche, Améliorations à droite,
---         bouton texte « Chances » ; au-dessus : Auto-Lancer, « Chance x… » (détail), Masquer.
+--   gauche (repliable) : Boutique, Rebirth, Paléo-Encyclopédie, Quêtes, Échange, Sac, Améliorer, Reliques, Potions ;
+--   bas : gros bouton LANCER ; au-dessus : Auto-Lancer, « Chance x… » (détail puis écran des chances), Masquer.
 -- Affichage seul : les valeurs viennent de DataController, de LuckController et des modules partagés purs.
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Workspace = game:GetService("Workspace")
 
 local Shared = ReplicatedStorage.Shared
+local Bonuses = require(Shared.Bonuses)
 local Events = require(Shared.Config.Events)
 local Remotes = require(Shared.Net.Remotes)
 
 local Controllers = script.Parent.Parent.Controllers
+local DataController = require(Controllers.DataController)
 local UIController = require(Controllers.UIController)
 
 local Kit = require(script.Parent.Kit)
@@ -129,7 +130,7 @@ function Hud.create(root: Frame)
 		BackgroundTransparency = 1,
 		-- En haut à gauche : le bas gauche est la zone du joystick tactile.
 		Position = UDim2.fromOffset(6, 4),
-		Size = UDim2.fromOffset(120, 268),
+		Size = UDim2.fromOffset(120, 336),
 		Parent = root,
 	})
 
@@ -145,6 +146,8 @@ function Hud.create(root: Frame)
 		{ "📖", "Paléo", "Encyclopedia", Color3.fromHex("#FF6A2B") },
 		{ "📜", "Quêtes", "Quests", Color3.fromHex("#2F7BFF") },
 		{ "🤝", "Échange", "Trade", Color3.fromHex("#2FD14A") },
+		{ "🎒", "Sac", "Backpack", Color3.fromHex("#F2433A") },
+		{ "⬆️", "Améliorer", "Upgrades", Color3.fromHex("#9BE22D") },
 	}
 	for i, item in railItems do
 		local cell = Kit.new(
@@ -152,7 +155,7 @@ function Hud.create(root: Frame)
 			{ BackgroundTransparency = 1, LayoutOrder = i, Size = UDim2.fromScale(1, 0.184), Parent = rail }
 		)
 		cell.Name = item[3] -- noms stables : tests et futurs tutoriels
-		iconButton(cell, item[1], item[2], item[4], function()
+		local button = iconButton(cell, item[1], item[2], item[4], function()
 			if item[3] == "Rebirth" then
 				-- On renaît au Totem du Renouveau : le bouton y téléporte (l'écran s'ouvre au totem).
 				Remotes.ShrineTeleport:FireServer("Shrine")
@@ -160,6 +163,32 @@ function Hud.create(root: Frame)
 				UIController:Open(item[3])
 			end
 		end)
+		if item[3] == "Backpack" then
+			-- Pastille « 12/30 » : rouge quand le sac est plein.
+			local badge = Kit.label(button, "", {
+				AnchorPoint = Vector2.new(1, 0),
+				Position = UDim2.new(1, 4, 0, -4),
+				Size = UDim2.fromOffset(34, 14),
+				BackgroundTransparency = 0,
+				BackgroundColor3 = Theme.Navy,
+				TextColor3 = Theme.White,
+				ZIndex = 3,
+			}, 10)
+			Kit.corner(badge, 0.3)
+			local data = DataController:Get()
+			local function inventory()
+				local count = 0
+				for _ in data.Dinos do
+					count += 1
+				end
+				local size = Bonuses.backpackSize(data)
+				badge.Text = `{count}/{size}`
+				badge.BackgroundColor3 = if count >= size then Theme.Lava else Theme.Navy
+			end
+			DataController:OnChanged("Dinos", inventory)
+			DataController:OnChanged("Upgrades", inventory)
+			inventory()
+		end
 	end
 
 	for i, item in
@@ -168,8 +197,10 @@ function Hud.create(root: Frame)
 			{ "🧪", "Potions", "Shop", Theme.Cyan },
 		}
 	do
-		local cell =
-			Kit.new("Frame", { Name = item[2], BackgroundTransparency = 1, LayoutOrder = 5 + i, Parent = rail })
+		local cell = Kit.new(
+			"Frame",
+			{ Name = item[2], BackgroundTransparency = 1, LayoutOrder = #railItems + i, Parent = rail }
+		)
 		iconButton(cell, item[1], item[2], item[4], function()
 			UIController:Open(item[3], if i == 2 then 4 else nil)
 		end)
@@ -213,7 +244,7 @@ function Hud.create(root: Frame)
 			end)
 		end
 	end)
-	require(script.Parent.RollDock).create(root, secondary)
+	require(script.Parent.RollDock).create(root)
 end
 
 return Hud
