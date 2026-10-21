@@ -13,7 +13,7 @@ export type Potion = {
 	durationSeconds: number,
 }
 
-export type ProductKind = "amber" | "bones" | "potion"
+export type ProductKind = "amber" | "bones" | "potion" | "dino"
 
 export type Product = {
 	id: string,
@@ -22,6 +22,7 @@ export type Product = {
 	kind: ProductKind,
 	amount: number, -- Ambre / Os reçus, ou nombre de potions
 	potionId: string?, -- seulement si kind == "potion"
+	dinoId: string?, -- seulement si kind == "dino" : un exemplaire (sans mutation) d'un dino exclusif
 }
 
 -- stylua: ignore
@@ -43,6 +44,7 @@ local Products: { Product } = {
 	{ id = "luck_potion_x3", displayName = "3 Potions de Chance", productId = 0, kind = "potion", amount = 3, potionId = "luck_potion" },
 	{ id = "super_luck_potion_x3", displayName = "3 Super Potions de Chance", productId = 0, kind = "potion", amount = 3, potionId = "super_luck_potion" },
 	{ id = "coins_potion_x3", displayName = "3 Potions de Fossiles", productId = 0, kind = "potion", amount = 3, potionId = "coins_potion" },
+	{ id = "peluchorex", displayName = "Peluchorex (Exclusif)", productId = 0, kind = "dino", amount = 1, dinoId = "peluchorex" },
 }
 
 for _, potion in Potions do

@@ -11,10 +11,12 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Shared = ReplicatedStorage.Shared
 local Gamepasses = require(Shared.Config.Gamepasses)
+local Mutations = require(Shared.Config.Mutations)
 local Products = require(Shared.Config.Products)
 local Remotes = require(Shared.Net.Remotes)
 
 local DataService = require(script.Parent.DataService)
+local InventoryService = require(script.Parent.InventoryService)
 local PolicyService = require(script.Parent.PolicyService)
 local Purchases = require(script.Parent.Parent.Data.Purchases)
 local RateLimit = require(script.Parent.Parent.Data.RateLimit)
@@ -48,6 +50,9 @@ local function grant(player: Player, product: Products.Product)
 		DataService:Update(player, { "Potions", product.potionId }, function(old: number?)
 			return (old or 0) + product.amount
 		end)
+	elseif product.kind == "dino" and product.dinoId then
+		-- Ajouté même sac plein : un achat n'est jamais perdu.
+		InventoryService:AddDino(player, product.dinoId, Mutations.defaultId, Mutations.defaultId)
 	end
 end
 

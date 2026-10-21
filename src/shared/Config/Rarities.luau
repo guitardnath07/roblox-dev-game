@@ -1,9 +1,19 @@
 --!strict
--- Raretés, du plus commun (order 1) au plus rare (order 8).
+-- Raretés, du plus commun (order 1) au plus rare (order 8), puis « Exclusif » (order 9) : jamais tiré au dé,
+-- obtenu seulement par achat (voir Config/Products, kind « dino »).
 -- `effect` = effet visuel côté client : "shimmer" (reflet animé) ou "rainbow" (arc-en-ciel animé).
 -- `revealSoundId` = son de révélation ; 0 = à remplir quand les sons seront uploadés.
 
-export type RarityId = "common" | "uncommon" | "rare" | "epic" | "legendary" | "mythic" | "primordial" | "secret"
+export type RarityId =
+	"common"
+	| "uncommon"
+	| "rare"
+	| "epic"
+	| "legendary"
+	| "mythic"
+	| "primordial"
+	| "secret"
+	| "exclusive"
 
 export type Effect = "none" | "shimmer" | "rainbow"
 
@@ -36,6 +46,7 @@ local Rarities: { [RarityId]: Rarity } = {
 	mythic = rarity("mythic", "Mythique", 6, "#E53935", "none"),
 	primordial = rarity("primordial", "Primordial", 7, "#1DE9B6", "shimmer"), -- turquoise animé
 	secret = rarity("secret", "Secret", 8, "#FFFFFF", "rainbow"), -- couleur de base, l'arc-en-ciel est animé
+	exclusive = rarity("exclusive", "Exclusif", 9, "#FF4FA3", "shimmer"), -- rose animé
 }
 
 return table.freeze(Rarities)

@@ -4,6 +4,7 @@
 -- Titles[1] est le titre de départ (toujours débloqué). `id` ne change jamais (sauvegardé dans Profile.Title).
 
 local Dinos = require(script.Parent.Dinos)
+local Odds = require(script.Parent.Parent.Odds)
 local Types = require(script.Parent.Parent.Types)
 
 export type Title = {
@@ -38,7 +39,13 @@ local function title(
 	hint: string,
 	unlocked: (data: Types.ProfileData) -> boolean
 ): Title
-	return table.freeze({ id = id, displayName = displayName, color = Color3.fromHex(hex), hint = hint, unlocked = unlocked })
+	return table.freeze({
+		id = id,
+		displayName = displayName,
+		color = Color3.fromHex(hex),
+		hint = hint,
+		unlocked = unlocked,
+	})
 end
 
 local Titles: { Title } = {
@@ -55,7 +62,7 @@ local Titles: { Title } = {
 		return count(d.Index.Found) >= 10
 	end),
 	title("chief", "Paléontologue en chef", "#FFD54F", "Toutes les espèces trouvées", function(d)
-		return count(d.Index.Found) >= #Dinos
+		return count(d.Index.Found) >= Odds.rollableCount
 	end),
 	title("lucky", "Chanceux", "#AED581", "Tirer un dino « 1 sur 10 000 » ou plus rare", function(d)
 		return d.BestPull.OneIn >= 10_000

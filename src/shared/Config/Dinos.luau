@@ -1,5 +1,6 @@
 --!strict
--- Les 28 espèces, triées du plus commun au plus rare (oneIn croissant).
+-- Les 28 espèces tirables, triées du plus commun au plus rare (oneIn croissant), puis les exclusives
+-- (`exclusive = true`, oneIn = 0) : jamais tirées, absentes des chances et de l'Index, vendues en Robux.
 -- Le tirage parcourt cette liste à l'envers ; le premier (galetosaure) est le repli si rien ne sort.
 -- `id` : snake_case ASCII, référencé par les profils joueurs, NE CHANGE JAMAIS (renommer = displayName seulement).
 -- `modelName` : nom du modèle 3D dans ReplicatedStorage (export Blender).
@@ -14,13 +15,14 @@ export type Dino = {
 	id: string,
 	displayName: string,
 	rarity: Rarities.RarityId,
-	oneIn: number, -- chance de base « 1 sur X »
+	oneIn: number, -- chance de base « 1 sur X » (0 pour un exclusif)
 	baseIncome: number, -- Fossiles par seconde de base
 	archetype: Archetype,
 	modelName: string,
 	description: string,
 	baseDamage: number,
 	baseHealth: number,
+	exclusive: boolean?,
 }
 
 local Dinos: { Dino } = {
@@ -359,6 +361,20 @@ local Dinos: { Dino } = {
 		description = "Le dernier dino de la liste, et il ne laissera personne l'oublier.",
 		baseDamage = 11_000,
 		baseHealth = 67_000,
+	},
+	-- shortcut: revenu proposé (niveau Épique) pour ne pas vendre de Pièces déguisées, à ajuster après les tests.
+	{
+		id = "peluchorex",
+		displayName = "Peluchorex",
+		rarity = "exclusive",
+		oneIn = 0,
+		baseIncome = 75,
+		archetype = "theropod",
+		modelName = "Peluchorex",
+		description = "Une peluche recousue qui grogne pour qu'on lui fasse un câlin.",
+		baseDamage = 108,
+		baseHealth = 648,
+		exclusive = true,
 	},
 }
 
