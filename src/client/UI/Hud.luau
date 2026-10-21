@@ -308,7 +308,7 @@ function Hud.create(root: Frame)
 	local rollHolder = place(0.68, 0.5, 0.31)
 	local backpackHolder = place(0.5, 0.288, 0.45)
 	local upgradesHolder = place(0.5, 0.712, 0.45)
-	local chancesHolder = place(0.3, 0.885, 0.6, 1.75)
+	local chancesHolder = place(0.3, 0.9, 0.6, 1.75)
 
 	rollHolder.Name = "Roll"
 	backpackHolder.Name = "Backpack"
