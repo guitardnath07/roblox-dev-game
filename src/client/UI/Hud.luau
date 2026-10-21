@@ -82,7 +82,12 @@ local ICONS: { [string]: string } = {
 
 -- Gros bouton carré « bonbon » à icône 3D (rail de gauche, Sac, Améliorations).
 local function iconButton(parent: Instance, icon: string, caption: string, color: Color3, onClick: () -> ()): TextButton
-	local button = Kit.button(parent, "", { color = color, onClick = onClick })
+	local button = Kit.button(parent, "", { color = Theme.Navy, onClick = onClick })
+	local border = button:FindFirstChildOfClass("UIStroke")
+	if border then
+		border.Color = color
+		border.Transparency = 0.3
+	end
 	local padding = button:FindFirstChildOfClass("UIPadding")
 	if padding then
 		padding:Destroy()
@@ -92,7 +97,7 @@ local function iconButton(parent: Instance, icon: string, caption: string, color
 		Position = UDim2.fromScale(0.04, 0.64),
 		Size = UDim2.fromScale(0.92, 0.32),
 		TextColor3 = Theme.White,
-		TextStrokeTransparency = 0.3,
+		TextStrokeTransparency = 1,
 	}, 18)
 	return button
 end
@@ -103,6 +108,7 @@ end
 
 function Hud.create(root: Frame)
 	local data: Types.ProfileData = DataController:Get()
+	local secondary: { GuiObject } = {}
 
 	-- Bandeau d'événement (provisoire : lit l'attribut « ServerEvent » du Workspace).
 	local bannerHolder, bannerBody = Kit.panel(root, {
@@ -155,6 +161,7 @@ function Hud.create(root: Frame)
 			Size = UDim2.fromScale(0.13, 0.13),
 			Parent = root,
 		})
+		table.insert(secondary, holder)
 		Kit.aspect(holder, 1, true)
 		Kit.limit(holder, nil, Vector2.new(50, 50))
 		local button = Kit.button(holder, "", {
@@ -167,17 +174,21 @@ function Hud.create(root: Frame)
 	end
 
 	-- Rail de gauche -----------------------------------------------------------------------------------------
-	local rail = Kit.new("Frame", {
+	local rail = Kit.new("CanvasGroup", {
 		Name = "LeftRail",
 		BackgroundTransparency = 1,
 		-- En haut à gauche : le bas gauche est la zone du joystick tactile.
 		Position = UDim2.fromOffset(6, 4),
-		Size = UDim2.fromScale(0.2, 0.8),
+		Size = UDim2.fromOffset(120, 268),
 		Parent = root,
 	})
-	Kit.aspect(rail, 0.2, true)
-	Kit.limit(rail, nil, Vector2.new(70, 350))
-	Kit.list(rail, false, 0.02, Enum.HorizontalAlignment.Center, Enum.VerticalAlignment.Top)
+
+	Kit.new("UIGridLayout", {
+		CellSize = UDim2.fromOffset(56, 60),
+		CellPadding = UDim2.fromOffset(8, 8),
+		SortOrder = Enum.SortOrder.LayoutOrder,
+		Parent = rail,
+	})
 	local railItems = {
 		{ "🛒", "Boutique", "Shop", Color3.fromHex("#FFA21F") },
 		{ "🔁", "Rebirth", "Rebirth", Color3.fromHex("#E040FB") },
@@ -190,7 +201,6 @@ function Hud.create(root: Frame)
 			"Frame",
 			{ BackgroundTransparency = 1, LayoutOrder = i, Size = UDim2.fromScale(1, 0.184), Parent = rail }
 		)
-		Kit.aspect(cell, 1, true)
 		cell.Name = item[3] -- noms stables : tests et futurs tutoriels
 		iconButton(cell, item[1], item[2], item[4], function()
 			if item[3] == "Rebirth" then
@@ -202,30 +212,57 @@ function Hud.create(root: Frame)
 		end)
 	end
 
-	-- Deuxième colonne (Reliques, Potions), accrochée à la case Boutique pour rester hors du UIListLayout.
-	local rail2 = Kit.new("Frame", {
-		Name = "SecondRail",
-		BackgroundTransparency = 1,
-		Position = UDim2.new(1, 6, 0, 0),
-		Size = UDim2.fromScale(1, 2.11),
-		Parent = rail:FindFirstChild("Shop"),
-	})
-	Kit.list(rail2, false, 0.05, Enum.HorizontalAlignment.Center, Enum.VerticalAlignment.Top)
 	for i, item in
 		{
-			{ "💍", "Reliques", Color3.fromHex("#8B3DFF"), "Relics", nil },
-			{ "🧪", "Potions", Color3.fromHex("#22C3E6"), "Shop", 4 },
+			{ "💍", "Reliques", "Relics", Theme.Neutral },
+			{ "🧪", "Potions", "Shop", Theme.Cyan },
 		}
 	do
-		local cell = Kit.new(
-			"Frame",
-			{ BackgroundTransparency = 1, LayoutOrder = i, Size = UDim2.fromScale(1, 0.474), Parent = rail2 }
-		)
-		cell.Name = item[4] .. (if item[5] then "Potions" else "")
-		iconButton(cell, item[1], item[2], item[3], function()
-			UIController:Open(item[4], item[5])
+		local cell =
+			Kit.new("Frame", { Name = item[2], BackgroundTransparency = 1, LayoutOrder = 5 + i, Parent = rail })
+		iconButton(cell, item[1], item[2], item[4], function()
+			UIController:Open(item[3], if i == 2 then 4 else nil)
 		end)
 	end
+	local handle = Kit.new("Frame", {
+		Name = "IconsToggle",
+		BackgroundTransparency = 1,
+		Position = UDim2.fromOffset(134, 8),
+		Size = UDim2.fromOffset(44, 44),
+		Parent = root,
+	})
+	local collapse = Kit.button(handle, "‹", { color = Theme.Navy, maxText = 30 })
+	local expanded = true
+	local slide: Tween? = nil
+	local fade: Tween? = nil
+	collapse.Activated:Connect(function()
+		expanded = not expanded
+		collapse.Text = if expanded then "‹" else "›"
+		if slide then
+			slide:Cancel()
+		end
+		if fade then
+			fade:Cancel()
+		end
+		if expanded then
+			rail.Visible = true
+		end
+		slide = Kit.tween(rail, 0.22, {
+			Position = UDim2.fromOffset(if expanded then 6 else -130, 4),
+		}, Enum.EasingStyle.Quart)
+		fade = Kit.tween(rail, 0.18, { GroupTransparency = if expanded then 0 else 1 })
+		Kit.tween(handle, 0.22, { Position = UDim2.fromOffset(if expanded then 134 else 6, 8) })
+		for _, object in secondary do
+			object.Visible = expanded
+		end
+		if not expanded and fade then
+			fade.Completed:Once(function()
+				if not expanded then
+					rail.Visible = false
+				end
+			end)
+		end
+	end)
 	-- Bas : grappe du bouton LANCER ------------------------------------------------------------------------
 	local ASPECT = 3 -- largeur / hauteur de la grappe : X = fraction de hauteur / ASPECT
 	local cluster = Kit.new("Frame", {
@@ -233,11 +270,11 @@ function Hud.create(root: Frame)
 		BackgroundTransparency = 1,
 		AnchorPoint = Vector2.new(0.5, 1),
 		Position = UDim2.new(0.5, 0, 1, -4),
-		Size = UDim2.fromScale(1, 0.46),
+		Size = UDim2.fromScale(0.86, 0.36),
 		Parent = root,
 	})
 	Kit.aspect(cluster, ASPECT, true)
-	Kit.limit(cluster, nil, Vector2.new(720, 240))
+	Kit.limit(cluster, nil, Vector2.new(600, 200))
 
 	local function place(height: number, centerX: number, y: number, aspect: number?): Frame
 		local width = height * (aspect or 1) / ASPECT
@@ -311,6 +348,9 @@ function Hud.create(root: Frame)
 	local chancesHolder = place(0.3, 0.9, 0.6, 1.75)
 
 	rollHolder.Name = "Roll"
+	table.insert(secondary, backpackHolder)
+	table.insert(secondary, upgradesHolder)
+	table.insert(secondary, chancesHolder)
 	backpackHolder.Name = "Backpack"
 	upgradesHolder.Name = "Upgrades"
 	chancesHolder.Name = "Chances"
@@ -384,6 +424,7 @@ function Hud.create(root: Frame)
 		TextStrokeColor3 = Theme.Ink,
 	}, 30)
 	local press = Kit.new("UIScale", { Parent = rollHolder })
+	local dieSpin: Tween? = nil
 
 	local function refreshDie()
 		local die = Kit.find(Dice, data.EquippedDice) or Dice[1]
@@ -405,6 +446,11 @@ function Hud.create(root: Frame)
 	setRing(1)
 	local ringConnection: RBXScriptConnection? = nil
 	RollController:OnRolled(function(cooldown: number)
+		if dieSpin then
+			dieSpin:Cancel()
+		end
+		iconHolder.Rotation = -24
+		dieSpin = Kit.tween(iconHolder, math.min(cooldown, 0.45), { Rotation = 0 }, Enum.EasingStyle.Back)
 		if ringConnection then
 			ringConnection:Disconnect()
 		end

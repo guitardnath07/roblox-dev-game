@@ -22,9 +22,9 @@ local DinoView = require(script.Parent.DinoView)
 local Kit = require(script.Parent.Kit)
 local Theme = require(script.Parent.Theme)
 
-local SMALL_HOLD = 1.8
-local BIG_HOLD = 2.6
-local MYTHIC_HOLD = 3.6
+local SMALL_HOLD = 1.45
+local BIG_HOLD = 1.8
+local MYTHIC_HOLD = 2.4
 
 local root: Frame
 local busy = false
@@ -67,7 +67,7 @@ local function buildCard(parent: Instance, result: Types.RollResult, maid: Kit.M
 	Kit.aspect(holder, 1.65, true)
 	local stroke = body:FindFirstChildOfClass("UIStroke") :: UIStroke
 	stroke.Color = rarity.color
-	stroke.Thickness = 4
+	stroke.Thickness = 2
 	Kit.rarityEffect(stroke, rarity, maid)
 
 	-- Vue 3D dans un médaillon.
@@ -94,7 +94,7 @@ local function buildCard(parent: Instance, result: Types.RollResult, maid: Kit.M
 		TextXAlignment = Enum.TextXAlignment.Left,
 		TextColor3 = rarity.color,
 		TextStrokeTransparency = 0,
-		TextStrokeColor3 = Theme.Ink,
+		TextStrokeColor3 = Theme.Outline,
 	}, 40)
 	Kit.rarityEffect(name, rarity, maid)
 
@@ -162,7 +162,7 @@ local function buildCard(parent: Instance, result: Types.RollResult, maid: Kit.M
 		})
 		Kit.corner(ribbon, 0.3)
 		Kit.stroke(ribbon, Theme.AmberDark, 2)
-		Kit.title(ribbon, "NOUVEAU !", { TextColor3 = Theme.Ink }, 22)
+		Kit.title(ribbon, "NOUVEAU !", { TextColor3 = Theme.Outline }, 22)
 	end
 
 	return holder
@@ -176,22 +176,34 @@ local function showSmall(result: Types.RollResult)
 	end
 	local maid = Kit.maid()
 	smallMaid = maid
-	local card = buildCard(root, result, maid, {
+	local rarity = Kit.rarityOf(result.dinoId)
+	local spinner = Kit.new("Frame", {
+		Name = "RollSpinner",
 		AnchorPoint = Vector2.new(0.5, 0.5),
-		Position = UDim2.fromScale(0.5, 1.4),
-		Size = UDim2.fromScale(1, 0.38),
+		Position = UDim2.fromScale(0.5, 0.32),
+		Size = UDim2.fromOffset(72, 72),
+		BackgroundColor3 = Theme.Navy,
+		Rotation = -35,
+		Parent = root,
 	})
-	Kit.tween(card, 0.4, { Position = UDim2.fromScale(0.5, 0.33) }, Enum.EasingStyle.Back)
-	maid:add(task.delay(0.4, function()
-		-- Petite secousse à l'arrivée.
-		for _, angle in { -4, 4, -2, 1, 0 } do
-			Kit.tween(card, 0.05, { Rotation = angle })
-			task.wait(0.05)
-		end
+	maid:add(spinner)
+	Kit.corner(spinner, 0.22)
+	Kit.stroke(spinner, rarity.color, 2)
+	local paint = Kit.dieIcon(spinner)
+	paint(rarity.color)
+	maid:add(Kit.tween(spinner, 0.28, { Rotation = 180 }, Enum.EasingStyle.Quart))
+	maid:add(task.delay(0.28, function()
+		spinner:Destroy()
+		local card = buildCard(root, result, maid, {
+			AnchorPoint = Vector2.new(0.5, 0.5),
+			Position = UDim2.fromScale(0.5, 0.36),
+			Size = UDim2.fromScale(0.78, 0.31),
+		})
+		local pop = Kit.new("UIScale", { Scale = 0.82, Parent = card })
+		maid:add(Kit.tween(pop, 0.24, { Scale = 1 }, Enum.EasingStyle.Back))
+		maid:add(Kit.tween(card, 0.24, { Position = UDim2.fromScale(0.5, 0.32) }))
 	end))
 	maid:add(task.delay(SMALL_HOLD, function()
-		Kit.tween(card, 0.3, { Position = UDim2.fromScale(0.5, 1.4) }, Enum.EasingStyle.Quad, Enum.EasingDirection.In)
-		task.wait(0.3)
 		if smallMaid == maid then
 			smallMaid = nil
 		end
@@ -407,7 +419,7 @@ local function confetti(maid: Kit.Maid, color: Color3)
 	local layer = Kit.new("Frame", { BackgroundTransparency = 1, Size = UDim2.fromScale(1, 1), Parent = root })
 	maid:add(layer)
 	local palette = { color, Theme.Gold, Theme.White, Theme.Leaf, Theme.Sky, Theme.Lava }
-	for _ = 1, 70 do
+	for _ = 1, 28 do
 		local piece = Kit.new("Frame", {
 			BackgroundColor3 = palette[math.random(1, #palette)],
 			BorderSizePixel = 0,
@@ -452,6 +464,10 @@ end
 
 -- Joue une grande révélation et attend sa fin (fin naturelle ou clic).
 local function playBig(result: Types.RollResult)
+	if smallMaid then
+		smallMaid:clean()
+		smallMaid = nil
+	end
 	local rarity = Kit.rarityOf(result.dinoId)
 	local mythic = rarity.order >= 6
 	local maid = Kit.maid()
@@ -484,7 +500,7 @@ local function playBig(result: Types.RollResult)
 		local laser = Kit.new("Frame", {
 			AnchorPoint = Vector2.new(0.5, 0.5),
 			Position = UDim2.fromScale(0.5, 0.5),
-			Size = UDim2.new(0, 0, 0, 3),
+			Size = UDim2.fromOffset(0, 3),
 			BackgroundColor3 = Color3.fromRGB(255, 40, 70),
 			BorderSizePixel = 0,
 			Parent = root,
@@ -546,7 +562,7 @@ local function playBig(result: Types.RollResult)
 		flash(maid, rarity.color);
 		(die :: Model):Destroy()
 		die = nil
-		sparks = burst(arena.viewport, Vector3.new(0, PEDESTAL_TOP + 1.5, 0), 45, SPARK_COLORS)
+		sparks = burst(arena.viewport, Vector3.new(0, PEDESTAL_TOP + 1.5, 0), 20, SPARK_COLORS)
 		local others = {}
 		for _, d in Dinos do
 			if d.id ~= result.dinoId then
@@ -570,7 +586,7 @@ local function playBig(result: Types.RollResult)
 		winner.Parent = arena.world
 		DinoModels.play(winner, "Roar", { thenClip = "Idle" }) -- sans effet sur le cube de repli
 		table.insert(spinning, { model = winner, base = winnerBase })
-		for _, s in burst(arena.viewport, Vector3.new(0, PEDESTAL_TOP + 2, 0), 25, { rarity.color, Theme.White }) do
+		for _, s in burst(arena.viewport, Vector3.new(0, PEDESTAL_TOP + 2, 0), 12, { rarity.color, Theme.White }) do
 			table.insert(sparks, s)
 		end
 		zoomAt = os.clock() - t0
@@ -666,6 +682,7 @@ function RollReveal.play(result: Types.RollResult)
 	if Kit.rarityOf(result.dinoId).order >= 4 then
 		table.insert(queue, result)
 		if not busy then
+			busy = true
 			task.spawn(runQueue)
 		end
 	elseif not busy then

@@ -62,7 +62,7 @@ function Window.open(root: Instance, title: string, opts: Options?): Window
 		-- Panneau bleu nuit, bordure épaisse de la couleur d'accent, onglet de titre penché qui déborde en haut.
 		local stroke = body:FindFirstChildOfClass("UIStroke") :: UIStroke
 		stroke.Color = accent
-		stroke.Thickness = 5
+		stroke.Thickness = 1.5
 		local gradient = body:FindFirstChildOfClass("UIGradient") :: UIGradient
 		gradient.Color = ColorSequence.new(Color3.new(1, 1, 1), Color3.fromRGB(150, 160, 200))
 		body.ClipsDescendants = false
@@ -70,12 +70,12 @@ function Window.open(root: Instance, title: string, opts: Options?): Window
 			BackgroundColor3 = accent,
 			Position = UDim2.fromScale(0.02, -0.07),
 			Size = UDim2.fromScale(0.36, 0.14),
-			Rotation = -3,
+			Rotation = 0,
 			ZIndex = 3,
 			Parent = body,
 		})
 		Kit.corner(tab, 0.3)
-		Kit.stroke(tab, Theme.Outline, 4)
+		Kit.stroke(tab, Theme.Outline, 1)
 		Kit.new("UIGradient", {
 			Rotation = 90,
 			Color = ColorSequence.new(Color3.new(1, 1, 1), Color3.fromRGB(190, 190, 190)),

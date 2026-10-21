@@ -341,22 +341,8 @@ local GLOSS_GRADIENT = ColorSequence.new({
 	ColorSequenceKeypoint.new(0, Color3.new(1, 1, 1)),
 	ColorSequenceKeypoint.new(0.5, Color3.new(0.94, 0.94, 0.94)),
 	ColorSequenceKeypoint.new(0.51, Color3.new(0.82, 0.82, 0.82)),
-	ColorSequenceKeypoint.new(1, Color3.new(0.68, 0.68, 0.68)),
+	ColorSequenceKeypoint.new(1, Color3.new(0.88, 0.88, 0.88)),
 })
-
-local function lightSpot(parent: Instance, x: number, y: number, size: number, transparency: number)
-	local spot = Kit.new("Frame", {
-		Name = "LightSpot",
-		BackgroundColor3 = Color3.new(1, 1, 1),
-		BackgroundTransparency = transparency,
-		BorderSizePixel = 0,
-		Position = UDim2.fromScale(x, y),
-		Size = UDim2.fromScale(size, size),
-		SizeConstraint = Enum.SizeConstraint.RelativeYY, -- rond même sur un bouton large
-		Parent = parent,
-	})
-	Kit.corner(spot, 0.5)
-end
 
 function Kit.button(parent: Instance, text: string, opts: ButtonOptions?): TextButton
 	local o: ButtonOptions = opts or {}
@@ -369,31 +355,13 @@ function Kit.button(parent: Instance, text: string, opts: ButtonOptions?): TextB
 		TextColor3 = o.textColor or Theme.White,
 		TextScaled = true,
 		TextWrapped = true,
-		TextStrokeTransparency = 0.45,
+		TextStrokeTransparency = 1,
 		Size = UDim2.fromScale(1, 1),
 		Parent = parent,
 	})
-	Kit.corner(button, 0.3)
-	Kit.stroke(button, darker(color, 0.45), 3)
+	Kit.corner(button, 0.18)
+	Kit.stroke(button, color:Lerp(Theme.White, 0.18), 1, 0.55)
 	Kit.new("UIGradient", { Rotation = 90, Color = GLOSS_GRADIENT, Parent = button })
-	-- Reflet : bande blanche translucide sur la moitié haute, qui s'efface vers le bas.
-	local gloss = Kit.new("Frame", {
-		Name = "Gloss",
-		BackgroundColor3 = Color3.new(1, 1, 1),
-		BackgroundTransparency = 0.55,
-		BorderSizePixel = 0,
-		Position = UDim2.fromScale(0.07, 0.05),
-		Size = UDim2.fromScale(0.86, 0.42),
-		Parent = button,
-	})
-	Kit.corner(gloss, 0.5)
-	Kit.new("UIGradient", {
-		Rotation = 90,
-		Transparency = NumberSequence.new({ NumberSequenceKeypoint.new(0, 0.2), NumberSequenceKeypoint.new(1, 1) }),
-		Parent = gloss,
-	})
-	lightSpot(button, 0.07, 0.1, 0.14, 0.05)
-	lightSpot(button, 0.07 + 0.11, 0.08, 0.07, 0.15)
 	Kit.new("UITextSizeConstraint", { MaxTextSize = o.maxText or 26, MinTextSize = 7, Parent = button })
 	Kit.new("UIPadding", {
 		PaddingLeft = UDim.new(0.06, 0),
@@ -442,7 +410,7 @@ function Kit.icon(parent: Instance, name: string?, emoji: string, props: { [stri
 	camera.CFrame = CFrame.lookAt(box.Position + Vector3.new(radius * 0.35, radius * 0.45, -radius * 2.1), box.Position)
 	viewport.CurrentCamera = camera
 	-- Flottement : tween moteur en boucle, pas de code par image.
-	Kit.loop(viewport, 1.4, { Position = viewport.Position + UDim2.fromScale(0, -0.04) }, true, Enum.EasingStyle.Sine)
+	-- Icônes statiques : aucun tween permanent dans les menus repliés.
 	return viewport
 end
 
@@ -480,11 +448,11 @@ function Kit.panel(parent: Instance, props: { [string]: any }?, color: Color3?, 
 		Parent = holder,
 	})
 	Kit.corner(body, radius or 0.06)
-	Kit.stroke(body, Theme.Stone, 3)
+	Kit.stroke(body, Theme.Stone, 1, 0.35)
 	-- Léger dégradé pour un aspect de vieux papier.
 	Kit.new("UIGradient", {
 		Rotation = 90,
-		Color = ColorSequence.new(Color3.new(1, 1, 1), Color3.fromRGB(225, 212, 185)),
+		Color = ColorSequence.new(Color3.new(1, 1, 1), Color3.fromRGB(200, 220, 245)),
 		Parent = body,
 	})
 	return holder, body
