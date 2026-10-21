@@ -12,6 +12,7 @@ local RunService = game:GetService("RunService")
 local Workspace = game:GetService("Workspace")
 
 local Config = ReplicatedStorage.Shared.Config
+local DinoMeshIds = require(Config.DinoMeshIds)
 local Dinos = require(Config.Dinos)
 local Mutations = require(Config.Mutations)
 local Rarities = require(Config.Rarities)
@@ -69,6 +70,7 @@ end
 local parsed: { [string]: Data | false } = {}
 -- shortcut: un EditableMesh par (dino, peau) gardé toute la session (≤ 28×6), à libérer si la mémoire mobile coince.
 local meshes: { [string]: EditableMesh } = {}
+local published: { [string]: MeshPart } = {} -- gabarit chargé depuis l'asset publié, cloné à chaque create()
 local rigs: { [Model]: Rig } = setmetatable({}, { __mode = "k" }) :: any
 local active: { [Model]: Player } = {}
 local connection: RBXScriptConnection? = nil
@@ -345,8 +347,24 @@ function DinoModels.create(dinoId: string, size: string?, skin: string?): Model?
 		return nil
 	end
 	local ok, result = pcall(function(): Model
-		local mesh = meshFor(dinoId, data, skin or Mutations.defaultId)
-		local part = AssetService:CreateMeshPartAsync(Content.fromObject(mesh))
+		local skinId = skin or Mutations.defaultId
+		local assetId = DinoMeshIds[dinoId]
+		local part: MeshPart
+		local okMesh, editable = false, nil
+		if not assetId or skinId ~= Mutations.defaultId then
+			okMesh, editable = pcall(meshFor, dinoId, data, skinId)
+		end
+		if okMesh then
+			part = AssetService:CreateMeshPartAsync(Content.fromObject(editable))
+		elseif assetId then
+			-- Asset publié (peau Normale) : pas d'EditableMesh, donc pas de limite de budget.
+			if not published[dinoId] then
+				published[dinoId] = AssetService:CreateMeshPartAsync(Content.fromUri(`rbxassetid://{assetId}`))
+			end
+			part = published[dinoId]:Clone()
+		else
+			error(editable)
+		end
 		part.Name = "Body"
 		part.Anchored = true
 		part.CanCollide = false
