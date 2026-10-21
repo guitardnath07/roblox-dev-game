@@ -1,5 +1,6 @@
 # DINO DICE — Chronoraptor (mythique, théropode) : modèle + rig + 7 animations + rendus de contrôle.
-# Version : 1
+# Version : 3 (style chibi + plaques : tête énorme, corps court, pattes trapues, facettes ; plaques/plots,
+# appui des pieds via theropod_plaques.py, appliqué dans main() seulement)
 # Référence réelle : Velociraptor (griffe en faucille relevée, queue droite et raide, bras repliés à plumes,
 # museau long légèrement concave). Couche thématique (docs/dinos-concept.md) : griffe = aiguille d'horloge dorée,
 # cadran cyan sur chaque flanc (12 graduations, 2 aiguilles mobiles), 3 engrenages dorés épaules/dos,
@@ -51,38 +52,38 @@ MAIN, BELLY, ACCENT, WHITE, DARK, GLOW, BACK, MOUTH, TONGUE = range(1, 10)
 
 # Demi-squelette (x >= 0) pour le Skin : (clé, position, rayon, parent). Avant = -Y, haut = +Z.
 NODES = [
-    ("hanche", (0, 0.15, 2.05), 0.60, None),
-    ("ventre", (0, -0.35, 2.08), 0.66, "hanche"),
-    ("epaules", (0, -0.82, 2.28), 0.52, "ventre"),
-    ("cou", (0, -1.08, 2.72), 0.40, "epaules"),
-    ("cou2", (0, -1.12, 3.12), 0.42, "cou"),
-    ("crane", (0, -1.30, 3.52), 0.86, "cou2"),
-    ("machoire", (0, -1.85, 3.38), 0.60, "crane"),
-    ("museau", (0, -2.35, 3.25), 0.42, "machoire"),
-    ("nez", (0, -2.78, 3.27), 0.32, "museau"),
+    ("hanche", (0, 0.15, 1.75), 0.66, None),
+    ("ventre", (0, -0.28, 1.80), 0.74, "hanche"),
+    ("epaules", (0, -0.66, 2.06), 0.56, "ventre"),
+    ("cou", (0, -0.86, 2.48), 0.46, "epaules"),
+    ("cou2", (0, -0.94, 2.86), 0.52, "cou"),
+    ("crane", (0, -1.20, 3.40), 1.12, "cou2"),  # tête énorme (style chibi)
+    ("machoire", (0, -1.86, 3.16), 0.78, "crane"),
+    ("museau", (0, -2.42, 3.04), 0.58, "machoire"),
+    ("nez", (0, -2.86, 3.06), 0.46, "museau"),
     # Queue raide et droite (Velociraptor)
-    ("queue1", (0, 0.75, 2.10), 0.46, "hanche"),
-    ("queue2", (0, 1.35, 2.16), 0.34, "queue1"),
-    ("queue3", (0, 1.95, 2.20), 0.26, "queue2"),
-    ("queue4", (0, 2.55, 2.22), 0.20, "queue3"),
-    ("queue5", (0, 3.10, 2.22), 0.15, "queue4"),
-    ("queue6", (0, 3.55, 2.22), 0.11, "queue5"),
-    # Jambe (chaîne séparée) : longue, métatarse incliné
-    ("bassin", (0.44, 0.10, 1.85), 0.50, None),
-    ("cuisse", (0.56, -0.05, 1.40), 0.50, "bassin"),
-    ("genou", (0.58, -0.32, 0.92), 0.25, "cuisse"),
-    ("cheville", (0.56, 0.08, 0.40), 0.155, "genou"),
-    ("pied", (0.56, -0.12, 0.13), 0.14, "cheville"),
-    ("orteils", (0.56, -0.56, 0.08), 0.085, "pied"),  # orteil médian (porte l'os Toe)
-    ("orteil_ext", (0.76, -0.45, 0.08), 0.075, "pied"),
-    ("orteil_int", (0.40, -0.30, 0.22), 0.07, "pied"),  # 2e orteil relevé : porte la faucille-aiguille
-    # Bras repliés (chaîne séparée), main à 3 doigts
-    ("epaule", (0.40, -1.00, 2.10), 0.17, None),
-    ("coude", (0.62, -1.08, 1.72), 0.13, "epaule"),
-    ("main", (0.58, -1.42, 1.70), 0.10, "coude"),
-    ("doigt1", (0.49, -1.62, 1.66), 0.045, "main"),
-    ("doigt2", (0.60, -1.67, 1.63), 0.045, "main"),
-    ("doigt3", (0.70, -1.58, 1.62), 0.045, "main"),
+    ("queue1", (0, 0.75, 1.80), 0.48, "hanche"),
+    ("queue2", (0, 1.30, 1.86), 0.36, "queue1"),
+    ("queue3", (0, 1.85, 1.92), 0.27, "queue2"),
+    ("queue4", (0, 2.38, 1.96), 0.20, "queue3"),
+    ("queue5", (0, 2.86, 1.98), 0.15, "queue4"),
+    ("queue6", (0, 3.25, 1.98), 0.11, "queue5"),
+    # Jambe (chaîne séparée) : courte et trapue, métatarse incliné
+    ("bassin", (0.48, 0.10, 1.55), 0.52, None),
+    ("cuisse", (0.60, -0.05, 1.22), 0.54, "bassin"),
+    ("genou", (0.64, -0.26, 0.80), 0.30, "cuisse"),
+    ("cheville", (0.62, 0.06, 0.38), 0.20, "genou"),
+    ("pied", (0.62, -0.12, 0.15), 0.18, "cheville"),
+    ("orteils", (0.62, -0.50, 0.10), 0.11, "pied"),  # orteil médian (porte l'os Toe)
+    ("orteil_ext", (0.84, -0.42, 0.10), 0.10, "pied"),
+    ("orteil_int", (0.44, -0.28, 0.25), 0.09, "pied"),  # 2e orteil relevé : porte la faucille-aiguille
+    # Bras (chaîne séparée), grosse main « patte d'ours » à 3 doigts
+    ("epaule", (0.46, -0.82, 1.95), 0.20, None),
+    ("coude", (0.70, -0.92, 1.62), 0.15, "epaule"),
+    ("main", (0.68, -1.22, 1.62), 0.13, "coude"),
+    ("doigt1", (0.56, -1.44, 1.58), 0.065, "main"),
+    ("doigt2", (0.69, -1.49, 1.55), 0.065, "main"),
+    ("doigt3", (0.82, -1.41, 1.55), 0.065, "main"),
 ]
 SPINE = ["queue6", "queue5", "queue4", "queue3", "queue2", "queue1", "hanche", "ventre", "epaules", "cou",
          "cou2", "crane", "machoire", "museau", "nez"]
@@ -91,12 +92,13 @@ ARM_NODES = {"epaule", "coude", "main", "doigt1", "doigt2", "doigt3"}
 LIMBS = LEG_NODES | ARM_NODES
 
 # Engrenages (squelette) : centre (y, z), rayon, dents. Dents de même pas -> rapports de vitesse exacts.
-GEARS = [("Gear1", (-0.05, 2.85), 0.48, 10), ("Gear2", (-0.80, 2.98), 0.34, 8), ("Gear3", (0.60, 2.66), 0.24, 6)]
-DIAL = (0.0, -0.30, 2.02)  # centre du cadran (y, z utilisés ; x = surface du flanc)
+# (sur les hanches et la base de la queue : la grosse tête chibi recouvre les épaules)
+GEARS = [("Gear1", (0.30, 2.50), 0.48, 10), ("Gear2", (0.99, 2.38), 0.34, 8), ("Gear3", (1.50, 2.22), 0.24, 6)]
+DIAL = (0.0, -0.30, 2.08)  # centre du cadran (y, z utilisés ; x = surface du flanc)
 DIAL_R = 0.34
 # Plan de la bouche (squelette) : passe par la commissure, légèrement descendant vers le nez
-MOUTH_Y0 = -1.70  # commissure (rien n'est coupé derrière)
-MOUTH_P = Vector((0, -1.75, 3.17))
+MOUTH_Y0 = -1.62  # commissure (rien n'est coupé derrière)
+MOUTH_P = Vector((0, -1.75, 2.95))
 MOUTH_N = Vector((0, -0.06, 1)).normalized()
 MOUTH_GAP = 0.02
 
@@ -168,7 +170,7 @@ def smile_dz(y):
     def sm(u):
         u = max(0.0, min(1.0, u))
         return u * u * (3 - 2 * u)
-    return 0.10 * sm((y + 2.25) / 0.5) * (1 - sm((y - MOUTH_Y0) / 0.3))
+    return 0.12 * sm((y + 2.40) / 0.5) * (1 - sm((y - MOUTH_Y0) / 0.3))
 
 
 def mouth_z(y):
@@ -215,6 +217,12 @@ def make_mouth(body):
     bm.free()
 
 
+def STRIPE(y):
+    """Segments 2 et 4 de la queue (entre les nœuds queueN), sur toute leur longueur."""
+    ys = [v[1] for k, v, _r, _p in NODES if k.startswith("queue")]
+    return any(ys[i] + 0.04 < y < ys[i + 1] - 0.04 for i in (1, 3))
+
+
 def paint_body(body):
     me = body.data
     dd.fill_color(me, C[MAIN])
@@ -227,17 +235,17 @@ def paint_body(body):
 
     for poly in me.polygons:
         c, n = poly.center, poly.normal
-        if c.y < -2.05 and c.z > 2.6:  # pas de ventre doré au bout du menton
+        if c.y < -2.15 and c.z > 2.3:  # pas de ventre doré au bout du menton
             paint(poly, MAIN)
         # Dos bleu-gris foncé : du crâne au bout de la queue, sur le dessus du tronc (pas les membres)
-        if n.z > 0.42 and abs(c.x) < 0.5 and c.z > 2.0 and c.y > -2.35:
+        if n.z > 0.42 and abs(c.x) < 0.5 and c.z > 1.7 and c.y > -2.5:
             paint(poly, BACK)
     clean_islands(me, BELLY, MAIN)
     clean_islands(me, BACK, MAIN)
     for poly in me.polygons:
         c = poly.center
-        # Rayures transverses (Velociraptor), qui descendent sur les flancs
-        if c.z > 1.95 and 0.55 < c.y < 3.3 and (c.y % 0.6) < 0.15 and abs(c.x) < 0.62:
+        # Rayures transverses (Velociraptor) : 1 segment de queue sur 2 (facettes « plaques »)
+        if c.z > 1.5 and abs(c.x) < 0.62 and STRIPE(c.y):
             paint(poly, DARK)
     sh = me.attributes["dd_shell"].data
     for poly in me.polygons:
@@ -258,45 +266,45 @@ def build_mesh():
 
     g_head, g_jaw = grp("rigid", "Head"), grp("rigid", "Jaw")
     # --- Yeux en petit cadran : blanc, iris cyan à 4 traits, pupille, 2 reflets (faits à droite puis symétrisés)
-    _ok, loc, nor, _ = body.closest_point_on_mesh(Vector((0.48, -2.0, 3.86)))
-    size = 0.34
+    _ok, loc, nor, _ = body.closest_point_on_mesh(Vector((0.46, -2.10, 3.74)))
+    size = 0.40
     ec = loc - nor * size * 0.30
     look = (nor + Vector((-0.3, -1.6, 0.1))).normalized()
     parts.append(P("Oeil", "sphere", WHITE, g_head, loc=ec, scale=(size, size, size * 1.12), mirror_x=True, u=10, v=7))
     fr = frame_from(ec + look * size * 0.93, look)
     n0 = len(parts)
-    parts.append(flat_poly("Iris", GLOW, g_head, circle(size * 0.66, 16), fr))
-    parts.append(flat_poly("Pupille", DARK, g_head, circle(size * 0.32, 12), fr @ Matrix.Translation((0, 0, 0.012))))
+    parts.append(flat_poly("Iris", GLOW, g_head, circle(size * 0.66, 10), fr))
+    parts.append(flat_poly("Pupille", DARK, g_head, circle(size * 0.34, 8), fr @ Matrix.Translation((0, 0, 0.012))))
     for k in range(4):
         a = k * math.pi / 2
         m = fr @ Matrix.Translation((math.cos(a) * size * 0.5, math.sin(a) * size * 0.5, 0.008)) @ \
             Matrix.Rotation(a, 4, "Z")
-        parts.append(flat_poly("IrisTrait", DARK, g_head, rect(0.08, 0.028), m))
-    parts.append(xform(P("Reflet", "sphere", WHITE, g_head, scale=(0.095, 0.095, 0.045), u=6, v=4),
+        parts.append(flat_poly("IrisTrait", DARK, g_head, rect(0.1, 0.035), m))
+    parts.append(xform(P("Reflet", "sphere", WHITE, g_head, scale=(0.12, 0.12, 0.05), u=6, v=4),
                        fr @ Matrix.Translation((-size * 0.2, size * 0.24, 0.05))))
     parts.append(xform(P("Reflet2", "sphere", WHITE, g_head, scale=(0.04, 0.04, 0.025), u=6, v=4),
                        fr @ Matrix.Translation((size * 0.22, -size * 0.2, 0.04))))
     for ob in parts[n0:]:
         mirror_inplace(ob)
     # --- Narines
-    parts.append(P("Narine", "sphere", DARK, g_head, loc=dd.snap(body, (0.14, -2.9, 3.48), -0.01),
+    parts.append(P("Narine", "sphere", DARK, g_head, loc=dd.snap(body, (0.16, -3.15, 3.26), -0.01),
                    scale=(0.06, 0.05, 0.04), mirror_x=True, u=6, v=4))
     # --- Dents : 1 paire de crocs visibles bouche fermée + rangées haut/bas visibles bouche ouverte, langue rose
-    for row, (gi, sign, ys) in enumerate(((g_head, -1, (-2.62, -2.42, -2.2, -1.98)), (g_jaw, 1, (-2.5, -2.28, -2.06)))):
+    for row, (gi, sign, ys) in enumerate(((g_head, -1, (-2.80, -2.56, -2.30, -2.04)), (g_jaw, 1, (-2.66, -2.40, -2.14)))):
         for k, y in enumerate(ys):
             z = mouth_z(y) + smile_dz(y) - sign * (MOUTH_GAP + 0.01)
             _ok, sp, _n, _ = body.closest_point_on_mesh(Vector((1.0, y, z)))
             big = row == 0 and k == 1  # croc avant : visible bouche fermée ; les autres restent dedans
             x = max(0.06, sp.x - (0.05 if big else 0.16))
-            L = 0.2 if big else 0.11
+            L = 0.28 if big else 0.16
             parts.append(P("Dent", "cone", WHITE, gi, loc=(x, y, z + sign * L * 0.5 - sign * 0.01),
                            rot=(0 if sign > 0 else 180, 0, 0), mirror_x=True, segments=4,
-                           r1=0.06 if big else 0.045, r2=0.0, depth=L))
-    zt = mouth_z(-2.2) - 0.12
-    parts.append(P("Langue", "sphere", TONGUE, g_jaw, loc=(0, -2.15, zt), scale=(0.2, 0.42, 0.07), u=10, v=6))
+                           r1=0.085 if big else 0.065, r2=0.0, depth=L))
+    zt = mouth_z(-2.3) - 0.13
+    parts.append(P("Langue", "sphere", TONGUE, g_jaw, loc=(0, -2.3, zt), scale=(0.26, 0.5, 0.08), u=10, v=6))
 
     # --- Crête : 3 aiguilles de montre effilées qui rayonnent d'un moyeu-engrenage sur le crâne
-    hub = dd.snap(body, (0, -1.42, 4.6), -0.02)
+    hub = dd.snap(body, (0, -1.30, 4.7), -0.02)
     # heure (courte, large), minute (longue), trotteuse (fine, avec contrepoids)
     # Aiguilles « à pomme » : tige effilée + anneau doré à cœur cyan aux 2/3 (motif d'aiguille de montre)
     for i, (ang, L, w, tail, ring) in enumerate(((104, 0.66, 0.075, 0.0, 0.13), (156, 1.08, 0.06, 0.0, 0.12),
@@ -323,7 +331,7 @@ def build_mesh():
     n0 = len(parts)
     parts.append(xform(P("CadranBord", "cone", ACCENT, g_spine, segments=16, r1=DIAL_R + 0.07, r2=DIAL_R + 0.07,
                          depth=0.12), Md))
-    parts.append(flat_poly("Cadran", GLOW, g_spine, circle(DIAL_R, 16), Md @ Matrix.Translation((0, 0, 0.062))))
+    parts.append(flat_poly("Cadran", GLOW, g_spine, circle(DIAL_R, 8), Md @ Matrix.Translation((0, 0, 0.062))))
     for k in range(12):
         a = k * math.pi / 6
         big = k % 3 == 0
@@ -349,7 +357,7 @@ def build_mesh():
 
     # --- Sablier en bout de queue (axe = queue), sable cyan, disques dorés
     g_hg = grp("rigid", "Hourglass")
-    tip = Vector((0, 3.56, 2.22))
+    tip = Vector([v for k, v, _r, _p in NODES if k == "queue6"][0]) + Vector((0, 0.01, 0))
     hl = 0.20
     for i, (y, rot) in enumerate(((tip.y + hl * 0.5, -90), (tip.y + hl * 1.5, 90))):
         parts.append(P("SablierVerre%d" % i, "cone", GLOW, g_hg, loc=(0, y, tip.z), rot=(rot, 0, 0), segments=8,
@@ -366,14 +374,14 @@ def build_mesh():
     #     dorée sur l'orteil intérieur relevé
     pos = {k: Vector(v) for k, v, _r, _p in NODES}
     g_toe, g_foot, g_hand = grp("rigid", "Toe.S"), grp("rigid", "Foot.S"), grp("rigid", "LowerArm.S")
-    for key, gi, ln, r1 in (("orteils", g_toe, 0.17, 0.06), ("orteil_ext", g_foot, 0.15, 0.055),
-                            ("doigt1", g_hand, 0.09, 0.03), ("doigt2", g_hand, 0.09, 0.03),
-                            ("doigt3", g_hand, 0.09, 0.03)):
+    for key, gi, ln, r1 in (("orteils", g_toe, 0.2, 0.08), ("orteil_ext", g_foot, 0.18, 0.075),
+                            ("doigt1", g_hand, 0.16, 0.055), ("doigt2", g_hand, 0.16, 0.055),
+                            ("doigt3", g_hand, 0.16, 0.055)):
         par = pos[[n for n in NODES if n[0] == key][0][3]]
         d = (pos[key] - par).normalized()
         tipp = pos[key] + d * 0.05
         q = d.to_track_quat("Z", "Y")
-        parts.append(xform(P("Griffe", "cone", ACCENT, gi, segments=5, r1=r1, r2=0.0, depth=ln),
+        parts.append(xform(P("Griffe", "cone", WHITE, gi, segments=5, r1=r1, r2=0.0, depth=ln),
                            Matrix.Translation(tipp + d * ln * 0.35) @ q.to_matrix().to_4x4()))
         mirror_inplace(parts[-1])
     base = pos["orteil_int"] + Vector((0, 0.02, 0.02))
@@ -550,7 +558,7 @@ LEG = ("UpperLeg", "LowerLeg", "Foot", "Toe")
 ARMB = ("UpperArm", "LowerArm")
 NT = 4  # os de queue (30 os au total : budget du runtime)
 TRUNK = ["Hips", "Spine1", "Spine2", "Neck1", "Neck2", "Head"] + ["Tail%d" % i for i in range(1, NT + 1)]
-GEAR_PARENT = {"Gear1": "Spine1", "Gear2": "Spine2", "Gear3": "Spine1"}
+GEAR_PARENT = {"Gear1": "Hips", "Gear2": "Tail1", "Gear3": "Tail1"}
 
 
 def bone_specs_skel():
@@ -565,12 +573,10 @@ def bone_specs_skel():
         ("Neck1", e, p["cou"], "Spine2", True, True),
         ("Neck2", p["cou"], p["cou2"], "Neck1", True, True),
         ("Head", p["cou2"], p["nez"], "Neck2", True, True),
-        ("Jaw", Vector((0, -1.55, 3.08)), Vector((0, -2.85, 3.02)), "Head", False, True),
+        ("Jaw", Vector((0, -1.47, 2.86)), Vector((0, -2.95, 2.80)), "Head", False, True),
         ("ClockMin", Vector((0, DIAL[1], DIAL[2])), Vector((0.4, DIAL[1], DIAL[2])), "Spine2", False, True),
         ("ClockHour", Vector((0, DIAL[1], DIAL[2])), Vector((0.3, DIAL[1], DIAL[2])), "Spine2", False, True),
     ]
-    for gname, (gy, gz), _r, _n in GEARS:
-        s.append((gname, Vector((0, gy, gz)), Vector((0.4, gy, gz)), GEAR_PARENT[gname], False, True))
     # Queue : NT os répartis à longueur égale le long de la polyligne des nœuds queue1..queue6
     poly = [h.lerp(p["queue1"], 0.5)] + [p["queue%d" % i] for i in range(1, 7)]
     acc = [0.0]
@@ -586,6 +592,8 @@ def bone_specs_skel():
     for i in range(NT):
         s.append(("Tail%d" % (i + 1), tail[i], tail[i + 1], "Hips" if i == 0 else "Tail%d" % i, i > 0, True))
     s.append(("Hourglass", tail[NT], tail[NT] + Vector((0, 0.5, 0)), "Tail%d" % NT, True, True))
+    for gname, (gy, gz), _r, _n in GEARS:  # après la queue : Gear2/Gear3 sont portés par Tail1
+        s.append((gname, Vector((0, gy, gz)), Vector((0.4, gy, gz)), GEAR_PARENT[gname], False, True))
     for side, sx in SIDES:
         def q(k):
             w = p[k].copy()
@@ -652,7 +660,7 @@ def rig_mesh(col, ob):
             if kind == "trunk":
                 # Mâchoire : sous le plan de la bouche (fondu dans la fine bande), devant la commissure
                 fy = max(0.0, min(1.0, (MOUTH_Y0 + 0.12 - s.y) / 0.3))
-                jw = fy * JAW[i] if s.z > 2.6 else 0.0  # dd_jaw : calculé avant la courbe du sourire
+                jw = fy * JAW[i] if s.z > 2.2 else 0.0  # dd_jaw : calculé avant la courbe du sourire
                 if jw > 0:
                     wd = {k: v * (1 - jw) for k, v in wd.items()}
                     wd["Jaw"] = wd.get("Jaw", 0.0) + jw
@@ -713,9 +721,9 @@ class Anims:
                 (R.Z, 16 * c + 9 * R.S2(t, 1, 0.25) * (1 - c)), (R.Y, -12 * c))
         rig.rot(P["Jaw"], (R.X, 3 * max(0.0, br) + 28 * st))
         self.tail(lambda i: ((R.Z, 5 * R.S2(t, 1, -0.08 * i)), (R.X, 2 * R.S2(t, 2, -0.1 * i) - 5 * st)))
-        for side, sx in SIDES:
-            rig.rot(P["UpperArm." + side], (R.X, -8 * R.S2(t, 2, 0.1) - 35 * st))
-            rig.rot(P["LowerArm." + side], (R.X, -10 * R.S2(t, 2, 0.2) - 20 * st))
+        for side, sx in SIDES:  # bras levés, griffes prêtes (pose « prête à bondir »), sursaut = bras en l'air
+            rig.rot(P["UpperArm." + side], (R.X, -45 - 8 * R.S2(t, 2, 0.1) - 35 * st), (R.Y, -sx * 20))
+            rig.rot(P["LowerArm." + side], (R.X, -15 - 10 * R.S2(t, 2, 0.2) - 20 * st))
         rig.rot(P["Toe.R"], (R.X, -28 * tap))
         gears(P, 2 * t)
         rig.rot(P["ClockMin"], (R.X, -360 * t))
@@ -889,6 +897,7 @@ CLIPS = [  # nom, images à 30 i/s (paires : export à 15 i/s), boucle
 
 
 def animate(arm, col, u, mesh_ob):
+    global DEATH_DROP
     A = Anims(arm, u)
     step, lift = 1.0 * u, 0.42 * u
     rstep, rlift = 1.8 * u, 0.6 * u
@@ -916,12 +925,19 @@ def animate(arm, col, u, mesh_ob):
     }
     acts, out = {}, {}
     for clip, length, loop in CLIPS:
+        if clip == "Death":  # descente réglée pour que le dino couché touche juste le sol (proportions variables)
+            DEATH_DROP = 0.0
+            act = R.make_action(arm, col, ID, clip, length, loop, A.death, None)
+            bpy.context.scene.frame_set(length)
+            dg = bpy.context.evaluated_depsgraph_get()
+            ev = mesh_ob.evaluated_get(dg)
+            DEATH_DROP = (min(v.co.z for v in ev.to_mesh().vertices) - 0.005) / u
+            ev.to_mesh_clear()
         act = R.make_action(arm, col, ID, clip, length, loop, getattr(A, clip.lower()), feet[clip])
         lo = R.min_z(mesh_ob, arm, act, step=1)
         for _ in range(6):  # Mort : on remonte la chute jusqu'à ce que rien ne passe sous le sol
             if clip != "Death" or lo > -0.02:
                 break
-            global DEATH_DROP
             DEATH_DROP -= (0.01 - lo) / u
             act = R.make_action(arm, col, ID, clip, length, loop, getattr(A, clip.lower()), feet[clip])
             lo = R.min_z(mesh_ob, arm, act, step=1)
@@ -950,6 +966,10 @@ def save_blend(sc):
 
 def main():
     args = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
+    # STYLE n°2 « plaques » + appui des pieds : ICI et pas au niveau du module, car theropod_helpers importe ce
+    # fichier (frame_from, split_sharp...) pour les autres théropodes, qui ne doivent pas être affectés.
+    import theropod_plaques as TP
+    TP.apply(dd, R, lambda fn: globals().__setitem__("split_sharp", fn), split_sharp)
     sc, col, rcol, ob, st = build_mesh()
     setup_cam(sc, rcol)
     out = {"mesh": st}

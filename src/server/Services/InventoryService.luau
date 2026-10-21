@@ -88,7 +88,8 @@ function InventoryService:AddDino(player: Player, dinoId: string, size: string, 
 		return instance
 	end)
 
-	local isNew = not data.Index.Found[dinoId]
+	local base = dinoById[dinoId]
+	local isNew = not data.Index.Found[dinoId] and not (base and base.exclusive)
 	if isNew then
 		DataService:Update(player, { "Index", "Found", dinoId }, function()
 			return true
@@ -168,7 +169,7 @@ local function onSellAllUnplaced(player: Player, maxRarityOrder: any)
 	local list: { string } = {}
 	for uuid, dino in data.Dinos do
 		local base = dinoById[dino.dinoId]
-		if base and Rarities[base.rarity].order <= maxRarityOrder then
+		if base and not base.exclusive and Rarities[base.rarity].order <= maxRarityOrder then -- un exclusif payé ne part jamais en lot
 			table.insert(list, uuid)
 		end
 	end

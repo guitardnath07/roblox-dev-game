@@ -12,6 +12,7 @@ local RunService = game:GetService("RunService")
 local Workspace = game:GetService("Workspace")
 
 local Config = ReplicatedStorage.Shared.Config
+local DinoMeshIds = require(Config.DinoMeshIds)
 local Dinos = require(Config.Dinos)
 local Mutations = require(Config.Mutations)
 local Rarities = require(Config.Rarities)
@@ -25,9 +26,10 @@ local MAX_DISTANCE = 150 -- au-delà, les dinos du monde ne sont plus animés
 local TICK = 1 / 30 -- mise à jour des os à 30 Hz max
 local FADE = 0.2 -- fondu enchaîné entre deux clips (s)
 local RAINBOW_STEPS = 12
+local FLAT_SHADING = true -- une normale par face : rendu à facettes « plaques de jouet » (style choisi le 21/10/2026)
 local EYE_WHITE = Color3.new(1, 1, 1)
 local PUPIL = Color3.fromHex("#1A1A1A")
-local MOUTH = Color3.fromHex("#6A1B2A") -- intérieur de bouche (slot 8)
+local MOUTH = Color3.fromHex("#9C2D4F") -- intérieur de bouche (slot 8), rose foncé du style chibi
 local TONGUE = Color3.fromHex("#F06292") -- langue (slot 9)
 
 type Clip = { loop: boolean, fps: number, frames: number, locals: { { CFrame } } } -- locals[image][os]
@@ -68,6 +70,7 @@ end
 local parsed: { [string]: Data | false } = {}
 -- shortcut: un EditableMesh par (dino, peau) gardé toute la session (≤ 28×6), à libérer si la mémoire mobile coince.
 local meshes: { [string]: EditableMesh } = {}
+local published: { [string]: MeshPart } = {} -- gabarit chargé depuis l'asset publié, cloné à chaque create()
 local rigs: { [Model]: Rig } = setmetatable({}, { __mode = "k" }) :: any
 local active: { [Model]: Player } = {}
 local connection: RBXScriptConnection? = nil
@@ -313,6 +316,18 @@ local function meshFor(dinoId: string, data: Data, skinId: string): EditableMesh
 			color = rainbowIds[math.clamp(math.floor(along * RAINBOW_STEPS), 0, RAINBOW_STEPS - 1) + 1]
 		end
 		mesh:SetFaceColors(face, { color, color, color })
+		if FLAT_SHADING then
+			-- Triangles anti-horaires vus de l'extérieur : (b - a) x (c - a) pointe vers l'extérieur.
+			local b, d = t[f * 3 - 1], t[f * 3]
+			local pa = Vector3.new(p[a * 3 - 2], p[a * 3 - 1], p[a * 3])
+			local n = (Vector3.new(p[b * 3 - 2], p[b * 3 - 1], p[b * 3]) - pa):Cross(
+				Vector3.new(p[d * 3 - 2], p[d * 3 - 1], p[d * 3]) - pa
+			)
+			if n.Magnitude > 1e-9 then
+				local normal = mesh:AddNormal(n.Unit)
+				mesh:SetFaceNormals(face, { normal, normal, normal })
+			end
+		end
 	end
 	meshes[key] = mesh
 	return mesh
@@ -332,8 +347,24 @@ function DinoModels.create(dinoId: string, size: string?, skin: string?): Model?
 		return nil
 	end
 	local ok, result = pcall(function(): Model
-		local mesh = meshFor(dinoId, data, skin or Mutations.defaultId)
-		local part = AssetService:CreateMeshPartAsync(Content.fromObject(mesh))
+		local skinId = skin or Mutations.defaultId
+		local assetId = DinoMeshIds[dinoId]
+		local part: MeshPart
+		local okMesh, editable = false, nil
+		if not assetId or skinId ~= Mutations.defaultId then
+			okMesh, editable = pcall(meshFor, dinoId, data, skinId)
+		end
+		if okMesh then
+			part = AssetService:CreateMeshPartAsync(Content.fromObject(editable))
+		elseif assetId then
+			-- Asset publié (peau Normale) : pas d'EditableMesh, donc pas de limite de budget.
+			if not published[dinoId] then
+				published[dinoId] = AssetService:CreateMeshPartAsync(Content.fromUri(`rbxassetid://{assetId}`))
+			end
+			part = published[dinoId]:Clone()
+		else
+			error(editable)
+		end
 		part.Name = "Body"
 		part.Anchored = true
 		part.CanCollide = false

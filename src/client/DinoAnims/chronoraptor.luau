@@ -26,179 +26,179 @@ return {
 			frames = 40,
 			bones = {
 				Hips = [[
-					gAj/gxACgAgAg9gAj/gxACgAgIg9gAkAgxACgAgRg9gAkBgxACgBgYg9gAkBgxACgBgfg9gAkBgxACgBgmg9gAkBgxACgBgrg9gAkBgxACgBgwg9gAkAgxAD
-					gCgzg9gAj/gxADgCg1g9gAj/gxADgCg2g9gAj+gxADgCg1g9gAj9gxADgCgzg9gAj9gxACgBgwg9gAj8gxACgBgrg9gAj8gxACgBgmg9gAj8gxACgBgfg9gA
-					j9gxACgBgYg9gAj9gxACgAgRg9gAj+gxACgAgIg9gAj/gxACgAgAg9gAj/gxACgAf4g9gAkAgxACgAfvg9gAkBgxACf/fog9gAkBgxACf/fhg9gAkBgxACf/
-					fag9gAkBgxACf/fVg9gAkBgxACf/fQg9gAkAgxADf+fNg9gAj/gxADf+fLg9gAj/gxADf+fKg9gAj+gxADf+fLg9gAj9gxADf+fNg9gAj9gxACf/fQg9gAkA
-					gxADf/fVhUgAkLgxAHgAfaiVgAkFgxAEgAfhhxgAkCgxADgAfohcgAkBgxADgAfvhTgAj/gxACgAf4hE]],
+					gAjVguAEgAgAh2gAjWguAEgAgIh2gAjWguAEgBgRh2gAjXguAFgBgYh2gAjXguAFgCgfh2gAjXguAFgCgmh2gAjXguAFgDgrh2gAjXguAFgDgwh2gAjWguAF
+					gDgzh2gAjWguAFgDg1h2gAjVguAFgDg1h2gAjUguAFgDg1h2gAjTguAFgDgzh2gAjTguAFgDgwh2gAjTguAFgDgrh2gAjSguAFgCgmh2gAjTguAFgCgfh2gA
+					jTguAFgBgYh2gAjTguAEgBgRh2gAjUguAEgAgIh2gAjVguAEgAgAh2gAjWguAEgAf4h2gAjWguAEf/fvh2gAjXguAFf/foh2gAjXguAFf+fhh2gAjXguAFf+
+					fah2gAjXguAFf9fVh2gAjXguAFf9fQh2gAjWguAFf9fNh2gAjWguAFf9fLh2gAjVguAFf9fLh2gAjUguAFf9fLh2gAjTguAFf9fNh2gAjTguAFf9fQh2gAjW
+					guAGf+fViNgAjhguAMf/fajOgAjbguAIf/fhiqgAjYguAHf/foiVgAjXguAGf/fviMgAjVguAFgAf4h9]],
 				Spine1 = [[
-					gAkBgSAPgAgAjugAkBgSAQgBgIj2f/kCgSARgCgQj9f/kDgSASgDgYkDf/kDgSASgEgfkHf/kDgSASgFgmkIf/kDgSASgGgrkHf/kDgSASgGgvkDf+kCgSAS
-					gHg7j9f+kBgSASgKhYj2f+kBgSASgOh0jtf+kAgSASgPh7jlf+j/gSARgOh5jef/j/gSAQgOh2jYf/j+gSAPgOhyjUf/j+gSAPgNhsjTf/j+gSAPgMhmjUf/
-					j/gSAPgMhejYf/j/gSAOgIhBjegAkAgSAOgDgYjmgAkBgSAPgAgAjugAkBgSAQf/f4j2gBkCgSARf+fwj9gBkDgSASf9fokDgBkDgSASf8fhkHgBkDgSASf7
-					fakIgBkDgSASf6fVkHgBkDgSASf6fRkDgCkCgSARf6fNj9gCkBgSARf6fLj2gCkBgSAQf6fLjugCkAgSAPf6fLjlgCj/gSAOf6fNjegBj/gSANf7fRjYgBkD
-					gSAPf8fVjrgBkQgSAXf+fakqgBkIgSASf+fhkHgBkFgSAQf+foj3gBkDgSAQf+fwj0gAkBgSAPf/f4js]],
+					gAjYgTAjgAgAl0gAjZgTAlgCgIl8gAjagTAmgDgQmDf/jagTAngFgYmJf/jagTAogGgfmNf/jbgTAogHglmOf/jagTAogIgrmNf/jagTAogJgvmJf/jagTAn
+					gLg6mDf/jZgTAmgQhXl8f/jYgTAmgVhzlzf/jXgTAlgXh6lrf/jXgTAkgWh4lkf/jWgTAjgWh1lef/jWgTAigVhxlaf/jWgTAhgUhrlZf/jWgTAhgThllaf/
+					jWgTAhgShdlegAjXgTAhgMhBlkgAjXgTAigEgYlsgAjYgTAjgAgAl0gAjZgTAlf+f4l8gAjagTAmf9fwmDgBjagTAnf7fomJgBjagTAof6fhmNgBjbgTAof5
+					fbmOgBjagTAof4fVmNgBjagTAof3fRmJgBjagTAnf2fOmDgBjZgTAlf2fMl8gBjYgTAkf2fLl0gBjXgTAif3fMlsgBjXgTAhf3fOlkgBjWgTAgf4fRlfgBja
+					gUAjf5fVlxgBjngUAvf7famwgBjggUAof7fhmNgBjcgUAlf8fol9gAjbgUAkf9fwl6gAjZgTAjf/f4lz]],
 				Spine2 = [[
-					gAkPfUAqgAgAmZf/kQfUAugCgImpf+kSfVAxgEgQm4f+kSfVA0gFgYnDf9kTfVA1gHgfnLf9kTfVA2gJglnNf8kTfVA2gKgqnLf8kSfVA0gLgvnDf7kSfVAy
-					gOhCm4f5kQfVAxgZh6mof3kPfVAygkiwmXf3kOfVAwgnjAmHf3kNfVAtgni+l4f3kMfUArgni6ltf4kLfUApgmi2llf4kLfUAoglixljf5kLfUAogkiqlmf6
-					kMfUApgiiiltf8kNfUAngYhxl5f+kOfUAngIgnmJgAkPfUAqgAgAmZgBkQfUAuf+f4mpgCkSfVAxf8fwm4gCkSfVA0f7fonDgDkTfVA1f5fhnLgDkTfVA2f3
-					fbnNgEkTfVA2f2fWnLgEkSfVA0f1fRnDgFkSfVAxf1fOm4gFkQfVAuf1fMmpgFkPfUArf1fLmZgFkOfUAof2fMmJgFkNfUAlf3fOl6gEkMfUAjf3fRlugEkR
-					fUAlf5fVl9gDkifWAyf7fam6gDkZfVArf7fhmZgCkUfVAof8fomNgCkSfUAof9fwmPgBkQfUAof+f4mQ]],
+					gAjsfhBcgAgApdf/jtfhBhgDgIptf/jufhBmgFgQp7f+jvfhBqgIgXqGf+jvfhBsgKgeqNf9jvfhBtgMgkqQf9jvfhBtgOgpqNf8jvfhBqgPgtqGf8jufhBn
+					gVhAp7f6jtfhBlglh3psf5jsfhBkg1ispbf4jqfhBhg6i7pKf5jpfhBcg6i5o8f5jofhBZg5i2oxf5jofhBWg4ixoqf6jofgBVg2isonf6jofgBVg0imoqf7
+					jofgBWgyieoxf8jpfgBWgjhuo+f/jqfhBYgMgmpNgAjsfhBcgAgApdgBjtfhBhf9f4ptgBjufhBmf7fwp7gCjvfhBqf4fpqGgCjvfhBsf2fiqNgDjvfhBtf0
+					fcqQgDjvfhBtfyfXqNgEjvfhBqfxfTqGgEjufhBnfwfQp7gEjtfhBifwfOptgEjsfhBdfwfNpdgEjqfhBYfxfNpNgEjpfgBUfyfPo/gEjofgBRfzfSozgDjt
+					fhBVf1fWpBgDj9fiBnf3fbp+gCj0fhBdf4fhpdgCjwfhBZf6fppRgBjvfhBaf8fwpUgBjsfhBaf+f4pU]],
 				Neck1 = [[
-					gAkce3EOgAgAv3f/kee3ERgEgHv7f+kfe3ETgIgOwAf9kge3EVgMgVwDf8khe4EXgQgbwFf7khe4EXgTghwGf7khe4EXgWglwFf6kge4EWgYgpwDf5kfe3EH
-					grhNvlf1kee3Dghni6uIfykce3DDijkjskfxkae3C7i3lBsAfxkYe3C5i3k/r8fykXe3C3i3k7r5fykWe3C1i2k3r3fzkWe2C0i1kyr3f0kWe2C0iyksr4f1
-					kXe2C0itkjr9f4kYe2DHh4jNtNf9kae2DygohFvAgAkce3EOgAgAv3gBkee3ERf8f5v7gCkfe3ETf4fywAgDkge3EVf0frwDgEkhe4EXfwflwFgFkhe4EXft
-					ffwGgFkhe4EXfqfbwFgGkge4EWfofXwDgGkfe3EUfnfUv/gGkee3ERfmfSv7gGkce3EPflfRv2gGkae2EMfmfSvxgGkYe2EJfnfUvtgGkXe2EHfpfWvqgFkd
-					e2EjfrfawagFkwe4GAftffyogEkle3FLfwflxagDkge3Ewf0frwvgCkfe3Elf4fywegBkce2EUf8f5wB]],
+					gAj8fJE9gAgAxFf/j9fJFAgEgHxKf+j/fKFDgJgOxOf+kAfKFFgNgUxRf9kBfKFGgRgaxTf8kBfKFHgVggxUf8kBfKFHgXgkxTf7kAfKFFgagoxRf6j/fKE1
+					gvhLw0f3j9fKEKhvi2vYf1j8fKDpiwkct1f0j6fJDfjFk5tTf0j5fJDdjGk2tOf0j4fJDbjFkztLf1j3fIDZjEkutJf1j3fIDYjCkptJf2j3fIDXi/kktLf3
+					j4fIDYi6kbtQf6j5fIDuiBjHuef+j6fIEfgrhDwQgAj8fJE9gAgAxFgBj9fJFAf8f5xKgCj/fKFDf3fyxOgCkAfKFFfzfsxRgDkBfKFGfvfmxTgEkBfKFHfr
+					fgxUgEkBfKFHfpfcxTgFkAfKFFfmfYxRgFj/fKFDflfVxNgFj9fJFBfkfTxJgFj8fJE+fjfTxEgFj6fJE7fkfTxAgFj5fIE4flfVw8gFj4fIE2fnfXw4gEj9
+					fJFUfpfbxngEkOfLG3frfgzxgDkFfKF+fvflylgCkAfJFhfzfrx8gCj/fJFWf3fyxrgBj8fJFEf8f5xP]],
 				Neck2 = [[
-					gAlTeWIUg5g/1cf/lVeWIYhBhI1gf9lXeXIbhHhP1jf8lZeXIehLhU1mf7lZeYIghOhX1of6laeYIhhPhX1of5lZeYIghNhW1of5lZeXIehKhS1mf2lWeWH/
-					hlhx0/fulReRGqjKjiy7fmlLeNFokzlVwnfjlIeMFWlUl2v0fjlGeLFTlVlzvwfklFeLFRlUlwvtfllEeLFPlTlrvsfmlEeKFNlQlnvsfnlEeKFNlNlhvufo
-					lFeKFOlFlZv1fwlJeNF2jTjmxwf6lQeSHWgggm0XgAlTeWIUfHfB1cgBlVeWIYe/e41ggDlXeXIbe5ex1jgElZeXIee1es1mgFlZeYIgeyep1ogGlaeYIhex
-					ep1ogHlZeYIgezeq1ogHlZeXIee2eu1mgIlXeXIbe7ez1kgIlVeWIYfBe71ggIlTeWITfKfE1cgIlSeVIPfTfO1ZgIlQeVIMfefa1VgHlOeUIJfqfn1TgHlW
-					eYIuf1f118gGltekKnf+gF3ygFlgedJjgMgS2ygElaeZJAgYge2OgDlYeYIygkgq1/gBlUeWIcgvg11m]],
+					gAkwewHMg2hC0Jf/kyewHQg9hL0Nf+k0exHThChS0Qf9k1eyHWhHhY0Tf8k2eyHYhJhb0Vf7k2eyHYhKhb0Vf7k2eyHYhJha0Vf6k1eyHWhGhW0Tf4kzewG5
+					hfh2zqfxkverFri+jtxifrkqenExkgllvLfpknemEilAmIuXfpkmelEflAmFuTfpkkelEdlAmBuQfqkkekEbk/l9uOfrkjekEak9l4uOfskkekEZk5lzuQft
+					kkekEakylquXfzkoenE7jGjxwUf8ktesGSgegozAgAkwewHMfKe+0JgBkyewHQfDe10NgCk0exHTe+eu0QgDk1eyHWe5eo0TgEk2eyHYe3el0VgFk2eyHYe2
+					el0VgFk2eyHYe3em0VgGk1eyHWe6eq0TgGk0exHTe/ew0QgHkyexHQfFe30NgHkwewHMfNfB0JgHkvevHIfWfM0FgGktevHEfgfY0BgGkseuHCfrflz+gFkz
+					eyHlf2f00pgElHe9JXf+gF2mgEk8e3IWgLgS1igDk2ezH1gXgf08gCk0eyHogigs0sgBkxewHTgsg40T]],
 				Head = [[
-					gAmGeRAQgNj1gpf+mIeRASgMj+g2f9mKeSATgLkChGf8mLeTATgKj/hZf7mMeTATgKj2hsf6mMeUASgJjmh+f5mMeUARgJjSiMf4mLeTAPgIi3iWf1mJePAP
-					gljjhHfrmCeDA/iBmycrffl5d5C2jbpzX9fcl1d1Dsj3qoWWfclzd1Dvj4qkWGfdlyd0D0j5qeV1felxdzD3j5qXVkfflwdzD6j4qPVUfglxdzD8j4qHVIfi
-					lydzD3j1p5VHfsl5d7BoigmXYtf6mCeJAFgjfveLgAmGeRAQfzcLgpgCmIeRASf0cCg2gDmKeSATf1b+hGgEmLeTATf2cBhZgFmMeTATf2cKhsgGmMeUASf3
-					cah+gHmMeUARf3cuiMgImLeTAPf4dJiWgImKeTAMf4dniZgImIeSAKf5eKiXgJmGeRAIf6eviPgImEeQAGf8fWiCgImCePAEf/f/hxgImBeOAEgCgnhegHmJ
-					eVAMf+hPjDgFmfepBJfohzoNgFmTedAgf2iXk/gDmNeYATf/i2jJgCmLeVARgEjQiTgBmHeSAPgKjlhG]],
+					f/lgemAQgPj1g3f+lienASgOj+hEf9ljeoATgNkChUf8lleoAUgMj/hnf7llepAUgLj2h6f6lmepATgLjmiMf6llepASgKjRiaf5lleoAQgKi3ijf2liekAQ
+					gmjjhVftlceZA+iEmxc5fjlUePCyjgpyYKfflQeMDnj8qmWifglOeLDrj9qiWTfglNeLDvj9qcWCfhlMeKDzj9qVVwfilLeKD2j9qOVhfjlMeKD3j8qGVUfk
+					lNeKDyj5p3VUfulTeRBkijmWY7f7lceeAEgjfveZgBlgemAQfxcLg3gClienASfycChEgDljeoATfzb+hUgElleoAUf0cBhngFllepAUf1cKh6gGlmepATf1
+					caiMgGllepASf2cviagHlleoAQf2dJijgHljeoAOf3dningHlienALf4eKilgHlgemAJf6evidgHleelAGf8fWiQgHldekAFf/f/h/gGlbejAEgCgnhsgFlj
+					epANf+hPjRgEl4e9BNfphzobgElseyAif3iXlMgDlmesAUgBi2jWgBlkeqASgFjQiggAlhenAQgMjlhU]],
 				Jaw = [[
-					fzl+dc/ugEcLhifxmBdd/tgHcBhlfvmEde/sgKb+hjfumGde/tgMcBhcfumIdf/vgNcKhRfumJde/xgNcahCfumKde/0gLcvgxfvmJdd/2gIdJggfpmDda/w
-					fucbhjfTlvdV+regZGlre+lcdZ8jdQV/qBe4lVdb7mc4VJrke5lSdb7hc3VNrze6lQdb7cc2VTsEe7lOdb7Xc1VZsVe8lOdb7Tc1Vhske+lNdb7Qc1VpsxfA
-					lOdb7Wc3V4sxfVladT90d8ZfpWf6lydU/vfbgOkAgNl+dc/uf8j1higPmBdd/tf5j/hlgRmEde/sf2kChjgSmGde/tf0j/hcgSmIdf/vfzj2hRgSmJde/xfz
-					jmhCgSmKde/0f1jRgxgRmJdd/2f4i3gggQmIdc/5f7iZgRgPmGdb/8f+h3gFgNmEda/9gAhRf8gLmBdZ//gBgqgJgIl+dZ//gBgBgagFl8dY/+gBfZgtgCmJ
-					de/8gMeyhFf/mxd2/5g5eZhjf8mado/3gpdvhqf6mNdi/0gcdMhvf3mIdg/xgXcxhwf1mBdd/vgKcbhr]],
+					fvlddl/ugDcLhcfulfdm/tgHcBhffslidn/tgKb+hdfslldo/tgMcBhWfrlndo/vgNcKhLfrlodo/xgMcag8fslpdo/0gKcvgrftlodn/3gHdJgbfolhdk/w
+					fucbhdfRlKdg+sefZGlme6k1dl8ldOWAp8e0ktdo7oc2VKrfe0kqdo7jc1VOrue1kodo7ec0VTr/e2kmdo7ZczVasQe3kldo7VczVisfe5kldo7TczVqsse7
+					kmdo7Yc1V4stfSkzde92d7ZfpRf8lOdd/vfcgOj6gRlddl/uf9j1hcgSlfdm/tf5j/hfgUlidn/tf2kChdgUlldo/tf0j/hWgVlndo/vfzj2hLgVlodo/xf0
+					jmg8gUlpdo/0f2jRgrgTlodn/3f5i3gbgRlndm/5f8iZgLgPlmdl/8f+h3f/gNljdk/9gAhRf3gKlhdj//gBgqgEgHledi//gBgBgUgElcdh/+gBfZgngAlp
+					do/9gMeyg/f9mTeB/5g5eZhef6l7dy/3goduhkf3ltdr/0gcdMhpf0lodp/ygWcxhrfylfdm/wgJcbhl]],
 				ClockMin = [[
-					gAj7f4gAJZgA2ngAj8f4h9JkeC2of/j8f4j2J6cG2df/j9f4lrKZaM2Jf+j9f4naLAYX1qf+j9f4pCLuWo1Df+j9f4qiMiVB0Uf9j9f4r8NbTgzef9j8f4tI
-					OhR/ysf9j8f4t6QAQUyGf+j7f4uiReOrxVf+j6f4vXSpNXwKf+j6f5wSTvMRuxf+j5f5xKU7LRtRf+j5f5x+WNKXrqf/j5f5yvXmJlp7f/j5f5zbZGI7oFf/
-					j5f50BasIbmJgAj6f50/cUIgkEgAj6f52FeFJCh/gAj7f42ngAJZgAgAj8f42oh+JkeDgBj8f42dj6J6cKgBj9f42Jl0KZaVgCj9f41qnpLAYmgCj9f41DpY
-					LuW+gCj9f40Uq/MiVegDj9f4zesgNbUEgDj8f4yit6OXSxgDj8f4xhvNPYRkgDj7f4wawaQcQcgDj6f5vNxhRkPYgDj6f5t6yiSxOXgDj5f5sgzeUENbgCj+
-					f5qy0bVsMbgCkMf5of1aX5LWgCkEf5nH11ZJK0gBkAf5lf2OaqKTgBj+f5jr2gcZJ3gAj8f5h52oeIJj]],
+					gAj+f2gAJZgA2ngAj/f2h9JkeC2of/kAf3j2J6cG2df/kBf3lrKZaM2Jf+kBf3naLAYX1qf+kBf3pCLuWo1Df+kBf3qiMiVB0Uf9kBf3r8NbTgzef9kAf3tI
+					OhR/ysf9j/f2t6QAQUyGf9j+f2uiReOrxVf8j9f2vXSpNXwKf9j9f1wSTvMRuxf9j8f1xKU7LRtRf9j8f1x+WNKXrqf9j8f0yvXmJlp7f+j8f1zbZGI7oFf+
+					j8f10BasIbmJf/j9f10/cUIgkEf/j9f22FeFJCh/gAj+f22ngAJZgAgAj/f22oh+JkeDgBkAf32dj6J6cKgBkBf32Jl0KZaVgCkBf31qnpLAYmgCkBf31DpY
+					LuW+gCkBf30Uq/MiVegDkBf3zesgNbUEgDkAf3yit6OXSxgDj/f3xhvNPYRkgDj+f2wawaQcQcgDj9f2vNxhRkPYgDj9f1t6yiSxOXgDj8f1sgzeUENbgCkB
+					f2qy0bVsMbgCkPf4of1aX5LWgCkHf3nH11ZJK0gBkDf2lf2OaqKTgBkCf2jr2gcZJ3gAj/f2h52oeIJj]],
 				ClockHour = [[
-					gAj7f4gAJZgA2ngAj8f4gMJff02tf/j8f4gWJkfq2zf/j9f4geJqfh24f+j9f4gjJvfb29f+j9f4glJ0fZ3Bf+j9f4gjJ4fb3Ff9j9f4geJ7fh3If9j8f4gW
-					KJfp3Wf9j8f4gMKzf039f+j7f4gALdgA4hf+j6f4f0LpgM4rf+j6f5fqLogW4qf+j5f5fhLmge4nf+j5f5fbLigk4lf/j5f5faLegl4hf/j5f5fbLZgj4df/
-					j5f5fhLTge4YgAj6f5fpKtgW33gAj6f5f0J1gM3EgAj7f4gAJZgA2ngAj8f4gMJTf02hgBj8f4gWJNfq2cgBj9f4gfJIfi2WgCj9f4glJDfd2RgCj9f4gnI/
-					fb2MgCj9f4glI7fd2IgDj9f4gfI4fi2FgDj8f4gXI1fq2DgDj8f4gMI0f12BgDj7f4gAIzgA2BgDj6f5f0I0gL2BgDj6f5fpI1gW2DgDj5f5fhI4ge2FgCj+
-					f5frI6gT2IgCkMf5gWI+fm2MgCkEf5f/JCf/2RgBkAf5f3JHgI2WgBj+f5f5JNgH2cgAj8f5f5JTgH2h]],
-				Gear2 = [[
-					gAl0e5gAJZgA2nf/l2e7goJffY2tf+l4e8hOJmew2xf9l5e+hyJueL20f8l6e/iTJ3do22f8l6e/iwJ/dJ23f7l6e/jJKGcu23f7l5e+jfKMcW22f5l4e9jw
-					KecA3Af2l2e7j6LKbn3jfzl0e6kBL2bO4Dfylze4kMMFa54Jfylxe3kbMHal4Dfylwe1ksMIaQ38fylve1lAMKZ33zfzlve0lZMMZc3of0lve0l1MPY+3bf1
-					lwe1mVMSYd3Lf4lxe2nDL5YE2gf9lze3n6LTXx1igAl0e5oqLHXW05gBl2e7pRLRW00kgCl4e8p3LcWT0OgDl5e+qbLoV1z5gEl6e/q8L0VazlgEl6e/rZL/
-					VCzTgFl6e/ryMJUtzCgFl5e+sIMTUcy0gGl4e9saMcUMyogGl2e7sqMkT+ydgGl0e5s5MtTxyUgGlze3tHM3TjyLgGlxe2tVNDTUyCgGlwe1tlNRTDx5gFl2
-					e2uCNqSixkgFmIe+u4ObRnw5gEl+e6u6OiRhw7gDl5e4vGOzRQwygCl3e4vZPMQ2wjgBl1e4vqPkQewU]],
+					gAj+f2gAJZgA2ngAj/f2gMJff02tf/kAf3gWJkfq2zf/kBf3geJqfh24f+kBf3gjJvfb29f+kBf3glJ0fZ3Bf+kBf3gjJ4fb3Ff9kBf3geJ7fh3If9kAf3gW
+					KJfp3Wf9j/f2gMKzf039f9j+f2gALdgA4hf8j9f2f0LpgM4rf9j9f1fqLogW4qf9j8f1fhLmge4nf9j8f1fbLigk4lf9j8f0faLegl4hf+j8f1fbLZgj4df+
+					j8f1fhLTge4Yf/j9f1fpKtgW33f/j9f2f0J1gM3EgAj+f2gAJZgA2ngAj/f2gMJTf02hgBkAf3gWJNfq2cgBkBf3gfJIfi2WgCkBf3glJDfd2RgCkBf3gnI/
+					fb2MgCkBf3glI7fd2IgDkBf3gfI4fi2FgDkAf3gXI1fq2DgDj/f3gMI0f12BgDj+f2gAIzgA2BgDj9f2f0I0gL2BgDj9f1fpI1gW2DgDj8f1fhI4ge2FgCkB
+					f2frI6gT2IgCkPf4gWI+fm2MgCkHf3f/JCf/2RgBkDf2f3JHgI2WgBkCf2f5JNgH2cgAj/f2f5JTgH2h]],
 				["UpperArm.L"] = [[
-					fNkFeg2FTtfgzmfMkHeg2iTzfHzIfLkJeh22T5e0yyfKkLeh3BT+enyofJkMeh3BUCeiyqfIkMei22UFeky5fHkMei2iUIeuzTfHkLei2GULe9z2fFkJej1j
-					UYfG0kfAkHen09U/e61fe8kFeq0XVoeu2We7kDerz3V2e425e7kBerzgV3fI3Oe8kAerzTV1fR3Ye8j/eqzSVyfU3Xe9j+eqzeVsfP3Le+j/eqz1VlfE20e/
-					kAep0UVce12UfDkBem06U3e/1efKkDei1hUGfa0cfNkFeg2FTtfgzmfPkHef2iTpfTzCfQkJef23TlfLylfRkLef3DTifKyVfSkMee3DTefPySfTkMee25TZ
-					faycfUkMee2lTVfryyfUkLed2ITQf/zRfVkJed1kTNgWz2fVkHed0+TKgt0dfVkFed0YTKhC1BfVkDedz3TKhU1gfVkBeezfTMhf12fUj/eezSTPhk2DfUkF
-					ee1KTQgf0UfTkaef53T0dSuGfSkPef31ThetxRfRkJef2zTgfTyofQkIef2oTkfVy4fPkFef2FTofmzk]],
+					fGjue14CRAVSqTfFjwe14ORTU1pzfEjye24VRiUfpbfDjze34YRrUQpQfDj0e34VRtUKpTfCj0e44ORpUOpkfBj0e44CRfUZqAfBjze43yRRUsqne/jye53a
+					RHU5rae8jwe92zRMUushe4jufA2MRUUjtle3jsfB10RPUxuPe4jrfA1oRGVFuoe4jpfA1hQ/VRu0e4jpfA1iQ9VUuye5joe/1qQ+VOuie6jpe/15RCVAuHe7
+					jpe+2NRKUttge+jre72zRFU1sffDjse33hQ8VPrQfGjue14CRAVSqTfHjwe14UROVCprfIjye04hRYU4pMfJjze04pRdU1o7fKj0e04sRbU7o3fLj0ez4pRT
+					VIpBfMj0ez4gRFVbpZfMjzez4SQzV0p6fMjyey4AQeWRqifNjwey3rQKWurMfNjuey3WP3XKr0fNjsey3CPpXhsXfMjqey2zPfXxswfMjpey2qPbX4s/fMjv
+					ey3vQTWdrCfLkBe057TlSvkkfKj3e05DR8UTnyfJjye04hRTVBpOfIjxe04ZRPVEpgfHjue04EQ9VYqQ]],
 				["LowerArm.L"] = [[
-					exjWeSub8VjigUewjZeQuc8OkRfzevjbePud8KkkfgeujdePuf8LkbfcesjeePuf8Qj1fnerjeeRue8Yi3f/erjdeTub8ghlgjeqjbeVuU8lgHhNeojZeauJ
-					8meghqekjXeht38mcwhjegjUeptj8kbRhWefjSestW8faYhgegjQeutS8baChuegjPevtV8baJhuehjOeutf8eashgehjNettt8jbphHeijOert+8nc7gmei
-					jPeouO8neZgAenjRehua8kgOf+etjTeYud8diHgVexjWeSub8VjigUezjZePua8OkYgBe0jbeNuZ8Kkzf9e1jdeLuY8LkxgGe3jeeLuX8QkSgee4jeeLuX8X
-					jZhDe4jdeMuW8diMhwe5jbeOuT8fgyiie5jZeQuN8dfVjUe6jXeTuH8Wd+kBe6jUeWuA8Oc1kle5jSeYt68GcDk9e5jQeat28DbqlHe4jOebt38EbvlBe4jV
-					eTuR8ff+i3e4j1d9tx6Rricze3jjeHuS7xm3fJe1jbeNuY8Kk4gDe0jZeOuZ8Lkvf/ezjWeRua8Vjnga]],
+					ecjleXZ9G3NMgYebjoeYZ4HZMhgmeZjreYZ0HpMPg0eYjteZZxHlMVhCeXjueaZwHNM0hNeWjuebZxGlNqhXeWjsecZzFzOzheeVjqecZ2E9QJhieTjnefZy
+					ELRohyeOjkelZgDjTKiieKjgesZRDHUejPeJjdeuZOC0VWjYeJjbeuZOCqVujPeJjZeuZLCsVnjEeKjYetZGC5VDi4eLjYesY/DSUFiseLjaerY4D3S1iheM
+					jceqYyElRaiWeRjeekZDFWP2hreYjiebZnGIOVgxecjleXZ9G3NMgYedjoeWaCHZMegZeejreVaIHpMIgbegjteUaPHkMMgcehjueUaWHMMogceijueTadGj
+					NcgbeijseTaiFxOjgXejjqeTamE7P4gSekjneTaoEHRSgLekjkeTaoDcSpgDekjgeUanC8Tyf8ekjdeUalCnUmf1ejjaeVajCeU/fvejjZeVagChU6fqeijj
+					eUacEgQpf9eikGeUacNFG2hCehj0eTaSJGKcgfegjreUaMHqMGgSeejpeVaGHmMMgTedjleWaCG3NJgR]],
 				["UpperArm.R"] = [[
-					gzkFeg2FsTggzmgxkHef2isXgtzCgwkJef23sbg1ylgvkLef3Dseg2yVgukMee3DsigxySgtkMee25sngmycgskMee2lsrgVyygskLed2IswgBzRgqkJed1k
-					s+ffzvglkHea07tjekz/ggkFeY0RuIdt0MgfkDeYzvuTdT0jgfkBeYzWuRdI05gfj/eYzJuPdD1Gggj+eYzJuMdF1Jghj+eYzXuHdN1Agij+eYzwuDdd0ugj
-					j/eZ0St8dy0UgokBeb06tcen0GgvkDee1issfvz9gzkFeg2FsTggzmg0kHeg2isNg5zIg1kJeh22sHhMyyg2kLeh3BsChZyog3kMeh3Br+heyqg4kMei22r7
-					hcy5g5kMei2ir4hSzTg5kLei2Gr1hDz2g6kJei1krzgu0dg6kHej0+rxgY1Fg6kFej0arvgC1qg6kDejz6rufu2Ig6kBejzirtff2dg5j/eizVrvfV2ng5kF
-					ei1Lr3gZ01g4kZej5yrljouig3kOei3zr6iAxpg2kJeh2ysChOy6g1kIeh2nsIhCzFg0kFeg2EsOgmzq]],
+					g6jue14CvAquqTg5jwe14Uuyq+prg4jye04huorIpMg3jze04pujrLo7g2j0e04sulrFo3g1j0ez4putq4pBg0j0ez4gu7qlpZg0jzez4SvNqMp6gyjyey4F
+					vopjqagujwev3/wPodqogqjues32w1nZqzgpjser3lxLm2rMgpjqer3WxVmnrmgpjper3NxZmgr1gqjoer3MxXmir4grjoer3TxPmvrvgrjoer3hxCnDrbgs
+					jpes3zwvngq+gxjqeu38wLohqwg2jsey38vfp1qqg6jue14CvAquqTg7jwe14OutrLpzg8jye24Vuerhpbg9jze34YuVrwpQg9j0e34VuTr2pTg+j0e44OuX
+					rypkg/j0e44CuhrnqAg/jze43yuvrUqnhAjye43fu/q7rShAjwe43LvQqfr/hAjue422vgqEsphAjse42kvtprtMhAjqe32Xv3pXtkg/jpe32Qv9pLtwg/jv
+					e33VvNqirtg+kBe55dsKuNlEg9j3e34ttysdoPg9jye24Ruerkplg8jxe24OunrVpvg7jue13/u9q0qY]],
 				["LowerArm.R"] = [[
-					hPjWeSubDrcegUhNjZePuaDybogBhMjbeNuZD2bNf9hLjdeLuYD1bPgGhJjeeLuXDwbugehIjeeLuXDpcnhDhIjdeMuWDjd0hwhHjbeOuTDhfOiihFjZePuO
-					DlgkjjhAjXeOuLD0hjlAg6jUeNuKEIiTmUg5jSePuIETi/m6g6jQeQuFEXjXnDg6jOeSuEEVjSm+g7jNeSuEENiymqg8jNeRuHEBh4mJg8jNeQuJD2grlcg9
-					jOeOuLDtfTkohDjQePuPDmeLjLhKjTeRuWDldVhchPjWeSubDrcegUhQjZeQucDybvfzhRjbePudD2bcfghSjdePufD1blfchUjeePufDwcLfnhVjeeRueDo
-					dJf/hVjdeTubDgebgjhWjbeVuUDbf5hNhWjZeYuKDbhYh5hWjXebt/DfixijhWjUeet0Dlj5jGhWjSegtrDskrjghWjQeitnDvlBjthVjOejtpDvk6jthVjV
-					eauODagphqhVj1eDuHF1VAbyhUjjeMudEQZleShSjbeQueD2befYhRjZeRudD1bgfhhQjWeSucDrcggM]],
-				Gear1 = [[
-					gAlkgYgAJZgA2ngAllgZfvJfgR2tgAllgafeJlgj2zf/lmgafMJrg124f/lmgbe4JxhK28f/lmgbejJ3hg2/f/lmgbeMJ8h53Bf/lmgad0KCiT3Cf/llgadb
-					KNiv3Gf/llgZdDKmjP3Xf/lkgYcrK+jv3lf/ljgXcRLIkN3lf/ljgXb2LMkq3ef/ligWbdLPlF3Wf/ligWbFLRle3Of/ligVauLSl23EgAligWaZLTmL26gA
-					ligWaFLSme2vgAljgXZvLDmr2XgAljgXZWKrm012gAlkgYZBKfm/1hgAllgZYvKfnN1WgAllgaYcKfnc1LgBlmgaYJKhnr0/gBlmgbX0Kjn80zgBlmgbXeKn
-					oO0ngBlmgbXGKtoi0bgBlmgaWtK0o40OgBllgaWTK9pP0BgBllgZV4LIpnz0gBlkgYVeLVqAzngBljgXVELjqZzbgBljgXUsLyqxzPgBligWUVMCrJzEgBlm
-					gYUNMKrSzCgBlzgeUiMCrAzSgBlsgbT7Merry9gBlogZThM1sLyvgAlngZTPNHsjymgAllgYS8Nbs+yb]],
-				Gear3 = [[
-					gAlMhqgAJZgA2ngAlMhrgsJffU2tgBlMhshWJneo2wgBlMhsh/Jwd+2zgClMhsinJ5dU2zgClMhsjMKCcs2zgClMhsjvKMcH2xgDlMhskQKVbj2tgElMhrkv
-					Kka/2ugGlMhrlJLAaa26gIlMhqlhLcZ13EgJlMhpl8LpZS2/gJlMhpmZLxYx20gJlMhom4L4YQ2mgJlMhonYMAXu2XgIlMhon6MJXL2GgIlMhooeMSWn1ygH
-					lMhopDMdWC1cgFlMhppyMbVk04gClMhqqlMUVK0KgAlMhqrUMaUszmgAlMhrr8MsUKzKf/lMhsskM+Tpyuf/lMhstKNSTKySf+lMhstvNmSsx2f+lMhsuRN6
-					SRxbf+lMhsuwOPR3xCf9lMhsvOOkRfwpf9lMhrvpO6RIwRf9lMhrwCPPQyv7f9lMhqwaPmQcvkf9lMhqwxP+QFvOf9lMhpxGQXPvu4f9lMhpxcQyPXuhf+lO
-					hqx7RcO0t9f+lWhvyqSgN+s9f+lShsyvSuN0s2f/lPhry6TINhskf/lOhrzKTpNKsKgAlNhqzXUIMzry]],
+					hkjleXZ95Jy0gYhjjoeWaC4nzigZhijreVaI4Xz4gbhgjteUaP4cz0gchfjueUaW40zYgchejueTad5dykgbhejseTai6PxdgXhdjqeTam7FwIgShbjneRav
+					74uxf8hVjkeNbF8jtjfDhPjgeJbY9AsieJhNjdeIbb9UrwdyhOjaeIbY9drXdshOjYeJbW9arddohPjXeJbW9MsAdohQjXeJbW8ys9drhRjZeJbX8NuLdxhS
+					jbeJbW7fvkd9hYjeeNa+6sw2ethgjieTaV55x6fxhkjleXZ95Jy0gYhljoeYZ44nzfgmhnjreYZ04Xzxg0hojteZZx4bzrhChpjueaZw4zzMhNhqjuebZx5b
+					yWhXhqjsecZz6NxNhehrjqecZ27Dv3hihrjnedZ572ubhkhsjkeeZ88htEhihsjgeeZ/9Cr7hdhsjdefaA9XrHhWhrjaefaA9gqvhNhrjZefZ/9eq1hChqjj
+					ecZ17fvHhIhqkFebZky548h0hpj0eaZq251YhPhojreZZv4Vzxg4hnjpeYZy4ZzugshljleYZ45Iy0ge]],
 				Tail1 = [[
-					gAkChXehgAgA/9gAkDhXeQgdgC/8gBkDhXeBg6gE/6gBkEhXd1hVgG/5gBkEhXduhugI/3gBkEhXdriEgK/1gCkEhXduiXgL/0gCkEhXd2ingL/zgCkDhXeC
-					iygL/zgCkDhXeRi5gK/0gCkChXehi7gJ/0gCkBhXexi5gH/1gCkAhXfAiygG/2gCkAhXfMingE/4gCj/hXfUiYgD/5gBj/hXfWiFgD/6gBj/hXfUhugC/8gB
-					kAhXfMhVgC/9gBkAhXfAg6gC/9gAkBhXexgdgB/9gAkChXehgAgA/9gAkDhXeQfjf+/8f/kDhXeBfGf8/6f/kEhXd1erf6/5f/kEhXdueSf4/3f/kEhXdrd8
-					f2/1f+kEhXdudpf1/0f+kEhXd2dZf1/zf+kDhXeCdOf1/zf+kDhXeRdHf2/0f+kChXehdFf3/0f+kBhXexdHf5/1f+kAhXfAdOf6/2f+kAhXfMdZf8/4f+kC
-					hXgLdof+/5f/kLhXixd7gA/zf/kGhXhUeSf//6f/kEhXgZerf+/9f/kDhXf2fGf+/+gAkChXfCfjf//+]],
+					gAjYhUecgAgA/9gAjZhUeLgdgC/7gBjahUd9g6gE/6gBjahUdxhVgG/4gBjahUdphugI/2gBjbhUdniEgK/1gCjahUdqiXgL/0gCjahUdxingM/zgCjahUd9
+					iygL/zgCjZhUeMi5gL/zgCjYhUeci7gJ/0gCjXhUeti5gI/1gCjXhUe8iygG/2gCjWhUfIingF/3gCjWhUfPiYgE/5gBjWhUfSiFgD/6gBjWhUfPhugD/7gB
+					jWhUfHhVgC/8gBjXhUe8g6gC/9gAjXhUetgdgB/9gAjYhUecgAgA/9gAjZhUeLfjf+/7f/jahUd9fGf8/6f/jahUdxerf6/4f/jahUdpeSf4/2f/jbhUdnd8
+					f2/1f+jahUdqdpf1/0f+jahUdxdZf0/zf+jahUd9dOf1/zf+jZhUeMdHf1/zf+jYhUecdFf3/0f+jXhUetdHf4/1f+jXhUe8dOf6/2f+jWhUfIdZf7/3f+jZ
+					hUgHdof9/5f/jhhUitd7gA/zf/jchUhPeSf//7f/jahUgVerf+/9f/jZhUfyfGf+/+gAjYhUe+fjf//+]],
 				Tail2 = [[
-					gAkLi5fkekf//9gDkNi5fHfSgA/+gGkPi5eqgBgC/9gJkRi4eNgwgE/7gMkSi4d1hdgH/4gOkTi4dkiIgK/0gQkSi4dbiwgN/xgSkRi3dbjUgP/tgTkPi3dk
-					jygR/rgUkNi3d2kKgR/pgUkLi4eOkcgQ/ogUkJi4erkngO/ogTkGi4fIkqgM/ogSkFi4fkkngJ/pgQkEi4f8kcgH/rgOkDi5gOkKgF/ugMkEi5gXjxgE/xgJ
-					kFi5gXjTgD/0gGkGi5gOivgC/3gDkJi5f8iHgC/7gAkLi5fkhcgB/9f9kNi5fHgugA/+f6kPi5eqf/f+/9f3kRi4eNfQf8/7f0kSi4d1ejf5/4fykTi4dkd4
-					f2/0fwkSi4dbdQfz/xfukRi3dbcsfx/tftkPi3dkcOfv/rfskNi3d2b2fv/pfskLi4eObkfw/ofskJi4erbZfy/oftkGi4fIbWf0/ofukFi4fkbZf3/pfwkB
-					i5hVblf7/pfyj6i4lqb3gA/Nf0j+i5jjcPf+/kf3kBi5iSctf+/vf6kEi6hkdRf+/1f9kIi6gYd5f+/6]],
+					gAjhise8ekf9/8gDjjiregfSf//8gGjlireCgBgC/7gIjmirdmgwgF/5gLjnirdOhdgJ/1gNjoiqc8iIgN/xgOjniqcziwgQ/tgQjmiqc0jTgT/qgRjliqc9
+					jxgV/ngSjjiqdPkKgW/mgSjhiqdnkbgV/lgSjeiqeDkmgU/mgRjdiqehkqgS/ngQjbire9kmgP/pgPjairfVkbgN/rgNjairfnkJgK/ugLjairfwjxgJ/xgI
+					jbisfvjTgH/0gGjdisfmivgG/3gDjeisfUiHgF/6gAjhise8hcgD/8f9jjireggugB/8f6jlireCf/f+/7f4jmirdmfQf7/5f1jnirdOejf3/1fzjoiqc8d4
+					fz/xfyjniqczdQfw/tfwjmiqc0ctft/qfvjliqc9cPfr/nfujjiqdPb2fq/mfujhiqdnblfr/lfujeiqeDbafs/mfvjdiqehbWfu/nfwjbire9bafx/pfxjY
+					irgublf1/rfzjSiqlDb3f7/Uf1jWiri8cPf6/of4jYishrctf6/xf6jbisg8dRf6/3f9jeisfwd5f7/6]],
 				Tail3 = [[
-					f3kOkbhGcfgC/xf/kTkbgsdQgD/3gGkYkbgMeEgE/7gOkckafoe9gG/+gVkgkZfEf2gH/+gbkikYekgwgJ/8ghkikXeKhpgL/5gmkhkWd6ifgN/0gqkekWd0
-					jRgP/vgtkbkWd6j+gQ/rgvkWkWeLkkgR/ngwkRkWeklEgQ/jgvkMkWfFlbgP/ggukIkWfplqgN/fgrkEkXgNlwgK/egnkCkYgtltgH/egjkCkZhGlhgF/fgd
-					kDkZhWlMgD/igXkFkahckwgB/mgQkJkbhWkMf//sgJkOkbhGjhf+/xgBkTkbgsiwf9/3f6kYkbgMh8f8/7fykckafohDf6/+frkgkZfEgKf5/+flkikYekfQ
-					f3/8ffkikXeKeXf1/5fakhkWd6dhfz/0fWkekWd0cvfx/vfTkbkWd6cCfw/rfRkWkWeLbcfv/nfQkRkWeka8fw/jfRkMkWfFalfx/gfSkIkWfpaWfz/ffVj5
-					kXiGaRf6/ZfZjYkQoGaWgF+bfdjpkWlcagf//Cfjj0kZj/a0f+/Ufpj7kajSbQf//dfwkGkbh8b0gA/q]],
+					f4jnkDgZcff9/yf/jrkDgAdQf//3gGjwkDffeEgC/7gMj0kCe7e8gE/9gSj3kBeXf2gH/8gYj5kAd3gwgK/6gdj5j/dehpgO/2gij4j+dNiegR/xglj2j+dI
+					jQgU/sgojyj+dOj9gW/ngqjuj+dekkgX/kgrjpj+d4lDgX/hgqjlj+eZlagW/fgpjhj/e9lpgU/egnjekAfhlvgS/dgjjckAgBltgP/egfjbkBgalhgN/gga
+					jckCgqlMgK/jgVjfkCgwkwgH/ogOjikDgqkMgF/tgIjnkDgZjhgD/ygBjrkDgAiwgB/3f6jwkDffh8f+/7f0j0kCe7hEf8/9fuj3kBeXgKf5/8foj5kAd3fQ
+					f2/6fjj5j/deeXfy/2fej4j+dNdifv/xfbj2j+dIcwfs/sfYjyj+dOcDfq/nfWjuj+debcfp/kfVjpj+d4a9fp/hfWjlj+eZamfq/ffXjhj/e9aXfs/efZjU
+					kAhaaRfy/cfdi3j7ncaWf9+mfhjGj/kxahf4/JfmjPkBjTa0f3/ZfrjWkDimbRf4/ifyjfkDhQb0f6/s]],
 				Tail4 = [[
-					fikHl7hua5gD/ifukPl8hkbdgG/of6kXl8hPcJgJ/ugHkel8gzc6gL/1gUkll7gSdxgO/6ggkql6fwergP/9grktl4fOfogR/+g1kul3eyglgS/9g9ksl1ee
-					hggS/6hFkol0eTiagT/2hKkhlzeTjQgT/xhOkalzeekAgS/shQkSlyeykqgS/ohQkKlzfPlNgR/jhOkDlzfwlngP/fhKj+l0gTl5gN/chEj7l1g0mCgK/ag9
-					j6l2hQmBgH/Zg0j8l4hkl2gE/agqkBl5huljgB/dgekHl7hulHf9/igSkPl8hkkjf6/ogGkXl8hPj3f3/uf5kel8gzjGf1/1fskll7gSiPfy/6fgkql6fwhV
-					fx/9fVktl4fOgYfv/+fLkul3eyfbfu/9fDksl1eeegfu/6e7kol0eTdmft/2e2khlzeTcwft/xeykalzeecAfu/sewkSlyeybWfu/oewkKlzfPazfv/jeyjt
-					lyiKaZf8/ae4iplgpqaLgU98e9jIltmUaAgE+yfEjclzklaAf+/FfMjnl2j5aKf9/NfWj6l5ifadf//a]],
+					fljklZhca5gA/jfwjrlahRbdgD/pf7jylag9cJgG/vgGj6lZghc6gK/1gSkAlYf/dxgM/6gckElXfdergO/9gmkHlWe7fogQ/+gvkHlUefgkgS/8g3kFlTeL
+					hggT/5g9kClSeAiagU/1hCj8lReAjPgV/whGj1lReLkAgV/rhIjulRefkqgU/nhIjnlRe8lNgU/jhGjhlSfdlngS/fhCjclTgAl5gQ/cg9jZlUghmBgO/ag2
+					jZlVg9mBgL/agujblWhRl2gI/bgljflYhcljgE/egbjklZhclHgA/jgQjrlahRkjf9/pgFjylag9j3f6/vf6j6lZghjGf2/1fukAlYf/iPf0/6fkkElXfdhV
+					fy/9fakHlWe7gYfw/+fRkHlUeffcfu/8fJkFlTeLegft/5fDkClSeAdmfs/1e+j8lReAcxfr/we6j1lReLcAfr/re4julRefbWfs/ne4jnlRe8azfs/je6jN
+					lSh4aZf4/ce/iQlEpYaLgR+BfDislOmCaAgA+1fKi+lTkTaAf6/IfSjIlWjnaKf6/PfbjZlYiMadf8/b]],
 				Hourglass = [[
-					fDj9nYhua5gD/ifSkFnahkbNgF/lfjkPnbhQbogH/qf0kZncg0cKgK/vgGkjndgTcygN/1gXksncfwdggQ/5gokynbfPeRgT/7g4k1nZezfFgV/9hHk1nXef
-					f7gX/9hTkynVeUgwgY/7heksnTeUhlgY/6hmkjnRefiXgX/3hskZnQezjFgW/0hvkPnQfPjugT/whwkFnPfwkSgQ/thuj8nPgTkugM/ohpj2nQg0lEgJ/lhh
-					jznRhQlRgF/ihXjznThklWgD/ghLj2nVhulTgA/gg9j9nYhulHf9/igukFnahkkzf7/lgdkPnbhQkYf5/qgMkZncg0j2f2/vf6kjndgTjOfz/1fpksncfwig
-					fw/5fYkynbfPhvft/7fIk1nZezg7fr/9e5k1nXefgFfp/9etkynVeUfQfo/7eiksnTeUebfo/6eakjnRefdpfp/3eUkZnQezc7fq/0eRkPnQfPcSft/weQjg
-					nNiKbugB/oeXhxmqpobSgr+IeZijnBmUa9gQ+8egjAnKklawgF/OepjQnPj5aqgB/Te1jrnUifatgA/d]],
+					fJjdmshua5gD/ifXjkmuhkbNgF/lfmjtmvhQbogH/qf1j3mwg0cKgK/vgFkAmwgTcygN/1gVkHmvfwdggQ/5gkkNmtfPeRgT/7gykQmsezfFgV/9g/kQmqef
+					f7gX/9hLkNmoeUgwgY/7hUkHmneUhlgY/6hcj/mmefiXgX/3hhj2mlezjFgW/0hkjtmkfPjugT/whkjkmkfwkSgQ/thijcmlgTkugM/ohejXmmg0lEgJ/lhX
+					jUmnhQlRgF/ihOjUmohklWgD/ghDjXmqhulTgA/gg3jdmshulHf9/igpjkmuhkkzf7/lgajtmvhQkYf5/qgLj3mwg0j2f2/vf7kAmwgTjOfz/1frkHmvfwig
+					fw/5fckNmtfPhvft/7fOkQmsezg7fr/9fBkQmqefgFfp/9e1kNmoeUfQfo/7eskHmneUebfo/6ekj/mmefdpfp/3efj2mlezc7fq/0ecjtmkfPcSft/wecjD
+					mkiKbugB/oehhfmHpobSgr+IejiMmamUa9gQ+8eqinmiklawgF/Oeyi0mlj5aqgB/Te9jNmqifatgA/d]],
+				Gear2 = [[
+					gAkkiYgAJZgA2ngCkmiWgQJufv28gEkniVgiKDfc3PgGkpiUg0KXfH3hgIkqiThJKreu3xgKkqiThhK9eR3+gLkqiTh8LNdw4IgMkpiUiaLcdL4OgNkniUi6
+					Lpcj4QgOkmiVjcL0b44OgOkkiXj/L8bN4IgOkiiYkjMCaj39gOkgiZlHMFZ73vgNkfialqMGZW3dgMkeibmLMDY23KgLkeibmqL+Yb20gJkeibnHL2YF2dgH
+					kfibniLsX02EgFkgian7LhXo1sgCkiiZoTLUXe1TgAkkiYoqLHXW05f+kmiWpBK6XP0gf8kniVpaKvXH0Gf6kpiUp1KnW+zsf4kqiTqSKiWyzRf2kqiTqxKh
+					Wjy3f1kqiTrUKlWQyef0kpiUr4KtV7yFfzkniUsfK7VixtfykmiVtFLNVGxWfykkiXtqLjUpxAfykiiYuNL9UKwtfykgiZutMaTqwdfzkfiavIM4TKwPf0kd
+					iev8NwSNvrf0kZipxgPiQeuTf3kbikw8PSQuu7f5kdigwoPWQrvTf7kfiewePmQbvff+kiiawLPvQSv0]],
+				Gear3 = [[
+					gAkQjYgAJZgA2ngEkTjXgaJufl28gIkVjWg0KDfJ3PgMkXjVhPKYeq3ggPkZjUhtKteH3ugSkZjTiNLBdf36gVkZjTiwLTc04BgXkXjTjWLlcE4EgYkVjUj+
+					L1bS4DgZkTjVkoMDad38gakQjVlTMQZp3wgakNjWl+MaY13ggZkKjXmqMjYF3MgYkIjYnUMpXY20gVkHjZn+MtWw2ZgTkGjZolMuWO19gQkHjZpLMtVy1ggM
+					kIjZpvMqVb1CgIkKjZqRMlVI0jgEkNjYqzMgU50EgAkQjYrUMaUszmf8kTjXr1MWUgzGf4kVjWsXMUUVynf0kXjVs7MVUHyHfxkZjUtgMaT4xmfukZjTuIMk
+					TmxFfrkZjTuyMzTRwjfpkXjTvcNIS5wBfokVjUwHNjSfvffnkTjVwxODSBu+fmkQjVxZOnRiuefmkNjWx9PPRCt/fnkKjXydP5QhthfokIjYy4QkP/tHfqkC
+					jbzlRuPGsQftj0jh0yT8NoqZfwj8jf0YTtNqq9f0kCjd0JT0NcrLf4kGjc0AUKNGrLf8kMjZzwUWMzrV]],
+				Gear1 = [[
+					gAkzhBgAJZgA2ngAk0hBfpJfgX2tgAk0hBfTJlgu2ygAk1hBe9JrhF23gBk1hBenJyhc27gBk1hBeRJ4h029gBk1hBd7J+iL2/gBk1hBdlKDii3AgBk0hBdP
+					KIi62/gBk0hBc5KNjR2+gBkzhBckKQjo27gBkyhBcOKTj/22gBkyhBb4KWkW2xgBkxhBbhKYks2qgBkxhBbLKalC2igBkwhBa0KblY2ZgBkxhBaeKclt2PgA
+					kxhBaHKdmC2FgAkyhBZvKdmX15gAkyhBZYKemr1tgAkzhBZBKfm/1hgAk0hBYpKhnT1UgAk0hBYSKjnm1HgAk1hBX6Kmn606f/k1hBXjKqoN0tf/k1hBXMKu
+					og0gf/k1hBW1K0oz0Uf/k1hBWfK6pG0If/k0hBWJLCpZz9f/k0hBVzLLpszyf/kzhBVeLVqAznf/kyhBVJLgqUzef/kyhBU2LsqozUf/kxhBUiL6q8zMf/k0
+					hDUdMArDzLf/k9hJUzL5qwzbf/k4hGULMUrczHgAk2hETuMsr/y3gAk1hDTYNBsaysgAkzhCTANYs5ye]],
 				["UpperLeg.L"] = [[
-					e5isgY71e1f+vve5itgZ7ze6f3vye5iugZ7xe+fxv1e5iuga7wfDfqv3e4ivga7wfHfkv3e4ivgb7yfLffv1e4ivgb70fNfavxe4iugb73fPfWvre4iugc78
-					fQfSvje4itgc8BfRfQvae4isgc8FfQfPvRe4isgc8KfPfOvJe4irgc8NfOfQvDe4iqgb8PfLfSu/e4iqgb8QfJfWu9e4iqgb8PfGfau/e4iqga8MfDfgvEe5
-					iqga8IfAfnvMe5irgZ8De8fuvWe5isgZ78e4f2vie5isgY71e1f+vve5itgX7texgGv8e6iugX7metgOwIe6iugW7gepgVwSe6ivgW7belgbwae6ivgV7Yei
-					ghwee6ivgV7Wefgmwge6iugV7Xedgpwfe6iugV7Zebgswbe6itgU7deZgtwUe7isgU7ieYgtwNe6isgU7meYgswEe6irgV7reZgqv8e6iqgV7webgnv1e6iu
-					gT7Qeggmwre6i7gO5Heugtzwe6i0gS6ferghx4e6iwgU7GergXw9e6ivgV7VeugPwke5itgX7sexgGv+]],
+					e1iTgV7XdWf8wWe1iTgW7Vdcf2wae0iUgX7Udifvwde0iVgX7Tdnfqwfe0iVgY7Udsfkwfe0iVgY7Vdwfewde0iVgZ7ZdyfZwXe0iVgZ7dd0fVwQe0iUgZ7j
+					d0fRwGe0iTgZ7od0fOv8e0iTgZ7udzfMvye0iSgZ7zdxfLvpe0iRgZ73dufLvhe0iQgZ75drfNvde0iQgZ76dofRvbe0iQgY75dlfVvee0iQgY71difbvke0
+					iQgX7wdffivte0iRgX7pdcfqv5e1iSgW7gdZfzwHe1iTgV7XdWf8wWe1iTgV7OdTgFwme1iUgU7FdQgNw0e1iVgU68dNgVxAe2iVgT62dKgcxJe2iVgT6ydG
+					ghxPe2iVgS6wdDgmxSe2iVgS6wdAgpxQe2iUgS6zc9grxLe2iTgR63c7gsxEe2iTgR69c5gsw7e2iSgR7Dc4gqwye2iRgS7Jc4gnwoe2iQgS7Oc5gjwge2iV
+					gR6qdEgmxce2ihgN36drg91He2iagQ5wdYgnyye1iXgS6fdTgZxue1iVgT6ydUgQxSe1iTgU7MdTgFwo]],
 				["LowerLeg.L"] = [[
-					e2hxf0tugkgB85e2hxf1t5grf+8ze2hyf2uEgzf68ue1hyf2uNg6f38pe1hzf3uUhBf08me0hzf3uXhHfy8je0hzf3uZhNfw8je0hzf3uXhRfu8je0hzf3uS
-					hVfu8lezhyf2uMhXft8oezhyf2uFhYfu8sezhxf1t9hYfu8wezhxf1t1hWfv80e0hxf0tuhTfx83e0hwf0tphPfz86e0hwf0tlhJf188e0hwfztkhDf389e1
-					hwfztkg8f589e1hwf0tmg0f788e2hwf0tqgsf+87e2hxf0tugkgB85e3hxf0tygbgE83e3hxf1t2gTgG81e4hxf1t5gMgJ80e4hxf1t6gFgM8ze5hxf1t5f+
-					gO80e5hxf0t1f5gQ82e5hxf0twf1gS84e5hwf0tofygT88e6hwfztgfwgU9Ae6hvfytYfwgU9De6hvfytQfxgU9He5hvfxtJfzgT9Ke5hufxtFf2gS9Me5hw
-					f0tnf5gQ88e5h4f+v0f6gM70e4hzf4uhgDgL8ge4hyf1uBgLgJ8we4hxf1t6gSgG8ze3hxf0ttgbgE85]],
+					ewhff5tqgugC86evhgf6t5g1f+8zevhgf7uHg9f78sevhhf7uShEf48meuhhf8ubhLf28ieuhhf8ughRf08feuhhf8uhhXfy8eethhf8ufhcfx8fethhf8ua
+					hffw8hethhf8uShifx8lethgf7uIhkfx8qethgf6t+hkfy8uethff6t1hjfz8zethff5tshgf184ethff5tlhcf287ethef5tghWf48+euhef5tehQf68/eu
+					hef5tehIf88/evhef5thhAf+8+evhff5tlg3f/89ewhff5tqgugC86ewhff5twglgE84ewhff6t1gcgG81exhgf6t5gTgI80exhgf6t6gMgK8zeyhgf6t5gG
+					gN80eyhff6t0gAgO82eyhff5ttf8gQ86eyhff5tkf6gR8+eyhef4tZf4gS9Deyhef3tOf4gS9Ieyhdf3tEf5gS9Neyhdf3s7f8gS9Qeyhcf2s2gAgR9Teyhf
+					f5tmgBgO89ezhngFwzf2gD7Oeyhif9u2gGgH8Vexhgf7uIgRgG8sexhgf6t9gagF8yewhff5tqglgE87]],
 				["Foot.L"] = [[
-					e5gwgp8kgBgAuZe5gwgp8kgHf8uZe5gwgp8kgNf5uZe5gwgp8kgTf2uZe5gwgp8kgZfzuZe5gwgp8kgefxuZe5gwgp8kgifvuZe5gwgp8kgmftuZe5gwgp8k
-					gpfruZe5gwgp8kgrfquZe5gwgp8kgsfquZe5gwgp8kgsfquZe5gwgp8kgqfruZe5gwgp8kgofsuZe5gwgp8kglfuuZe5gwgp8kggfwuZe5gwgp8kgbfyuZe5
-					gwgp8kgVf1uZe5gwgp8kgPf5uZe5gwgp8kgIf8uZe5gwgp8kgBgAuZe5gwgp8kf6gDuZe5gwgp8kfzgGuZe5gwgp8kftgKuZe5gwgp8kfngMuZe5gwgp8kfi
-					gPuZe5gwgp8kfegRuZe5gwgp8kfbgTuZe5gwgp8kfYgUuZe5gwgp8kfXgVuZe5gwgp8kfXgVuZe5gwgp8kfXgUuZe5gwgp8kfZgUuZe5gwgp8kfcgSuZe5gw
-					gp8kfegRuZe5gwgp8kfegRuZe5gwgp8kflgNuZe5gwgp8kfsgKuZe5gwgp8kfzgHuZe5gwgp8kf6gDuZ]],
+					eygsgj8wgDf/uBeygsgj8wgJf8uBeygsgj8wgPf5uBeygsgj8wgUf2uBeygsgj8wgafzuBeygsgj8wgffxuAeygsgj8wgkfvuAeygsgj8wgoftuAeygsgj8w
+					grfruAeygsgj8wgufquAeygsgj8wgvfpuAeygsgj8wgvfpuAeygsgj8wgufpuAeygsgj8wgsfquAeygsgj8wgpfsuAeygsgj8wglfuuAeygsgj8wgffxuAey
+					gsgj8wgZf0uBeygsgj8wgSf3uBeygsgj8wgKf7uBeygsgj8wgDf/uBeygsgj8wf7gCuBeygsgj8wf0gGuBeygsgj8wftgJuBeygsgj8wfngMuBeygsgj8wfh
+					gPuAeygsgj8wfdgRuAeygsgj8wfagTuAeygsgj8wfYgUuAeygsgj8wfXgUuAeygsgj8wfXgUuAeygsgj8wfYgUuAeygsgj8wfagTuAeygsgj8wfdgRuAeygs
+					gj8wfdgRuAeygsgj8wfRgXuAeygsgj8wfggPuAeygsgj8wfqgLuBeygsgj8wfygHuBeygsgj8wf7gCuB]],
 				["Toe.L"] = [[
-					e5gOgP/8gBf/h0e5gOgP/8gFf6h0e5gOgP/8gKf0h0e5gOgP/8gOfvh0e5gOgP/8gSfrh0e5gOgP/7gVfmh0e5gOgP/7gZfih0e5gOgP/7gbffh0e5gOgP/7
-					gdfdh0e5gOgP/7gffbh0e5gOgP/7gffah0e5gOgP/7gffbh0e5gOgP/7gefch0e5gOgP/7gdfeh0e5gOgP/7gafgh0e5gOgP/7gXfkh0e5gOgP/8gTfph0e5
-					gOgP/8gPfuh0e5gOgP/8gLfzh0e5gOgP/8gGf5h0e5gOgP/8gBf/h0e5gOgP/8f8gFh0e5gOgP/8f3gLh0e5gOgP/8fygQh0e5gOgP/8fugVh0e5gOgP/7fr
-					gZh0e5gOgP/7fogdh0e5gOgP/7flggh0e5gOgP/7fkgih0e5gOgP/7fjgjh0e5gOgP/7figkh0e5gOgP/7fjgjh0e5gOgP/7fkghh0e5gOgP/7fmgfh0e5gO
-					gP/7fogdh0e5gOgP/7fogdh0e5gOgP/8ftgXh0e5gOgP/8fygRh0e5gOgP/8f2gMh0e5gOgP/8f8gFh0]],
+					eygPgN/7gCf+iGeygPgN/7gGf5iGeygPgN/7gLf0iGeygPgN/6gPfviGeygPgN/6gTfqiGeygPgN/6gXfmiGeygPgN/6gafiiGeygPgN/6gdffiGeygPgN/6
+					ggfciGeygPgN/6gifaiGeygPgN/6gjfZiGeygPgN/6gjfZiGeygPgN/6gifZiGeygPgN/6ghfbiGeygPgN/6gefeiGeygPgN/6gbfiiGeygPgN/6gXfmiGey
+					gPgN/6gSfriGeygPgN/7gNfxiGeygPgN/7gIf3iGeygPgN/7gCf+iGeygPgN/7f8gEiGeygPgN/7f3gKiGeygPgN/7fygQiGeygPgN/6ftgViGeygPgN/6fp
+					gaiGeygPgN/6fmgdiGeygPgN/6fkggiGeygPgN/6figiiGeygPgN/6fhgiiGeygPgN/6fhgiiGeygPgN/6fighiGeygPgN/6fkggiGeygPgN/6fmgdiGeygP
+					gN/6fmgdiGeygPgN/6fdgniGeygPgN/6fpgaiGeygPgN/6fwgSiGeygPgN/7f2gMiGeygPgN/7f8gEiG]],
 				["UpperLeg.R"] = [[
-					hHisgY71hLgCvvhHitgX7thPf6v8hGiugX7mhTfywIhGiugW7ghXfrwShGivgW7bhbflwahGivgV7YheffwehGivgV7WhhfawghGiugV7XhjfXwfhGiugV7Z
-					hlfUwbhGitgU7dhnfTwUhFisgU7ihofTwNhGisgU7mhofUwEhGirgV7rhnfWv8hGiqgV7whlfZv1hGiqgV7zhjfdvvhGiqgV72hhfivqhGiqgW74hdfovohG
-					iqgW74hZfuvnhGirgX74hVf0vphHisgX72hQf7vrhHisgY71hLgCvvhHitgZ7zhGgJvyhHiugZ7xhCgPv1hHiuga7wg9gWv3hIivga7wg5gcv3hIivgb7yg1
-					ghv1hIivgb70gzgmvxhIiugb73gxgqvrhIiugc78gwguvjhIitgc8BgvgwvahIisgc8FgwgxvRhIisgc8KgxgyvJhIirgc8NgygwvDhIiqgb8Pg1guu/hIiu
-					gZ7vgyglv6hIi7gU5tglgQzBhIi0gW65gygUxThHiwgX7Yg6gTwhhHivgX7hhAgNwRhHitgY7xhGgJv1]],
+					hLiTgV7XiqgEwWhLiTgV7Oitf7wmhLiUgU7Fiwfzw0hLiVgU68izfrxAhKiVgT62i2fkxJhKiVgT6yi6ffxPhKiVgS6wi9faxShKiVgS6wjAfXxQhKiUgS6z
+					jDfVxLhKiTgR63jFfUxEhKiTgR69jHfUw7hKiSgR7DjIfWwyhKiRgS7JjIfZwohKiQgS7OjHfdwghKiQgS7TjFfhwYhKiQgT7WjCfmwThKiQgT7Zi/fswQhL
+					iQgU7ai6fywPhLiRgU7ai1f4wQhLiSgV7Ziwf+wThLiTgV7XiqgEwWhLiTgW7VikgKwahMiUgX7UiegRwdhMiVgX7TiZgWwfhMiVgY7UiUgcwfhMiVgY7ViQ
+					giwdhMiVgZ7ZiOgnwXhMiVgZ7diMgrwQhMiUgZ7jiMgvwGhMiTgZ7oiMgyv8hMiTgZ7uiNg0vyhMiSgZ7ziPg1vphMiRgZ73iSg1vhhMiQgZ75iVgzvdhMiU
+					gX7UiNgmwfhMihgS4zhpgA0JhMiagU6UiEgPyEhMiWgV64iSgRxLhMiVgV7CiagNw7hLiTgV7UikgKwc]],
 				["LowerLeg.R"] = [[
-					hKhxf0tufcf/85hJhxf0tyflf883hJhxf1t2ftf681hIhxf1t5f0f380hIhxf1t6f7f08zhHhxf1t5gCfy80hHhxf0t1gHfw82hHhxf0twgLfu84hHhwf0to
-					gOft88hGhwfztggQfs9AhGhvfytYgQfs9DhGhvfytQgPfs9HhHhvfxtJgNft9KhHhufxtFgKfu9MhHhufxtDgGfv9NhHhufxtEgAfx9MhIhufxtIf6fz9LhI
-					hvfytPfzf29HhJhvfytYfsf59DhJhwfztifkf88+hKhxf0tufcf/85hKhxf1t5fVgC8zhKhyf2uEfNgG8uhLhyf2uNfGgJ8phLhzf3uUe/gM8mhMhzf3uXe5
-					gO8jhMhzf3uZezgQ8jhMhzf3uXevgS8jhMhzf3uSergS8lhNhyf2uMepgT8ohNhyf2uFeogS8shNhxf1t9eogS8whNhxf1t1eqgR80hMhxf0tuetgP83hMhy
-					f2uIe0gQ8rhKh4f/wCfEgX7qhLh0f5u0fEgP8VhLhzf3uSfIgK8mhKhyf2uGfOgH8thKhxf0t0fVgC82]],
+					hQhff5tqfSf+86hQhff5twfbf884hQhff6t1fkf681hPhgf6t5ftf480hPhgf6t6f0f28zhOhgf6t5f6fz80hOhff6t0gAfy82hOhff5ttgEfw86hOhff5tk
+					gGfv8+hOhef4tZgIfu9DhOhef3tOgIfu9IhOhdf3tEgHfu9NhOhdf3s7gEfu9QhOhcf2s2gAfv9ThOhcf2szf8fw9UhPhcf2s1f2fy9ThPhdf2s6fwf09RhP
+					hdf3tDfpf29NhQhef4tOfif59IhQhef4tcfaf79BhQhff5tqfSf+86hRhgf6t5fLgC8zhRhgf7uHfDgF8shRhhf7uSe8gI8mhShhf8ube1gK8ihShhf8ugev
+					gM8fhShhf8uhepgO8ehThhf8ufekgP8fhThhf8uaehgQ8hhThhf8uSeegP8lhThgf7uIecgP8qhThgf6t+ecgO8uhThff6t1edgN8zhThff5tseggL84hShh
+					f7uQeqgO8mhQhngGw+fFge7GhRhjf/vOe+gR8HhRhhf8uee/gK8ghRhgf7uNfFgG8phRhff6tzfLgC82]],
 				["Foot.R"] = [[
-					hHgwgp8kf/gAuZhHgwgp8kgGf9uZhHgwgp8kgNf6uZhHgwgp8kgTf2uZhHgwgp8kgZf0uZhHgwgp8kgefxuZhHgwgp8kgifvuZhHgwgp8kglftuZhHgwgp8k
-					gofsuZhHgwgp8kgpfruZhHgwgp8kgpfruZhHgwgp8kgpfsuZhHgwgp8kgnfsuZhHgwgp8kgkfuuZhHgwgp8kghfwuZhHgwgp8kgcfyuZhHgwgp8kgXf0uZhH
-					gwgp8kgSf3uZhHgwgp8kgMf6uZhHgwgp8kgFf9uZhHgwgp8kf/gAuZhHgwgp8kf5gEuZhHgwgp8kfzgHuZhHgwgp8kftgKuZhHgwgp8kfngNuZhHgwgp8kfi
-					gPuZhHgwgp8kfegRuZhHgwgp8kfagTuZhHgwgp8kfXgVuZhHgwgp8kfVgWuZhHgwgp8kfUgWuZhHgwgp8kfUgWuZhHgwgp8kfWgVuZhHgwgp8kfYgUuZhHgw
-					gp8kffgRuZhHgwgp8kfugJuZhHgwgp8kfsgKuZhHgwgp8kfvgJuZhHgwgp8kf0gGuZhHgwgp8kf5gEuZ]],
+					hOgsgj8wf9gBuBhOgsgj8wgFf+uBhOgsgj8wgMf6uBhOgsgj8wgTf3uBhOgsgj8wgZf0uBhOgsgj8wgffxuAhOgsgj8wgjfvuAhOgsgj8wgmftuAhOgsgj8w
+					gofsuAhOgsgj8wgpfsuAhOgsgj8wgpfsuAhOgsgj8wgofsuAhOgsgj8wgmftuAhOgsgj8wgjfvuAhOgsgj8wgffxuAhOgsgj8wgafzuAhOgsgj8wgVf2uBhO
+					gsgj8wgQf4uBhOgsgj8wgKf7uBhOgsgj8wgEf+uBhOgsgj8wf9gBuBhOgsgj8wf3gEuBhOgsgj8wfxgHuBhOgsgj8wfsgKuBhOgsgj8wfmgNuBhOgsgj8wfh
+					gPuAhOgsgj8wfcgRuAhOgsgj8wfYgTuAhOgsgj8wfVgVuAhOgsgj8wfSgWuAhOgsgj8wfRgXuAhOgsgj8wfRgXuAhOgsgj8wfSgXuAhOgsgj8wfUgWuAhOgs
+					gj8wfdgRuAhOgsgj8wf4gEuBhOgsgj8wfvgIuBhOgsgj8wfvgIuBhOgsgj8wfzgGuBhOgsgj8wf3gEuB]],
 				["Toe.R"] = [[
-					hHgOgP/8f/gBh0hHgOgP/8gEf7h0hHgOgP/8gJf1h0hHgOgP/8gOfwh0hHgOgP/8gSfrh0hHgOgP/7gVfnh0hHgOgP/7gYfjh0hHgOgP/7gbfgh0hHgOgP/7
-					gcfeh0hHgOgP/7gdfdh0hHgOgP/7gefch0hHgOgP/7gdfdh0hHgOgP/7gcffh0hHgOgP/7gafhh0hHgOgP/7gXfkh0hHgOgP/7gUfoh0hHgOgP/8gRfsh0hH
-					gOgP/8gNfxh0hHgOgP/8gIf2h0hHgOgP/8gEf7h0hHgOgP/8f/gBh0hHgOgP/8f7gGh0hHgOgP/8f2gMh0hHgOgP/4f1gSdWhHgOgP/4fxgYdWhHgOgP//fs
-					gbfihHgOgP/pfugibXhHgOgP/9flghhMhHgOgP/cfsgpaMhHgOgP/7fhglh0hHgOgP/cfrgsaMhHgOgP/9figmhMhHgOgP/7figkh0hHgOgP/7fjgih0hHgO
-					gP/7fogdh0hHgOgP/8fzgQh0hHgOgP/8fygRh0hHgOgP/8f0gPh0hHgOgP/8f3gKh0hHgOgP/8f7gGh0]],
+					hOgPgN/7f+gCiGhOgPgN/7gEf8iGhOgPgN/7gJf2iGhOgPgN/7gOfwiGhOgPgN/6gTfriGhOgPgN/6gXfmiGhOgPgN/6gafjiGhOgPgN/6gcfgiGhOgPgN/6
+					gefeiGhOgPgN/6gffeiGhOgPgN/6gffeiGhOgPgN/6geffiGhOgPgN/6gcfgiGhOgPgN/6gafjiGhOgPgN/6gXfmiGhOgPgN/6gUfqiGhOgPgN/6gQfuiGhO
+					gPgN/7gMfziGhOgPgN/7gHf4iGhOgPgN/7gDf9iGhOgPgN/7f+gCiGhOgPgN/7f6gHiGhOgPgN/7f1gMiGhOgPgN/5fzgTdohOgPgN/5fwgYdohOgPgN//fr
+					gbf0hOgPgN/sfsgibphOgPgN/8fjgihehOgPgN/gfpgqaehOgPgN/6fegmiGhOgPgN/ffnguaehOgPgN/8fegohehOgPgN/6fegniGhOgPgN/6ffgliGhOgP
+					gN/6fmgdiGhOgPgN/7f6gGiGhOgPgN/7fzgOiGhOgPgN/7fzgOiGhOgPgN/7f3gKiGhOgPgN/7f6gHiG]],
 			},
 		},
 		Walk = {
@@ -207,92 +207,92 @@ return {
 			frames = 15,
 			bones = {
 				Hips = [[
-					gAjugx/9hHf6hAgAjxgx/8g8fAhBgAj4gx/7gmeShCgAj+gx/5gKd3hBgAkAgx/5fsdzg/gAj7gx/6fReIg9gAj0gx/8e/eyg9gAjvgx/9e4fpg/gAjvgx/9
-					e9gkhBgAj0gx/7fOhZhCgAj7gx/6foh+hCgAkAgx/5gFiOhAgAj+gx/5giiFg+gAj4gx/7g5hlg9gAjxgx/8hGg0g+]],
+					gAjFgu/+hHf4gHgAjIgu/9g6e/gIgAjOgu/8gjeRgJgAjVgu/6gGd3gIgAjWgu/6fod0gGgAjSgu/7fOeJgEgAjLgu/8e9e0gEgAjFgu/+e3frgGgAjFgu/+
+					e+gmgIgAjLgu/8fRhagJgAjSgu/7frh/gJgAjWgu/6gJiOgHgAjVgu/6gmiEgFgAjOgu/8g8hkgEgAjIgu/9hIgygF]],
 				Spine1 = [[
-					gAjsgSAEe6gMhWf+jvgSAFfGgvhef9j2gSAGfdhKhyf8j8gSAHf6hYiGf8j+gSAIgYhWiMf8j6gSAHgxhFiAf+jygSAFhCgqhqf/jtgSAEhIgHhZgBjtgSAE
-					hCfihYgDjygSAFgwfChngEj5gSAHgVeth9gEj+gSAIf3eniLgEj8gSAHfaexiIgDj2gSAGfFfHh1gCjvgSAFe6fnhg]],
+					gAjEgTAOe6gQjef+jHgTAPfJgzjlf9jOgTASfihMj5f8jUgTAVgAhYkNf8jWgUAVgehUkTf9jSgTAUg2hCkHf+jLgTARhFgljyf/jFgTAPhIgCjhgBjFgTAP
+					hAfejfgCjKgTAQgse/jvgDjSgTATgPeskEgEjWgUAVfxeokSgEjUgTAVfVezkPgDjOgTASfCfLj9gBjHgTAQe4fsjo]],
 				Spine2 = [[
-					f/jyfTAQe7gRjof7j1fTARfEgej6f4j9fTAWfZgmkjf2kEfUAcf1gnlIf2kGfUAdgTgglSf4kCfTAagrgUk5f7j5fTAUg9gGkOf/jzfTAQhFf3jtgDjyfTAQ
-					hCfojtgHj4fTAUgzfdkNgJkBfUAZgZfZk4gKkGfUAdf8fclRgJkFfUAcfgfmlJgGj+fTAXfLfzkkgDj1fTARe+gCj7]],
+					f/jQfeAwe9gXmwf7jTfeA0fHgknBf5jbffA9fdgqnpf4jiffBGf5gnoOf4jkffBJgWgeoXf6jgffBCgtgQn/f8jXffA4g9gAnVgAjRfeAxhEfwm1gDjRfeAx
+					hAfim0gGjXffA4gvfYnUgIjfffBCgVfWn+gIjkffBIf4fdoXgHjjffBGfefpoPgFjcffA9fKf4nqgCjUfeA0e+gInC]],
 				Neck1 = [[
-					f+j5ezDJfEgmtvf6j9e0C9fQgvtXf3kGe0DbfngxuVf1kPe1ESgEgov9f2kRe1FAgdgWxJf4kLe1FBgwgBxKf7kCe0EVg7fuwAgAj6ezDdg+fguYgEj6ezC+
-					g4fVtYgIkBe0DHgmfPttgKkLe1D1gLfSvIgLkRe1EtfvfgwqgKkPe1FHfYf1xUgHkHe0EvfKgJwtgDj9e0D3fDgavL]],
+					f9jcfEDyfFgpvBf6jgfEDlfSgxupf3jpfFEFfpgyvmf3jxfGFBgFgoxLf3jzfGFzgegVyVf6jufGF0gwf/yWf9jkfFFEg6fsxOgBjdfEEIg9fdvpgEjdfEDm
+					g2fSuqgHjkfFDwgkfOu/gJjtfGEigJfSwXgJjzfGFeftfhx3gIjxfGF7fYf2yggFjpfFFgfKgLx5gBjgfEEkfEgcwb]],
 				Neck2 = [[
-					f6kreLHLfOgz0Jf2kueKHNfdg50Lfzk6eOHtfzg10yfzlHeVIXgMgm1jf1lMeaIwghgQ19f5lGeZIlgvf41xf+k6eUH/g2fj1GgDkueNHXg1fT0XgIkreJHI
-					grfI0FgMkzeLHagZfH0bgNlBeRIDgAfR1LgMlKeYInfpfk10gJlKeaIvfXf818gElAeXIUfNgT1ef/kzeQHpfJgm0t]],
+					f6kMejGIfMgxyyf2kPejGKfag3y0f0kaenGofxg0zcf1kmeuHPgKgn0Pf3kqeyHmgggS0rf7kkeyHcgvf70egAkZesG4g3fmzxgEkPemGTg4fVzAgIkMeiGF
+					gufLytgLkUekGWgcfJzFgMkgeqG8gDfRz3gKkpewHefqfj0igHkoezHlfXf60qgDkfevHMfMgQ0Kf+kTepGkfHgjzX]],
 				Head = [[
-					f3ldeAAEe5gLhPfzlfd/AEfAf1hcfxlseGAFfUfgh1fyl5eQAGfwfQiJf2l+eXAHgNfIiLf7l5eVAGgnfLh6gBlseNAFg6fXhhgHlgeDAEhFfqhQgMlcd/AE
-					hFgAhTgPlleCAEg4gWhogPlzeLAGgfgoiAgMl9eUAHgBg1iNgIl9eXAGflg4iFgClzeSAFfPgxhuf8lleIAEe/ghhW]],
+					f3k6eUAEe6gMhdfzk9eUAFfAf1hqfylJeaAGfTfhiDf0lVekAHfvfRiXf4laeqAIgNfIiZf9lUepAHgnfKiIgClIehAFg6fWhvgHk9eXAEhFfphegLk6eTAE
+					hFf/hhgOlCeWAFg4gVh2gNlQefAHgfgoiOgKlZeoAIgBg1ibgGlYerAHflg4iTgAlPelAGfPgxh8f7lCecAFfAghhk]],
 				Jaw = [[
-					f3lXdK/5hHf8iEf0ladJ/7g/gSh3fzlodP/8gpgkhkf1l3dZ/7gKgxh1f5l8dg/6fsg1h8f+l1df/7fTgxhzgDlndX/7fCgjhygHladN/6e5gPiDgLlXdI/6
-					e7f5iAgNlgdL/7fLflhrgNlwdU/7fmfUhtgJl7de/7gGfMh6gFl6dh/6gifMh5gAlvdb/7g2fVhrf7lgdR/6hEfmh8]],
+					f2k6dS/6hHf8h+f0k9dR/7g/gRhxf0lLdY/8gpgkhef3lYdi/7gKgxhvf7lddo/7fsg1h2gAlWdn/7fTgxhtgFlJde/7fCgjhsgIk8dV/6e5gPh9gLk6dQ/6
+					e7f5h6gMlDdU/8fLflhlgLlSdd/8fmfUhngHlcdm/7gGfMh0gClbdo/7gifMhzf9lQdj/7g2fVhlf5lCdZ/6hEfmh2]],
 				ClockMin = [[
-					gAjkf6e0Jhix2jf9jmf6jnJ7du2wf6jtf6oTLWYX1qf4jzf5sfNoTZzQf3j1f5v5QcPYv4f4jxf5yiTkMgsBf7jqf60lXAKpn5f+jlf62Ea/JrjggCjkf62z
-					fsJmezgFjpf62Yk+KhaBgHjwf50nqOMZVigIj1f5xquxO/RugIjzf5t/yNR+OtgGjuf5p/0jVPMYgEjnf6lv19Y6Kn]],
+					f9jmfwe0Jhix2jf6jpfwjnJ7du2wf5jwfyoTLWYX1qf4j3fzsfNoTZzQf5j5fzv5QcPYv4f7j0fyyiTkMgsBf+jtfx0lXAKpn5gBjnfw2Ea/JrjggEjnfw2z
+					fsJmezgHjsfx2Yk+KhaBgIj0fy0nqOMZVigIj5fzxquxO/RugGj3fzt/yNR+OtgEjxfyp/0jVPMYgAjqfwlv19Y6Kn]],
 				ClockHour = [[
-					gAjkf6e0Jhix2jf9jmf6e8Jqig2uf6jtf6fMJwh125f4jzf5fTJzhH2/f3j1f5fEJygr2/f4jxf5egJvgq25f7jqf6dzJpg62wf+jlf6dUJihJ2lgCjkf6dU
-					JYhK2agFjpf6dzJMg82SgHjwf5ejJDgv2OgIj1f5fKJAgx2NgIjzf5fZJDhM2PgGjuf5fPJLh32UgEjnf6e9JVig2a]],
-				Gear2 = [[
-					f4lQeme0Jhix2jf0lUeofhJph62yfzleetgWJwgo29f0lnewhCJ0fT3Af3lqexhZJ0eR27f7lkevhbJudq2ygAlaeqhVJldW2ngGlSenhdJbdB2agKlReniF
-					JTce2KgNlZeqjMJTbu15gNljevkiJda91pgLlpexlvJuac1ggHloewmhJ/aQ1hgClfesm6KOaT1qf9lVeonJKeaT10]],
+					f9jmfwe0Jhix2jf6jpfwe8Jqig2uf5jwfyfMJwh125f4j3fzfTJzhH2/f5j5fzfEJygr2/f7j0fyegJvgq25f+jtfxdzJpg62wgBjnfwdUJihJ2lgEjnfwdU
+					JYhK2agHjsfxdzJMg82SgIj0fyejJDgv2OgIj5fzfKJAgx2NgGj3fzfZJDhM2PgEjxfyfPJLh32UgAjqfwe9JVig2a]],
 				["UpperArm.L"] = [[
-					fNjbehvNUzkO5efJjfeiv0U2jt5NfEjqeixXUqii4OfCj1eizPUUhE2tfCj5ei03T6ft1BfEj1eh1+TiewzlfHjreh2kTNePyofLjjeh20S+eIyJfQjjeg21
-					S2eUyEfVjqef2nS4exyZfYjzee2CTDfgzPfZj5ee07TUgj0mfYj1efzRTrhz2SfWjrefxXUGjD35fSjgegvzUhj95B]],
+					fFjHezuoSYk44ffBjLe0vNSakU4Qe+jWe1wrSLjA3We9jge1ycR0hV16e9jle1z9Rafx0Te/jge10/RDeqy6fCjXez1iQveDx+fGjQey1wQhd5xffKjQey1x
+					QaeExYfOjWex1lQbejxsfQjfex1DQlfYyffQjkex0BQ1gkzzfPjgeyyeRMiC1afMjWeywrRpjf29fJjMeyvMSFkj4D]],
 				["LowerArm.L"] = [[
-					e1ireysF70X+mRewivexsg8RZklKeri5ertS8ucqjTenjEeiuG8rgfhOeljJeaur8HkIfcemjHeTu+7Ym1eUeoi/ePvH63oSd5esi4eNvL6wokeEeyi4eMvL
-					7Bn1eqe3i+eMvE7imMfme7jFePuy8Hjug4e9jIeVuU8ggjice+jDedto8gdHkIe8i5ens28JaElke5ivevsP7yYMmY]],
+					eqibe/em+mW4hNemife+eu/IY0g7eiiqe5fJ/xccgpefi1eyfy/+g1gfeei7ergd/nk4gkefi6elg+/AnzgyeiizeghR+kpShFeliseehX+gpehXeqisechQ
+					+xojhjeuixedg+/Omqhpexi4eggj/tj4hqeyi6elgC/8gWhoeyi0esfh/wcfhlewiqe1fE/LZGhieuige7ev+pXBha]],
 				["UpperArm.R"] = [[
-					gyjieg22tHh0yDgujmeg2wtKhgyKgqjvef2YtEg6yvgnj3ee1js1gBz3gnj4ee0Kshe21bgpjxefyUsIdj3Igsjlegwfrscc4igwjcehvWrUb15Vg1jceivX
-					rJb95bg6jkeiwgrOc04zg9jweiyTrgeM3gg+j4ei0Hr5fq13g9j4ei1fsSg10Qg7jweh2VsphkzCg3jmeh2vs8h3yV]],
+					g4jPey1yvkiExYg0jSex1tvnhvxegxjbex1YvhhFyBgwjiex0nvUgFzFgwjjexzTvAeu0lgyjceyxkumdO2Og1jReyv2uJb63kg5jIezuxtwbM4Wg9jIezuy
+					tlbT4dhBjQe0v3tscS34hDjce1xkuAd12rhDjke1zQuZfg1GhCjje10iuyg3zkhAjce01UvHhuyYg8jTez1rvZiFxr]],
 				["LowerArm.R"] = [[
-					hRi3eMQ162oUhshMi6eMQ47QnIg7hHjCeNRD71lEf0hEjIeRRb8WiNeYhCjHeZSB8je1cuhDi/eiSx8WbfbGhFi0erTg77Y8Z7hJisexT67vX3ZkhOiseyTy
-					8AYjaLhTizeuTJ8ia9bthXi/enST8xeidwhajHeeRl8ciZfwhbjJeWRJ7vlohOhZjDeRQ87Fnuh+hWi7eOQ36wokiF]],
-				Gear1 = [[
-					f5lPgJfHJgie2lf4lSgKepJ7ix28f4lZgMeNKRi13Of6lggOdrKfiz3Zf9lhgPc9Kli63YgAldgNcEKkjN3MgDlWgLbJKbjr20gGlQgKaVKOkL2WgIlQgKZ0
-					J8kn12gIlVgLZnJpk/1YgHldgNZlJala1BgElhgPZjJVl/0xgBlggOZXJdmy0nf+lagMZBJznu0jf7lSgKYmKUoo0l]],
-				Gear3 = [[
-					f6lEhefHJgie2lf8lGhff4J4hf3Df/lLhhgpKNgO3ZgClQhihTKae33igElRhjhyKcdp3cgGlOhiiIKTcs3LgGlIhgigKCb+2wgGlEhejEJtbW2QgFlEhej9
-					Jcau1sgClJhglLJVaE1JgAlOhimiJcZc0sf9lRhjnzJwY70bf7lQhiozKOYh0Xf6lLhhphKxYI0ff6lGhfqCLZXo0r]],
+					hYiredhVBaW4hehUiuechJBBYShnhQi1eegyAiaohqhOi6eigTAJd0hphOi4epfxAGhmhnhPivexfSAhlVhkhRike4e4BIoKhehUice9epBepUhVhYice/eo
+					BMoahEhcike8e5Ailjgxhgiwe2fcAEhZgihii5evgIAKdDgghii7eogvAtZfgqhgi2eihJBRXSg8hdivefhVBhWfhP]],
 				Tail1 = [[
-					gAj2hXbshOhI/qgCj5hXayguhD/igEkAhWaggIgw/ggFkGhWbAfigV/mgFkHhWb/fAf4/ugFkDhWczenfe/ygDj8hXc4eefJ/ygBj3hXcNene7/tf/j3hXbM
-					fBe4/mf9j8hXaifkfF/gf8kDhWaqgLfd/if7kHhWbegwf5/qf7kGhWcdhOgV/xf8kAhXc8hggt/zf+j5hXcnhghA/w]],
+					gAjMhTbohOhI/pgCjPhTauguhD/hgEjWhTabgIgw/fgFjchTa8figV/lgFjehTb7fAf4/tgFjZhTcuenfe/ygDjShTc0eefJ/ygBjNhTcIene6/tf/jNhTbI
+					fBe4/lf9jThTaefkfF/ff8jahTamgLfd/hf7jehTbagwf6/pf7jchTcYhOgV/wf8jWhTc4hggt/yf+jPhTcjhghA/w]],
 				Tail2 = [[
-					gGkQi1cBj7g+/egFkZi0aMiYg+/WgEkhizZDgdgw/NgCkki0ZXefgU/Qf/kgi1a5cxf2/af9kXi2crbkff/gf6kPi3dfbHfR/gf6kOi2czbjfG/gf6kUi0bF
-					cyfA/bf7kdizZeekfH/Rf9kkizZBgjfd/Nf/kji1aBibf8/VgCkci2b1j7gX/egFkSi3dQkxgp/ggGkOi2dVkyg1/g]],
+					gGjkiobaj6hD/ZgFjsimZliXhB/PgEj0imYdgcgw/EgCj4inYweegS/HgAj0ioaTcxfy/Tf9jripcEblfZ/bf7jkipc4bIfL/df6jiiocMbkfB/cf7joinaf
+					cze8/Vf8jximY3elfF/If9j3imYagkfe/Ef/j3inZbibf//NgBjwipbOj6gc/YgEjnipcpkwgv/cgFjiipcukxg7/c]],
 				Tail3 = [[
-					gdkpkRdFnPgh/BgTk8kOazlUgh/HgFlLkMYuigge/Df4lMkNYOfTgL/Bfsk/kRZocOfv/HfikrkTcBZwfb/HfdkfkTd0YWfY++ffkikSdzYRfe+9fokykQcB
-					Zlff/Ff0lFkNZocBff/FgBlOkMYOfGfq/BgOlHkPYtiSgD/Egak1kSazlIgd/JghkkkTdGnHgo/DgjkfkTeEn4gl+8]],
+					gaj+j6canOgr+8gQkPj2aIlTgp+/gFkdj0YDifgh+4f6kfj1XjfTgK+2fvkTj5Y8cOfq++fmkBj7bWZxfS/Bfhj2j7dJYXfN+7fjj4j7dIYSfT+6fqkGj4bW
+					ZmfW+/f1kXj1Y9cCfa+8gBkgj0XjfGfo+1gMkaj3YCiSgG+5gWkKj6aHlHgk/Bgdj6j7canGgy++gfj1j7dZn3gw+5]],
 				Tail4 = [[
-					hIk7lodjqDgK+Rgylclmbioif2+ggUl3ljY8lkfx+sf0l7lkXfhsfr+yfWllloYHdhfZ+5e9lElracZufH+2ewktlpc6W/fM+hexkwlod4V2fn+QfClLlncu
-					WggC+XfdlrlkaNYzgN+of8l8ljX/cTgQ+vgclzlmXhgagd+1g4lVlqZJkegy+6hLk2lqbxn1g6+thRkrlpdqp0go+W]],
+					hAkSlGdRqDgQ+PgskvlEbQoif7+dgSlHlAYqlkf1+of2lLlBXMhsfs+tfbk5lGX1dhfX+0fFkblJaKZvfD+ze5kGlIcoW/fG+fe6kIlHdmV2fh+PfJkglFcc
+					Wgf9+Vfhk9lCZ6YzgJ+kf8lMlAXtcTgO+rgYlElDXPgZgd+wgxkqlIY3keg1+2hCkOlIbfn0g/+rhIkElHdYpzgu+V]],
 				Hourglass = [[
-					iDlKm2dlnAgZ/Hhkl2m3bilUgU/Og1mgm2Y9ixga/Ff+mtm4XefzgN+1fImUm+YGc2fk+1eZlmm/adaZe/+/d7lBm6c+Y4fA/Bd3k9m2d7Yofb/DeKlem2cv
-					Ztft/MeymNm2aNb4fo/Mfmmrm2X/etfo+8gdmlm7XhhugG+zhRl+nAZJkegy+6h5lQm9b0mghG/BiKk6m3dunbg0/B]],
+					h0khmMdlnAgZ/HhZlImLbilUgU/OgvlumJY9ixga/Ff/l6mLXefzgN+1fPlkmRYGc2fk+1elk7mUadaZe/+/eKkZmQc+Y4fA/BeGkVmMd7Yofb/DeXkzmMcv
+					Ztft/Me7ldmKaNb4fo/Mfpl4mKX/etfo+8gZlzmOXhhugG+zhIlQmTZJkegy+6hrknmTb0mghG/Bh7kTmOdunbg0/B]],
+				Gear2 = [[
+					f/kjiJexKaiw3Zf/kpiEeqKEiw3EgAkwiCe2JmiN2sgBk1iEfkJGg/2TgCkziKgmIsfd14gBksiOhjIceF1fgBkliPiAIXdP1RgBkiiLh+Ibc/1UgBkliGhy
+					IqdD1mgAktiCh9JEc+1/f/kziDixJncb2Zf+k1iHkGKSbb2rf+kwiMlgLAaV2zf/koiPmjLiZl20f/kiiNnDLvZZ2y]],
+				Gear3 = [[
+					gFkbjLexKaiw3ZgDkkjGe2KDik3GgCktjFfPJlhz2vgAkvjHgKJGga2Uf+kpjMhaIues12f7kfjPikIidJ1Zf6kXjQjPIgcI1Gf6kYjNjaImbs1Gf8kfjIja
+					I1bj1Vf9kpjFjwJSbQ1sf/kvjFktJ8af1/gBktjJmKKyZS2IgEkkjOnqLsX/2FgGkajQo0MaXD18gGkWjPpdMvWr1z]],
+				Gear1 = [[
+					f5kkg2faJfiL2nf7kng2e1KKik3Mf+kug1eKKui33pgAk0g1dcLHjD35gDk2g1ctLQjN35gGkxg1b+LHjY3pgHkqg2bQKxjm3LgHklg2anKSj62hgGklg2aE
+					JwkV1xgEkqg2ZpJSk31DgBkxg1ZXI+le0df+k2g1ZLI3mJ0Ff7k0g1ZCJAm4z9f6kug2Y6JZno0Gf5kng2YvKBoY0a]],
 				["UpperLeg.L"] = [[
-					e/iVgj32epgY1Se9iYgn56eyfbyue7ihgq8Ze0ehune4ipgs+qezdgoue2itgs/oe+cmjPe0iqgr/yfQckg0ezikgo/2fQdihYezifgk/qe8e7kUe0ifgg/M
-					ecf/m9e3ijgc+leAg0pHe6ioga9gduhgsEe9iqgZ8Rdmh3uqe/ingZ7Rdqh4wefAifgc6bd5hlx1fAiYgf5YeOhDzX]],
+					e6h7ge1ldZgu3de4h+gi3+dOfq0/e2iHgm7Fc7emwre0iPgo+RcndOpWeyiTgo/dcxbnh6ewiRgm/idVbafOeviLgj/tdccqgUewiGgf/ldLebj7exiFgb/F
+					cqflmweziJgX+dcKgco/e2iOgU9Mb8hRsYe4iQgT7qb7hxvce6iNgU6WcEh5xne7iFgW5JcWhrzWe7h+ga3qcyhQ1Q]],
 				["LowerLeg.L"] = [[
-					e8hPgbmIfbfw/Ze4hWgRjMgSfV/0ezhogCjNhVfL/yesiFfxmuiofh/KeniffpsPjxgU9Uelinfnw3kAhD63eoiffjzsjRhQ49euiNfh1IiAhE36eziBfg0I
-					gxg+41e4h9fixmfsg86se8h3fovme2g475e/hxfxt1eWg08yfBhpf5rweMgq9sfBhfgBpTeYga+ke/hUgMnIe1gF/K]],
+					e0hAgjk9fjfv/mewhEgagxgifS/+erhTgLgChqfK/8emhwf4kUjBfp/jehiOfwsHkRgw9SegiVfux/kXhu6CejiLfp1JjXhz3teph4fm2mh8hW2hethtfl1P
+					gshJ34exhpflyBfshB6ae1hkfrvge5g478e3hef0tZebgx9Ae4hWf9q9eUgm+Ae4hMgHoHekgW+6e2hDgTlufBgD/d]],
 				["Foot.L"] = [[
-					e5gwho8je/ghuYe5hGhi7/fugKvfe5hYhT7kgrfnwNe5hjg87Shye7wke5hlgi7KixeUwle5hegJ7RjGeJwVe5hPf17pikeiv1e5g7fr8OhffOu9e5gwfy8k
-					gWf1uZe5gwgD8kfZgUuZe5gwgT8iepgsuYe5gwgk8heNg6uXe5gwg18geCg/uXe5gwhG8geKg8uXe5gwhX8ieggwuY]],
+					eygshi8ve+gguAeyhBhc8Gf3gFvTeyhThN7ng6fewIeyheg27SiEewwheyhggd7IjJeGwjeyhZgE7Qjad+wReyhLfw7tisefvteyg3fm8XhafSuteygsft8w
+					gNf6uBeygsf98wfTgWuAeygsgO8uelgst/eygsgf8seKg5t/eygsgw8seDg9t/eygshA8teNg4t/eygshR8uejgtt/]],
 				["Toe.L"] = [[
-					e5gOhP/6fRg4h0e5gihM/2f0gQjDe5gzg+/vgdfYj4e5g9go/ohNeTkUe5g/gO/hh3dWkYe5g5f1/hiGdEkHe5grfg/qhxdojfe5gYfT/2hDesiee5gOfY/8
-					gQfth0e5gOfp/7fkgih0e5gOf6/5fChLh0e5gOgL/4ethjh0e5gOgc/3emhshze5gOgt/3erhmh0e5gOg+/5e7hTh0]],
+					eygPhL/5fPg3iGeygihJ/yf5gIjieygzg7/qgpfLkfeyg9gm/ghceEk+eyhAgM/YiLdDlDeyg5fy/YiZc1kweygrfe/lh6dlkDeygZfR/0hBezi4eygPfW/7
+					gKf1iGeygPfn/6fegmiGeygPf4/4e9hLiGeygPgI/2ephiiGeygPgZ/2ejhoiFeygPgq/3erhfiGeygPg7/4e7hNiG]],
 				["UpperLeg.R"] = [[
-					hMifgi/ShSgYmkhKigge+9hzfnn2hIimgb+GiKe0qkhFiqgZ84iXeStdhCipgZ7uiZeGvqhAijga62iQePxKhAibgd59h9eqyjhAiVgh4shlfT0RhCiWgl41
-					hSgG0IhEicgp7HhNhBw6hHilgr9phNh+r0hJisgs/UhKjAlthLisgs/vg4jkhmhNiogp/1gtjCgxhNiigm/0g4hyil]],
+					hQiFgd/Ki+gtmmhOiHgZ+3jpgBnnhLiMgW95j/fIqphJiQgU8bkGecuAhHiPgU6+kBeIwohFiJgV5wj0eLyghFiBgY4ejdeh0QhGh7gc2ti8fB2UhHh8gg2u
+					isf02WhJiCgk5ci7g3zKhLiLgn8zjQiCtYhNiSgo/KjbjqlNhPiSgn/gi8kvf9hQiOgl/nijkFfahRiIgh/uirifh1]],
 				["LowerLeg.R"] = [[
-					hPiDfi1iesfF3mhLh/fgyzfzfD53hGh6fkwigxfG7XhCh0fsuuhdfK8WhAhtf1s2hyfQ9Pg/hkf9qjhxfd+JhAhZgGoIhbfw+6hChRgTmcg4gF/UhGhSgWkW
-					gMgf/shLhegKixfPgz/2hQh2f5kjeCgu/mhXiUfspccvgH+Zhbimfouxb/fR8FhailflyfcSey5zhViXfh0jdVe14W]],
+					hUhufn3Aeye72KhRhsfkzkf1e65ShNhnfowrgwfE7RhKhhfwudhZfL8fhIhbf5sPhrfU9ghIhRgCpjhmfh+fhJhHgNmyhOf0/PhLhAgblEgugG/lhOhBgfig
+					f/gi/4hShKgUf4e8g2/9hXhggBhedtgs/3hdiAfyoKcSf3+thgiUfvvcbger7nhfiRfsz1cDeJ4thaiCfn2BdVea3A]],
 				["Foot.R"] = [[
-					hHgwfp8jfJgcuYhHgwf68kgKf7uZhHgwgL8jhBffuYhHgwgc8hhofMuXhHgwgt8gh7fCuXhHgwg+8gh8fBuXhHgwhP8hhtfJuXhHgwhf8ihRfXuYhHg7hm8Q
-					gsfpu/hHhPhc7xf1gGv5hHhehI7aeygvwbhHhlgv7NdrhbwnhHhjgV7Lc9h2wfhHhYf+7bdFhuwHhHhGfv76d8hJvc]],
+					hOgsfk8wfSgWuAhOgsf18wgRf4uBhOgsgG8vhGfeuAhOgsgX8thrfMt/hOgsgn8sh8fEt/hOgsg48sh6fEt/hOgshJ8thpfNt/hOgshZ8vhPfZuAhOg3hg8Z
+					gnfsuthOhLhW71fpgNvxhOhZhC7beig4wYhOhggq7MdXhnwlhOhegQ7JcliEwchOhTf57cc3h2wChOhBfq8Bd7hJvQ]],
 				["Toe.R"] = [[
-					hHgOfQ/7fZgvh0hHgOfh/8gHf4h0hHgOfy/6gvfIh0hHgOgD/4hKenh0hHgOgT/3hYeWhzhHgOgk/3hZeVhzhHgOg1/4hOeih0hHgOhG/6g6e6h0hHgYhP/4
-					gffZiehHgrhG/zf5gKjghHg5g0/sfLhKkJhHg/gc/keciPkZhHg9gB/gd9i6kShHgzfp/leAivj2hHgifY/wekh4jC]],
+					hOgPfO/6fegmiGhOgPff/7gNfyiGhOgPfv/5g0fGiGhOgPgA/3hPeniGhOgPgR/2hceZiGhOgPgh/2hbebiGhOgPgy/3hOepiGhOgPhD/5g7e+iGhOgZhL/2
+					gdfei4hOgrhD/ufwgVkFhOg5gx/le+hYkyhOhAgZ/ceLiflEhOg9f//WdojNk8hOgzfn/edyi5kdhOgifW/tegh2ji]],
 			},
 		},
 		Run = {
@@ -301,63 +301,63 @@ return {
 			frames = 8,
 			bones = {
 				Hips = [[
-					gAj7gx/4gAgAirgAjjgx/2f1e1irgAjogx/1fxeWiqgAkBgx/2f1e1irgAj7gx/4gAgAirgAjjgx/2gLhLirgAjogx/1gPhqiqgAkBgx/2gLhLir]],
+					gAjSgu/8gAgAhygAi6gu/6fze1hygAi/gu/5fueWhygAjXgu/6fze1hygAjSgu/8gAgAhygAi6gu/6gNhLhygAi/gu/5gShqhygAjXgu/6gNhLhy]],
 				Spine1 = [[
-					gAj2gSABgAgAgZf+jegSADgQhKfof9jjgSAEgXhpfzf+j8gSADgShKgkgAj2gSABgAgAgZgCjegSADfwe2fogDjjgSAEfpeXfzgCj8gSADfue2gk]],
+					gAjPgTAHgAgAihf+i3gTAFgVhJhwf9i8gUAHgehnh6f+jUgTAKgXhIisgAjPgTAHgAgAihgCi3gTAFfre3hwgDi8gUAHfieZh6gCjUgTAKfpe4is]],
 				Spine2 = [[
-					gAj4fTANgAgAjZf5jcfTAGgVhJh3f2jjfTAJgfhmiNf5j+fTAQgahHjvgAj4fTANgAgAjZgHjcfTAGfre3h3gKjjfTAJfheaiNgHj+fTAQfme5jv]],
+					gAjXfeAsgAgAmhf6i9feAcgchGlAf4jDfeAhgphjlWf6jdfeAygghEm3gAjXfeAsgAgAmhgGi9feAcfke6lAgIjDfeAhfXedlWgGjdfeAyfge8m3]],
 				Neck1 = [[
-					gAj/ezEagAgAwKf3jgezDAgug8tbfzjne0DUhEhTuCf3kGe0Exg1g2wvgAj/ezEagAgAwKgJjgezDAfSfEtbgNjne0DUe8etuCgJkGe0ExfLfKwv]],
+					gAjjfDFKgAgAxYf4jFfCDogxg6utf1jMfDD+hHhQvTf5jpfEFjg4g0x8gAjjfDFKgAgAxYgIjFfCDofPfGutgLjMfDD+e5ewvTgHjpfEFjfIfMx8]],
 				Neck2 = [[
-					gAk3eUJTgAgA2if1kReJHQg8gu0PfwkaeMHuhWhA0wf2k/eXJ0hBgn3AgAk3eUJTgAgA2igLkReJHQfEfS0PgQkaeMHueqfA0wgKk/eXJ0e/fZ3A]],
+					gAkYerIIgAgA1Sf3j1ehGNg5gyy4fzj9ejGohThEzaf4kgeuImg/gq1xgAkYerIIgAgA1SgJj1ehGNfHfOy4gNj9ejGoete8zagIkgeuImfBfW1x]],
 				Head = [[
-					gAlqeTANgAgAjbf1lDd/AFgUgjh5fxlMeEAHgegxiOf3lyeZAQgbghjxgAlqeTANgAgAjbgLlDd/AFfsfdh5gPlMeEAHfifPiOgJlyeZAQflffjx]],
+					gAlIemAOgAgAjpf2kkeSAGgUgjiHfzkseXAIgfgxicf5lQerARgbghj/gAlIemAOgAgAjpgKkkeSAGfsfdiHgNkseXAIfhfPicgHlQerARflffj/]],
 				Jaw = [[
-					gAlsdd/8gAgAhwfzlAdJ/ff0fZllfulKdN/oftfKkvf1l1di/+fqfbg6gAlsdd/8gAgAhwgNlAdJ/fgMgnllgSlKdN/ogTg2kvgLl1di/+gWglg6]],
+					gAlRdk/8gAgAhqf0kldQ/gf0fZlgfwkwdU/oftfKkqf2ladp/+fqfbg0gAlRdk/8gAgAhqgMkldQ/ggMgnlggQkwdU/ogTg2kqgKladp/+gWglg0]],
 				ClockMin = [[
-					gAjrf6d3JfiJ2hf8jTf7lNK2aC2pf6jYf7s0O0RXysf8jwf6zRV2LHqlgAjrf62hd3JfiJgEjTf72pl+K2azgGjYf7ysupO0TMgEjwf6ql05V2Mv]],
+					gAjufvd3JfiJ2hf8jVftlNK2aC2pf6jafts0O0RXysf8jzfwzRV2LHqlgAjufv2hd3JfiJgEjVft2pl+K2azgGjaftysupO0TMgEjzfwql05V2Mv]],
 				ClockHour = [[
-					gAjrf6d3JfiJ2hf8jTf7ctKejK3Nf6jYf7c6Kzi33kf8jwf6d/KUhy3WgAjrf6d3JfiJ2hgEjTf7c2IzjT1igGjYf7dJIcjG1NgEjwf6eOIqiB1s]],
-				Gear2 = [[
-					gAlWeld3JfiJ2hf3k2eddxKViA3Vfzk9effAKmgj3vf4ldeohMKQeV3XgAlWeliTJgdt2ggJk2edilIud91sgNk9efkGIncz1MgIldeomMJbam1H]],
+					gAjufvd3JfiJ2hf8jVftctKejK3Nf6jaftc6Kzi33kf8jzfwd/KUhy3WgAjufvd3JfiJ2hgEjVftc2IzjT1igGjaftdJIcjG1NgEjzfweOIqiB1s]],
 				["UpperArm.L"] = [[
-					fNjkehrbUtk37OfDjFenniWfl89Ae+jMepofWrlV86fDjselsXVbj17RfNjkehrbUtk37OfYjDegnPUjm88IfdjKefoHT/m27rfYjqeesOTslK6Y]],
+					fGjSeyq5Sal26Le9i0e3nLUVnR7+e6i7e5oGUdmn78e+jZe3rzTEkx6WfGjSeyq5Sal26LfQiyevm1SeoO68fTi4etnqR3oD6dfPjYeurpRamD5Q]],
 				["LowerArm.L"] = [[
-					exi7e9uZ8eiGhCepimfQuQ8ddciDemisfQuc8deJhLeojCfAuw8Rifflexi7e9uZ8eiGhCe6ikfEt78dehkJe+iofAt48hfqkHe7jAe1uE8ejjhk]],
+					eoisfIgF/4iWhEehiWfYgH/6dvf5eeicfZgR/9ewfbegizfMgg/zjXf8eoisfIgF/4iWhEewiTfMfv/1dviPeziYfHfp/2eyitexiwe/fu/vjZiL]],
 				["UpperArm.R"] = [[
-					gzjkehrbrTbJ7OgojDegnPrdZE8IgjjKefoHsBZK7rgojqeesOsUa26YgzjkehrbrTbJ7Og9jFenniphaE9AhCjMepofpVar86g9jselsXqlcL7R]],
+					g6jSeyq5tmaK6Lgwiyevm1tiXy68gti4etnquJX96dgxjYeurpumZ95Qg6jSeyq5tmaK6LhDi0e3nLrrYv7+hGi7e5oGrjZZ78hCjZe3rzs8bP6W]],
 				["LowerArm.R"] = [[
-					hPi7e9uZDid6hChGikfEt7DjhfkJhCiofAt4DfgWkHhFjAe1uEDicdhkhPi7e9uZDid6hChXimfQuQDjikiDhaisfQucDjh3hLhYjCfAuwDvdhfl]],
-				Gear1 = [[
-					gAlZgEdqJgiW2gf+lAf/cMKjju3If9lFgAbdLDkf3Uf+legFbJKxk226gAlZgEaKKKl212gClAf/YuJwnI0mgDlFgAX7Jrnxz/gClegFXoKIoI0O]],
-				Gear3 = [[
-					gAlShZdqJgiW2ggEk9hVedKRhS3YgGlChVf6Kkfj3vgElXhah8KTdi3SgAlShZjjJrcd2Vf8k9hVk0JFb41Zf6lChVmmJMaj0vf8lXhaoaKJYh0d]],
+					hYisfIgFAIdqhEhQiTfMfvALiRiPhNiYfHfpAKhOithPiwe/fuARcniLhYisfIgFAIdqhEhfiWfYgHAGiRf5hiicfZgRADhQfbhgizfMggANcpf8]],
 				Tail1 = [[
-					gAkHhWcrg5f5/zgDjvhWa8gef+/lgEj0hVbNfygB/ogDkNhWc9fOgH/1gAkHhWcrfHgH/zf9jvhWa8figC/lf8j0hVbNgOf//of9kNhWc9gyf5/1]],
+					gAjdhScmg5f5/zgDjFhSa3gef+/kgEjKhSbJfygB/ngDjjhSc4fOgG/1gAjdhScmfHgH/zf9jFhSa3figC/kf8jKhSbJgOf//nf9jjhSc4gyf6/1]],
 				Tail2 = [[
-					gFkbi2fWiufp/3gGkNizcWhHf4/wgDkRizbYe1gF/of+kfi2eYdPgP/1f7kbi2fWdSgX/3f6kNizcWe5gI/wf9kRizbYhLf7/ogCkfi2eYixfx/1]],
+					gFjwioevivfs/2gFjhimbuhHf5/rgDjlimaxe1gD/if+j0iodxdPgL/yf7jwioevdRgU/2f7jhimbue5gH/rf9jlimaxhLf9/igCj0iodxixf1/y]],
 				Tail3 = [[
-					gWkfkXh4kvfY/lgNkkkSfJi0fj/2f7ktkRcafOgF/xftkpkWfKcFgT/vfqkfkXh4bRgo/lfzkkkSfJdMgd/2gFktkRcagyf7/xgTkpkWfKj7ft/v]],
+					gUj3j/hMkwfe/ngMj4j6eci1fn/0f8kBj5bufOgE/sfvkAj+eecFgO/tfsj3j/hMbQgi/nf0j4j6ecdLgZ/0gEkBj5bugyf8/sgRkAj+eej7fy/t]],
 				Tail4 = [[
-					gzkTl0i7mEfS/Rgekplzhxk1fJ/kf3lDlxeOgyf5/7fVkul2fZcNgV/wfNkTl0i7Z8gu/RfikplzhxbLg3/kgJlDlxeOfOgH/7grkul2fZjzfr/w]],
+					gujwlTipmFfW/SgbkBlRhek2fM/lf4kZlOd7gyf5/6fakIlTfGcNgT/wfSjwlTipZ7gq/SflkBlRhebKg0/lgIkZlOd7fOgH/6gmkIlTfGjzft/w]],
 				Hourglass = [[
-					hXkBnNi0iEe7/yg7kdnQhnf5e5/7f8lOnTeOd2gD/3e+kxnVfYc/gU/1epkBnNi0d8hF/yfFkdnQhngHhH/7gElOnTeOiKf9/3hCkxnVfYjBfs/1]],
+					hOjhmji0iEe7/yg1j4mkhnf5e5/7f8kkmleOd2gD/3fFkNmpfYc/gU/1eyjhmji0d8hF/yfLj4mkhngHhH/7gEkkmleOiKf9/3g7kNmpfYjBfs/1]],
+				Gear2 = [[
+					gEkwiNemKDhN3MgFkeiDehJxhY26gDkjiFf6JPgK2ef/k1iOiZI+d91+f8kwiNjWJBdG1zf7keiDjHJRdI2Gf9kjiFkOJ8bq2WgBk1iOmTK2ZK2H]],
+				Gear3 = [[
+					gIkkjOemKDhN3MgHkZjGe4JvhA27gCkcjHgqJQfb2df8knjQjiJIc412f4kkjOk2JTbs1kf5kZjGk+JnbV1zf+kcjHmXKdZf10gEknjQorLtWr1M]],
+				Gear1 = [[
+					gAkygsdcJiik2egBkZgscgKgjY3LgCkfgrbqLBkR3XgBk3gsa1K2lM22gAkygsZ9KNmD1zf/kZgsZDJpm10sf+kfgrYIJnnl0Df/k3gsXUKQob0G]],
 				["UpperLeg.L"] = [[
-					e5imgr2Ne3gT2/e3iOgw+lePeapDe3iUgz8tezaVTIe3isgw/6fjeIg/e5imgr9jfJgXsPe7iMgm/sd6ggjze8iRgk6qeEhlxhe7iqgmsRfFhr9f]],
+					e1iLglyWdvgv6Gezh0gq4Hcqex0tezh6gt6jdFXzQbeziSgq/zeGeLiPe1iLgl/zdVf/iGe3hygg/lbvfziwe4h3gd47cchvzqe3iQggtKeNiE9B]],
 				["LowerLeg.L"] = [[
-					e2hgguf5ghf8//evhpf2cziDgH/wejjIgI21lChP1zeviofr6dixgdxwe5h0f69hglfxsUe8h7fixIfIgQ7Ae9hRgJmZfEgq/Ue6h4hXsNfigm9k]],
+					ewhUg5eMgqfv/7eog7ghQEi/gD7kefitgV5xl8hwx6esiKfw8uingdt2e0iEfq/6gbf0iNe1hoflxVfGgU64e1g+gPkXfWgi/re0hjhGlyfigZ/d]],
 				["Foot.L"] = [[
-					e5hgiB7tgDf+v/e5h5hH7ShkfDwme5h4gC7BkVdYwXe5hcfL7riYepv0e5g5e/8zgEf+t7e5gwgG8ieygnuYe5gwhV8jezgnuYe5g+iS6ffLggx5]],
+					eyhbh67xgFf9v4eyh0hB7Hjmd0wdeyhzf96ylocnwMeyhXfH7viZepvsezh7ep/Jfzf2nSeygsgB8uepgquAeygshP8ve8ghuAeyhMiE6PfGgoyQ]],
 				["Toe.L"] = [[
-					e5g8hrAXf/gEkte5hUgzAFfNhpg3e5hSfuAtdFkIbxe5g3e2AVeXiMcie5gYelADf9gEeue5gOfsAGg4e9eMe5gOg8AEgxe5g/e5gWiCAtgOfEmj]],
+					eyg8hoASf+gFkIeyhUgwATeFjwgLeyhSfsBFcFlRbJeyg4e0AZeTiKb/ezhqeIAbgPgElCeygPfqAIhAe4d6eygPg4ADgtfDgteygph3AggNe7lb]],
 				["UpperLeg.R"] = [[
-					hHimgr9jg3fpsPhFiMgm/siGfgjzhEiRgk6qh8ebxhhFiqgmsRg7eV9fhHimgr2NhJft2/hJiOgw+lhxhmpDhJiUgz8thNlrTIhJisgw/6gdh4g/]],
+					hLiLgl/zirgBiGhJhygg/lkRgNiwhIh3gd47jkeRzqhJiQggtKhzd89BhLiLglyWiRfR6GhNh0gq4HjWhP0thNh6gt6ji7oNQbhNiSgq/zh6h1iP]],
 				["LowerLeg.R"] = [[
-					hHh0f69hfbgPsUhEh7fixIg4fw7AhDhRgJmZg8fW/UhGh4hXsNgefa9khKhgguf5ffgE//hRhpf2czd9f5/whdjIgI21a+ex1zhRiofr6ddPfjxw]],
+					hMiEfq/6flgMiNhLhoflxVg6fs64hLg+gPkXgqfe/rhMhjhGlygefn/dhQhUg5eMfWgR/7hYg7ghQEdBf97khhitgV5xaEeQx6hUiKfw8udZfjt2]],
 				["Foot.R"] = [[
-					hHg5e/8zf8gCt7hHgwgG8ihOfZuYhHgwhV8jhNfZuYhHg+iS6fg1fgx5hHhgiB7tf9gCv/hHh5hH7Secg9wmhHh4gC7BbriowXhHhcfL7rdohXv0]],
+					hNh7ep/JgNgKnShOgsgB8uhXfWuAhOgshP8vhEffuAhOhMiE6Pg6fYyQhOhbh67xf7gDv4hOh0hB7HcaiMwdhOhzf96yaYjZwMhOhXfH7vdnhXvs]],
 				["Toe.R"] = [[
-					hHgYel/9f9gEhShHgOfs/6g4e9h0hHgOg8/8gxe5fBhHgWiC/TgOfEZdhHg8hr/pf/gEbThHhUgz/7fNhpfJhHhSfu/TdFkIkPhHg3e2/reXiMje]],
+					hNhqeIAbfxf8lChOgPfqAIfAhId6hOgPg4ADfTg9gthOgph3AgfzhFlbhOg8hoASgCf7kIhOhUgwATh7cQgLhOhSfsBFj7avbJhOg4e0AZhtd2b/]],
 			},
 		},
 		Attack = {
@@ -366,92 +366,92 @@ return {
 			frames = 16,
 			bones = {
 				Hips = [[
-					gAkBgxACgAgAg9gAj8g2ADgAgAhVgAjuhAAGgAgAiQgAjghLALgAgAjOgAjZhRAPgAgAjugAkGgTACgAgAfMgAkdfsANgAgAcggAkdfsANgAgAcggAkdfsAN
-					gAgAcggAkbfwALgAgAczgAkUgDAFgAgAd+gAkKgaABgAgAffgAkDgtABgAgAgqgAkBgxACgAgAg9gAkBgxACgAgAg9gAkBgxACgAgAg9]],
+					gAjXguAEgAgAh2gAjSgzAGgAgAiOgAjFg9ALgAgAjJgAi3hIASgAgAkHgAiwhOAWgAgAkngAjdgQABgAgAgFgAjzfpAIgAgAdZgAjzfpAIgAgAdZgAjzfpAI
+					gAgAdZgAjxfuAGgAgAdsgAjqgAACgAgAe3gAjhgYABgAgAgYgAjZgqADgAgAhjgAjXguAEgAgAh2gAjXguAEgAgAh2gAjXguAEgAgAh2]],
 				Spine1 = [[
-					gAkDgSAPgAgAjugAj+gWARgAgAj8gAjzghAVgAgAkfgAjngsAbgAgAlEgAjggyAegAgAlXgAkFfzAGgAgAiJgAkWfNABgAgAgGgAkWfNABgAgAgGgAkWfNAB
-					gAgAgGgAkVfRABgAgAgWgAkQfjADgAgAhSgAkJf7AHgAgAiigAkEgNANgAgAjegAkDgSAPgAgAjugAkDgSAPgAgAjugAkDgSAPgAgAju]],
+					gAjbgTAjgAgAl0gAjWgYAmgAgAmCgAjKgiAtgAgAmlgAi+guA1gAgAnJgAi3g0A5gAgAncgAjdf1ATgAgAkQgAjvfPAGgAgAiOgAjvfPAGgAgAiOgAjvfPAG
+					gAgAiOgAjtfTAHgAgAidgAjoflANgAgAjagAjhf9AXgAgAkpgAjcgPAggAgAllgAjbgTAjgAgAl0gAjbgTAjgAgAl0gAjbgTAjgAgAl0]],
 				Spine2 = [[
-					gAkSfUAqgAgAmZgAkOfZArgAgAmegAkEfkAugAgAmpgAj6fwAwgAgAm1gAj1f2AygAgAm8gAkNe1AagAgAlBgAkXeOAOgAgAjpgAkXeOAOgAgAjpgAkXeOAO
-					gAgAjpgAkWeSAQgAgAj1gAkVekAWgAgAkjgAkTe8AfgAgAlfgAkSfPAogAgAmNgAkSfUAqgAgAmZgAkSfUAqgAgAmZgAkSfUAqgAgAmZ]],
+					gAjufhBcgAgApdgAjqflBegAgApigAjgfxBhgAgAptgAjVf9BlgAgAp5gAjQgDBngAgAp/gAjrfBBEgAgAoHgAj2eZAvgAgAmwgAj2eZAvgAgAmwgAj2eZAv
+					gAgAmwgAj2edAygAgAm8gAj0ewA8gAgAnpgAjxfIBMgAgAolgAjvfcBZgAgApSgAjufhBcgAgApdgAjufhBcgAgApdgAjufhBcgAgApd]],
 				Neck1 = [[
-					gAkee3EOgAgAv3gAkbe7EmgAgAwggAkSfGFmgAgAyDgAkIfTGvgAgAzngAkDfZHYgAgA0agAkXeWDKgAgAt0gAkeduBigAgApvgAkeduBigAgApvgAkeduBi
-					gAgApvgAkedzBrgAgAqKgAkeeFCSgAgArzgAkeeeDMgAgAt6gAkeexEAgAgAvdgAkee3EOgAgAv3gAkee3EOgAgAv3gAkee3EOgAgAv3]],
+					gAj+fJE9gAgAxFgAj6fNFXgAgAxtgAjxfZGbgAgAzNgAjmflHpgAgA0ugAjhfsIUgAgA1fgAj5enDzgAgAvFgAkCd/CAgAgArFgAkCd/CAgAgArFgAkCd/CA
+					gAgArFgAkCeDCKgAgArggAkBeWC1gAgAtIgAkAewD2gAgAvLgAj/fEEugAgAwsgAj+fJE9gAgAxFgAj+fJE9gAgAxFgAj+fJE9gAgAxF]],
 				Neck2 = [[
-					gAlWeWISgAgA1egAlUedJAgAgA2OgAlOevK3gAgA4AgAlHfDM/gAgA5ugAlCfNOJgAgA6igAlKdtGlgAgAzagAlDc5DigAgAumgAlDc5DigAgAumgAlDc5Di
-					gAgAumgAlFc/DzgAgAvGgAlKdWE6gAgAw/gAlRd2GigAgAzWgAlVePH6gAgA1DgAlWeWISgAgA1egAlWeWISgAgA1egAlWeWISgAgA1e]],
+					gAkzewHKgAgA0KgAkwe3H1gAgA09gAkpfJJmgAgA21gAkgfcLogAgA4qgAkbfmMvgAgA5igAkqeHFkgAgAyBgAkodSCzgAgAtCgAkodSCzgAgAtCgAkodSCz
+					gAgAtCgAkpdYDCgAgAtjgAktdwEBgAgAvggAkweQFhgAgAx8gAkzepG0gAgAzugAkzewHKgAgA0KgAkzewHKgAgA0KgAkzewHKgAgA0K]],
 				Head = [[
-					gAmJeRADgAgAhcgAmHebAKgAgAi7gAmAe1AtgAgAmkgAl3fSBugAgAqUgAlyfgCcgAgAsOgAl7dgABgAgAgigAltccAdgAgAaxgAltccAdgAgAaxgAltccAd
-					gAgAaxgAlvcjAYgAgAbNgAl4dAAKgAgAc9gAmCdoACgAgAfPgAmIeIACgAgAhAgAmJeRADgAgAhcgAmJeRADgAgAhcgAmJeRADgAgAhc]],
+					gAljemAEgAgAhqgAlgewALgAgAjJgAlZfKAvgAgAmxgAlQflBzgAgAqhgAlKf0CigAgAsbgAlXd1ACgAgAgwgAlMcyAagAgAa/gAlMcyAagAgAa/gAlMcyAa
+					gAgAa/gAlOc5AWgAgAbbgAlWdWAJgAgAdLgAled+ABgAgAfdgAliedACgAgAhNgAljemAEgAgAhqgAljemAEgAgAhqgAljemAEgAgAhq]],
 				Jaw = [[
-					gAmEda/+gAgAgvgAmHdk//gAgAf8gAmNeA/7gAgAd5gAmQeh/qgAgAbfgAmQez/fgAgAaZgAlzcq83gAgAtygAlSbs9cgAgAshgAlSbs+wgAgAo1gAlSbs+e
-					gAgApwgAlWby/EgAgAnngAlkcN/kgAgAlNgAl1cz/2gAgAi8gAmBdS/+gAgAhMgAmEda/+gAgAgvgAmEda/+gAgAgvgAmEda/+gAgAgv]],
+					gAljdj//gAgAgpgAlndu//gAgAf2gAlveL/6gAgAdzgAlzet/qgAgAbZgAl0fA/egAgAaUgAlTcz86gAgAttgAkxb19egAgAscgAkxb1+xgAgAovgAkxb1+f
+					gAgApqgAk1b7/GgAgAnigAlDcW/lgAgAlIgAlUc8/3gAgAi2gAlgdb/+gAgAhGgAljdj//gAgAgpgAljdj//gAgAgpgAljdj//gAgAgp]],
 				ClockMin = [[
-					gAj9f4gAJZgA2ngAj5f9g5JafH2mgAjwgIjHJmc52agAjlgUlmKFaa17gAjgganKKjY21dgAj8faniKrYe1VgAkJe1wRQTPvvtgAkJe12ngMJZf0gAkJe1xc
-					uaOkRmgAkIe5s3ynTJNZgAkFfKrxzUUPMsgAkBfipQ0pWwLXgAj+f0l/10aBKMgAj9f4i92bdDJlgAj9f4gz2nfNJZgAj9f4gA2ngAJZ]],
+					gAkBf2gAJZgA2ngAj9f7g5JafH2mgAjzgGjHJmc52agAjogSlmKFaa17gAjigZnKKjY21dgAkAfUniKrYe1VgAkMerwRQTPvvtgAkMer2ngMJZf0gAkMerxc
+					uaOkRmgAkMevs3ynTJNZgAkJfDrxzUUPMsgAkFfdpQ0pWwLXgAkCfxl/10aBKMgAkBf2i92bdDJlgAkBf2gz2nfNJZgAkBf2gA2ngAJZ]],
 				ClockHour = [[
-					gAj9f4gAJZgA2ngAj5f9gDJZf92ngAjwgIgMJZf02ngAjlgUgVJZfr2ngAjggagZJZfn2ngAj8fafBJag/2mgAkJe1eCJeh+2igAkJe1eCJeh+2igAkJe1eC
-					Jeh+2igAkIe5eKJdh22jgAkFfKerJbhV2lgAkBfifWJZgq2ngAj+f0f4JZgI2ngAj9f4gAJZgA2ngAj9f4gAJZgA2ngAj9f4gAJZgA2n]],
-				Gear2 = [[
-					gAl3e5gAJZgA2ngAlze+gXJZfp2ngAlqfKhSJbeu2lgAlgfYiUJgds2ggAlbffi+JldC2bgAlweRiRJgdv2ggAl2dhlhKEaf18gAl2dhrlMlUbzbgAl2dhwI
-					QJP4v3gAl2dnxuR9OSuDgAl2d9yOSmNytagAl3ebzET1M8sLgAl3ezz5VOMHqygAl3e50cWVLkprgAl3e50yXFLOo7gAl3e505XWLHoq]],
+					gAkBf2gAJZgA2ngAj9f7gDJZf92ngAjzgGgMJZf02ngAjogSgVJZfr2ngAjigZgZJZfn2ngAkAfUfBJag/2mgAkMereCJeh+2igAkMereCJeh+2igAkMereC
+					Jeh+2igAkMeveKJdh22jgAkJfDerJbhV2lgAkFfdfWJZgq2ngAkCfxf4JZgI2ngAkBf2gAJZgA2ngAkBf2gAJZgA2ngAkBf2gAJZgA2n]],
 				["UpperArm.L"] = [[
-					fNkIeg1QTsgA0ffNkEek2STRerzDfNj7ev4USxbNvSfNjye75uTLXYrEfNjtfC6JTyVZo1fNj/eB5DTZb7u2fNkDdc5MT/dWvafNkDdc5MT/dWvafNkDdc5M
-					T/dWvafNkEdg49T9dhvxfNkFdx4BT1eNxLfNkGeJ2rTufIy6fNkHeb1jTtf00LfNkIeg1QTsgA0ffNkIeg1QTsgA0ffNkIeg1QTsgA0f]],
+					fGjxe10WRNgAzvfGjte51RQzeiyXfGjjfF3FQaatuzfGjZfR4SQ/Wjq4fGjUfX4oRsUao0fGjqeV34RAbXuXfGjxdt4JRjczu4fGjxdt4JRjczu4fGjxdt4J
+					Rjczu4fGjxdy37RgdBvOfGjxeE3BRXd2wkfGjxed1uRPe8yPfGjxew0pRNfyzcfGjxe10WRNgAzvfGjxe10WRNgAzvfGjxe10WRNgAzv]],
 				["LowerArm.L"] = [[
-					exjXeWuR8jgAiGevjXeUvF8CjKgdeqjZeTwP5KqncWeljeeYwPz4xZYKejjieevywW0QWKetjbdjvm7lkXfWexjcc+uC8cdhjVexjcc+uC8cdhjVexjcc+uC
-					8cdhjVexjbdEuE8ddrjQexjadauI8geVi7exjYd4uN8ifMigexjXePuR8jf1iLexjXeWuR8jgAiGexjXeWuR8jgAiGexjXeWuR8jgAiG]],
+					eojHeogA/+gAhEemjHeog3/wjlhDeijJepi/9dsFgzeejNeylK4fz7gRecjPe4mQ1A3Tf5eljOd3hg/ilKgneojRdQf6/2dOhEeojRdQf6/2dOhEeojRdQf6
+					/2dOhEeojQdWf6/3dahEeojNdsf8/6eIhEeojKeKf+/9fFhEeojIeigA/+f0hEeojHeogA/+gAhEeojHeogA/+gAhEeojHeogA/+gAhE]],
 				["UpperArm.R"] = [[
-					gzkIeg1QsUgA0fgzkEek2SsvhVzDgzj7ev4UtPkzvSgzjye75us1oorEgzjtfC6JsOqno1gzj/eB5DsnkFu2gzkDdc5MsBiqvagzkDdc5MsBiqvagzkDdc5M
-					sBiqvagzkEdg49sDifvxgzkFdx4BsLhzxLgzkGeJ2rsSg4y6gzkHeb1jsTgM0LgzkIeg1QsUgA0fgzkIeg1QsUgA0fgzkIeg1QsUgA0f]],
+					g6jxe10WuzgAzvg6jte51RvNheyXg6jjfF3FvmlTuzg6jZfR4SvBpdq4g6jUfX4ouUrmo0g6jqeV34vAkpuXg6jxdt4JudjNu4g6jxdt4JudjNu4g6jxdt4J
+					udjNu4g6jxdy37ugi/vOg6jxeE3BupiKwkg6jxed1uuxhEyPg6jxew0puzgOzcg6jxe10WuzgAzvg6jxe10WuzgAzvg6jxe10WuzgAzv]],
 				["LowerArm.R"] = [[
-					hPjXeWuRDdgAiGhRjXeUvFD+c2gdhWjZeTwPG2VZcWhbjeeYwPMIOnYKhdjieevyPqLwWKhTjbdjvmEbbpfWhPjcc+uCDkifjVhPjcc+uCDkifjVhPjcc+uC
-					DkifjVhPjbdEuEDjiVjQhPjadauIDghri7hPjYd4uNDeg0ighPjXePuRDdgLiLhPjXeWuRDdgAiGhPjXeWuRDdgAiGhPjXeWuRDdgAiG]],
-				Gear1 = [[
-					gAlmgYgAJZgA2ngAligef6JZgG2ngAlWgsfrJZgV2ngAlJg7fXJZgp2ngAlChDfHJag52mgAlofwcTJsjt2UgAl4e9XmLAoa1AgAl4e9S/NgtByggAl4e9Pg
-					QiwgvegAl3fDOaRyxmuOgAlzfaOsRdxUujgAltf6O1RSxLuugAlogSOsRcxUukgAlmgYOPSAxxuAgAlmgYN2ShyKtfgAlmgYNtStyTtT]],
-				Gear3 = [[
-					gAlOhqgAJZgA2ngAlJhwglJZfb2ngAk6h9iBJed/2igAkqiLjnJrcZ2VgAkiiSkmJ3ba2JgAlZhEjNJncz2ZgAl0gSnXKnYp1ZgAl0gSu6O/RGxBgAl0gSzv
-					U9MRrDgAlxgY1HX4K5oIgAlogv1eY4KinIgAlbhO2AaxKAlPgAlRhl2ac4JmjIgAlOhq2kehJchfgAlOhq2nfnJZgZgAlOhq2ngAJZgA]],
+					hYjHeogAACgAhEhajHeog3AQcbhDhejJepi/CjT7gzhijNeylKHhMFgRhkjPe4mQLAItf5hbjOd3hgAea2gnhYjRdQf6AKiyhEhYjRdQf6AKiyhEhYjRdQf6
+					AKiyhEhYjQdWf6AJimhEhYjNdsf8AGh4hEhYjKeKf+ADg7hEhYjIeigAACgMhEhYjHeogAACgAhEhYjHeogAACgAhEhYjHeogAACgAhE]],
 				Tail1 = [[
-					gAkEhXehgAgA/9gAj+hcefgAgA/9gAjvhmecgAgA/9gAjehxeZgAgA/8gAjVh3eYgAgA/8gAkOg4bVgAgA/pgAkrgPaFfNgF/bgAkrgPbUfUgC/ogAkrgPbU
-					gsf+/ogAkogUbthmf8/qgAkegndDhXgA/0gAkRhAeXgPgB/8gAkHhTfAfqf//+gAkEhXetf4gA/9gAkEhXehgAgA/9gAkEhXehgAgA/9]],
+					gAjbhUecgAgA/9gAjUhYebgAgA/8gAjFhjeYgAgA/8gAi1hteVgAgA/8gAishzeTgAgA/8gAjkg1bRgAgA/ogAkAgNaBfNgF/agAkAgNbQfUgC/ogAkAgNbQ
+					gsf+/ogAj+gSbohmf8/pgAj0gkc+hXgA/0gAjng9eSgPgB/8gAjdhPe7fqf//+gAjbhUeof4gA/9gAjbhUecgAgA/9gAjbhUecgAgA/9]],
 				Tail2 = [[
-					gAkOi5e4gAgA/+gAkHi+eegAgA/9gAj4jIdegAgA/5gAjojTcZgAgA/ygAjfjZb2gAgA/ugAkqiWaTgAgA/ef7lOhradebgL/df8lHhtc8epgG/0gElHhtc8
-					hXf6/0gKlChzdbjLf1/ugIkwiIe8iuf+/2gBkbiigCgfgB//f+kNi1gKfVf+//f/kMi5fRfwf//+gAkOi5e4gAgA/+gAkOi5e4gAgA/+]],
+					gAjjiseRgAgA/8gAjdiwd3gAgA/6gAjOi6c2gAgA/1gAi+jFbygAgA/tgAi2jLbPgAgA/ogAj+iJZsgAgA/Xf8khheZ2eagJ/Wf8kahhcVepgE/wgEkahhcV
+					hXf8/wgJkWhmczjLf5/rgHkFh7eViugB/1gBjxiUfbgfgC/+f+jjinfifVf9/+f/jiisepfwf//9gAjjiseRgAgA/8gAjjiseRgAgA/8]],
 				Tail3 = [[
-					gAkUkbfogAgA//gAkRkfe0gAgA/+gAkIkpc2gAgA/1gAj+kzaxgAgA/jgAj5k4ZsgAgA/XgAlNjyZngAgA/WfxlwjHbMdogT/ifzlajOe8d+gM/6gNlajOe8
-					iCf0/6gdlSjSfgkvfp/ogZk3johNkFf3/tgEkbkEiGgugA/6f6kMkXhre/f+/7f+kRkcgMfogA//gAkUkbfogAgA//gAkUkbfogAgA//]],
+					gAjtkDe7gAgA/+gAjpkHeIgAgA/7gAjfkRcKgAgA/wgAjVkaaFgAgA/cgAjQkfZBgAgA/OgAkgjbY8gAgA/MfzlCiwagdogQ/bf1kui2ePd+gJ/4gLkui2eP
+					iCf3/4gakni6e0kwfv/ngWkOjRghkFf9/ugEj0jshZgugB/9f6jmj/g+e/f9/9f+jqkDfgfof///gAjtkDe7gAgA/+gAjtkDe7gAgA/+]],
 				Tail4 = [[
-					gAkXl+gAgAgA//gAkYmBe0gAgA/+gAkbmJb4gAgA/ugAkemQY0gAgA/LgAkfmSXPgAgA+xgAlzlNYmgAgA/HfjmNkkblc2gc/hfnlgkvgkdTgR/3gZlgkvgk
-					itfv/3g6lUkwhPmSfc/VgykvlHjGlafw/YgJkOlljyg9gA/wfzkCl5i1epf//1f7kQl+gxfggA/+gAkXl+gAgAgA//gAkXl+gAgAgA//]],
+					gAjzlbftgAgA//gAjzlfehgAgA/9gAj0lmblgAgA/rgAj1lsYhgAgA/GgAj1luW9gAgA+rgAlGkqYUgAgA/DfmlgkBbSc2ga/efqk4kNgRdTgQ/4gWk4kNgR
+					itfw/4g0ktkOg9mSfg/WgtkLkmi0lafz/agIjslEjfg9gA/yf1jglXiiepf+/3f8jslbgefggA//gAjzlbftgAgA//gAjzlbftgAgA//]],
 				Hourglass = [[
-					gAkXnggAgAgA//gAkfnke0gAgA/+gAk0npb4gAgA/ugAlJnoY0gAgA/LgAlTnmXPgAgA+xgAmfmlYpcRg5+5fPmnmAbpZcg7+/fXldmQgkdTgR/3gpldmQgk
-					itfv/3hglMmKhQmvfe/PhSkcmijHnPf8/AgPj3nFjxjbgT/lfrjxnZi1glgK/3f4kLnggxgCgB/+gAkXnggAgAgA//gAkXnggAgAgA//]],
+					gAj0mzgAgAgA//gAj7m2e0gAgA/+gAkMm7b4gAgA/ugAkdm6Y0gAgA/LgAklm4XPgAgA+xgAlvl4YpcRg5+5fUl5lUbpZcg7+/fbk2lkgkdTgR/3glk2lkgk
+					itfv/3hWkolfhQmvfe/PhKj8l4jHnPf8/AgNjZmajxjbgT/lftjSmti1glgK/3f5jqmzgxgCgB/+gAj0mzgAgAgA//gAj0mzgAgAgA//]],
+				Gear2 = [[
+					gAkmiYgAJZgA2ngAkgicgTJZft2ngAkRimhEJae82mgAkBixh7JeeF2igAj5i2ifJhdh2fgAk8hohAJafA2mf9lcg5koJUb51sf9lYhArpMEVAzOgDlYhAvg
+					QNPswWgHlUhHwnSYNautgGlGhhxiTVMztqgBk0iAzNUXMhr0f/kniV0UViMHqPf/kmiZ0lWaLlphgAkmiY0yXFLOo7gAkmiY05XWLHoq]],
+				Gear3 = [[
+					gAkSjYgAJZgA2ngAkMjcgaJZfm2ngAj9jmhbJbel2lgAjtjxilJidb2egAjlj2jVJocr2YgAk1iriFJfd72hf5lah8nHJ+Zh1Gf6lRiCvhO6RRwhgGlRiCzb
+					VXLqq7gNlMiJ0HYcJrn8gLk4ii0tZuJamqgCkgjA2AbhJrkjf9kRjV2tdXJyilf/kRjY2reqJhhWgAkSjY2nfnJZgZgAkSjY2ngAJZgA]],
+				Gear1 = [[
+					gAk1hBgAJZgA2ngAkwhIgBJZf/2ngAkhhXgCJZf+2ngAkRhogAJZgA2ngAkJhwf5JZgH2ngAk8gYcLJuj12SgAlTfiXDLPo90xgAlTfiSgN3tgyJgAlTfiPG
+					Q+w6vCgAlRfoOESOx8tygAlKgBOcRxxkuPgAlAgiOtRbxTulgAk4g7OrRexVuigAk1hBOPSAxxuAgAk1hBN2ShyKtfgAk1hBNtStyTtT]],
 				["UpperLeg.L"] = [[
-					e5ivgY7le2gAwKe5iqga8Nezf8vDe5iegg9cesfxsbe5iSgm+eemfnpoe5iMgq+6ekfhoHe5iygD5Re+gMzle5jHfqxzfjgq6ke5jHfqxzfjgq6ke5jHfqxz
-					fjgq6ke5jFftx/fjgq6ce5i+f51cfTge3ue5i2gJ5YfAgMzde5iwgV7Me4gCwze5ivgY7le2gAwKe5ivgY7le2gAwKe5ivgY7le2gAwK]],
+					e1iVgV7EdbgAw2e1iQgY72dRf1vge1iFgf9Xc+fdsUe1h5gm+jcufEo2e1hygp/Bcne2m7e1iYf/33dzge1Le1isfk0PeQg44te1isfk0PeQg44te1isfk0P
+					eQg44te1irfn0bePg34je1ikf01PeOg032e1icgF4Cd3gf1Ae1iWgS6kdfgGxpe1iVgV7EdbgAw2e1iVgV7EdbgAw2e1iVgV7EdbgAw2]],
 				["LowerLeg.L"] = [[
-					e3hyf2uIgjgA8se2hwfztmgkgC88e2htfvspgngG9Ye2hqftsHgqgL9me1hqftsBgrgN9pe3hufxtGgff79Me5iGgFxvgNfs6ne5iGgFxvgNfs6ne5iGgFxv
-					gNfs6ne5iEgHx6gOfs6ge4h5gAwNgVfy7le3hzf3uTgef78ne3hyf2uFgif/8ue3hyf2uIgjgA8se3hyf2uIgjgA8se3hyf2uIgjgA8s]],
+					ewhgf7uMgrgA8qevhef5tigwgE8+evhbf1scg5gL9deuhaf0sBg+gR9oeuhaf0sHhAgU9lexhdf3tKggf29KeyhyfvtugRfs85eyhyfvtugRfs85eyhyfvtu
+					gRfs85eyhwfyt8gRfs8yeyhpf7u5gSft8Texhif9uqgdf18bewhgf7uJgpf+8rewhgf7uMgrgA8qewhgf7uMgrgA8qewhgf7uMgrgA8q]],
 				["Foot.L"] = [[
-					e5gwgp8kgAgAuZe5gwgp8kgCf/uZe5gwgp8kgFf9uZe5gwgp8kgIf8uZe5gwgp8kgKf7uZe5gwgp8kf8gCuZe5g6gl7JfsgNw7e5g6gl7JfsgNw7e5g6gl7J
-					fsgNw7e5g3gm7ifrgMwSe5gwgp8kfygHuZe5gwgp8kf7gCuZe5gwgp8kf/gAuZe5gwgp8kgAgAuZe5gwgp8kgAgAuZe5gwgp8kgAgAuZ]],
+					eygsgj8wgAgAuBeygsgj8wgFf+uBeygsgj8wgOf5uBeygsgj8wgVf2uBeygsgj8wgXf1uBeygsgj8wf0gGuBeyg/gZ7JfogPw7eyg/gZ7JfogPw7eyg/gZ7J
+					fogPw7eyg9gb7YfogPwieygzgg8OfngNvEeygsgj8wfygHuBeygsgj8wf+gBuBeygsgj8wgAgAuBeygsgj8wgAgAuBeygsgj8wgAgAuB]],
 				["Toe.L"] = [[
-					e5gOgP/8gAgAh0e5gOgP/8gBf+h0e5gOgP/8gEf7h0e5gOgP/8gGf5h0e5gOgP/8gHf4h0e5gOgP/9f9gEeve5gTgS/+f2gWfIe5gTgS/+f2gWfIe5gTgS/+
-					f2gWfIe5gSgR/9f1gWewe5gOgP/7f3gNeEe5gOgP//f9gEf+e5gOgP/9f/gBhce5gOgP/8gAgAh0e5gOgP/8gAgAh0e5gOgP/8gAgAh0]],
+					eygPgN/7gAgAiGeygPgN/7gEf8iGeygPgN/7gLf0iGeygPgN/6gPfviGeygPgN/6gRftiGeygPgN/+f4gKfBeygegJ//f0gZf2eygegJ//f0gZf2eygegJ//
+					f0gZf2eygcgK//fzgZfxeygUgM//fwgYfheygPgN//f2gNgQeygPgN/8f+gChueygPgN/7gAgAiGeygPgN/7gAgAiGeygPgN/7gAgAiG]],
 				["UpperLeg.R"] = [[
-					hHivgY7lhKgAwKhHiqga8NhNgEvDhHiegg9chUgPsbhHiSgm+ehagZpohHiMgq+6hcgfoHhHiygD/GhiglnShHjHfq/ShlhnZthHjHfq/ShlhnZthHjHfq/S
-					hlhnZthHjFft/ghmhha4hHi+f5/7hnhEgehHi2gJ+xhegfonhHiwgV8bhPgGuohHivgY7lhKgAwKhHivgY7lhKgAwKhHivgY7lhKgAwK]],
+					hLiVgV7EilgAw2hLiQgY72ivgLvghLiFgf9XjCgjsUhLh5gm+jjSg8o2hLhygp/BjZhKm7hLiYf//CjkhKmxhLisfk+ijsi7XthLisfk+ijsi7XthLisfk+i
+					jsi7XthLirfn+0juizYzhLikf0/rjxiFe0hLicgF+tjYg+oQhLiWgS8EiygNvGhLiVgV7EilgAw2hLiVgV7EilgAw2hLiVgV7EilgAw2]],
 				["LowerLeg.R"] = [[
-					hJhyf2uIfdgA8shKhwfztmfcf+88hKhtfvspfZf69YhKhqftsHfWf19mhLhqftsBfVfz9phLiTfEthfQfy8/hMjieq2nfAfg2mhMjieq2nfAfg2mhMjieq2n
-					fAfg2mhMjber1nfCfh3khMi9ezxtfJfp6ohLiSfNuVfSf08mhKh4fst5fbf+80hJhyf2uIfdgA8shJhyf2uIfdgA8shJhyf2uIfdgA8s]],
+					hQhgf7uMfVgA8qhRhef5tifQf88+hRhbf1scfHf19dhShaf0sBfCfv9ohShaf0sHfAfs9lhSiAfJtJfAfo9JhSjLey4ifPfU0ghSjLey4ifPfU0ghSjLey4i
+					fPfU0ghSjFez3YfNfU1zhSipe5ykfFfZ6ChSh/fSuLfEfp8qhRhmfxtzfPf782hQhgf7uMfVgA8qhQhgf7uMfVgA8qhQhgf7uMfVgA8q]],
 				["Foot.R"] = [[
-					hHgwgp8kgAgAuZhHgwgp8kf+gBuZhHgwgp8kf7gDuZhHgwgp8kf4gEuZhHgwgp8kf2gFuZhHhTf696fwgGrWhHiPeq/8fbgChmhHiPeq/8fbgChmhHiPeq/8
-					fbgChmhHiJey/2fdgDi6hHhwfU/GfngGnfhHhPf/9vfzgFrxhHg3gg8yf9gBt9hHgwgp8kgAgAuZhHgwgp8kgAgAuZhHgwgp8kgAgAuZ]],
+					hOgsgj8wgAgAuBhOgsgj8wf7gCuBhOgsgj8wfygHuBhOgsgj8wfrgKuBhOgsgj8wfpgLuBhOhPf1+TflgJqPhOiKem/8fnf/ePhOiKem/8fnf/ePhOiKem/8
+					fnf/ePhOiDeu//flgAfthOhrfP/ifigFlThOhLf6+HfqgIqyhOgygb9Af6gDtehOgsgj8wgAgAuBhOgsgj8wgAgAuBhOgsgj8wgAgAuB]],
 				["Toe.R"] = [[
-					hHgOgP/8gAgAh0hHgOgP/8f/gCh0hHgOgP/8f8gFh0hHgOgP/8f6gHh0hHgOgP/8f5gIh0hHg3fa/if1gNaqhHiLeA6yfjgXOhhHiLeA6yfjgXOhhHiLeA6y
-					fjgXOhhHiBeJ7tflgXQChHhdeu+XfugTV8hHgyfg/0f3gKcqhHgVgG/+f+gCg2hHgOgP/8gAgAh0hHgOgP/8gAgAh0hHgOgP/8gAgAh0]],
+					hOgPgN/7gAgAiGhOgPgN/7f8gEiGhOgPgN/7f1gMiGhOgPgN/6fxgRiGhOgPgN/6fvgTiGhOg4fY/dftgVaMhOiOeB5PfrgNMXhOiOeB5PfrgNMXhOiOeB5P
+					frgNMXhOiEeK6ZfqgPN7hOhfes92fpgUUghOgzfe/xfwgRcThOgWgD/+f8gFhChOgPgN/7gAgAiGhOgPgN/7gAgAiGhOgPgN/7gAgAiG]],
 			},
 		},
 		Roar = {
@@ -460,105 +460,121 @@ return {
 			frames = 23,
 			bones = {
 				Hips = [[
-					gAkBgxACgAgAg9gAj9gxABgAgAgjgAj1gxABgAgAfngAjugxACgAgAe2gAjvgxACgAgAe/gAj/gxADgAgAhXgAkIgxANgAgAjagAkJgxAPgAgAjvgAkJgxAP
-					gAgAjvgAkJgxAPgAgAjvgAkJgxAPgAgAjvgAkJgxAPgAgAjvgAkJgxAPgAgAjvgAkJgxAPgAgAjvgAkJgxAPgAgAjvgAkJgxAPgAgAjvgAkJgxAPgAgAjvgA
-					kJgxAPgAgAjsgAkGgxAIgAgAiugAkCgxADgAgAhZgAkBgxACgAgAg9gAkBgxACgAgAg9gAkBgxACgAgAg9]],
+					gAjXguAEgAgAh2gAjUguADgAgAhcgAjLguABgAgAgggAjEguABgAgAfvgAjGguABgAgAf4gAjVguAGgAgAiQgAjeguATgAgAkSgAjfguAXgAgAkogAjfguAX
+					gAgAkogAjfguAXgAgAkogAjfguAXgAgAkogAjfguAXgAgAkogAjfguAXgAgAkogAjfguAXgAgAkogAjfguAXgAgAkogAjfguAXgAgAkogAjfguAXgAgAkogA
+					jfguAWgAgAkkgAjcguAOgAgAjngAjZguAGgAgAiSgAjXguAEgAgAh2gAjXguAEgAgAh2gAjXguAEgAgAh2]],
 				Spine1 = [[
-					gAkDgSAPgAgAjugAj+gSALgAgAjJgAj0gSAEgAgAh3gAjsgSACgAgAg0gAjtgSACgAgAhAgAkCgSATgAgAkSgAkPgSA0gAgAnGgAkQgTA7gAgAnkgAkQgTA7
-					gAgAnkgAkQgTA7gAgAnkgAkQgTA7gAgAnkgAkQgTA7gAgAnkgAkQgTA7gAgAnkgAkQgTA7gAgAnkgAkQgTA7gAgAnkgAkQgTA7gAgAnkgAkQgTA7gAgAnkgA
-					kQgTA6gAgAnfgAkLgSAngAgAmKgAkFgSAUgAgAkVgAkDgSAPgAgAjugAkDgSAPgAgAjugAkDgSAPgAgAju]],
+					gAjbgTAjgAgAl0gAjWgTAdgAgAlQgAjMgTARgAgAj+gAjEgTAKgAgAi8gAjFgTALgAgAjIgAjZgUAqgAgAmYgAjlgUBWgAgApJgAjngUBfgAgApngAjngUBf
+					gAgApngAjngUBfgAgApngAjngUBfgAgApngAjngUBfgAgApngAjngUBfgAgApngAjngUBfgAgApngAjngUBfgAgApngAjngUBfgAgApngAjngUBfgAgApngA
+					jngUBegAgApigAjigUBGgAgAoOgAjdgUArgAgAmbgAjbgTAjgAgAl0gAjbgTAjgAgAl0gAjbgTAjgAgAl0]],
 				Spine2 = [[
-					gAkSfUAqgAgAmZgAkLfUAhgAgAlrgAj7fTASgAgAkDgAjvfTAIgAgAivgAjxfTAKgAgAi+gAkSfVA0gAgAnIgAkqfZB2gAgAqpgAktfaCDgAgArOgAktfaCD
-					gAgArOgAktfaCDgAgArOgAktfaCDgAgArOgAktfaCDgAgArOgAktfaCDgAgArOgAktfaCDgAgArOgAktfaCDgAgArOgAktfaCDgAgArOgAktfaCDgAgArOgA
-					ktfaCBgAgArIgAkjfYBdgAgApdgAkWfVA1gAgAnKgAkSfUAqgAgAmZgAkSfUAqgAgAmZgAkSfUAqgAgAmZ]],
+					gAjufhBcgAgApdgAjofgBPgAgAowgAjaffA1gAgAnLgAjOfeAkgAgAl3gAjQfeAngAgAmGgAjufhBrgAgAqKgAkDfnDCgAgAtkgAkGfoDTgAgAuHgAkGfoDT
+					gAgAuHgAkGfoDTgAgAuHgAkGfoDTgAgAuHgAkGfoDTgAgAuHgAkGfoDTgAgAuHgAkGfoDTgAgAuHgAkGfoDTgAgAuHgAkGfoDTgAgAuHgAkGfoDTgAgAuHgA
+					kFfoDQgAgAuCgAj9flCigAgAscgAjyfiBsgAgAqNgAjufhBcgAgApdgAjufhBcgAgApdgAjufhBcgAgApd]],
 				Neck1 = [[
-					gAkee3EOgAgAv3gAkWe1DfgAgAufgAkEe0CEgAgArRgAj0ezBLgAgAojgAj3ezBUgAgApCgAkge4EogAgAwigAk+fAIkgAgA1xgAlCfCJRgAgA2ggAlCfCJR
-					gAgA2ggAlCfCJRgAgA2ggAlCfCJRgAgA2ggAlCfCJRgAgA2ggAlCfCJRgAgA2ggAlCfCJRgAgA2ggAlCfCJRgAgA2ggAlCfCJRgAgA2ggAlCfCJRgAgA2ggA
-					lCfCJKgAgA2YgAk1e9HNgAgA0NgAkke4E5gAgAw/gAkee3EOgAgAv3gAkee3EOgAgAv3gAkee3EOgAgAv3]],
+					gAj+fJE9gAgAxFgAj3fHEKgAgAvvgAjmfFCmgAgAsmgAjYfDBmgAgAp7gAjbfDBwgAgAqZgAkAfKFZgAgAxvgAkZfUJkgAgA2ygAkdfWKTgAgA3ggAkdfWKT
+					gAgA3ggAkdfWKTgAgA3ggAkdfWKTgAgA3ggAkdfWKTgAgA3ggAkdfWKTgAgA3ggAkdfWKTgAgA3ggAkdfWKTgAgA3ggAkdfWKTgAgA3ggAkdfWKTgAgA3ggA
+					kcfWKLgAgA3YgAkSfRIIgAgA1TgAkDfLFsgAgAyLgAj+fJE9gAgAxFgAj+fJE9gAgAxFgAj+fJE9gAgAxF]],
 				Neck2 = [[
-					gAlWeWISgAgA1egAlKePG8gAgAz4gAkueDEUgAgAwAgAkWd7CngAgAsmgAkad9C4gAgAtOgAlaeaJAgAgA2PgAl/e8P3gAgA7ngAmDfBREgAgA8SgAmDfBRE
-					gAgA8SgAmDfBREgAgA8SgAmDfBREgAgA8SgAmDfBREgAgA8SgAmDfBREgAgA8SgAmDfBREgAgA8SgAmDfBREgAgA8SgAmDfBREgAgA8SgAmDfBREgAgA8SgA
-					mCfAQ3gAgA8LgAl1ewNjgAgA6IgAleecJggAgA2vgAlWeWISgAgA1egAlWeWISgAgA1egAlWeWISgAgA1e]],
+					gAkzewHKgAgA0KgAkpepF6gAgAyggAkQecDfgAgAufgAj7eUB+gAgArAgAj/eVCNgAgArogAk1e0H2gAgA0+gAlUfVOagAgA6tgAlXfbPjgAgA7cgAlXfbPj
+					gAgA7cgAlXfbPjgAgA7cgAlXfbPjgAgA7cgAlXfbPjgAgA7cgAlXfbPjgAgA7cgAlXfbPjgAgA7cgAlXfbPjgAgA7cgAlXfbPjgAgA7cgAlXfbPjgAgA7cgA
+					lWfaPXgAgA7UgAlMfKMLgAgA5GgAk6e2IUgAgA1fgAkzewHKgAgA0KgAkzewHKgAgA0KgAkzewHKgAgA0K]],
 				Head = [[
-					gAmJeRADgAgAhcgAl8eEADgAgAebgAladqBHgAgAXugAk7dYC/gAgASjgAlBdbCmgAgATcgAmMeYALgAfpjLgAmrfUECgYfKvggAmtfeEPfNhxvxgAmtfeE7
-					gQfhxBgAmtfeFPgsetxcgAmtfeESfRhnv3gAmtfeEwgAgAwwgAmtfeFWg2ecxlgAmtfeEWfYhWwBgAmtfeEmfxggwfgAmtfeFZg7eTxqgAmtfeEdfjg9wOgA
-					mtfdETfkg8v9gAmlfBCZgXe1sDgAmRecARgAgGj8gAmJeRADgAgAhcgAmJeRADgAgAhcgAmJeRADgAgAhc]],
+					gAljemAEgAgAhqgAlXeZADgAgAepgAk4eABDgAgAX8gAkadvC5gAgASvgAkgdxCggAgATpgAlmetANgAfpjZgAmAfoEJgYfKvsgAmCfyEWfOhxv9gAmCfyFD
+					gQfgxNgAmCfyFXgsesxogAmCfyEZfRhowDgAmCfyE4gAgAw8gAmCfyFdg1ebxxgAmCfyEdfZhWwNgAmCfyEtfxggwrgAmCfyFhg6eTx1gAmCfyEkfjg9wagA
+					mCfwEaflg8wJgAl7fVCfgWe1sQgAlqexASgAgGkJgAljemAEgAgAhqgAljemAEgAgAhqgAljemAEgAgAhq]],
 				Jaw = [[
-					gAmEda/+gAgAgvgAltdP/ugAgAkDgAk3dA97gAgArUgAkLc97PgAgAwxgAkTc97ygAgAv2gBmNdh/sf7gWkSgDnTew/9fSgmevf5nWe6/7hle4gLgCnZe+/9
-					figTewgFnae//6ewgyeOf6nWe6/8hde+gFgAnZe9/+gAgAfEgGnafA/4efg8eDf7nXe7/9hNfKf6f+nYe8/+gdfsfYgHnafA/3eXhBd+f8nXe7/+g4fZfrf8
-					nWe5/+g2fZfsgEnDeU/8fRg+e/gAmVdm//gBf7ghgAmEda/+gAgAgvgAmEda/+gAgAgvgAmEda/+gAgAgv]],
+					gAljdj//gAgAgpgAlKdY/vgAgAj+gAkRdJ99gAgArPgAjkdI7SgAgAwtgAjsdI71gAgAvxgBltdr/tf7gWkMgEm1fA/8fSgmeqf4m3fL/7hke4gFgCm7fQ/9
+					fjgTeqgGm8fS/5ewgzeIf5m3fL/8hce+f/gAm6fP/+gAgAe+gHm8fS/4egg8d+f6m4fM/9hNfJf0f+m5fN/+gdfsfSgIm8fT/3eXhBd4f8m5fN/+g3fZflf8
+					m4fK/+g2fZfmgFmlei/8fRg+e5gAl1dw//gBf7gcgAljdj//gAgAgpgAljdj//gAgAgpgAljdj//gAgAgp]],
 				ClockMin = [[
-					gAj9f4gAJZgA2ngAj4f5gBJZf/2ngAjtf6gNJZfz2ngAjjf6gwJZfQ2ngAjlf6h1JdeL2jgAj8f4lfKEah18gAkNf3reMhUizfgAkPf3xTRbOtulgAkPf315
-					aWKHlqgAkPf31ompKYZXgAkPf3tryBSVN/gAkPf3fv2ngRJZgAkPf3R6xsuGOUgAkPf3KPmI1xZ4gAkPf3KQZ01wmMgAkPf3PERAw8vAgAkPf3UoMdrYzjgA
-					kOf3YFK0n71MgAkIf3XvK9oR1DgAkAf4YTKvnt1RgAj9f4bWJ4kq2IgAj9f4erJbhV2lgAj9f4gAJZgA2n]],
+					gAkBf2gAJZgA2ngAj8f0gBJZf/2ngAjvfxgNJZfz2ngAjlfugwJZfQ2ngAjnfvh1JdeL2jgAkAf4lfKEah18gAkPgAreMhUizfgAkRgCxTRbOtulgAkRgC15
+					aWKHlqgAkRgC1ompKYZXgAkRgCtryBSVN/gAkRgCfv2ngRJZgAkRgCR6xsuGOUgAkRgCKPmI1xZ4gAkRgCKQZ01wmMgAkRgCPERAw8vAgAkRgCUoMdrYzjgA
+					kRgCYFK0n71MgAkMf9XvK9oR1DgAkEf4YTKvnt1RgAkBf2bWJ4kq2IgAkBf2erJbhV2lgAkBf2gAJZgA2n]],
 				ClockHour = [[
-					gAj9f4gAJZgA2ngAj4f5foJZgY2ngAjtf6ezJbhN2lgAjjf6ePJdhx2jgAjlf6eoJbhY2lgAj8f4hyJdeO2jgAkNf3lTKBat1/gAkPf3ncKpYk1XgAkPf3py
-					LnWO0ZgAkPf3sfNJThy3gAkPf3vRPUQvwsgAkPf3xzSDONt9gAkPf3z3VLMJq1gAkPf31TYZKtnngAkPf32JbYJ3kogAkPf32hd5JfiHgAkPf32nfsJZgUgA
-					kOf32ngmJZfagAkIf32nfkJZgcgAkAf42kedJchjgAj9f42me1JahLgAj9f42nfrJZgVgAj9f42ngAJZgA]],
-				Gear2 = [[
-					gAl3e5gAJZgA2ngAlve0ftJZgT2ngAlcepfGJag62mgAlLehewJbhQ2lgAlOeifTJZgt2ngAl5e+ikJidc2egAmTfbmpKYZX1ogAmWfgpxLnWP0ZgAmWfgtT
-					NtStyTgAmWfgxCRIO+u4gAmWfg0OV3LyqJgAmWfg2MbmJ0kagAmWfg2khoJceYgAmWfg1bnPKlYxgAmWfgzSr0MuUMgAmWfgw1vHPLQ5gAmWfguvxKRRO2gA
-					mVfftkyGScN6gAmMfRuRxjRvOdgAl9e/u2xERKO8gAl3e5uHxsR5OUgAl3e5tBygS/NggAl3e5sky0TcNM]],
+					gAkBf2gAJZgA2ngAj8f0foJZgY2ngAjvfxezJbhN2lgAjlfuePJdhx2jgAjnfveoJbhY2lgAkAf4hyJdeO2jgAkPgAlTKBat1/gAkRgCncKpYk1XgAkRgCpy
+					LnWO0ZgAkRgCsfNJThy3gAkRgCvRPUQvwsgAkRgCxzSDONt9gAkRgCz3VLMJq1gAkRgC1TYZKtnngAkRgC2JbYJ3kogAkRgC2hd5JfiHgAkRgC2nfsJZgUgA
+					kRgC2ngmJZfagAkMf92nfkJZgcgAkEf42kedJchjgAkBf22me1JahLgAkBf22nfrJZgVgAkBf22ngAJZgA]],
 				["UpperArm.L"] = [[
-					fNkIeg1QTsgA0ffNj+eg1dTsf40SfNjqeh15TtfnzzfNjZei2QTtfZzafNjcei2MTtfbzefNkLeg39SbatvZfNkuek5GUDSHnnfNk0el48VGQRl3fNk0el48
-					VGQRl3fNk0el48VGQRl3fNk0el48VGQRl3fNk0el48VGQRl3fNk0el48VGQRl3fNk0el48VGQRl3fNk0el48VGQRl3fNk0el48VGQRl3fNk0el48VGQRl3fN
-					kzel4/U6QkmJfNkkei45SrWErRfNkPeg2lS3dsyTfNkIeg1QTsgA0ffNkIeg1QTsgA0ffNkIeg1QTsgA0f]],
+					fGjxe10WRNgAzvfGjoe00jRNf3zjfGjWez0+RNfizGfGjGez1UROfRytfGjJez1QROfTyxfGjze22rQFaQu7fGkRe93aSHRJn0fGkWe/3OTRPMmPfGkWe/3O
+					TRPMmPfGkWe/3OTRPMmPfGkWe/3OTRPMmPfGkWe/3OTRPMmPfGkWe/3OTRPMmPfGkWe/3OTRPMmPfGkWe/3OTRPMmPfGkWe/3OTRPMmPfGkWe/3OTRPMmPfG
+					kVe/3RTEPgmgfGkIe63XQhVUrIfGj3e21gQadfxqfGjxe10WRNgAzvfGjxe10WRNgAzvfGjxe10WRNgAzv]],
 				["LowerArm.L"] = [[
-					exjXeWuR8jgAiGexjOeVuT8jgSh9exi6eTuV8ig6hpexiqeTuX8hhbhYexiteTuX8hhWhbeojqeFxD5loZdLedkseHySwAxyVNebk3eMyBtMzKTcebk3eMyB
-					tMzKTcebk3eMyBtMzKTcebk3eMyBtMzKTcebk3eMyBtMzKTcebk3eMyBtMzKTcebk3eMyBtMzKTcebk3eMyBtMzKTcebk3eMyBtMzKTcebk3eMyBtMzKTceb
-					k1eLyFtqy9TvehkTeDyP1EuBY7etjkeNvy7jj4f+exjXeWuR8jgAiGexjXeWuR8jgAiGexjXeWuR8jgAiG]],
+					eojHeogA/+gAhEeoi/engB/+gUhEeoitekgC/9hBhEeoieeigD/7hlhEeoiheigE/8hghEegjZebjl+QpwgjeXkUemov101nd/eWkderpvzG3kdHeWkderpv
+					zG3kdHeWkderpvzG3kdHeWkderpvzG3kdHeWkderpvzG3kdHeWkderpvzG3kdHeWkderpvzG3kdHeWkderpvzG3kdHeWkderpvzG3kdHeWkderpvzG3kdHeW
+					kceqplzk3RdRebj/eemh6hwqfcekjUeihs/nkdg+eojHeogA/+gAhEeojHeogA/+gAhEeojHeogA/+gAhE]],
 				["UpperArm.R"] = [[
-					gzkIeg1QsUgA0fgzj+eg1dsUgI0Sgzjqeh15sTgZzzgzjZei2QsTgnzagzjcei2MsTglzegzkLeg39tllTvZgzkuek5Gr9t5nngzk0el48q6vvl3gzk0el48
-					q6vvl3gzk0el48q6vvl3gzk0el48q6vvl3gzk0el48q6vvl3gzk0el48q6vvl3gzk0el48q6vvl3gzk0el48q6vvl3gzk0el48q6vvl3gzk0el48q6vvl3gz
-					kzel4/rGvcmJgzkkei45tVp8rRgzkPeg2ltJiUyTgzkIeg1QsUgA0fgzkIeg1QsUgA0fgzkIeg1QsUgA0f]],
+					g6jxe10WuzgAzvg6joe00juzgJzjg6jWez0+uzgezGg6jGez1Uuygvytg6jJez1Quygtyxg6jze22rv7lwu7g6kRe93at5u3n0g6kWe/3Osvw0mPg6kWe/3O
+					svw0mPg6kWe/3Osvw0mPg6kWe/3Osvw0mPg6kWe/3Osvw0mPg6kWe/3Osvw0mPg6kWe/3Osvw0mPg6kWe/3Osvw0mPg6kWe/3Osvw0mPg6kWe/3Osvw0mPg6
+					kVe/3Rs8wgmgg6kIe63XvfqsrIg6j3e21gvmihxqg6jxe10WuzgAzvg6jxe10WuzgAzvg6jxe10WuzgAzv]],
 				["LowerArm.R"] = [[
-					hPjXeWuRDdgAiGhPjOeVuTDdfuh9hPi6eTuVDefGhphPiqeTuXDfelhYhPiteTuXDfeqhbhYjqeFxDGbXndLhjkseHySQAOOVNhlk3eMyBS0M2Tchlk3eMyB
-					S0M2Tchlk3eMyBS0M2Tchlk3eMyBS0M2Tchlk3eMyBS0M2Tchlk3eMyBS0M2Tchlk3eMyBS0M2Tchlk3eMyBS0M2Tchlk3eMyBS0M2Tchlk3eMyBS0M2Tchl
-					k1eLyFSWNDTvhfkTeDyPK8R/Y7hTjkeNvyEdcIf+hPjXeWuRDdgAiGhPjXeWuRDdgAiGhPjXeWuRDdgAiG]],
-				Gear1 = [[
-					gAlmgYgAJZgA2ngAligUfbJZgl2ngAlYgMeFJeh72igAlPgGc3JnjJ2ZgAlQgHctJojT2YgAllgceyJbhO2lgAlugufiJZge2ngAlvgxdiJhie2fgAlvgxaT
-					KHlt15gAlvgxWfLfph0hgAlvgxSjN0tdyMgAlvgxO/RHxBu5gAlvgxMNVFzzq7gAlvgxKaZS1mmugAlvgxJjdP2dixgAlvgxJZgh2nffgAlvgxJki32cdJgA
-					lvgwJxkL2Pb1gAltgoKClY1+aogAlogcKnnW1ZYqgAlmgYLNo50zXHgAlmgYLqp40WWIgAlmgYL2qR0KVv]],
-				Gear3 = [[
-					gAlOhqgAJZgA2ngAlNhof5JZgH2ngAlJhhftJZgT2ngAlGhbfxJZgP2ngAlGhcgZJZfn2ngAlKhtjHJmc52agAlFh5nIKiY41egAlEh7rBMQU/zwgAlEh7vc
-					PeQkwigAlEh7znUvMZrRgAlEh72Pb4JxkIgAlEh72Rj7JvcFgAlEh7zfrfMhUhgAlEh7ulxTRbOtgAlEh7o200XKLMgAlEh7jm2VcaJrgAlEh7ft2ngTJZgA
-					lEh7dp2giXJggAlIh1eJ2jh3JdgAlNhteN2jhzJdgAlOhqco2XjYJpgAlOhqa22BlKJ/gAlOhqaJ12l3KK]],
+					hYjHeogAACgAhEhYi/engBACfshEhYitekgCADe/hEhYieeigDAFebhEhYiheigEAEeghEhgjZebjlBwWQgjhpkUemovKMKZd/hqkderpvM6IcdHhqkderpv
+					M6IcdHhqkderpvM6IcdHhqkderpvM6IcdHhqkderpvM6IcdHhqkderpvM6IcdHhqkderpvM6IcdHhqkderpvM6IcdHhqkderpvM6IcdHhqkderpvM6IcdHhq
+					kceqplMcIvdRhlj/eemhFfPWfchcjUeihsAZbjg+hYjHeogAACgAhEhYjHeogAACgAhEhYjHeogAACgAhE]],
 				Tail1 = [[
-					gAkEhXehgAgA/9gAkChXeagAgA/8gAj7hXeLgAgA/8gAj2hXd/gAgA/7gAj3hXeBgAgA/7gAkBhXeefxf//9gAkFhXewfaf+/9gAkFhXeyhPgE/8gAkFhXey
-					fpf//9gAkFhXeyfDf9/9gAkFhXeyhJgE/8gAkFhXeygAgA/+gAkFhXeye3f8/8gAkFhXeyg9gD/9gAkFhXeygXgB/9gAkFhXeyexf8/8gAkFhXeygrgC/9gA
-					kFhXeygrgC/9gAkFhXesfOf9/9gAkFhXejgEgA/9gAkEhXehgAgA/9gAkEhXehgAgA/9gAkEhXehgAgA/9]],
+					gAjbhUecgAgA/9gAjYhUeVgAgA/8gAjShUeGgAgA/7gAjNhTd6gAgA/7gAjNhTd8gAgA/7gAjXhUeZfxf//8gAjbhUesfaf+/9gAjchUeuhPgF/8gAjchUeu
+					fpf//9gAjchUeufDf9/8gAjchUeuhJgE/8gAjchUeugAgA/9gAjchUeue3f8/8gAjchUeug9gD/8gAjchUeugXgB/9gAjchUeuexf7/8gAjchUeugrgD/9gA
+					jchUeugrgC/9gAjbhUenfOf9/8gAjbhUefgEgA/9gAjbhUecgAgA/9gAjbhUecgAgA/9gAjbhUecgAgA/9]],
 				Tail2 = [[
-					gAkOi5e4gAgA/+gAkLi5fGgAgA/+gAkGi5fkgAgA//gAkDi4f8gAgA//gAkDi4f4gAgA//f/kKi5eaf7gA/8f8kNi5c7eUf+/zgIkNi5cqh0gI/wf+kNi5cq
-					gbf8/0f6kNi5cqd2f7/vgHkNi5cqhZgI/ygAkNi5cqhBf+/zf5kNi5cqdyf6/vgGkNi5cqg1gI/zgCkNi5cqhigA/xf4kNi5cqd5f4/vgEkNi5cqgOgG/0gE
-					kNi5cth5gC/wf7kNi5dee2f8/3gAkNi5eif8gA/9gAkOi5e4gAgA/+gAkOi5e4gAgA/+gAkOi5e4gAgA/+]],
+					gAjjiseRgAgA/8gAjhireegAgA/9gAjcire8gAgA/+gAjYirfUgAgA//gAjZirfQgAgA/+f/jgisdyf7f//6f9jjiscUeUf8/ugHjjircDh0gL/sf+jjiscD
+					gbf8/vf7jjiscDd2f5/rgGjjiscDhYgK/tgAjjiscDhBf//uf6jjiscDdyf3/qgFjjiscDg1gJ/vgCjjiscDhigC/tf5jjircDd5f2/rgEjjiscDgOgH/vgE
+					jjiscGh5gF/sf8jjisc3e2f6/0gAjjisd6f8gA/7gAjjiseRgAgA/8gAjjiseRgAgA/8gAjjiseRgAgA/8]],
 				Tail3 = [[
-					gAkUkbfogAgA//gAkRkbgJgAgA//gAkJkbhUgAgA/9gAkDkaiRgAgA/6gAkEkbiGgAgA/7f+kUkbetgVf//9fykgkZbedof+/lgTkhkZa6hRgU/jgAkhkaa6
-					hqfy/iftkhkYa6dXf4/egPkhkZa6gigV/kgGkhkZa6iNf3/gfskhkYa6dpfz/fgLkhkZa6fxgU/lgMkhkZa6ikf9/efskhkYa6eHfv/hgFkhkZa6fBgS/kgQ
-					khkZbAiqgC/ff0kdkacpfNf4/zgAkWkbe4fvgA/+gAkUkbfogAgA//gAkUkbfogAgA//gAkUkbfogAgA//]],
+					gAjtkDe7gAgA/+gAjpkDfcgAgA//gAjikDgngAgA//gAjckDhkgAgA/9gAjdkDhZgAgA/9f+jskDeAgVgA/7f0j3kBaydof7/egRj4kAaOhQgV/cgAj4kBaO
+					hrf0/afvj4kAaOdXf0/WgOj4kBaOgigV/dgGj4kBaOiNf6/Yfuj4kAaOdpfw/YgKj4kBaOfwgU/dgKj4kBaOikgA/Xfuj4kAaOeIfs/agFj4kBaOfAgQ/cgO
+					j4kAaUiqgG/Xf1j0kCb8fNf3/ugAjvkDeLfvgA/8gAjtkDe7gAgA/+gAjtkDe7gAgA/+gAjtkDe7gAgA/+]],
 				Tail4 = [[
-					gAkXl+gAgAgA//gAkQl+g1gAgA/+gAkBl9itgAgA/4gAj1l8kOgAgA/tgAj3l8j9gAgA/vgAkcl9epgqf+/9fkk7l3Zsd6fy/SgalAl2Y2gCgr/LgLlAl2Y0
-					iXfv/FfdlAl0Y1eAfj/HgSlAl2Y1fTgp/KgUlAl2Y0ilf7/EfdlAl1Y1ekfc/IgJlAl3Y1engk/JgblAl1Y0imgH/EfglAl1Y1fPfX/Kf/lAl3Y1eDgb/Hgg
-					k/l1Y+iWgS/Hfvkxl6bcf/fv/qf+kdl9e3fogA/+gAkXl+gAgAgA//gAkXl+gAgAgA//gAkXl+gAgAgA//]],
+					gAjzlbftgAgA//gAjslbgigAgA//gAjflbiagAgA/5gAjTlaj7gAgA/wgAjVlajqgAgA/ygAj3laeWgqf//8fnkTlTZZd6fw/OgXkYlSYjgCgr/GgKkXlTYi
+					iXfw/BfhkYlRYieBfi/CgQkYlTYjfSgo/GgSkXlSYiilf8/AfhkYlRYjekfb/EgIkYlTYjengj/EgYkXlSYiimgI+/fkkYlSYjfPfW/Gf/kXlTYieDga/Cgc
+					kXlSYriWgT/DfxkKlXbKf/fv/nf/j5laekfogA/9gAjzlbftgAgA//gAjzlbftgAgA//gAjzlbftgAgA//]],
 				Hourglass = [[
-					gAkXnggAgAgA//gAkLngg1gAgA/+gAjxneitgAgA/4gAjbnbkOgAgA/tgAjfnbj9gAgA/vgEklnfepgKgA/9fXlhnQZrcngC/LgZlrnOY0iugD/DgZlrnOY0
-					hmf6/IfSlrnMY0b9gC+6gNlrnPY0hxgE/HgjlrnNY0ilf7/EfWlrnNY0cGgA+7gAlrnPY0grgF/KgqlrnMY0jWf8+/fdlrnNY0cjf+++fzlrnOY0fhgG/Kgt
-					lpnNY9jyf9++fvlNnZbceQf//nf8kknfe3fwgA/+gAkXnggAgAgA//gAkXnggAgAgA//gAkXnggAgAgA//]],
+					gAj0mzgAgAgA//gAjqmzg1gAgA/+gAjRmyitgAgA/4gAi+mwkOgAgA/tgAjBmwj9gAgA/vgEkAmyepgKgA/9fck3mjZrcngC/LgWk/mhY0iugD/DgWk/mgY0
+					hmf6/IfXlAmfY0b9gC+6gMk/mhY0hxgE/Hgfk/mgY0ilf7/EfalAmfY0cGgA+7gAk/mhY0grgF/Kgmk/mfY0jWf8+/fhlAmgY0cjf+++f0k/mhY0fhgG/Kgo
+					k+mgY9jyf9++fxklmrbceQf//nf8kAmye3fwgA/+gAj0mzgAgAgA//gAj0mzgAgAgA//gAj0mzgAgAgA//]],
+				Gear2 = [[
+					gAkmiYgAJZgA2ngAkkiXgJJZf32ngAkfiWghJZff2ngAkbiUhAJafA2mgAkbiVhZJben2lf/kjiYiBJUeB2Xf9kmiZj2JScS14gFkmiZmaLQZH2cf/kmiZqk
+					LuVqz1f8kmiZvEOQRywtgFkmiZx1TeM3tfgAkmiZ1SYXKunpf7kmiZ3WeNKRhpgEkmiZ1mj4JFb6gBkmiZ0movK9XFf7kmiZzns6N4UCgDkmiZwvueOhQ6gD
+					kmiZvtvnPoPvf9kmiZwPwiQkQQgAkmiYvNwsQvPQgAkmiYuHxsR5OUgAkmiYtBygS/NggAkmiYsky0TcNM]],
+				Gear3 = [[
+					gAkSjYgAJZgA2ngAkQjXgOJZfy2ngAkMjWgyJZfO2ngAkJjVhdJcej2kgAkJjVh+JeeC2if+kPjYitJZdW2Tf7kRjYlDJibI1qgKkRjYoYL9W/1rf9kRjZtn
+					NoSsx+f4kRjYyvSMOVtAgJkRjY02ZpJom3gAkRjZ2lhYJbeof3kRjY1ZphMGXIgIkRjYv8vFPEQCgDkRjZrBzeUvMHf2kRjYmW2naKLFgGkRjYiN2BdsJCgF
+					kRjYgJ2Jf1I7f6kSjYfw3KgQJ9gAkSjYen2ihZJZgAkSjYco2XjYJpgAkSjYa22BlKJ/gAkSjYaJ12l3KK]],
+				Gear1 = [[
+					gAk1hBgAJZgA2ngAkyg/fiJZge2ngAkrg5ecJchk2kgAkkg1dbJiil2egAklg1dOJkiy2cgAkzhEeqJbhW2lgAk4hPe2JahK2mgAk4hRcwJojQ2YgAk4hRZi
+					KVme1rgAk4hRVyL1qO0LgAk4hRR7OTuFxtgAk4hROeRtxiuTgAk4hRL1Vx0LqPgAk4hRKMaD10l9gAk4hRJeeB2ih/gAk4hRJbhU2lesgAk4hRJrjp2VcXgA
+					k4hRJ7k72FbFgAk4hLKKl312aJgAk2hEKqne1WYigAk1hBLNo50zXHgAk1hBLqp40WWIgAk1hBL2qR0KVv]],
 				["UpperLeg.L"] = [[
-					e5ivgY7le2gAwKe5iqga8Keyf8vJe5ihgf9Oeqfys8e5iZgj98ekfqrLe5iagi90elfsrfe5itgW7me2gAwJe5i6gM5CfGgQz5e5i8gK4ifJgT0ge5i8gK4i
-					fJgT0ge5i8gK4ifJgT0ge5i8gK4ifJgT0ge5i8gK4ifJgT0ge5i8gK4ifJgT0ge5i8gK4ifJgT0ge5i8gK4ifJgT0ge5i8gK4ifJgT0ge5i8gK4ifJgT0ge5
-					i8gK4ofIgS0Ze5i3gP55fBgMyxe5ixgW7Ne5gDwye5ivgY7le2gAwKe5ivgY7le2gAwKe5ivgY7le2gAwK]],
+					e1iVgV7EdbgAw2e1iRgX7udRf3vue1iHgb86c8fmtVe1h/ge9scsfYrbe1iBge9kcvfarxe1iTgU7Hdaf+wxe1iggL4DeEgf0/e1iigK3ZeMgl1ve1iigK3Z
+					eMgl1ve1iigK3ZeMgl1ve1iigK3ZeMgl1ve1iigK3ZeMgl1ve1iigK3ZeMgl1ve1iigK3ZeMgl1ve1iigK3ZeMgl1ve1iigK3ZeMgl1ve1iigK3ZeMgl1ve1
+					iigK3geLgk1ne1idgO5Id2gVzre1iXgT6qdhgFxge1iVgV7EdbgAw2e1iVgV7EdbgAw2e1iVgV7EdbgAw2]],
 				["LowerLeg.L"] = [[
-					e3hyf2uIgjgA8se2hwf0tpglgC87e2htfws0gpgF9Te2hsfusYgsgI9fe2hsfvscgsgI9de3hwf0tqgjgA87e3h2f8vagZf78Ce4h3f+vwgYf672e4h3f+vw
-					gYf672e4h3f+vwgYf672e4h3f+vwgYf672e4h3f+vwgYf672e4h3f+vwgYf672e4h3f+vwgYf672e4h3f+vwgYf672e4h3f+vwgYf672e4h3f+vwgYf672e4
-					h3f9vsgYf674e3h1f5u4gcf88Ue3hzf2uQghf/8pe3hyf2uIgjgA8se3hyf2uIgjgA8se3hyf2uIgjgA8s]],
+					ewhgf7uMgrgA8qevhef5tggwgE8/evhbf0sSg4gK9heuhYfyrlg9gP9zeuhZfzrsg8gO9xewhff5tqgsgA87exhmgDwTgXfy7heyhngGw3gTfv7LeyhngGw3
+					gTfv7LeyhngGw3gTfv7LeyhngGw3gTfv7LeyhngGw3gTfv7LeyhngGw3gTfv7LeyhngGw3gTfv7LeyhngGw3gTfv7LeyhngGw3gTfv7LeyhngGw3gTfv7Ley
+					hngFwxgUfw7PexhkgAvdgef38Aewhhf8uagpf+8jewhgf7uMgrgA8qewhgf7uMgrgA8qewhgf7uMgrgA8q]],
+				["Foot.L"] = [[
+					eygsgj8wgAgAuBeygsgj8wgFf+uBeygsgj8wgOf5uBeygsgj8wgTf3uBeygsgj8wgSf3uBeygsgj8wgBf/uBeygsgj8wfrgKuBeygsgj8wfngMuBeygsgj8w
+					fngMuBeygsgj8wfngMuBeygsgj8wfngMuBeygsgj8wfngMuBeygsgj8wfngMuBeygsgj8wfngMuBeygsgj8wfngMuBeygsgj8wfngMuBeygsgj8wfngMuBey
+					gsgj8wfogMuBeygsgj8wfygHuBeygsgj8wf9gBuBeygsgj8wgAgAuBeygsgj8wgAgAuBeygsgj8wgAgAuB]],
+				["Toe.L"] = [[
+					eygPgN/7gAgAiGeygPgN/7gEf8iGeygPgN/7gKf1iGeygPgN/7gOfwiGeygPgN/7gNfxiGeygPgN/7gBf/iGeygPgN/6fxgRiGeygPgN/6fugViGeygPgN/6
+					fugViGeygPgN/6fugViGeygPgN/6fugViGeygPgN/6fugViGeygPgN/6fugViGeygPgN/6fugViGeygPgN/6fugViGeygPgN/6fugViGeygPgN/6fugViGey
+					gPgN/6fugUiGeygPgN/7f2gLiGeygPgN/7f+gCiGeygPgN/7gAgAiGeygPgN/7gAgAiGeygPgN/7gAgAiG]],
 				["UpperLeg.R"] = [[
-					hHivgY7lhKgAwKhHiqga8KhOgEvJhHihgf9OhWgOs8hHiZgj98hcgWrLhHiagi90hbgUrfhHitgW7mhKgAwJhHi6gM5Cg6fwz5hHi8gK4ig3ft0ghHi8gK4i
-					g3ft0ghHi8gK4ig3ft0ghHi8gK4ig3ft0ghHi8gK4ig3ft0ghHi8gK4ig3ft0ghHi8gK4ig3ft0ghHi8gK4ig3ft0ghHi8gK4ig3ft0ghHi8gK4ig3ft0ghH
-					i8gK4og4fu0ZhHi3gP55g/f0yxhHixgW7NhHf9wyhHivgY7lhKgAwKhHivgY7lhKgAwKhHivgY7lhKgAwK]],
+					hLiVgV7EilgAw2hLiRgX7uivgJvuhLiHgb86jEgatVhLh/ge9sjUgorbhLiBge9kjRgmrxhLiTgU7HimgCwxhLiggL4Dh8fh0/hLiigK3Zh0fb1vhLiigK3Z
+					h0fb1vhLiigK3Zh0fb1vhLiigK3Zh0fb1vhLiigK3Zh0fb1vhLiigK3Zh0fb1vhLiigK3Zh0fb1vhLiigK3Zh0fb1vhLiigK3Zh0fb1vhLiigK3Zh0fb1vhL
+					iigK3gh1fc1nhLidgO5IiKfrzrhLiXgT6qiff7xghLiVgV7EilgAw2hLiVgV7EilgAw2hLiVgV7EilgAw2]],
 				["LowerLeg.R"] = [[
-					hJhyf2uIfdgA8shKhwf0tpfbf+87hKhtfws0fXf79ThKhsfusYfUf49fhKhsfvscfUf49dhJhwf0tqfdgA87hJh2f8vafngF8ChIh3f+vwfogG72hIh3f+vw
-					fogG72hIh3f+vwfogG72hIh3f+vwfogG72hIh3f+vwfogG72hIh3f+vwfogG72hIh3f+vwfogG72hIh3f+vwfogG72hIh3f+vwfogG72hIh3f+vwfogG72hI
-					h3f9vsfogG74hJh1f5u4fkgE8UhJhzf2uQffgB8phJhyf2uIfdgA8shJhyf2uIfdgA8shJhyf2uIfdgA8s]],
+					hQhgf7uMfVgA8qhRhef5tgfQf88/hRhbf0sSfIf29hhShYfyrlfDfx9zhShZfzrsfEfy9xhQhff5tqfUgA87hPhmgDwTfpgO7hhOhngGw3ftgR7LhOhngGw3
+					ftgR7LhOhngGw3ftgR7LhOhngGw3ftgR7LhOhngGw3ftgR7LhOhngGw3ftgR7LhOhngGw3ftgR7LhOhngGw3ftgR7LhOhngGw3ftgR7LhOhngGw3ftgR7LhO
+					hngFwxfsgQ7PhPhkgAvdfigJ8AhQhhf8uafXgC8jhQhgf7uMfVgA8qhQhgf7uMfVgA8qhQhgf7uMfVgA8q]],
+				["Foot.R"] = [[
+					hOgsgj8wgAgAuBhOgsgj8wf7gCuBhOgsgj8wfygHuBhOgsgj8wftgJuBhOgsgj8wfugJuBhOgsgj8wf/gBuBhOgsgj8wgVf2uBhOgsgj8wgZf0uBhOgsgj8w
+					gZf0uBhOgsgj8wgZf0uBhOgsgj8wgZf0uBhOgsgj8wgZf0uBhOgsgj8wgZf0uBhOgsgj8wgZf0uBhOgsgj8wgZf0uBhOgsgj8wgZf0uBhOgsgj8wgZf0uBhO
+					gsgj8wgYf0uBhOgsgj8wgOf5uBhOgsgj8wgDf/uBhOgsgj8wgAgAuBhOgsgj8wgAgAuBhOgsgj8wgAgAuB]],
+				["Toe.R"] = [[
+					hOgPgN/7gAgAiGhOgPgN/7f8gEiGhOgPgN/7f2gLiGhOgPgN/7fygQiGhOgPgN/7fzgPiGhOgPgN/7f/gBiGhOgPgN/6gPfviGhOgPgN/6gSfriGhOgPgN/6
+					gSfriGhOgPgN/6gSfriGhOgPgN/6gSfriGhOgPgN/6gSfriGhOgPgN/6gSfriGhOgPgN/6gSfriGhOgPgN/6gSfriGhOgPgN/6gSfriGhOgPgN/6gSfriGhO
+					gPgN/6gSfsiGhOgPgN/7gKf1iGhOgPgN/7gCf+iGhOgPgN/7gAgAiGhOgPgN/7gAgAiGhOgPgN/7gAgAiG]],
 			},
 		},
 		Celebrate = {
@@ -567,121 +583,121 @@ return {
 			frames = 21,
 			bones = {
 				Hips = [[
-					gAkBgxACgAgAg9gAj+gxACgCgsgvgAjlgxAEgIhmfSgAkfgxAHgBhmhvgAlPgxANf9g/jQgAlggxAPgAgAjvgAlPgxANgDfBjQgAkfgxAHf/eahvgAjlgxAE
-					f4eafSgAjwgxACf8fBf8gAjtgxABgAgAfwgAk3gxAIf/g/ihgAlagxAQf7hmjkgAldgxARf6hmjqgAlAgxAKf+g/izgAj/gxABgAgAgfgAjtgxACf8fBfwgA
-					kBgxAEf9eag7gAkBgxADf+e0g9gAkBgxACgAfwg9gAkBgxACgAgAg9]],
+					gAjXguAEgAgAh2gAjUguAEgDgrhogAi8guAEgLhlgLgAj1guAKgDhmiogAklguATf/g/kJgAk1guAXgAgAkogAklguATgBfBkJgAj1guAKf9eaiogAi8guAE
+					f1ebgLgAjHguADf6fBg1gAjEguABgAgAgpgAkMguAOgBg/jZgAkvguAXf+hmkcgAkzguAYf9hmkjgAkWguAQgAg/jsgAjWguADgAgAhZgAjEguACf6fBgpgA
+					jXguAHf6eah0gAjXguAGf8e0h2gAjXguAEf/fwh2gAjXguAEgAgAh2]],
 				Spine1 = [[
-					gAkDgSAPgAgAjuf/j/gSANgFgrjZf9jkgSAFgOhlhNf9kjgSAZgKhlkqf+lWgSAvgEg/mqgAlogTA3gAgAnSgClWgSAvf8fBmqgDkjgSAZf2ebkqgDjkgSAF
-					fyebhNgCjwgSAHf4fCiMgAjtgSAFgAgAh6f+k8gSAjgFg/ltf9lhgTA2gGhmnDf9llgTA4gGhmnLf+lGgSAngFg/mFgAkAgSAKgAgAi9gCjtgSAGf4fCh6gD
-					kDgSARf0ebjrgCkDgSAQf3e0jugAkDgSAPf+fwjugAkDgSAPgAgAju]],
+					gAjbgTAjgAgAl0f/jXgTAggIgrlff9i8gTAPgVhkjVf9j6gUAygRhlmwf+ksgUBPgIg+ougAk9gUBagAgApWgCksgUBPf4fCougDj6gUAyfvebmwgDi8gTAP
+					frecjUgCjIgTAVf0fCkTgAjFgTARgAgAkBf+kSgUA/gJg+nyf9k3gUBYgNhlpGf9k6gUBbgNhlpOf+kcgUBFgJg+oJgAjYgTAbgAgAlEgCjFgTASfzfCkBgD
+					jagUAlfteclxgCjbgUAkfye1l0gAjbgTAjf9fxl0gAjbgTAjgAgAl0]],
 				Spine2 = [[
-					gAkSfUAqgAgAmZf8kMfUAlgJgrl+f3jpfTANgUhkjFf3k1fWA9gThkngf6lvfZBngLg+p8gAmEfaB3gAgAqsgGlvfZBnf1fCp8gJk1fWA9ftecnggJjpfTAN
-					fsecjEgGj5fTAVfzfCkYgAj0fTARgAgAkAf6lSfXBRgLg+ozf3l8faBzgRhkqaf3mAfaB2gRhkqjf6ldfYBZgLg+pPgAkMfUAegAgAlWgGj0fTASfzfCkAgJ
-					kRfVAsfsecmVgHkSfVAsfxe1mZgBkSfUAqf9fxmZgAkSfUAqgAgAmZ]],
+					gAjufhBcgAgApdf9jpfgBVgNgqpCf4jHfeAqgehhmNf4kQfiB2gdhiqif7lIfmCwgRg9s5gAlcfnDEgAgAtngFlIfmCwfvfDs5gIkQfiB2fjeeqigIjHfeAq
+					fiefmMgFjXffA7ftfEnfgAjSffA0gAgAnIf7ksfkCSgRg9ryf4lUfnC+gbhitVf4lYfnDCgbhitff7k3flCdgRg9sOgAjpfgBJgAgAobgFjSffA1ftfEnHgI
+					jtfhBefiefpYgGjufhBefpe3pdgBjufhBcf7fxpdgAjufhBcgAgApd]],
 				Neck1 = [[
-					gAkee3EOgAgAv2f7kYe2D4gVgmvOf0jve0B7gshcqyf0lEe5FOgzhYxaf5mDe/Hqgig10ugAmYfBIggAgA1sgHmDe/HqfefL0ugMlEe5FOfNeoxagMjve0B7
-					fUekqwgIkBe0CtfjfIs0gAj8e0CdgAgAsPf5lje8Gcghg2zNf0mQfBINg3hW1Uf0mUfBIZg3hW1hf5lve9G6ghg2zzgAkWe1DYgAgAuRgIj8e0CefkfIsPgM
-					kde3ENfOenvwgJkee3EPfae+v2gCkee3EOf4fyv2gAkee3EOgAgAv3]],
+					gAj+fJE9gAgAxFf8j5fIElgXglwdf2jSfECcgwhasHf2kifMGBg3hWymf6lefTIngkg01ygAlyfVJfgAgA2ugGlefTInfcfM1ygKkifMGBfJeqymgKjSfECb
+					fQemsFgGjkfFDUfhfJuGgAjffFDCgAgAtjf6lAfPHVgjg00Vf2lqfUJMg7hT2Xf2lufVJYg7hT2jf6lLfQH0gjg006gAj4fHECgAgAvigGjffFDCfhfJtigK
+					j+fJE8fKeqw+gIj+fJE+fXe/xEgCj+fJE9f4fzxFgAj+fJE9gAgAxF]],
 				Neck2 = [[
-					gAlWeWISgAgA1df5lOeTH0gdgh06fvkYeCE9g/hQxAfxl/efJmhFhL2xf3nCe1Msgsgt5fgAnYe8NugAgA6QgJnCe1MsfUfT5fgPl/efJme7e12xgRkYeCE8
-					fBeww+gKkxeIGKfYfQy0gAkqeGFygAgAyUf3mheqLLgsgt4QfynQe6NXhIhI58fynVe7NlhIhI6Gf3mueuLwgsgt4wgAlKeOHHgAgA0GgKkqeGFzfYfPyUgQ
-					lVeWIQe8e01XgMlWeWITfNfH1dgClWeWISf1f01egAlWeWISgAgA1e]],
+					gAkzewHKgAgA0Kf7ksetGugbgizlfyj7ebEFg7hTvhf0lZe5IZhBhP1if5mYfOLWgqgv4agAmsfVMVgAgA5OgHmYfOLWfWfR4agMlZe5IZe/ex1igOj7eaEE
+					fGetvfgIkSeiFLfafNxZgAkLefE1gAgAw4f5l5fEJ5gpgw3Gf1mlfTL/hEhM46f1mpfVMMhEhM5Ef5mFfIKdgpgw3ngAkpeoGEgAgAyugIkMefE2fbfNw3gN
+					kyewHIfAex0DgJkzewHMfQfF0JgCkzewHKf2f00KgAkzewHKgAgA0K]],
 				Head = [[
-					gAmJeRADgAgAhcf5mBeLAJeegtiSftlGdsAVcaiIeTfxmyegAvcghRlpf4nzfCBjd6gfpjgAoIfNB3gAgAqugInzfCBjiGfhpjgPmyegAvjgevlpgTlGdsAW
-					jmd3eRgLlhd5AHiOe1gWgAlad0ABgAgAfpf3nTexBCd4gonrfzoBfKB8cqgsqYfzoFfMCBcrgqqof3nge4BOd5gloagAl8eDAFgAgAh4gLlad1AHiOeyfugQ
-					mIeRAejhehjugMmJeRAUire2jNgCmJeRAFgkfviAgAmJeRADgAgAhc]],
+					gAljemAEgAgAhqf6lbegAKeeguigfwkleBAVcbiKehfzmKe1AychhSl2f5nIfWBnd7ggpwgAnbfhB8gAgAq7gHnIfWBniFfgpwgNmKe1Ayjfeul2gQkkeBAV
+					jld2efgJk+eOAIiNe0gkgAk3eKABgAgAf3f5mpfGBFd4gpn4f1nUfeCBcqguqlf1nYfgCGcrgsq1f5m1fMBSd5gmongAlXeZAFgAgAiGgKk3eKAHiNeyf8gO
+					liemAfjhefj8gKljemAViqe0jbgCljemAGgkfviOgAljemAEgAgAhq]],
 				Jaw = [[
-					gAmEda/+gAgAgvf3l+dV/chqfslpfpk2c49akGfJr4ftm7dq/ajuf8kzf1oKeQ/6iJgOg2gAoied//gAgAfogLoKeQ/6d3fyg2gTm7dq/acSgEkzgXk1c49Z
-					b6g3r6gOlYdD+SdigZqAgAlPc/+JgAgAqtf1njd9/yiOgGiyfvoZeZ/zjZgbf7fvoeec/zjXgdfqf1nyeF/2iMgJiBgAl4dN+0gAgAolgOlPc/+FdhgbqmgU
-					mKda/DcMgRmtgPmJda/bdIgblMgDmGda/5fagMiRgAmEda/+gAgAgv]],
+					gAljdj//gAgAgqf3lfde/dhqfsljfpkXdA9ckFfJrzftmad1/bjuf7ktf1noed/6iJgNgwgAoBeq//gAgAfigLnoed/6d3fzgwgTmad1/bcSgFktgXkWdA9b
+					b6g4r0gNk5dM+TdigZp7gAkwdI+LgAgAqnf1nDeJ/ziOgGisfvn4em/zjZgbf1fvn8ep/zjYgcflf1nReQ/2iMgJh8gAlZdW+2gAgAofgOkwdI+HdhgcqhgU
+					lqdk/EcMgSmngPlqdk/cdIgclHgDlldj/6fagMiLgAljdj//gAgAgp]],
 				ClockMin = [[
-					gAj9f4gAJZgA2nf+j5f5mjK3ZK2Ef6jcf7qoNWUD0ef6kef4x2UEMXtSf8lTf31gbxJMktgAlmf32ZjJJnc3gElTf31OpmMHWzgGkef4ytulPJSugGjcf7vy
-					xsRiQJgDjpf6ok1rX4LqgAjmf6ht2jeTJdf8k4f4Xl0Po1Kcf6lff3RGvdwLOrf6ljf3M/qA0yUof8lDf3Knkw2tazgAj6f5JZgw2nfQgDjmf6JYac1TlIgG
-					j9f5MzSGxZslgEj9f5SONCsyxmgBj9f4Y9KVm81WgAj9f4gAJZgA2n]],
+					gAkBf2gAJZgA2nf+j8f1mjK3ZK2Ef6jefvqoNWUD0ef6khf5x2UEMXtSf9lWf/1gbxJMktgAlogB2ZjJJnc3gDlWf/1OpmMHWzgGkhf5ytulPJSugGjefvvy
+					xsRiQJgEjsfyok1rX4LqgAjofxht2jeTJdf9k7f8Xl0Po1Kcf7lhgARGvdwLOrf7llgBM/qA0yUof9lFf9Knkw2tazgAj9f0JZgw2nfQgEjofxJYac1TlIgG
+					kAf2MzSGxZslgEkBf2SONCsyxmgBkBf2Y9KVm81WgAkBf2gAJZgA2n]],
 				ClockHour = [[
-					gAj9f4gAJZgA2nf+j5f5gRJ4ft3Gf6jcf7exKkhI3sf6kef4igKsdW3kf8lTf3k4KobB2wgAlmf3mDKNZ91zgElTf3mKJiaB1FgGkef4lHI2bS08gGjcf7il
-					Icd51XgDjpf6kCJDcT1mgAjmf6kMJyb02Of8k4f4n5LkXv1yf6lff3paMsV+1ef6ljf3qBNAVU1Kf8lDf3pxMZVx07gAj6f5n9K1YD1LgDjmf6n5KFYr0qgG
-					j9f5qLKlWzzZgEj9f5qpLHWIzZgBj9f4q4L+VTzugAj9f4rUMaUszm]],
-				Gear2 = [[
-					gAl3e5gAJZgA2nf7lxe2f9J4gC3GfzlGekerKlhO3rf0mcfCjHKxcr3ff5nYfVmoLHZK2RgAnsfcpYLbWo0lgHnYfVrfLvVCy+gMmcfCszMCUWyBgNlGeks9
-					MJUdyHgIlaerwKPOQ4v2gAlUepxzSDONt9f5m6fM0jYZKNoPf1nlfa1Qc3Inj2f1npfb1fgBITgYf5nGfQ12h1IxeOgAlvey2khoJceYgIlUep3GjEKRdOgM
-					l2e52xmpLZaAgJl3e52En7LhYqgCl3e51KoeLLXqgAl3e505oqLHXW]],
+					gAkBf2gAJZgA2nf+j8f1gRJ4ft3Gf6jefvexKkhI3sf6khf5igKsdW3kf9lWf/k4KobB2wgAlogBmDKNZ91zgDlWf/mKJiaB1FgGkhf5lHI2bS08gGjefvil
+					Icd51XgEjsfykCJDcT1mgAjofxkMJyb02Of9k7f8n5LkXv1yf7lhgApaMsV+1ef7llgBqBNAVU1Kf9lFf9pxMZVx07gAj9f0n9K1YD1LgEjofxn5KFYr0qgG
+					kAf2qLKlWzzZgEkBf2qpLHWIzZgBkBf2q4L+VTzugAkBf2rUMaUszm]],
 				["UpperArm.L"] = [[
-					fNkIeg1QTsgA0ffHkBei22RwYFvWe/jUen3NSuS3roe/kuem5cXgOviafElxen5UVfQol9fNmIel4LSmTvqZfWlyeg6HU7SJlKfckvec6/XMRWhdfcjTed4h
-					R3VWqafWjoed15P+XZumfNjieh4NSoTsqVfElQel50YHO4hJe/l/eq5JV6QAlye/mEeq3oTSStrQfElcel5LVKQ4mifNj+eg6DWQQqjwfWjiee4nSYUdp8fc
-					kHeb29QVW4s8fYkIec5FSIXCrAfQkIef3KSic5xMfNkIeg1QTsgA0f]],
+					fGjxe10WRNgAzwfBjqe31XPfXsvAe6jBe51fQqSPrse7kVe93yV2NcjCe/lUe/3pToPimVfGlqe+2gQjS+qZfOlVe44fTEQ9lbfTkWex5eVeP4h7fTjAeu25
+					PzUkqRfOjTew0QN1XAuMfGjOez2iQlS7qVe/k1e94OWgNeh0e7lhfD3dUEO7mPe7lmfE17ROSCrWe/lBe+3gTRP1m4fGjoe04bUePZkMfOjOew29QVTpp5fT
+					jwew1UONWVsmfQjxex3kP/WPqxfIjxe02AQIclwmfGjxe10WRNgAzv]],
 				["LowerArm.L"] = [[
-					exjXeWuR8jgAiGebjneKzA28qpbReMjKeR0u1koQYNeMk4ePxK2CpRTdeTlyeMyizPtMUXedl/eJzExcwtXPeol0eAx3zwuZVqevk5d7wR3Fq/VwevjId9zl
-					2dqKaTeojUeF0A0otdb4edjZeFz91wp3YpeTlbeNwh10qiTNeMmBeRyjy2tHTreNl5eTzvxOvmWVeTlceLyyzjsvUxedkEeDxf3PokVxeojYd/zm2BqdZTev
-					j2d/zYz5vEbAevj3d6yg3pp+bSeujgeIwL7giDgyexjXeWuR8jgAiG]],
+					eojHeogA/+gAhEeVjYegmd8qspf/eKi9emou8Ir6cPeKkhetlY6xu1YZePlaernt43x8bEeYlnemoz3izyfSehlceem05DyacvemkieYkB7XvVbKeni7eRnO
+					8dsqe7ehjGeYoR7Bu5h4eYjLebn679tIdWePlCesk26QwDYueKlnexn54fyKabeKlhewpk3ozOd/ePlFepnz5RxXbOeYjyedlI8FtLaHehjKeVnc8CtXeLem
+					jmeVoA6Cwsh0emjneSlu9FsCfqeljRediH/0ieg4eojHeogA/+gAhE]],
 				["UpperArm.R"] = [[
-					gzkIeg1QsUgA0fgskBee52s7pvpsgkjTed4iuIqqqZgkkvec3cvSpssFgqlyeg6HrFt3lKgzmIel6Tm+wzfNg8lxen5UqhvYl9hBkuem2ct5r7tlhBjUen3N
-					tTtJrpg7joek5bqIv1k0gzjieh4NtYsUqVgqlQef3yulquragkmBeg6brBtjkggkmFeg7CnOvce1gqldef5/ratnlwgzj+eg2CvVpyuag7jiek3ytHtFqthB
-					kHem5WpHw7jYg9kIek4WtBq0sAg1kIeh2ptSjHyBgzkIeg1QsUgA0f]],
+					g6jxe10WuzgAzwg0jqey4WvCqppkgtjAeu25wNrdqQgtkWex1zxZqVrzgylVe44fs8vDlbg6lqe+4yogyWf7hBlUe/3psYwemVhFkVe90wwBsYthhGjBe51e
+					vXtwrthBjUe33wr7xAlRg6jOez2ivbtFqVgyk1e22HwqrarPgtlje440s3uzkwgtlne45loyxFfcgylCe34WtTuwl+g6joe00YxeqLuHhBjOe32FvJtzqxhF
+					jwe73rq1yLj9hDjxe52xvLrfr8g8jxe21fvtjVxbg6jxe10WuzgAzv]],
 				["LowerArm.R"] = [[
-					hPjXeWuRDdgAiGhWjzd6yFGsZ6bthRjId9zkJjV1aShRkgd+zKMrQNaQhYl0eAx3MQRnVqhjmYeLvdKmTlS7htlyeMyiMxS0UXhzkfeS0iNPSOYSh0jKeR0u
-					KbXxYNhtjseJyEI3YsVnhjjZeFz9KQWJYphYlDeBzJNZPzZDhRmEd+xeMWQ8VzhRmVeCvEKES0UKhYled/yHL8SEWFhjjseJ0SL9SjaphtjZeL0TKiWwYAh0
-					kOeOxmJoXlUGhsj3eIzNIyXcZihXjfeNwSE7bJfKhPjXeWuRDdgAiG]],
-				Gear1 = [[
-					gAlmgYgAJZgA2nf/ljgWfjJ4gd3Gf9lHgJdYKsiq3kf+mGgee3KkhY3rf/m2gre3KHhb3QgAnHgvdYJiio2egBm2gralJWk61XgCmGgeWvKLoSzzgDlHgIST
-					MqsmxZgClUgPQ2OUuVwlgAlQgNPIQ8w4vEf/mdglPqRaxevaf+nBguPAS4zAuLf+nEgvNqU00csAf/mngnL1Xb1go+gAlkgTJ3bY2JkogClQgNI0dy11h/gD
-					lmgYIYeA1ZhzgClmgYIlfG1vg2gAlmgYJOfy2cgOgAlmgYJZgA2ngA]],
-				Gear3 = [[
-					gAlOhqgAJZgA2ngClMhpgIJ4f33GgFk8hdflKigO3tgGlphvjvK3b/3YgEmPh3neLZYQ1+gAmdh6qyMIVOz4f8mPh3ttNKS9xnf6lphvwCOiRavwf7k8hdxg
-					QBQTupf9lEhj0UUlM9q0gAlBhh1fY7KhnFgEl7hz16gNItf7gGmYh50xleI/aWgGmbh5zVpYKgWBgEmDh1yQsIMgTQgAlQhnyJtgN3Sgf9lBhhxKvxPzRQf6
-					lOhqusyoStPJf8lOhqtAzhT8N5f/lOhqruzjUeMwgAlOhqrUzmUsMa]],
+					hYjHeogAACgAhEhejjeSkvBjXneQhZi7eRnNDjTVe7hakOeWoCGnOWhghflceem0G9Nmcvhol6eskCGnOMZUhxlaerntHJOEbEh2kNerpnGjPOe4h2i9emou
+					D4UHcQhxjcejlvDvT2ZahojLebn6EDS4dWhfkveboWHUNdgphalrecmeHNNEdKhal4eijZGSODavhflHecm5GjOKc6hojdeeozFbQkgzhxjLehoXELTHchh2
+					j6eqloEsSNYlhwjnehmmDCUcdghfjPehiVAoaTgshYjHeogAACgAhE]],
 				Tail1 = [[
-					gAkEhXehgAgA/9gCkBhXehkagJ/pgEjshXekn4fj++gEkhhXeVjpgY/vgClNhXeEdHfa/ygAldhXeAZieb/Of+lNhXeFbNfA/jf8khhXeUgegD/8f8jshXei
-					kwfu/mf+j2hXehkbf7/pgAjzhXehgAgA/9gCk2hXeNbofV/ogElXhXeBbXe8/kgElahXd+fif5/7gCk/hXeKk1g2/jgAkEhXeemqgI/Qf+jzhXehi9f7/0f8
-					kEhXehcWf2/vf9kEhXeiaEfu/Zf/kEhXeheaf7/6gAkEhXehgAgA/9]],
+					gAjbhUecgAgA/9gCjYhUedkagK/pgEjDhTefn4fk++gEj3hUeQjpgY/vgCkjhUd/dHfZ/ygAkyhUd7Zjea/Of+kjhUeAbNfA/jf8j3hUePgegD/8f8jDhTed
+					kwfv/mf+jMhUedkbf8/pgAjKhUecgAgA/9gCkMhUeJbpfU/ogEkshUd8bXe7/kgEkwhUd5fif5/6gCkUhUeGk1g3/jgAjahUeampgJ/Qf+jKhUeci9f7/0f8
+					jahUedcWf1/vf9jbhUeeaEft/Zf/jbhUeceaf7/6gAjbhUecgAgA/9]],
 				Tail2 = [[
-					gAkOi5e4gAgA/+gckKi1fHlsgG/egzj0itgqtve983gakri3dxpDgw+mfxlZi3btdYfN/lfalrixbHUsdP9Zfhlai1byVHeA9tf/kri5dueNf7/3gZj1i0gn
-					oafX+2gZj/i1f+q6fw+EgAj8i5gGkGf//ufolCi1cvZ1e+/Nfolki1bWVad29vgBlni5bLaFfM/DgflLi1cWkkhH/bgokNixfTrugF9wgQj8i3gIpQfw+ofm
-					kNi3e6enf9/8fZkOiye7XUft+xf2kOi5e5cvf5/zgAkOi5e4gAgA/+]],
+					gAjjiseRgAgA/8gajgioeglsgN/cgujKiggHtwfO83gXkAipdLpCg7+jfzkuiqbGdZfK/ffek/ikajUvdB9SfkkuinbNVJdz9of/kAirdHeOf5/zgWjLingA
+					obfh+3gWjViofZq6f++EgAjSirfekGgE/ufrkWiocIZ3e2/Ifrk4inaxVddp9pgBk7iralaGfF+9gckginbwkjhM/WgkjjikeurtgT9vgOjSiqfipQf8+nfo
+					jjipeTenf8/6fdjjileVXVfi+vf3jjireRcvf1/xgAjjiseRgAgA/8]],
 				Tail3 = [[
-					gAkUkbfogAgA//g/kQkRgDkAf6/vh/jujri7wxd/7AhPk5kIdmvNg18Cfil0kVZ1hsfD/VedmMj2YsTacW8Qekl2j9Z7Pqdb6sf0k5kadjYof4/ChLjwkJi7
-					n7eu+1hYj+kBhrvkfP75gZj8kYh/qZf1+MfElWkObrcUew/detmDj9ZHSTdH77femEkQY7Txez8rg6likQbCgRhT/khrkRj5gYtPfr9HhGj7kJiBu+fS8Mfd
-					kUkYfskQgE/temkUkGfpXof6+3fikUkZfobdf9/qgAkUkbfogAgA//]],
+					gAjtkDe7gAgA/+g4joj6fXkAgA/uhyjIjYiWw0eX7EhGkRjyc/vMhK7+fllJj9ZKhufF/MeolgjhYFTgcF8FeulLjnZWPtdE6jf1kQkBc3Yofu++hDjKjziQ
+					n9e5+4hOjYjrhEvlfl77gWjVkAhVqZgD+OfLksj3a/cVer/We3lXjoYgSXc07xfjlZj4YTTzei8hg0k3j5aWgPhT/dhgjqjkfvtQf+9Hg/jUjzhau+fn8Ofh
+					jskAe/kQgK/sevjtjwe9Xofu+2fljtkBe8bdf2/pgAjtkDe7gAgA/+]],
 				Tail4 = [[
-					gAkXl+gAgAgA//hXkPlxgogCf0//jVjYkVkowEc47GiglJk9dFzZg65QftmZlvX7oLek90ddm9kwWUWQa48bdTmdkkX6NGcm4QfIlIlwdFSWf/8yh5jdldkv
-					jfeA/Yirjzk0i6wxen7DhVjwlljav9fj7heulxlrafiHeP/ZdomwkyWxTKb47fedmulMWiPgeV5qg6mAluZoZuhx+qi1kOk5hDqxfV+GiXjulAjcx1es6Tf3
-					kWl3gFqugB+Jd0kXlbgAa3gA/kfGkXl3gAbGgA/ngAkXl+gAgAgA//]],
+					gAjzlbftgAgA//hOjslQgVgCf0//jAi4j+kYwGdC7IiPkikhc2zZhF5OfwltlMXqoMep9vdxmPkTWDWTaz8VdnlxkKXsNIcb4LfOkhlOc0SWf38whti9k/kc
+					jgeC/biZjRkaiqwyex7FhMjOlGjJv9ft7ie4lIlJaMiIeQ/Vd6mDkWWhTMbw7aepmCksWTPheL5kg0lWlLZWZthu+miijrkegxqxfb+GiHjNkkjMx2e36Vf4
+					jylVf0qugH+JeDjzk8fta3f9/kfMjzlVftbGf9/ngAjzlbftgAgA//]],
 				Hourglass = [[
-					gAkXnggAgAgA//hXkMnTgogCf0//kmi2lCkowEc47Gj+lalVc4zZhE5OgenFm4QPoRg06kcyn7luFDcuVftQcBnPk1GeeOM4etd9lYmtDNf6SWdTiMi/m5Ao
-					iAjfkvkBjglfE9hZwxi6ipjcmUEfgdv9jae9mSnGBGhoiPYRcrnrllLdpZWULjdOniloaSu2YmFRgTmjnBihmBdeAzjzkHmFe9VPgrB6jwjYljckOLhUFtg1
-					kVnDf7VSf/B3dVkXm4gAlJgAAceokXnVgAk6gAAZgAkXnggAgAgAAB]],
+					gAj0mzgAgAgA//hOjqmogogCf0//kJickmkowEc47Gjjkzk2c4zZhE5OgbmWmNQPoRg06kdKnIlKFDcuVftQcemgkZGeeOM4eteKkxmFDNf6SWdTh+ikmSAo
+					iAjfkvjnjClAE9hZwxi6iYi+lwEfgdv9jafFlnmaBGhoiPYRdFm5lCLdpZWULjdjmylFaSu2YmFRgRl3mVihmBdeAzjajmlie9VPgrB6jXi7lEckOLhUFtgv
+					jzmZf7VSf/B3dnj0mPgAlJgAAcexj0mpgAk6gAAZgAj0mzgAgAgAAB]],
+				Gear2 = [[
+					gAkmiYgAJZgA2ngUkjiVgMMufq5hgokOiOgNPneG7agSlDiViIMPdn48f4lwiVj8HvcM0GfrmBiRmWGAajwpftlxiTpWH+YWxUf+lDiXrRMyUbz0gSkOiUrq
+					Q+PmzzgSkYiVuES0NExHgAkViXy0TcNMskfylZiU25UvOeoCf1l7iT4XX2NqlJgCl+iV2pcSKAjggTliiTy6f9GOhAgckmiRxWhqFVdHgLkViW0DkBH9a1ft
+					kmiW4CnEM7aafkkmiT44o7PCZ6f5kmiX2Bo0MFYCgAkmiY05oqLHXW]],
+				Gear3 = [[
+					gAkSjYgAJZgA2ngmkPjSgRMufj5hhFj5jGgePodq7YghkwjUi1MUcu41fslejUldICa8z1fQlwjMo0GuY/wDfZlfjQsgJdWFwIgAkwjXuhPGRFxcglj6jRuv
+					T+LkvngjkEjSxIXKJIrTgAkBjX12aJKKl3fglHjS5cd/Mvg/fhlpjQ5jisNLdEgAlsjV11nEK2ZCgnlQjRwcpWJIUFg2kSjMt1qmK7PagXkBjVuZuhO7OTfe
+					kSjUvfztTtQYfNkSjOuq1/WARAfykSjXsM0WU+NmgAkSjYrUzmUsMa]],
+				Gear1 = [[
+					gAk1hBgAJZgA2ngBkyhAfoJ4gY3GgCkbg3d8KoiC3ogClShGevKlhh3rgBl/hOeZKJh73OgAmPhRcyJnjO2Zf/l/hOaGJelY1Qf+lShGWnKOoazwf+kbg3Sz
+					MTsJxtf/kmg7RIOEuEw0gAkjg6PbQowlvYgBlohKPcRpxsvKgCmJhQOsTTzVttgCmMhRNZVS0vrfgBlxhMLsXx1qomgAk0g+J6bL2Gk1f/kjg6I3dW1yiaf+
+					k1hBIYeA1Zh0f/k1hBIlfG1vg2gAk1hBJOfy2cgOgAk1hBJZgA2ngA]],
 				["UpperLeg.L"] = [[
-					e5ivgY7le2gAwKe4irgc8PfJfWu/e3iSgo+gfId/pYe3jOgb7Xf0euwhe4kBgR35f4fq1Re5kTgK0Tfggn4te7kCgI2LephK2/e8jPgN6FeChbyXe8iQga91
-					d4hNrTe7icgZ9HeMgstIe5iZge9qemfur6e4jngV5sfrfdzDe3kMgS3PgYfT1+e3kPgS2ygcfW2ce4jxgT5Ffwfhz2e5isga8wetf2t9e7iZga9YeLgqsfe8
-					iugR7Dd/hYw6e7ivgT7JeNhCwze5ivgX7geugOwSe5ivgY7le2gAwK]],
+					e1iVgV7FdbgAw2e0iRgZ74dpfRvfezh4gk+ZdNdipPezi0ga69eheyxIezjmgR+wezgMoue1j4gK+ad2gXpse2jngI/DcngGm5e4i0gL5Kcuhhzae4h2gV9b
+					b4g8r1e2iCgV8ucZgftne1h/ga9ZcxfcsMezjMgU40epfu0JezjxgS+ufdgGo4ezj0gS+sfegGo/ezjWgS36e3f51Oe1iSgX8bdEfsuYe2h/gW9BcUgbs9e4
+					iUgO6UcihYxze3iVgQ6dcxhDxqe1iVgU69dSgOxAe1iVgV7EdbgAw2]],
 				["LowerLeg.L"] = [[
-					e3hyf2uIgjgA8se0hxf1t6hPfy8xethrfvsOigf39deyiQf7vEh+fV8Je2i8gJxxhHfW6ke5jPgY0PgNfw4xe6i8gLyIfjgX6We8iNf2uEfEgo8te+hifmp/
-					e9gd+Xe6hofrrefogX93e2hpfsrwgrgH9ve1ikgAwNhRfd7je2jGgOyohhe958e2jKgRzChfe75pe1itgDwvhNfa7Oe2h2fvsmgngE9Ze6hnfqrJfogW9+e8
-					hwfztafCgm9Be7hwf0tpfagd87e3hyf1uCgUgG8we3hyf2uIgjgA8s]],
+					ewhgf7uMgrgA8qethff6t5hcf28yenhYfzroi4gI9qesh/gBviiIfW74ezjHfe+thqfao0e0jWfa+dgRfnpye0jPfS9te9f8r1e1h7f7uUfFgi8le1hOfqof
+					fMgW+1eyhVfvqmf2gW+LeuhWfwq9g8gM+CeviTgHxNhQfV67eyjRfg+nicfQo8eyjUfg+kibfQpEewibgLyGhIfP6Wevhjf0sKg2gH9leyhUfuqIf3gV+We1
+					hef4tSfHgi9Fezhff5tmfgga89exhgf6uEgcgF8uewhgf7uMgrgA8q]],
 				["Foot.L"] = [[
-					e5gwgp8kgAgAuZe5gwgp8kglftuZe5gwgp8hhtfJuXe5hLgp8HhKfYvNe5hvgp7pgbfwwGe5h+go7VfrgNwne5hvgp7ofKgfwFe5hLgp8HeygqvMe5gwgp8i
-					ergruYe5gwgp8kfQgYuZe5gwgp8kgJf8uZe5hbgp75gkfsvpe5h3gp7hgwfkwRe5h6gp7fguflwVe5hjgp7zggfuv0e5g5gp8bgFf+use5gwgp8kfQgYuZe5
-					gwgp8iexgouYe5gwgp8jfFgeuYe5gwgp8kf0gGuZe5gwgp8kgAgAuZ]],
+					eygsgj8wgAgAuBeygsgj8wgpfsuAeygsgj8sh/fCt+eyhGgj8PhKfZu+eyikeml5rGGAtweyiweksAiXaO8/eyiheipzbTtA7IeyhGgj8Pesgsu+eygsgj8u
+					exgnuAeygsgj8wfWgUuAeygsgj8wgSf3uBeyhWgj7/gafyvfeyiteppip2LO0FeyiwepqMpXMe1Oeyhegj74gSf2vseyg1gj8lgLf7uXeygsgj8wfXgUuAey
+					gsgj8ueugouAeygsgj8vfCgeuAeygsgj8wfzgGuBeygsgj8wgAgAuB]],
 				["Toe.L"] = [[
-					e5gOgP/8gAgAh0e5gOgP/7gbfgh0e5gOgP/4hOeih0e5gogR/2g0e+ive5hKgU/xgTfnjve5hYgV/sfygUkVe5hKgU/wfbgyjve5gogR/2fKhFive5gOgP/6
-					fDhJh0e5gOgP/7fegph0e5gOgP/8gGf4h0e5g3gS/0gZfgjOe5hSgU/vghfTj9e5hVgU/ugffUkBe5g+gT/zgWfijbe5gXgQ/6gDf8iJe5gOgP/7fegph0e5
-					gOgP/6fHhEh0e5gOgP/7fVgzh0e5gOgP/8f3gLh0e5gOgP/8gAgAh0]],
+					eygPgN/7gAgAiGeygPgN/6gefeiGeygPgN/2heeXiFeygogP/zg2e/jLeyiJfAqqgcDvqgeyiWe+2FgAZx2SeyiKe+zVgkt01ZeygogP/zfDhJjLeygPgN/5
+					fFhCiGeygPgN/6fhgjiGeygPgN/7gOfxiGeyg3gQ/xgSfpjveyiRfAwbhQJCu/eyiUfAxdhSKYvyeyg+gQ/vgNfwj+eygXgN/5gIf3ifeygPgN/6figiiGey
+					gPgN/5fDhEiGeygPgN/5fSgziGeygPgN/7f2gLiGeygPgN/7gAgAiG]],
 				["UpperLeg.R"] = [[
-					hHivgY7lhKgAwKhGirgW70hjfdvuhEiQga90iIezrVhEjPgN6Fh+elyXhFkCgI2LhXe22/hHkTgK0TggfZ4thIkBgR35gIgW1RhJjOgb7XgMhSwhhJiRgo+h
-					g4iBpWhIidgi9ng8hMr/hHiZge9qhagSr6hFjogM4phhe/0ThEkOgEzxhreY5ChEkSgEzwhqeX5DhFjygK34hee81NhHisga8whTgKt9hIiZgj93g/hQrWhJ
-					iugf8HgVhbvMhJivgd79ghhDvhhHivgZ7rhBgOwBhHivgY7lhKgAwK]],
+					hLiVgV7FilgAw2hKiRgT7SjFfgwahIh2gV9akIfEr3hIi0gL5KjSefzahKjngI/DjZf6m5hLj4gK+aiKfppshNjmgR+whNf0ouhNi0ga69hfhOxIhNh4gk+a
+					iziepNhNiDge9bishdsKhLh/ga9ZjPgksMhKjNgK3Niget11hIjzgE+sj9fooFhIj3gD+Uj4fgpbhKjXgJ3Hifet17hLiSgX8bi8gUuYhNiAgf9sizhkrdhN
+					iUgd7zhvhcvrhNiVgb7lh7hEwDhMiVgW7MicgOwrhLiVgV7EilgAw2]],
 				["LowerLeg.R"] = [[
-					hJhyf2uIfdgA8shHhvfytTgGfv9FhChifmqAhDfj+XhEiNf2uEg8fY8thGi8gLyIgdfp6WhHjPgY0PfzgQ4xhKi8gJxxe5gq6khOiQf7vEeCgr8JhThrfvsO
-					dggJ9dhPhsfwsoeUgK9WhKhpfsrwfVf59vhGijf+v5gbfo7whFjKgUzvg7fT5JhFjOgUzug7fT5KhGisgCwmgcfo7WhKh2fvsmfZf89ZhPhrfvsXeSgI9dhP
-					h0f5uud6gm8UhOh0f5uoeTgd8ZhKhyf2uOfOgG8phJhyf2uIfdgA8s]],
+					hQhgf7uMfVgA8qhOhdf3tGf9fw9MhLhOfqohg0fq+0hLh7f7uUg7fe8lhMjPfS9thDgEr1hMjWfa+dfvgZpyhNjHfe+teWgmo0hUh/gBvid4gq74hZhYfzrn
+					dIf49qhVhaf1sKeBgA9hhShWfwq9fEf0+ChMiSgHxEgify7DhLjWfQ9mh6gBr/hLjWfS99h8gCrEhMicgGxNgifz6+hRhjf0sKfKf59lhWhZfzrzd9f99qhV
+					hif/u+dtgg8LhUhif+u1eIgZ8RhRhhf8uUfFgF8mhQhgf7uMfVgA8q]],
 				["Foot.R"] = [[
-					hHgwgp8kgAgAuZhHgwgp8kghfvuZhHgwgp8ihVfVuYhHhLgp8HhOfWvMhHhvgp7og2fhwFhHh+go7VgVfzwnhHhvgp7pflgQwGhHhLgp8He2govNhHgwgp8h
-					eTg3uXhHgwgp8jfBgguYhHgwgp8kf3gEuZhHhbgp75gzfjvohHh5go7ShQfQwohHh9go7JhQfQw3hHhjgp7zg0fiv0hHg5gp8bf7gCushHgwgp8je+ghuYhH
-					gwgp8ieugpuYhHgwgp8jfDgfuYhHgwgp8kf0gGuZhHgwgp8kgAgAuZ]],
+					hOgsgj8wgAgAuBhOgsgj8wggfwuAhOgsgj8uhPfZuAhOhGgj8PhUfUu+hOiheipzktTA7IhOiweksAdply8/hOikeml5U66AtwhOhGgj8Pe2gnu+hOgsgj8s
+					eBg+t+hOgsgj8ve1gluAhOgsgj8wfugJuBhOhWgj7+hCfcvehOioegoIm4Mg3BhOireglUpJF6vLhOhggi7qhCfawChOg1gj8lf1gFuXhOgsgj8vexgmuAhO
+					gsgj8uergpuAhOgsgj8vfBgfuAhOgsgj8wfzgGuBhOgsgj8wgAgAuB]],
 				["Toe.R"] = [[
-					hHgOgP/8gAgAh0hHgOgP/7gYfkh0hHgOgP/6g9e3h0hHgogR/2g2e7ivhHhKgU/wglfOjvhHhYgV/sgOfskVhHhKgU/xftgZjvhHgogR/2fMhCivhHgOgP/4
-					eyheh0hHgOgP/6fTg3h0hHgOgP/8f6gIh0hHg3gS/0gjfRjOhHhUgV/qg2e1kYhHhXgV/ng2e0kphHg+gT/ygkfQjbhHgXgQ/6f9gEiJhHgOgP/6fRg5h0hH
-					gOgP/6fGhGh0hHgOgP/7fVg0h0hHgOgP/8f3gLh0hHgOgP/8gAgAh0]],
+					hOgPgN/7gAgAiGhOgPgN/6gYfliGhOgPgN/5g7e+iGhOgogP/zg9e3jLhOiKe+zVfcSM1ZhOiWe+2FgAmP2ShOiJfAqqfk8RqghOgogP/zfKhBjLhOgPgN/2
+					eihpiFhOgPgN/5fIg+iGhOgPgN/7fygPiGhOg3gQ/wgvfFjvhOiRe9wOfALXyPhOiUe9qqemEZsChOhAgQ/qgvfEkYhOgXgN/5f4gJifhOgPgN/5fGhBiGhO
+					gPgN/4fBhHiGhOgPgN/5fRg0iGhOgPgN/7f2gLiGhOgPgN/7gAgAiG]],
 			},
 		},
 		Death = {
@@ -690,121 +706,121 @@ return {
 			frames = 23,
 			bones = {
 				Hips = [[
-					gAkBgxACgAgAg9gAkBhIAKgAgAi/gAkBhXATgAgAkSgAkBhTARgAgFj8gAkBhMAMgBfljRgAkBhDAMgDd/iigAkBg+AIgAeTiDgAkBg8AFgAfrh7gAkBg4AE
-					gBgOhlgAkGgzAGh6f+hIgAkMgxAsmff0g8gAkCgxCcsMfpg5gAjhgxFBxJffg0gAjFgxHF0BfagwgAjBgxHZ0afZgvgAjOgxGczMfbgxgAjQgxGQy9fcgxgA
-					jDgxHO0MfZgwgAi/gxHh0jfZgvgAi/gxHh0jfZgvgAi/gxHh0jfZgvgAi/gxHh0jfZgvgAi/gxHh0jfZgv]],
+					gAjXguAEgAgAh2gAjXhFAQgAgAj4gAjXhUAcgAgAlKgAjXhQAYgAgFk1gAjXhIATgAflkKgAjXhAARf/d/jbgAjXg7ANf9eTi8gAjXg5AJf/fri0gAjXg1AH
+					gBgOiegAjdgwAJh6f7iBgAjmguAvmefoh0gAjgguCfsLfThtgAjDguFDxIfBhkgAiqguHH0Ae2hcgAimguHb0Ze0hbgAixguGezLe5hfgAi0guGSy7e6hfgA
+					ioguHP0Ke1hcgAikguHj0ie0hbgAikguHj0ie0hbgAikguHj0ie0hbgAikguHj0ie0hbgAikguHj0ie0hb]],
 				Spine1 = [[
-					gAkDgSAPgAgAjugAkHgpAigAgAlugAkKg5AzgAgAnAgAkJg1AugAgFmqgBkIgtAmf/flmAgEkGgkAhf3d/lRgDkFgfAbf3eTkzgBkFgdAXf+frkrgAkEgZAU
-					gCgOkVgAkIgUAUh5f0j4gBkOgSA5mcfQjpgBkDgSCosHeljcgCjigSFMxCeBjJgCjFgSHPz5dri5gCjBgSHj0Sdoi3gCjOgSGmzFdxi+gCjRgSGby1dzi/gC
-					jEgSHY0Edqi4gCjAgSHr0bdni2gCjAgSHr0bdni2gCjAgSHr0bdni2gCjAgSHr0bdni2gCjAgSHr0bdni2]],
+					gAjbgTAjgAgAl0gAjegrA/gAgAnzgAjgg6BVgAgApEgAjgg2BPgAgFougBjeguBDf9floEgDjdgmA8fveAnWgDjcggA0fweUm4gBjcgfAvf9fsmxgAjcgbAr
+					gDgOmbgAjggVAph4frl+gBjpgTBNmYe1lsgCjigTC7r/dylYgDjEgTFdw3c5k6gDiqgTHfztcXkigDimgTHz0FcSkegDiygTG2y4chkqgDi1gTGrypcjksgD
+					ipgTHnz3cVkggDilgTH60OcRkdgDilgTH60OcRkdgDilgTH60OcRkdgDilgTH60OcRkdgDilgTH60OcRkd]],
 				Spine2 = [[
-					gAkSfUAqgAgAmZgAkdfuBIgAgAoXgAklgABggAgApogAkjf7BZgBgFpSgCkffyBNf8flopgMkbfpBFfseAn7gKkYfjA8fueVndgCkXfgA4f8fsnWf/kVfcAz
-					gDgOnAgCkXfWAwh6fymkgHkbfUBVmdfLmXgMkNfUDHsHebmQgPjofUFuxBdtmHgQjJfUHzz3dQl+gQjEfUII0PdLl9gQjSfUHKzCdYmBgQjVfUG+yzdbmCgQ
-					jHfUH80BdOl+gQjCfUIP0YdKl8gQjCfUIP0YdKl8gQjCfUIP0YdKl8gQjCfUIP0YdKl8gQjCfUIP0YdKl8]],
+					gAjufhBcgAgApdgAj4f7CHgAgArYgAj+gMCmgAgAslgAj8gICdgBgFsRgCj5f/CNf6flrpgKj2f2CBfgeDq8gIjzfvB1fjeXqegCjzftBwf6fsqYf/jxfpBp
+					gFgNqDgDj0fjBjh4fmpngJj7fhCHmVejpWgQjwfhD4r6dOpFgUjNfhGcwtcCorgWiufhIhzfbToVgWiqfhI1z3bMoSgWi4fhH3ysbhocgWi6fhHsydbloegW
+					isfhIpzpbQoUgWiofhI80AbKoRgWiofhI80AbKoRgWiofhI80AbKoRgWiofhI80AbKoRgWiofhI80AbKoR]],
 				Neck1 = [[
-					gAkee3EOgAgAv3gAkufSGqgAgAzhgAk3flIfgAgA1rf/k1fgH/gDgE1HgDkwfWHCfyfoz/gQkqfNGIe/eQysgNknfGFgfJeix2gCkmfEFVf2fuxpf+kje/E6
-					gIgMxAgDkke5EXhme9v/gLkne3Eclccgu4gTkXe3FkqTZrtWgZjwe3HZumXdregcjOe3I6xKWTqGgcjJe3JKxgWKp4gbjZe3IcwaWoqggbjbe3ITwNWuqogc
-					jMe3JBxTWPqAgcjHe3JPxoWGp0gcjHe3JPxoWGp0gcjHe3JPxoWGp0gcjHe3JPxoWGp0gcjHe3JPxoWGp0]],
+					gAj+fJE9gAgAxFgAkLflHjgAgA0ogAkTf5JegAgA2tgAkRfzI8gDgE2LgDkNfqH9fxfp1GgNkIfgG/e6eTz1gLkFfZGVfFekzAgCkEfWGJf1fvy0f/kCfRFt
+					gIgMyNgEkFfLFGhje5xMgPkKfJFIlRcRwGgaj8fJGMqAZOuhgijVfJH7uNW0sjgli0fJJZwtVjrHgmivfJJnxDVYq5gli+fJI7v+V6rjgkjBfJIzvxWArrgm
+					iyfJJfw2VerBgmiufJJtxLVVq0gmiufJJtxLVVq0gmiufJJtxLVVq0gmiufJJtxLVVq0gmiufJJtxLVVq0]],
 				Neck2 = [[
-					gAlWeWISgAgA1egAlsfCLdgAgA4hgAl4fgNtgAgA6Pf/l1fYNGgDgE5zgElvfIL7ftfs45gTloe5Kxeoeh31gQljeuJ+e2ew3IgDlheqJwfyfx2+f+ldejJN
-					gKgK2cgKlceZIchLed1jghlZeTIMkAa20Vg6k8eRItnqWmyQhJkEeQJtq/TPvkhOjXePKltBRetihOjQePKutTRPtPhNjkePKTsbR9uKhNjoePKOsQSHuVhO
-					jUePKptJRYtahPjOePKxtaRKtIhPjOePKxtaRKtIhPjOePKxtaRKtIhPjOePKxtaRKtIhPjOePKxtaRKtI]],
+					gAkzewHKgAgA0KgAlEfcKKgAgA3YgAlNf5MUgAgA5Nf/lLfxLugDgE4vgDlGfiKnfufr3ygPlBfTJgeuec2pgNk9fIIwe7es16gCk8fEIjfzfw1vf+k5e9IC
+					gJgK1LgLk5ezHUhReh0Pgkk5euHIkRbEzBg/kfesHwoKXBw+hQjpeqI5rqT2uVhWi9epJ4tySMsXhWi2epKCuFR+sEhUjKepJktKSps+hUjOeqJfs/SytJhW
+					i6epJ8t6SGsPhWi0epKGuMR6r+hWi0epKGuMR6r+hWi0epKGuMR6r+hWi0epKGuMR6r+hWi0epKGuMR6r+]],
 				Head = [[
-					gAmJeRADgAgAhcgAmefLBKgAgAodgAmnfxCrgAgAswf/mlfnCNf7gDrogEmhfTBcgdfspagTmae/A7iReUnDgQmVewAkh9eelVgDmUesAZgYftk0f+mQeiAO
-					fwgNjngQmOeUAIh3fPhlg1mHeMAvmTdoffhelfeJCnrpcOc+h2kYeFFRwCbvaPh/jheDHWydb4Yah/jYeDHqyxb7YKh9jyeEGtxxbzY9h8j2eEGhxkbyZHh/
-					jdeDHeylb5YTh/jWeDHxy4b9YEh/jWeDHxy4b9YEh/jWeDHxy4b9YEh/jWeDHxy4b9YEh/jWeDHxy4b9YE]],
+					gAljemAEgAgAhqgAl1ffBNgAgAoqgAl8gFCwgAgAs9f/l7f7CSf7gDr1gDl3fnBggdfspngQlyfTA/iQeTnRgOltfFAmh8edljgDlsfBAbgYftlCf+lpe3AQ
+					fwgOj1gRlpepAIh2fOhzg3lkeiAvmSdlfshhlAeeClrncJdLh6j7ebFPwAboabiDjFeZHSybbwYliDi9eZHmyvbzYUiBjVeaGqxvbrZIiAjaeaGexibqZSiD
+					jCeZHbyjbxYeiEi6eZHuy2b0YPiEi6eZHuy2b0YPiEi6eZHuy2b0YPiEi6eZHuy2b0YPiEi6eZHuy2b0YP]],
 				Jaw = [[
-					gAmEda/+gAgAgvgAmxeX/9gAgAetgAnIfF/4gAgAdaf/nCe5/6gGf+dwgFm3eh/8ffgMebgZmoeK/2ddhOfAgVmdd6/5d1hOfigEmbd2//fmgPfxf9mTdr//
-					gRf1gIgSmJde/5eFgmhkg5l6dX+9ZehlkZhflKdW8aT4hsoIhwj9dW4yPbgnrjhxjDdX19NHfWtjhxi6dY1iM0fJt0hxjUdX21Nwfxs+hxjZdX3FN8f4s0hx
-					i/dX1yM/fRtqhwi4dY1YMufEt6hwi4dY1YMufEt6hwi4dY1YMufEt6hwi4dY1YMufEt6hwi4dY1YMufEt6]],
+					gAljdj//gAgAgpgAmRej/9gAgAeogAmofT/4gAgAdUf/mjfG/6gGf+dqgFmXet/8ffgMeVgYmIeV/2dehOe7gVl9eF/5d2hOfcgEl6eA//fmgPfrf9lyd1//
+					gRf0gCgUlpdn/5eFgmheg+lbdg++ZehnkUhmkqdg8cT5huoDh4jcdh40Pbgprfh4iidi2ANHfatfh4iZdi1kM0fMtwh5izdi24Nwf0s6h5i4dh3HN8f7swh4
+					iedi10M/fUtmh3iWdi1bMufHt2h3iWdi1bMufHt2h3iWdi1bMufHt2h3iWdi1bMufHt2h3iWdi1bMufHt2]],
 				ClockMin = [[
-					gAj9f4gAJZgA2ngAkFgPoMK7X01FgAkJgfuaOkRmxcgAkIgbyISjN0tigCkGgT0yWWLupUgHkDgL3NZ4LflJgGkBgF3sd3KshxgBkBgD2zhkJredf/kAf/2B
-					kaJrbigAkCf610ldKwX6gAkIf411kaNJS6f/j9f411iMRNOCf+jdf41pf+V9Ktf9jBf41ae4ZrJIf9i8f41afkbJIwf9jJf41dhaa5I4f9jMf41aiObVIzf9
-					i/f41Yhmc8Idf9i7f41WhkdmIXf9i7f41VhvdyIVf9i7f41Vh1d5IVf9i7f41Vh3d7IVf9i7f41Uh3d7IV]],
+					gAkBf2gAJZgA2ngAkIgSoMK7X01FgAkMgluaOkRmxcgAkLggyISjN0tigCkJgX0yWWLupUgHkGgN3NZ4LflJgGkFgG3sd3KshxgBkEgD2zhkJredf/kDf/2B
+					kaJrbigFkHf410ldKwX6gRkMf211kaNJS6gej8f211iMRNOCgmjTf21pf+V9Ktgpiwf21ae4ZrJIgpirf21afkbJIwgoi7f21dhaa5I4goi+f21aiObVIzgp
+					iuf21Yhmc8Idgpipf21WhkdmIXgpipf21VhvdyIVgpipf21Vh1d5IVgpipf21Vh3d7IVgpipf21Uh3d7IV]],
 				ClockHour = [[
-					gAj9f4gAJZgA2ngAkFgPhcJbek2lgAkJgfiXJgdp2ggAkIgbiHJid52lgCkGgThnJJeW2QgHkDgLhDICe01HgGkBgFgvIOfM1YgBkBgDgrJLfU2Yf/kAf/gc
-					Jjfk2xgAkCf6eyJjei2sgAkIf4bfKMbW2ff/j9f4XpLuXI1hf+jdf4UaNvTYz5f9jBf4SlPSRJygf9i8f4SVPhQ1ySf9jJf4TGO0Ryy8f9jMf4TQOrR+zEf9
-					i/f4SePZRAyaf9i7f4SQPnQuyNf9i7f4SQPnQuyNf9i7f4SQPnQuyNf9i7f4SQPnQuyNf9i7f4SQPnQuyN]],
-				Gear2 = [[
-					gAl3e5gAJZgA2ngAmFfgjZJpcn2XgAmNf6mJKPZ31xf/mLfznmKwYZ1XgDmHfmo0K2XV0kgPmCfYqNKSWxzCgNl/fOrRLDVvyxgCl+fLsCMlULzBf+l8fFsw
-					NhTFywgOl8e8saNQRSxWgul5e5qZMUOHuZhSlWe5nbLWK/p/hqkVe5klK3JDlShyjhe5jAKxIVh0hzjZe5jZK3IQgohwjxe5lFLHIWhEhwj2e5l1LTIWgqhz
-					jee5lQLOISe+hzjXe5lULRITeMhzjXe5lnLWIVd2hzjXe5l1LaIXdnhzjXe5l9LcIXddhzjXe5l/LdIYda]],
+					gAkBf2gAJZgA2ngAkIgShcJbek2lgAkMgliXJgdp2ggAkLggiHJid52lgCkJgXhnJJeW2QgHkGgNhDICe01HgGkFgGgvIOfM1YgBkEgDgrJLfU2Yf/kDf/gc
+					Jjfk2xgFkHf4eyJjei2sgRkMf2bfKMbW2fgej8f2XpLuXI1hgmjTf2UaNvTYz5gpiwf2SlPSRJyggpirf2SVPhQ1ySgoi7f2TGO0Ryy8goi+f2TQOrR+zEgp
+					iuf2SePZRAyagpipf2SQPnQuyNgpipf2SQPnQuyNgpipf2SQPnQuyNgpipf2SQPnQuyNgpipf2SQPnQuyN]],
 				["UpperArm.L"] = [[
-					fNkIeg1QTsgA0ffNkae541T7dnv+fNkmfK6pUVcHsufNkifG6NUQcdtofRkde75RTwdlvHfgkWeu4HSpfjwNfdkSeo3SSvf4xefQkQeq3FTjfFyTfLkNeo2c
-					T2fHzRfOkUei0dS0e/0vfTknehxLRMc62WfeksejtWQIZV3bfukWekp+QHVg3sf6j9eloEQiS63Zf8j5elnzQnSj3Vf3kFelonQYTs3hf2kHeloxQVT63jf7
-					j7eln9QkSw3Yf9j3elnuQpSa3Tf9j3elnuQpSa3Tf9j3elnuQpSa3Tf9j3elnuQpSa3Tf9j3elnuQpSa3T]],
+					fGjxe10WRNgAzvfGkAfQ3zRfdIvafGkJfi5jR9bVsTfGkHfd5IR3bvtLfKkCfS4PRVdBujfWj9fD3IQOfHvdfUj5e+2UQTfkwsfJj4fA2HRFe1xnfFj1e+1f
+					RXe+ymfJj+e4zcQXfD0AfUkVe3v9O3dR1ofnkce4r2N/aA22f9kFe6oROLWa3WgLjre7mPOvT73PgNjne7l9O2Tj3NgHj0e7m0OiUq3UgGj2e6m+OfU43UgM
+					jqe7mHOyTx3OgOjme7l3O4Tb3MgOjme7l3O4Tb3MgOjme7l3O4Tb3MgOjme7l3O4Tb3MgOjme7l3O4Tb3M]],
 				["LowerArm.L"] = [[
-					exjXeWuR8jgAiGexjxedua8AljfSexkFeluN7FpBdeexkAejuS7YoFd4e2j2eduW71mgfRfHjseSuT8FlPhtfDjleSuW8RjxiGe1jjeXuZ8ai0hCevjfeYuZ
-					8ghnhCetjmeZvq71f/h2eokBehyt52eVhverkVes2T2uc/gme5kOe25NzScJe7fHj+e86yw2b6dofJj8e96/web5dbfCkEe66Vxlb8eBfBkFe66Nxzb9eIfH
-					j9e863wsb5difJj7e97DwWb5dXfJj7e97DwWb5dXfJj7e97DwWb5dXfJj7e97DwWb5dXfJj7e97DwWb5dX]],
+					eojHeogA/+gAhEeojee0gN/XmOhDeojwe/gW+VqHhBeojre8gU+qpGg8esjie0gN/KnFhee7jaengD/ek2jEe4jUemgD/sjXiwerjSesgG/0i/hZemjOetgF
+					/7h6g2enjYeshj/8gJg5epj2ezlP/ieygKe1kLe9p6+VeKetfKkDfHuG8geNdAfajyfNwn6+emb2fdjvfOw+6verbrfVj4fLv47dedcMfUj5fLvr7mebcSfb
+					jxfNwx64eobxfdjufOxF6qetbnfdjufOxF6qetbnfdjufOxF6qetbnfdjufOxF6qetbnfdjufOxF6qetbn]],
 				["UpperArm.R"] = [[
-					gzkIeg1QsUgA0fgzkae541sFiZv+gzkmfK6prrj5sugykjfF6Nr2jctlg3kce+5QrwjCvchFkVe74Cq7jSxxhCkRez3PrLieyxg2kQes3EsDhYyjgxkNem2d
-					saglzGgykIeh14q5eU0kgwj+ee1vndZd1Rgmjled1BjPTd0WgZi6eczdfwOQyKgQiaebyFd3LRwKgPiWebx4dnK3v2gTikebyheZMHwzgUinebypejMXw+gP
-					iYebyAdwLGwCgOiUebxzdiKuvvgOiUebxzdiKuvvgOiUebxzdiKuvvgOiUebxzdiKuvvgOiUebxzdiKuvv]],
+					g6jxe10WuzgAzvg6kAfQ3zuhi4vag6kJfi5juDkrsTg5kHfd5IuPkKtHg9kCfV4NuMjku9hJj8fS3BtbjmxVhGj4fK2QtsiryQg8j4fD2Gujhmx6g4j1e81g
+					u6gvyZg8jwe21LtdeWzyg+jnez1hqEZc0Zg5jLex1blxTfzWguidew0ZiFOUxCgkh7evzVgALZu+gih2evzKfvK/upgniFevzrgmMOvogoiIewzxgxMev0gj
+					h5evzRf5LOu1gih1evzGfpK3uigih1evzGfpK3uigih1evzGfpK3uigih1evzGfpK3uigih1evzGfpK3ui]],
 				["LowerArm.R"] = [[
-					hPjXeWuRDdgAiGhPjxeduaEAadfShPkFeluNE7W/dehOkAeiuREoX2eBhTj1ehuaEKZ4eghjjqemugDwcleGhfjkeiudDkdxfEhSjjeaubDkdfgehMjfeWuX
-					DheMhchHjUeYsPCifniJgxjGecm9A8gSjDgQixejf/AQgbj4fziUeqZoBBgekqfjh/evVzCJgflLfhh8evVRCVgflQfniFetW6BwgflCfoiHetXPBqgfk/fi
-					h+evVlCOgflOfgh7ewVGCagelSfgh7ewVGCagelSfgh7ewVGCagelSfgh7ewVGCagelSfgh7ewVGCagelS]],
-				Gear1 = [[
-					gAlmgYgAJZgA2ngAlpg8f3JZgJ2ngAlqhTfSJZgu2ngAlphNdoJkia2jgBlphBbsJgkH18gDlog0ZiI5lc0cgDlogsYFJlm+0OgBlogpXTK4og0ugAlngjWR
-					Lwp30igMlqgbT5M7px0bgolpgYQfPjnt1RhHlJgYNOTakd2LhckMgYLBXlhT2lhjjbgYKCaoff2nhkjTgYJ0blfw2nhhjqgYJ8bDha2lhhjugYJ4bTiG2hhj
-					jYgYJncyhZ2lhkjRgYJidchZ2lhkjRgYJgdthp2khkjRgYJfd4h12jhkjRgYJeeAh82ihkjRgYJeeCh+2i]],
-				Gear3 = [[
-					gAlOhqgAJZgA2ngAlHiLkDJwb92QgAlBifnXKnYp1ZgAlCiapVLdWp0pf+lFiPrDL7VLzgf5lIiDs+L0UWxpf6lKh8uWNCS/w+f/lLh6vPO/RDwqgBlMh0wF
-					QVPsv5gJlShtwLQOOCtxgflThqu2O8Lnpyg2k4hqsmNOJ1kdhGkChqqTL3JZfPhLjWhqpFLSJ0bmhMjPhqptLkKIaPhKjjhqrfMhKFabhKjnhqsWNDKPZ3hM
-					jThqr+M0KyYKhMjNhqsKM8LHXWhMjNhqshNKLSW8hMjNhqsxNVLaWrhMjNhqs7NcLfWghMjNhqs+NeLgWc]],
+					hYjHeogAACgAhEhYjee0gNApZyhDhYjwe/gWBrV5hBhXjre8gTBXW6hGhcjie5gRA0Y8gnhpjYe9gRAabKfChmjSe4gLANcpfXhbjRevgHAKdBgvhWjOeqgD
+					AGeGhShUjDeqdwAIfvhOhEizeuYVBAg5hmgpiZezRyDehoiKgMh2e5MbG+iRixf7hde9JgJqiqjNf5hae+JHKEiujRgAhle8KVI1ijjEgBhne8KkImihjCf6
+					hce+JVJ1isjPf4hZe+I/KNivjTf4hZe+I/KNivjTf4hZe+I/KNivjTf4hZe+I/KNivjTf4hZe+I/KNivjT]],
 				Tail1 = [[
-					gAkEhXehgAgA/9gAkAhvgjgAgA//gAj8h9h2gAgA/8gAj9h5hggJgB/9f/j/hyg1fQf6/+f7kBhpgGcffq/yf8kChkfndCfx/2f/kChifffcf9/+gBkDhffI
-					gZgB/+gAkIhZewf8eG/6gBkPhXeqfqZg/SgCkEhXenfUTy9hgDjihXeafAO267gDjGhXeNe2L/43gDjBhXeLe1Lm4igDjPhXeRe5Mz5ggDjRhXeSe6ND5sgD
-					jEhXeMe1L04ugDjAhXeKe0Ld4bgDjAhXeKe0Ld4bgDjAhXeKe0Ld4bgDjAhXeKe0Ld4bgDjAhXeKe0Ld4b]],
+					gAjbhUecgAgA/9gAjWhrgegAgA//gAjTh5hxgAgA/8gAjUh1hbgJgB/9f/jVhugwfQf6/+f7jXhmgBcffq/yf8jYhgfidCfw/2f/jYhffafcf9/+gBjZhbfE
+					gZgB/+gAjghWerf9eG/6gBjphUemfrZg/SgCjihUejfVTy9hgDjEhUeWfDO267gDiqhUeJe5L/42gDimhUeHe4Lm4igDiyhUeOe8Mz5ggDi1hUePe8ND5rgD
+					iphUeIe4L04ugDilhUeGe3Ld4agDilhUeGe3Ld4agDilhUeGe3Ld4agDilhUeGe3Ld4agDilhUeGe3Ld4a]],
 				Tail2 = [[
-					gAkOi5e4gAgA/+gAj8jRg6gAgA/+gAjxjfiOgAgA/6gBj0jbh4gMgC/7f6j6jUhMe8f5/8fmkAjJgda/fl/lfqkEjEf+bxft/tf8kFjFf2fMf9/+gDkIjBfg
-					gjgB/+gBkQi7fMfweF/7gBkYi5fJe8Zf/SgCkNi5e8d6Tz9egDjui5eZdBO661gEjTi5d3ciMH4tgFjPi5dyceLu4YgEjbi5eCcqM65XgEjdi5eFctNJ5jgF
-					jRi5d1cgL84kgFjNi5dwccLm4RgFjNi5dwccLm4RgFjNi5dwccLm4RgFjNi5dwccLm4RgFjNi5dwccLm4R]],
+					gAjjiseRgAgA/8gAjTjDgTgAgA//gAjJjRhmgAgA/8gBjMjNhQgMgC/9f7jRjGgle8f3/+fojXi7f2a/ff/lfsjbi3fXbyfo/sf8jci3fPfMf8/+gDjeize5
+					gjgC/9gBjniuekfzeF/5gBjxiseifEZe/RgCjriseYeJTw9cgDjPird4dWO36ygFi2irdZc6MC4qgFiyirdTc3Lq4VgEi+irdjdCM25VgEjAirdldENF5hgF
+					i0irdWc5L44hgFixirdSc2Li4OgFixirdSc2Li4OgFixirdSc2Li4OgFixirdSc2Li4OgFixirdSc2Li4O]],
 				Tail3 = [[
-					gAkUkbfogAgA//gAj3kzhqgAgA/8gAjklAi9gAgA/2gCjpk9ingQgC/4f0jyk2h8enf5/5fHj+knhLZffm/SfQkFkjgtagfw/gf3kGkngme9f9/+gGkLkjgQ
-					gugB/+f/kVkef/fieG/7f7kekbf+eIZh/Rf4kYkafncXT59Yf5kAkZera2PI6pf8jqkYd0aAMc4ff9jnkYdrZ6MF4Kf7jxkYeGaPNN5Kf7jzkYeKaUNc5Wf8
-					jpkYdwZ+MS4Wf9jmkYdnZ3L94Cf9jmkYdnZ3L94Cf9jmkYdnZ3L94Cf9jmkYdnZ3L94Cf9jmkYdnZ3L94C]],
+					gAjtkDe7gAgA/+gAjSkbg9gAgA/+gAjAkoiQgAgA/6gCjFklh6gQgC/7f1jOkehPenf3/8fNjYkPggZffd/UfVjekMgBahfo/gf4jgkPf5e9f8/+gGjkkLfj
+					gugC/+gAjvkFfSfleF/7f+j6kDfTeSZf/Qf8j3kDe+coT09Xf9jhkBeGbNPB6ngBjMkAdRacMU4cgBjJkAdJaWL94Gf/jSkBdiaqNF5Hf/jUkBdnauNU5TgB
+					jKkAdOaZMK4TgBjHkAdGaTL13+gBjHkAdGaTL13+gBjHkAdGaTL13+gBjHkAdGaTL13+gBjHkAdGaTL13+]],
 				Tail4 = [[
-					gAkXl+gAgAgA//gAjsmViCgAgA/7gAjRmhjVgAgA/0gEjZmei/gUgC/2frjnmXiUeTf4/3egj3mAhiYAfn+7evkBmAhEZQfx/QfwkDmJg+etf9/8gLkKmFgo
-					g4gA/+f8kVmAgbfWeG/7fwkhl9gedaZk/Oflkjl6f9a+UB9PfjkYl2eqY4Pb6YfokLlydfXwM44JfpkJlydSXmMi3zfmkPl0d3YENm41flkQl0d+YKNz5Cfp
-					kKlydZXsMv4AfqkIlydOXjMb3rfqkIlydOXjMb3rfqkIlydOXjMb3rfqkIlydOXjMb3rfqkIlydOXjMb3r]],
+					gAjzlbftgAgA//gAjMlzhvgAgA/8gAi0mAjCgAgA/2gDi6l8isgUgC/4ftjHl1iBeTf3/4eqjWlghQYAfi+8e3jflegyZQft/Qfyjglngretf9/9gKjnljgV
+					g4gB/+f+jzldgIfXeG/7f1kAlbgLdeZi/OftkDlYfrbFT+9Oftj3lVebZCPX6XfyjqlSdQX7Mz4Hf0jolRdEXyMd3xfwjulTdoYPNh40fwjvlTdvYVNv5Afz
+					jplSdLX3Mq3+f0jnlRdAXvMW3pf0jnlRdAXvMW3pf0jnlRdAXvMW3pf0jnlRdAXvMW3pf0jnlRdAXvMW3p]],
 				Hourglass = [[
-					gAkXnggAgAgA//gAjgn2iCgAgA/7gAi9oBjVgAgA/0gGjGn+i/gjgD/2fhjZn4iTc9fy/wdwjvnWhbSFfU8weGj7nZhBULfm9sfoj9nrg+dtf8/5gQkGnngo
-					hlgB/8f4kTnif9fbeF/7fgkhnee4dvZc/NfIkvnYdGcKTm9FfDk1nOa9bTOl57fLk1nGZdbFLw3XfNk1nFZPbFLY2+fIk1nJZ6bHMk4LfHk1nKaCbIMz4ZfM
-					k1nGZXbFLm3NfOk1nFZKbFLQ21fOk1nFZKbFLQ21fOk1nFZKbFLQ21fOk1nFZKbFLQ21fOk1nFZKbFLQ21]],
+					gAj0mzgAgAgA//gAjDnKiCgAgA/7gAijnWjVgAgA/0gFisnTi/gjgD/2fki8nMiTc9fy/wd/jQmthbSFfU8weTjbmvhBULfm9sfrjdm+g+dtf8/5gOjlm6go
+					hlgB/8f6jzm1f9fbeF/7fnkCmye4dvZc/NfVkPmsdGcKTm9FfSkSmka9bTOl57fakQmdZdbFLw3XfckQmcZPbFLY2+fXkRmgZ6bHMk4LfWkRmgaCbIMz4Zfb
+					kQmdZXbFLm3NfdkPmcZKbFLQ21fdkPmcZKbFLQ21fdkPmcZKbFLQ21fdkPmcZKbFLQ21fdkPmcZKbFLQ21]],
+				Gear2 = [[
+					gAkmiYgAJZgA2ngAkYi4jZJpcn2XgAkPjLmJKPZ31xgBkRjGnmKzYY1Zf8kWi8o4KpXZ0WfskcivqiJXXLx8fvkfiornKSWJx5f9kginsIMcURy3gCkiiiss
+					NnTBy2gJkqibslNGRYxJgdkviZq6LtOntxgzkaiaoQKEMNpDhCjqialhI3LEkWhIjDibj+IVK5hFhIi9ibkbIYK6gAhGjPibmOI4KzgchGjSibnCJJKxgFhI
+					jAibmfI4K7eihJi7ibmlI4LBd1hJi7ibm6I+LEdihJi7ibnJJCLFdVhJi7ibnSJFLGdNhJi7ibnVJGLHdK]],
+				Gear3 = [[
+					gAkSjYgAJZgA2ngAj8j1kDJwb92QgAjukGnXKnYp1ZgBjykBpVLgWo0sf5j5j4rILuVQzTfekCjrtaK8U5wofkkHjluzMVThwKf7kIjmvWO2RKwigEkMjhwA
+					QaPnv+gGkVjawSQLOGtqgSkdjYvQOuL7pcggkOjZtVMvKmj+gqjnjZrSLEKpe1gvjFjZqMKRLYbXgwjAjZq4KkLvaGgujQjZsqLrLlaRgtjSjZtiMRLtZwgw
+					jDjZtPL9MYYLgwi/jZtdMEMvXbgwi/jZt1MVM6XDgwi/jZuGMhNCWzgwi/jZuQMoNHWpgwi/jZuTMrNIWm]],
+				Gear1 = [[
+					gAk1hBgAJZgA2ngAkyhkf3JZgJ2ngAkwh6fSJZgu2ngAkwh0doJkia2jf/kyhpbsJgkH18f+kzhcZiI5lc0cf+k0hUYFJlm+0OgAk0hSXTK4og0ugAk1hMWR
+					Lwp30igLk6hET5M7px0bglk9hBQfPjnt1RhCkihBNOTakd2LhVjrhBLBXlhT2lhci+hBKCaoff2nhci3hBJ0blfw2nhajMhBJ8bDha2lhajQhBJ4bTiG2hhc
+					i7hBJncyhZ2lhdi1hBJidchZ2lhdi1hBJgdthp2khdi1hBJfd4h12jhdi1hBJeeAh82ihdi1hBJeeCh+2i]],
 				["UpperLeg.L"] = [[
-					e5ivgY7le2gAwKe5izgl9Re3f3s2e5i2gt+Ke4fyqne5i1gr98e6fvrOe6i0gl9eepgOsWe9izgZ84d1hotfe8ixgY8gd/hZuUe6ixgd8cesgOule5iwgd8J
-					e9fxvLewi9gZ71dNfBveeejdgY7eZJc8ujeUj5gY6ST7atsmeXj+gY4OPRZLqfegj5gY2dMgYfpFeij3gY2LMIYao4edj7gY3BNUYqpgecj7gY3LNiYupoeh
-					j4gY2VMWYdo/ejj3gY2FMAYYozejj3gY2FMAYYozejj3gY2FMAYYozejj3gY2FMAYYozejj3gY2FMAYYoz]],
+					e1iVgV7EdbgAw2e1iZgk82dcfttle1icgu9ydefhrZe1ibgr9jdgfgr/e1iagk9EdOgBtFe5iZgX8bcXheuIe4iXgV8CcihSu9e1iXgb7+dQgIvSe0iWgb7q
+					difuv4etikgX7Qb0e8wLehjHgV6uX2cvvPecjmgV5USyaTtOekjrgV3GOTYnrBevjlgV1QLqX2piexjjgV0+LTXwpUerjngV11MbYDp/eqjogV2AMpYHqHew
+					jkgV1JLgXzpceyjjgV03LLXupPeyjjgV03LLXupPeyjjgV03LLXupPeyjjgV03LLXupPeyjjgV03LLXupP]],
 				["LowerLeg.L"] = [[
-					e3hyf2uIgjgA8se3h/f2xXgjgE63e3iKf3zUgigH5fe2iHf3y0gngE53e4iCf0xzgKgQ6le/h9ftwoeug77Se+h5fuv4fBgy7ve4h4f0vsgQgL74e2h2f3vJ
-					gvf68LemiCf0uSfueS8keFipfwthdxaJ8TdsjVfssfbcU565dpjrforLZjQT4sdxjxflqNYgNl24dzjxflqEYXNO2mdujwfmqgYzOX3ddtjvfmqlY5Om3ndy
-					jxflqJYcNb2xd0jxflqAYUNF2gd0jxflqAYUNF2gd0jxflqAYUNF2gd0jxflqAYUNF2gd0jxflqAYUNF2g]],
+					ewhgf7uMgrgA8qewhsf+xbgrgF60ewh1gBzYgqgI5cevhygBy3gvgF50exhuf9x2gSgS6ie3hqf0wse2g87Qe2hnf0v8fJgy7texhlf7vwgZgL71evhjf9vN
+					g4f78Ieihyf6uXf3eS8ieIibf2tmd4aJ8Rd3jIfysmbiU663d6jdfvrTZoQT4qeEjgfsqVYkNm23eHjhfsqMYbNP2keBjgftqoY3OY3beAjgftquY9On3leF
+					jhfsqSYgNc2veHjhfsqJYYNG2eeHjhfsqJYYNG2eeHjhfsqJYYNG2eeHjhfsqJYYNG2eeHjhfsqJYYNG2e]],
 				["Foot.L"] = [[
-					e5gwgp8kgAgAuZe5g0gY+DgAgAq+e5g6gN+ygAgAote5g4gQ+mgCf8pUe6g1gU+OfzgYqfe8gzgT9sfFhzrue7gygY9YfOhhske5gxgf9Uf3gSsye5gwgk9E
-					gGfztXehhAgm8yeTfJt1duhtgl8ZaIdRtPdBimgi7JU0bKrvcyjPgg5EQGZnqEc3jhge3TNSY2o6c4jjge3BM6Ywovc0jcgf32OGZEpQc0jbgf4AOVZIpWc3
-					jige3LNIY0o1c5jkge27MxYuorc5jkge27MxYuorc5jkge27MxYuorc5jkge27MxYuorc5jkge27MxYuor]],
+					eygsgj8wgAgAuBeygvgZ+MgAgAqleyg1gT+5gAgAoTeygzgV+ugCf8o6ezgwgW+Wf0gZqFe1gvgS92fGh0rVe1gtgV9ifQhisLezgtgd9ff3gTsZeygsgh9P
+					gGfzs+eeg9gi8+eSfLtcd2hrgg8kaGdWs2dViigd7TUwbUrYdOjGgb5MQAZ1pudWjUga3aNNZGomdYjVgZ3IM0ZAobdTjQga3+OBZTo8dSjPga4IOQZXpCdX
+					jUga3TNCZEoidYjWgZ3CMrY+oYdYjWgZ3CMrY+oYdYjWgZ3CMrY+oYdYjWgZ3CMrY+oYdYjWgZ3CMrY+oY]],
 				["Toe.L"] = [[
-					e5gOgP/8gAgAh0e5gYf3/7gAgAeGe5gkfp/sgAgAbte5ggft/ygAf7cWe7gbfy/5f+gbdkfAgWf0/6f4iBe6e+gTf7/8f5htf0e6gSgC//f/gVgCe4gQgJ//
-					gAfygredgfgM/6eGf5hNdhhPgK/UZhf1g0csiQgF9kT0gCf8cYjCgB6/O3gffPcbjbf/46L/g6e4ccjef+4mLmg+e1cZjUf/5kM0gxe/cYjSf/5vNEgvfAcc
-					jcf+4yL1g7e3cdjff+4eLeg/e1cdjff+4eLeg/e1cdjff+4eLeg/e1cdjff+4eLeg/e1cdjff+4eLeg/e1]],
+					eygPgN/7gAgAiGeygYf8/8gAgAeYeygifz/vgAgAb/eygff2/0gAf7coe0gaf4/6f+gbd3e5gWf2/6f2iBfMe3gTf8/8f4htgGezgSgD//f/gVgUeygRgJ/+
+					gAfyg9ebghgK/5eGf4hfdrhSgI/TZhfyhGdDiQgE9kT0f7gNc4i7gA7AO3gVfec/jOf+47L/gufGdBjRf94mLmgyfDc8jJf+5kM0gmfNc7jIf/5wNDgkfPc/
+					jPf+4yL0gwfFdBjSf94fLdg0fCdBjSf94fLdg0fCdBjSf94fLdg0fCdBjSf94fLdg0fCdBjSf94fLdg0fC]],
 				["UpperLeg.R"] = [[
-					hHivgY7lhKgAwKhHizgl9RhJgJs2hHi2gt+KhIgOqnhHi1gr98hLgIrNhIizgp9eg7ghsYhKixgr84gHh2tphJiwgn8ggShiuchHiwgg8cg/gWunhHiwgb8J
-					hQf2vKg9isgZ8HfffGvOggikgY8YbTdQtuf4iVgY72VwbmrHfUh+gY6PQra3oke/hugY4rNnaxm+e8hsgY4bNMaymwfFhzgY5LOgaxncfGh0gY5UOwaxnke+
-					htgY4kNbaym4e7hrgY4VNCaymre7hrgY4VNCaymre7hrgY4VNCaymre7hrgY4VNCaymre7hrgY4VNCaymr]],
+					hLiVgV7EilgAw2hLiZgk82ikgTtlhLicgu9yiigfrZhLibgr9jilgYr+hMiZgo9EiVgttJhOiXgq8bhfh8udhNiWgl8ChrhmvPhMiXge7+iagbvWhLiWgZ7q
+					isf6v2hDiSgW7tg9fGv7griMgV8OcydNudgHh8gV8AXNbgr5fkhjgV6sSCaspYfPhSgV5SO5ajn0fNhQgV5DOdaknmfVhXgV5wP0akoRfXhYgV54QFaloafO
+					hRgV5MOtajnufMhPgV4+OTaknhfMhPgV4+OTaknhfMhPgV4+OTaknhfMhPgV4+OTaknhfMhPgV4+OTaknh]],
 				["LowerLeg.R"] = [[
-					hJhyf2uIfdgA8shJh/f2xXfdf863hJiKf3zUfef55fhJiHf2y0fif453hLiBf4xzfFgH6khRh7f/wodpg17NhQh4f+v4d7gt7shLh4f3vsfLgH73hIh2f0vJ
-					fqf48Lg4hxfzuJepeS8ngNhxfttAcwaI8cfYhxfmriaqU17Jevhqfgp5ZFQK5BechkfdowYSNZ3QeZhjfcolYMNA2+ehhmfepGYgOM30ejhmfepMYkOb3+eb
-					hjfcorYPNO3IeZhjfcohYKM424eZhjfcohYKM424eZhjfcohYKM424eZhjfcohYKM424eZhjfcohYKM424]],
+					hQhgf7uMfVgA8qhQhsf+xbfVf760hQh1gBzYfWf45chQhygAy3faf250hShtgBx2e8gG6hhXhogIwsdhg17KhWhlgFv8dzgt7phRhlf+vwfCgH70hPhjf7vN
+					fhf48JhChff5uMeheS8lgchefztCcnaJ8afshaftrjahU37HfEhOfop4Y8QL5AewhGflouYJNa3PethFfkojYDNC29e2hIfmpEYXON3ze3hJfmpKYbOc38ev
+					hFflopYGNQ3HethEfkofYAM623ethEfkofYAM623ethEfkofYAM623ethEfkofYAM623ethEfkofYAM623]],
 				["Foot.R"] = [[
-					hHgwgp8kgAgAuZhHg0gY+DgAgAq+hHg6gN+ygAgAothHg4gQ+mgCf8pUhIg1gX+OfzgYqfhJgxgk9sfFhzruhIgxgn9YfOhhskhHgxgi9Uf3gSsyhHgwgi9E
-					gGfztXgugwgl83eTfKtqfyg4gj8qaEdZspeshIgf7lUobnqqd6hUgb5lPwahoodkhaga32M2aInUdihbgZ3kMdaGnIdqhYga4ZNsaOntdrhYga4jN8aQn0dj
-					haga3uMraHnPdhhbgZ3eMUaFnEdhhbgZ3eMUaFnEdhhbgZ3eMUaFnEdhhbgZ3eMUaFnEdhhbgZ3eMUaFnE]],
+					hOgsgj8wgAgAuBhOgvgZ+MgAgAqlhOg1gT+5gAgAoThOgzgU+ugCf8o6hOgwga+Wf0gZqFhQgtgl92fGh0rVhPgsgm9ifQhisLhOgsgg9ff3gTsZhNgsgf9P
+					gGfzs+g5grgh9DeSfLtRgGgwge80aCdesRfIg5ga7uUkbwqTeZg9gX5tPravoSeDg+gV38MxaZm/eBg/gV3qMYaWm0eJg+gW4gNnaenYeLg+gW4qN3agnfeC
+					g/gV30MnaYm6eAg/gV3kMPaWmweAg/gV3kMPaWmweAg/gV3kMPaWmweAg/gV3kMPaWmweAg/gV3kMPaWmw]],
 				["Toe.R"] = [[
-					hHgOgP/8gAgAh0hHgYf3/7gAgAeGhHgkfp/sgAgAbthHghfs/ygAf7cWhIgaf2/5f+gbdkhMgUgG/6f4iBe6hLgSgK/8f5htf0hIgSgF//f/gVgChGgQgH//
-					gAfygrgqgPgK/6eGf6hBflgbgG/UZhf+gLeXg0f/9jT0ggeydihJf566O6hddtdNhVf24yMGiQdNdLhXf24dLuiYdJdShRf35cM6iAdVdUhQf45oNJh8dYdM
-					hWf24pL8iTdLdKhXf24VLlibdHdKhXf24VLlibdHdKhXf24VLlibdHdKhXf24VLlibdHdKhXf24VLlibdH]],
+					hOgPgN/7gAgAiGhOgYf8/8gAgAeYhOgifz/vgAgAb/hNggf1/0gAf7cohPgaf8/6f+gbd3hTgUgK/6f2iBfMhSgSgM/8f4htgGhPgSgG//f/gVgUhNgRgG/+
+					gAfyg9g2gQgJ/6eGf5hTf7gYgF/UZhf6gde3gof+9jT0gZfDeGg0f567O6hTd9dwg6f24zMFiFdbdug7f24eLtiNdXd2g4f35eM5h1dkd3g4f35pNIhxdndv
+					g7f24qL7iIdZdtg8f24XLkiPdVdtg8f24XLkiPdVdtg8f24XLkiPdVdtg8f24XLkiPdVdtg8f24XLkiPdV]],
 			},
 		},
 	},

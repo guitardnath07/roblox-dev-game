@@ -51,7 +51,7 @@ describe("exactDistribution", function()
 
 	it("un dino plus rare n'est jamais plus probable qu'un plus commun à luck = 1", function()
 		local dist = Odds.exactDistribution(1)
-		for i = 2, #Dinos do
+		for i = 2, Odds.rollableCount do
 			expect(dist[Dinos[i].id] <= dist[Dinos[i - 1].id]).toBe(true)
 		end
 	end)
@@ -70,10 +70,13 @@ end)
 describe("tables de config", function()
 	it("les dinos sont triés par oneIn croissant avec des id uniques et une rareté valide", function()
 		expectUniqueIds(Dinos)
-		expect(#Dinos).toBe(28)
+		expect(Odds.rollableCount).toBe(28)
 		for i, dino in Dinos do
 			expect(Rarities[dino.rarity]).never.toBeNil()
-			if i > 1 then
+			-- les exclusifs viennent après toutes les espèces tirables (Odds ne parcourt que les rollableCount premiers)
+			expect(dino.exclusive == true).toBe(i > Odds.rollableCount)
+			expect(dino.exclusive == true).toBe(dino.rarity == "exclusive")
+			if i > 1 and i <= Odds.rollableCount then
 				expect(dino.oneIn > Dinos[i - 1].oneIn).toBe(true)
 				expect(Rarities[dino.rarity].order >= Rarities[Dinos[i - 1].rarity].order).toBe(true)
 			end

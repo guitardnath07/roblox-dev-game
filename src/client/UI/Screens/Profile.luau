@@ -10,6 +10,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Shared = ReplicatedStorage.Shared
 local Dinos = require(Shared.Config.Dinos)
+local Odds = require(Shared.Odds)
 local Remotes = require(Shared.Net.Remotes)
 local Titles = require(Shared.Config.Titles)
 local Types = require(Shared.Types)
@@ -131,7 +132,7 @@ local function buildCard(parent: Frame, win: Window.Window): () -> ()
 			else "Choisis ton dino vitrine →"
 		local best = Kit.dinoById[data.BestPull.DinoId]
 		stats.Text =
-			`🎲 {Kit.group(data.TotalRolls)} lancers\n📖 {count(data.Index.Found)} / {#Dinos} espèces\n🏆 {if best
+			`🎲 {Kit.group(data.TotalRolls)} lancers\n📖 {count(data.Index.Found)} / {Odds.rollableCount} espèces\n🏆 {if best
 				then `{best.displayName} (1 sur {Kit.big(data.BestPull.OneIn)})`
 				else "—"}`
 	end
@@ -209,6 +210,9 @@ local function buildDinos(page: Frame, win: Window.Window): () -> ()
 	Kit.grid(scroll, 5, 0.85)
 	local cells: { () -> () } = {}
 	for i, dino in Dinos do
+		if dino.exclusive then
+			continue -- jamais dans l'Index, donc jamais choisissable en vitrine
+		end
 		local cell = Kit.new("TextButton", {
 			AutoButtonColor = false,
 			Text = "",

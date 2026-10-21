@@ -1,5 +1,5 @@
 --!strict
--- Paléo-Encyclopédie : les 28 espèces, silhouettes noires pour celles pas encore trouvées, chance de base,
+-- Paléo-Encyclopédie : toutes les espèces (exclusifs compris), silhouettes noires pour celles pas encore trouvées, chance de base,
 -- et paliers de récompense (Economy.IndexMilestones, réclamés par ClaimIndexMilestone).
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -7,6 +7,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Shared = ReplicatedStorage.Shared
 local Dinos = require(Shared.Config.Dinos)
 local Economy = require(Shared.Config.Economy)
+local Odds = require(Shared.Odds)
 local Rarities = require(Shared.Config.Rarities)
 local Remotes = require(Shared.Net.Remotes)
 local Types = require(Shared.Types)
@@ -51,10 +52,12 @@ function Screen.build(win: Window.Window)
 	local function render()
 		cellMaid:clean()
 		local foundCount = 0
-		for _ in data.Index.Found do
-			foundCount += 1
+		for _, dino in Dinos do
+			if not dino.exclusive and data.Index.Found[dino.id] then
+				foundCount += 1 -- les exclusifs (Robux) ne comptent pas pour les paliers
+			end
 		end
-		progress.Text = `Trouvés : {foundCount} / {#Dinos}`
+		progress.Text = `Trouvés : {foundCount} / {Odds.rollableCount}`
 
 		for i, m in Economy.IndexMilestones do
 			local reached = foundCount >= m.found
@@ -122,7 +125,7 @@ function Screen.build(win: Window.Window)
 				Size = UDim2.fromScale(0.92, 0.18),
 				TextColor3 = if found then Kit.darker(rarity.color, 0.2) else Theme.InkSoft,
 			}, 16)
-			Kit.number(cell, `1 sur {Kit.big(dino.oneIn)}`, {
+			Kit.number(cell, if dino.exclusive then "Exclusif Robux" else `1 sur {Kit.big(dino.oneIn)}`, {
 				Position = UDim2.fromScale(0.04, 0.82),
 				Size = UDim2.fromScale(0.92, 0.15),
 				TextColor3 = Theme.InkSoft,
@@ -132,8 +135,9 @@ function Screen.build(win: Window.Window)
 					detail.Text =
 						`{dino.displayName} · {rarity.displayName} · {Kit.big(dino.baseIncome)} Fossiles/s de base — {dino.description}`
 				else
-					detail.Text =
-						`??? · {rarity.displayName} · chance de base 1 sur {Kit.big(dino.oneIn)}. Pas encore trouvé !`
+					detail.Text = if dino.exclusive
+						then `??? · {rarity.displayName} · s'achète en Robux dans la Boutique. Pas encore obtenu !`
+						else `??? · {rarity.displayName} · chance de base 1 sur {Kit.big(dino.oneIn)}. Pas encore trouvé !`
 				end
 			end))
 		end

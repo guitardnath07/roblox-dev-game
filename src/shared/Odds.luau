@@ -7,6 +7,14 @@ local Helpers = require(script.Parent.Config.Helpers)
 
 local Odds = {}
 
+-- Nombre d'espèces tirables (les exclusifs, en fin de liste, ne sont ni tirés ni comptés dans l'Index).
+Odds.rollableCount = 0
+for _, dino in Dinos do
+	if not dino.exclusive then
+		Odds.rollableCount += 1
+	end
+end
+
 -- Chance qu'un test réussisse pour un dino « 1 sur oneIn » avec la chance totale `luck`.
 function Odds.effectiveChance(oneIn: number, luck: number): number
 	return math.min(1, luck / oneIn)
@@ -22,7 +30,7 @@ end
 function Odds.exactDistribution(luck: number): { [string]: number }
 	local result: { [string]: number } = {}
 	local noneYet = 1 -- probabilité qu'aucun dino plus rare ne soit sorti
-	for i = #Dinos, 2, -1 do
+	for i = Odds.rollableCount, 2, -1 do
 		local dino = Dinos[i]
 		local p = Odds.effectiveChance(dino.oneIn, luck)
 		result[dino.id] = p * noneYet
@@ -34,7 +42,7 @@ end
 
 -- Tire un dino. `rng` = le Random serveur.
 function Odds.rollDino(luck: number, rng: Random): Dinos.Dino
-	for i = #Dinos, 2, -1 do
+	for i = Odds.rollableCount, 2, -1 do
 		local dino = Dinos[i]
 		if rng:NextNumber() < Odds.effectiveChance(dino.oneIn, luck) then
 			return dino
