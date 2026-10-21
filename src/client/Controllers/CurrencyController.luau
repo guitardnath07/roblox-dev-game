@@ -1,6 +1,6 @@
 --!strict
 -- Monnaies, affichage fin et « vivant » :
---   barre de pilules sombres en haut au centre (Fossiles, Ambre, Os, Lancers Dorés + bouton Lancer) ;
+--   trois compteurs bleu nuit / cyan centrés (Fossiles, Ambre, Os), lancers dorés séparés ;
 --   le « +X/s » des Fossiles n'apparaît qu'au survol / toucher ; les nombres défilent en douceur ;
 --   pulsation de la pièce au plus toutes les 5 s ; popup centré seulement pour les gros gains ;
 --   la pilule des Fossiles tremble et rougit quand le serveur refuse une dépense (CurrencyDenied).
@@ -33,10 +33,10 @@ local CURRENCY_FX = {
 	enabled = true, -- futur réglage « Effets de monnaie : On/Off » (menu Paramètres)
 	-- Barre
 	barHeight = 0.06, -- part de la hauteur d'écran
-	pillColor = Color3.fromRGB(22, 20, 30),
-	pillTransparency = 0.2,
+	pillColor = Color3.fromHex("#0D2038"),
+	pillTransparency = 0,
 	textColor = Color3.fromRGB(250, 246, 236),
-	countSeconds = 0.5,
+	countSeconds = 0.3,
 	pulseScale = 1.15,
 	pulseSeconds = 0.18,
 	pulseCooldown = 5,
@@ -117,7 +117,7 @@ local function pill(
 	order: number,
 	emoji: string,
 	coinColor: Color3,
-	aspect: number
+	_aspect: number
 ): (Frame, TextLabel, Frame)
 	local frame = Kit.new("Frame", {
 		BackgroundColor3 = CURRENCY_FX.pillColor,
@@ -126,62 +126,31 @@ local function pill(
 		Size = UDim2.fromScale(1, 1),
 		Parent = parent,
 	})
-	Kit.aspect(frame, aspect, true)
-	Kit.corner(frame, 0.5)
-	Kit.stroke(frame, Color3.new(1, 1, 1), 1.5, 0.82)
+	frame.Size = UDim2.new(1 / 3, -8, 1, 0)
+	frame.Name = if order == 1 then "Fossils" elseif order == 2 then "Amber" else "Bones"
+	Kit.corner(frame, 0.18)
+	Kit.stroke(frame, Theme.Cyan, 1.5, 0.15)
 	Kit.new("UIGradient", {
 		Rotation = 90,
-		Color = ColorSequence.new(Color3.new(1, 1, 1), Color3.new(0.55, 0.55, 0.55)),
+		Color = ColorSequence.new(Color3.new(1, 1, 1), Color3.fromRGB(190, 210, 235)),
 		Parent = frame,
 	})
 	local coin = Kit.new("Frame", {
+		Name = "CurrencyIcon",
+		BackgroundTransparency = 1,
 		AnchorPoint = Vector2.new(0, 0.5),
-		BackgroundColor3 = coinColor,
-		Position = UDim2.new(0, 3, 0.5, 0),
-		Size = UDim2.new(1, -6, 1, -6),
-		SizeConstraint = Enum.SizeConstraint.RelativeYY,
+		Position = UDim2.new(0, 5, 0.5, 0),
+		Size = UDim2.fromOffset(34, 34),
 		Parent = frame,
 	})
-	Kit.corner(coin, 0.5)
-	Kit.stroke(coin, Kit.darker(coinColor, 0.4), 2)
-	Kit.new("UIGradient", {
-		Rotation = 90,
-		Color = ColorSequence.new({
-			ColorSequenceKeypoint.new(0, Color3.new(1, 1, 1)),
-			ColorSequenceKeypoint.new(0.5, Color3.new(0.95, 0.95, 0.95)),
-			ColorSequenceKeypoint.new(0.51, Color3.new(0.8, 0.8, 0.8)),
-			ColorSequenceKeypoint.new(1, Color3.new(0.7, 0.7, 0.7)),
-		}),
-		Parent = coin,
-	})
-	Kit.new("TextLabel", {
-		BackgroundTransparency = 1,
-		Position = UDim2.fromScale(0.15, 0.12),
-		Size = UDim2.fromScale(0.7, 0.76),
-		Text = emoji,
-		TextScaled = true,
-		Parent = coin,
-	})
-	local shine = Kit.new("Frame", {
-		BackgroundColor3 = Color3.new(1, 1, 1),
-		BackgroundTransparency = 0.15,
-		Position = UDim2.fromScale(0.18, 0.12),
-		Size = UDim2.fromScale(0.2, 0.2),
-		Parent = coin,
-	})
-	Kit.corner(shine, 0.5)
-	local coinShare = 1 / aspect -- largeur de la pièce, en part de la pilule
-	local value = Kit.new("TextLabel", {
-		BackgroundTransparency = 1,
-		Position = UDim2.fromScale(coinShare + 0.04, 0.18),
-		Size = UDim2.fromScale(1 - coinShare - 0.1, 0.64),
-		Font = Enum.Font.GothamBlack,
-		Text = "0",
-		TextColor3 = CURRENCY_FX.textColor,
-		TextScaled = true,
-		TextXAlignment = Enum.TextXAlignment.Left,
-		Parent = frame,
-	})
+	Kit.label(coin, emoji, { TextColor3 = coinColor, Size = UDim2.fromScale(1, 1) }, 30)
+	local value = Kit.number(frame, "0", {
+		Position = UDim2.fromOffset(43, 5),
+		Size = UDim2.new(1, -49, 1, -10),
+		Font = Enum.Font.GothamBold,
+		TextColor3 = Theme.White,
+		TextXAlignment = Enum.TextXAlignment.Center,
+	}, 21)
 	return frame, value, coin
 end
 
@@ -210,31 +179,42 @@ local function buildBar(root: Frame, data: Types.ProfileData): { [string]: (numb
 		BackgroundTransparency = 1,
 		AnchorPoint = Vector2.new(0.5, 0),
 		Position = UDim2.new(0.5, 0, 0, 6),
-		Size = UDim2.fromScale(0.8, CURRENCY_FX.barHeight),
+		Size = UDim2.new(0.48, 0, 0, 44),
 		Parent = root,
 	})
-	Kit.limit(bar, nil, Vector2.new(900, 40))
-	Kit.list(bar, true, 0.008, Enum.HorizontalAlignment.Center, Enum.VerticalAlignment.Center)
+	Kit.limit(bar, Vector2.new(300, 44), Vector2.new(460, 44))
+	Kit.list(bar, true, 0.025, Enum.HorizontalAlignment.Center, Enum.VerticalAlignment.Center)
 
 	local fossilValue, coin
-	fossilPill, fossilValue, coin = pill(bar, 1, "🐚", Color3.fromHex("#FFC22E"), 4.2)
+	fossilPill, fossilValue, coin = pill(bar, 1, "🪙", Color3.fromHex("#FFC22E"), 4.2)
 	fossilStroke = fossilPill:FindFirstChildOfClass("UIStroke") :: UIStroke
 	coinScale = Kit.new("UIScale", { Parent = coin })
 	local _, amberValue = pill(bar, 2, "🔶", Color3.fromHex("#FF8A1F"), 3)
-	local _, bonesValue = pill(bar, 3, "🦴", Color3.fromHex("#E8DCC4"), 3)
-	local _, goldenValue = pill(bar, 4, "✨", Color3.fromHex("#FFE46B"), 2.6)
-	local goldenHolder =
-		Kit.new("Frame", { BackgroundTransparency = 1, LayoutOrder = 5, Size = UDim2.fromScale(1, 1), Parent = bar })
-	Kit.aspect(goldenHolder, 2.2, true)
-	Kit.button(goldenHolder, "Lancer", {
-		color = Theme.Gold,
-		textColor = Theme.Ink,
-		maxText = 16,
-		minWidth = 44,
+	local _, bonesValue = pill(bar, 3, "🐚", Color3.fromHex("#E8DCC4"), 3)
+	-- Les trois soldes principaux restent centrés comme dans la maquette.
+	-- Les lancers dorés sont une commande secondaire, pas une quatrième monnaie dans la barre.
+	local goldenHolder = Kit.new("Frame", {
+		Name = "GoldenRolls",
+		BackgroundTransparency = 1,
+		AnchorPoint = Vector2.new(1, 0),
+		Position = UDim2.new(1, -8, 0, 64),
+		Size = UDim2.fromOffset(132, 44),
+		Parent = root,
+	})
+	local goldenButton = Kit.button(goldenHolder, "", {
+		color = Theme.Navy,
+		textColor = Theme.Gold,
+		maxText = 15,
 		onClick = function()
 			RollController:Golden()
 		end,
 	})
+	local goldenStroke = goldenButton:FindFirstChildOfClass("UIStroke")
+	if goldenStroke then
+		goldenStroke.Color = Theme.Gold
+		goldenStroke.Transparency = 0.3
+	end
+	local goldenValue = Kit.label(goldenButton, "", { Size = UDim2.fromScale(1, 1), TextColor3 = Theme.Gold }, 15)
 
 	-- « +X/s » sous les Fossiles : au survol (souris) ou quelques secondes après un toucher.
 	local income = Kit.new("TextLabel", {
@@ -281,7 +261,9 @@ local function buildBar(root: Frame, data: Types.ProfileData): { [string]: (numb
 		Fossils = rolling(fossilValue, Kit.big),
 		Amber = rolling(amberValue, Kit.big),
 		Bones = rolling(bonesValue, Kit.big),
-		GoldenRolls = rolling(goldenValue, Kit.group),
+		GoldenRolls = rolling(goldenValue, function(value: number): string
+			return `✨ {Kit.group(value)} · Lancer`
+		end),
 	}
 	for key, set in setters do
 		set((data :: any)[key])
@@ -292,7 +274,7 @@ end
 local function denied()
 	Kit.tween(fossilStroke, CURRENCY_FX.deniedSeconds / 2, { Color = CURRENCY_FX.deniedColor, Transparency = 0 })
 	task.delay(CURRENCY_FX.deniedSeconds / 2, function()
-		Kit.tween(fossilStroke, CURRENCY_FX.deniedSeconds / 2, { Color = Color3.new(1, 1, 1), Transparency = 0.82 })
+		Kit.tween(fossilStroke, CURRENCY_FX.deniedSeconds / 2, { Color = Theme.Cyan, Transparency = 0.15 })
 	end)
 	local base = fossilPill.Rotation
 	for _, angle in { -3, 3, -2, 1, 0 } do
