@@ -11,6 +11,7 @@ local DinoLooks: { [string]: DinoLook } = {
 	galetosaure = { colors = { main = "#9AA5B1", belly = "#E6E1D3", accent = "#7BC67E", glow = "#FFB74D", back = "#6B7785" } },
 	lianopteryx = { colors = { main = "#43A047", belly = "#C5E1A5", accent = "#FFEB3B", glow = "#FF9800", back = "#2E7D32" } },
 	moussecrete = { colors = { main = "#5DBB63", belly = "#F2E8C9", accent = "#2E7D32", glow = "#C6FF6B", back = "#3F9A48" } },
+	sablegriffe = { colors = { main = "#E8C07D", belly = "#F7E6BE", accent = "#FF7043", glow = "#FFD180", back = "#C68B4E" } },
 }
 
 for _, look in DinoLooks do

@@ -162,7 +162,7 @@ class Builder:
     def build_body(self):
         cfg = self.cfg
         body = dd.skin_body(cfg.NAME + "_Corps", cfg.NODES, self.col, branch_smoothing=getattr(cfg, "BRANCH", 0.7),
-                            subdiv=1, smooth_iters=getattr(cfg, "SMOOTH", 1), root="nez")
+                            subdiv=getattr(cfg, "SUBDIV", 1), smooth_iters=getattr(cfg, "SMOOTH", 1), root="nez")
         self.body = body
         me = body.data
         dd.fill_color(me, self.C[MAIN])
@@ -446,7 +446,7 @@ def build_mesh(B):
     ob.data.transform(T)
     ob["dd_skel_matrix"] = [v for row in (T @ m) for v in row]
     B.slot_counts = assign_slots(B, ob)
-    split_sharp(ob, 50.0)
+    split_sharp(ob, getattr(B.cfg, "SHARP", 50.0))  # SHARP petit = facettes plates (style « plaques »)
     st = dd.stats(ob)
     assert st["triangles"] <= getattr(cfg, "TRI_BUDGET", 5000), st
     return sc, col, rcol, ob, st
