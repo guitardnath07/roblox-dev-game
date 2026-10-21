@@ -29,10 +29,14 @@ describe("reçus d'achat", function()
 		expect(Purchases.productFor(0)).toBeNil()
 	end)
 
-	it("Ambre, Os et potions de chance sont des objets aléatoires payants ; pas la potion de Fossiles", function()
-		for _, product in Products.products do
-			local expected = product.kind ~= "potion" or product.potionId ~= "coins_potion"
-			expect(Purchases.isPaidRandom(product)).toBe(expected)
+	it(
+		"Ambre, Os et potions de chance sont des objets aléatoires payants ; pas la potion de Fossiles ni un dino exclusif",
+		function()
+			for _, product in Products.products do
+				local expected = product.kind ~= "dino"
+					and (product.kind ~= "potion" or product.potionId ~= "coins_potion")
+				expect(Purchases.isPaidRandom(product)).toBe(expected)
+			end
 		end
-	end)
+	)
 end)

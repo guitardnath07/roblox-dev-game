@@ -79,6 +79,9 @@ function Screen.build(win: Window.Window)
 
 		local distribution = Odds.exactDistribution(b.total)
 		for i, dino in Dinos do
+			if dino.exclusive then
+				continue
+			end
 			local rarity = Rarities[dino.rarity]
 			local found = data.Index.Found[dino.id] == true
 			Kit.row(list, {

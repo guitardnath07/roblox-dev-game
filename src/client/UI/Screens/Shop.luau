@@ -293,6 +293,7 @@ local function buildRobux(page: Frame, maid: Kit.Maid)
 		local effect = if product.kind == "amber"
 			then `{product.amount} Ambre`
 			elseif product.kind == "bones" then `{product.amount} Os`
+			elseif product.kind == "dino" then "Dino exclusif, jamais tiré au dé"
 			else (function()
 				local potion = Kit.find(Products.potions, product.potionId)
 				return if potion

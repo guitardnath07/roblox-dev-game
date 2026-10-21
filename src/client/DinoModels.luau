@@ -318,8 +318,9 @@ local function meshFor(dinoId: string, data: Data, skinId: string): EditableMesh
 			-- Triangles anti-horaires vus de l'extérieur : (b - a) x (c - a) pointe vers l'extérieur.
 			local b, d = t[f * 3 - 1], t[f * 3]
 			local pa = Vector3.new(p[a * 3 - 2], p[a * 3 - 1], p[a * 3])
-			local n = (Vector3.new(p[b * 3 - 2], p[b * 3 - 1], p[b * 3]) - pa)
-				:Cross(Vector3.new(p[d * 3 - 2], p[d * 3 - 1], p[d * 3]) - pa)
+			local n = (Vector3.new(p[b * 3 - 2], p[b * 3 - 1], p[b * 3]) - pa):Cross(
+				Vector3.new(p[d * 3 - 2], p[d * 3 - 1], p[d * 3]) - pa
+			)
 			if n.Magnitude > 1e-9 then
 				local normal = mesh:AddNormal(n.Unit)
 				mesh:SetFaceNormals(face, { normal, normal, normal })

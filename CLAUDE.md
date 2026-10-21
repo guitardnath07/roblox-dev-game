@@ -61,6 +61,8 @@ Inspiration : la **boucle de gameplay** des jeux de dés Roblox (type Anime Dice
 | Secret | Glitchosaure | 500 000 000 | 160 000 | Théropode |
 | Secret | Omégarex | 2 000 000 000 | 350 000 | Théropode |
 
+**Exclusif** (rose animé #FF4FA3, validé le 21/10/2026) : Peluchorex, T-rex en peluche, Théropode, 75 Pièces/s. Jamais tiré au dé, absent de l'écran des chances et de l'Index ; s'obtient uniquement par achat Robux direct (non aléatoire).
+
 Couleurs de rareté : Commun gris #9AA0A6, Peu commun vert #4CAF50, Rare bleu #2196F3, Épique violet #9C27B0, Légendaire orange #FF9800, Mythique rouge #E53935, Primordial turquoise animé, Secret arc-en-ciel animé.
 
 ## 5. Le tirage (modèle « du plus rare au plus commun »)
@@ -134,7 +136,7 @@ Flair I–III (+10/25/50 % chance), Trésor I–III (+10/25/50 % Pièces), Vélo
 
 ## 10. Monétisation (Robux)
 Passes : Chance (x2), Ultra Chance (x3), Plus de Pièces (x2), VIP (x1,5 Pièces + chat tag + 10 % chance), Vitesse de lancer (x2), Double Lancer, Plus de Grades (+5 relances par clic), Plus d'Instincts (+5).
-Produits : packs d'Ambre, packs de Fossiles, potions. **Pas de vente de Pièces, pas de « Jackpot » payant au lancement.**
+Produits : packs d'Ambre, packs de Fossiles, potions, dino exclusif Peluchorex (achat direct, non aléatoire). **Pas de vente de Pièces, pas de « Jackpot » payant au lancement.**
 Conformité obligatoire (voir docs/regles-roblox.md) : écran des chances complet avant achat, effet chiffré des boosts de chance, `PolicyService` respecté par joueur.
 
 ## 11. Règles techniques (non négociables)

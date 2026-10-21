@@ -27,6 +27,7 @@ local DinoLooks: { [string]: DinoLook } = {
 	nebulodon = { colors = { main = "#311B92", belly = "#E040FB", accent = "#FFFFFF", glow = "#B388FF", back = "#1A0E5C" } },
 	omegarex = { colors = { main = "#2D1B69", belly = "#7B1FA2", accent = "#B388FF", glow = "#FFD740", back = "#0D0221" } },
 	orageceros = { colors = { main = "#546E7A", belly = "#B0BEC5", accent = "#FFEE58", glow = "#FFF176", back = "#263238" } },
+	peluchorex = { colors = { main = "#F77AB0", belly = "#E8C9D3", accent = "#7CB342", glow = "#FFD54F", back = "#D9668F" } },
 	ronceplaque = { colors = { main = "#7B1FA2", belly = "#A5D6A7", accent = "#E91E63", glow = "#FF4F9A", back = "#4A148C" } },
 	sablegriffe = { colors = { main = "#E8C07D", belly = "#FFF1D0", accent = "#FF7043", glow = "#FFAB91", back = "#C68B4E" } },
 	solaripteryx = { colors = { main = "#FFC107", belly = "#FF6F00", accent = "#FFFDE7", glow = "#FFEA00", back = "#E65100" } },

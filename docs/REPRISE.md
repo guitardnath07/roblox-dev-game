@@ -3,7 +3,7 @@
 ## Fait
 - Jeu : version « jeux-premier » dans `src/` (ancienne version sauvegardée dans `_backup_avant_maj_2026-10-19/`). `rojo build` OK.
 - Références des 28 dinos : `docs/dinos-concept.md` (vrai dinosaure + couche thématique).
-- Dinos 3D (21/10/2026) : les 28 dinos + Peluchorex (29e, pas encore dans Config/Dinos.luau, rareté à choisir) sont construits,
+- Dinos 3D (21/10/2026) : les 28 dinos + Peluchorex (29e, rareté « Exclusif », vendu en Robux) sont construits,
   rendus et exportés (`src/client/DinoMeshes` + `DinoAnims`), style chibi + « plaques » à facettes (normales par face :
   `FLAT_SHADING` dans `DinoModels.luau`). Planche : `docs/renders/dinos/planche.jpg`. Palettes fusionnées dans `DinoLooks.luau`.
   Blender tourne aussi dans le cloud (`pip install bpy==5.2.2` + libegl1), voir les build_<id>.py.
@@ -12,7 +12,7 @@
 - Code jeu qui affiche les dinos 3D : `src/client/DinoModels.luau`.
 
 ## À faire
-1. Choisir la rareté de Peluchorex et l'ajouter à `Config/Dinos.luau` + `docs/dinos-concept.md`.
+1. Créer le produit développeur « Peluchorex » sur Roblox et mettre son id dans `Config/Products.luau` (productId = 0 pour l'instant).
 2. Tester en Play dans Studio et sur mobile : facettes, bouche au rugissement, perfs avec 20–30 dinos.
 
 ## Pour relancer

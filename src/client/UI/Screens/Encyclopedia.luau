@@ -7,6 +7,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Shared = ReplicatedStorage.Shared
 local Dinos = require(Shared.Config.Dinos)
 local Economy = require(Shared.Config.Economy)
+local Odds = require(Shared.Odds)
 local Rarities = require(Shared.Config.Rarities)
 local Remotes = require(Shared.Net.Remotes)
 local Types = require(Shared.Types)
@@ -54,7 +55,7 @@ function Screen.build(win: Window.Window)
 		for _ in data.Index.Found do
 			foundCount += 1
 		end
-		progress.Text = `Trouvés : {foundCount} / {#Dinos}`
+		progress.Text = `Trouvés : {foundCount} / {Odds.rollableCount}`
 
 		for i, m in Economy.IndexMilestones do
 			local reached = foundCount >= m.found
@@ -93,6 +94,9 @@ function Screen.build(win: Window.Window)
 		end
 
 		for i, dino in Dinos do
+			if dino.exclusive then
+				continue
+			end
 			local rarity = Rarities[dino.rarity]
 			local found = data.Index.Found[dino.id] == true
 			local cell = Kit.new("TextButton", {

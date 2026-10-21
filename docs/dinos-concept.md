@@ -280,3 +280,14 @@ Inspiration de style uniquement : on ne copie aucune créature, aucun nom d'une 
 - Référence réelle : *Giganotosaurus carolinii*, carcharodontosauridé argentin rival du T. rex en taille, au crâne long et étroit — https://en.wikipedia.org/wiki/Giganotosaurus
   - À garder : crâne plus long et plus bas que celui du T. rex (silhouette distincte de Tonnerrex), petite crête osseuse au-dessus des yeux, bras à 3 doigts, longue queue puissante.
 - Couche thématique : couronne de 7 cornes en spirale de galaxie (cônes torsadés 0,3–0,6) le long du crâne ; symbole Ω (extrusion 0,5 × 0,5 × 0,06, émissif doré) qui flotte 0,6 au-dessus de la tête ; 2 anneaux d'orbite inclinés (tores Ø 2,0 et 2,4, épaisseur 0,04) autour du torse, chacun avec 1 petite planète (sphère 0,12) ; derniers 40 % de la queue en 10 fragments de plus en plus petits qui se détachent en étoiles (4 branches).
+
+## Exclusif (jamais tiré au dé, vendu en Robux)
+
+### Peluchorex — Théropode — taille 1,0
+- Silhouette : T-rex en peluche cousue main, assis et trapu : tête énorme (≈ le torse) au museau rond, gueule immense toujours entrouverte, bras moignons à 3 grosses griffes sombres, cuisses rondes, grosse queue posée au sol au bout recourbé, petites pointes de feutre vert de l'arrière du crâne au dos.
+- Couleurs : `#F77AB0` / `#E8C9D3` / `#7CB342` (dos `#D9668F`, boutons marron foncé = intérieur de bouche `#6A1B2A`)
+- Émissif : 2 éclats d'yeux dorés `#FFD54F` au fond de la gueule (visibles gueule ouverte) + tirette dorée de la fermeture éclair.
+- Personnalité : peluche vivante maladroite, grognon-mignonne. Idle : se dégonfle lentement (s'affaisse, tête qui penche, gueule qui se referme, petits frissons « pfff »), puis se regonfle d'un coup avec un rebond, gueule grande ouverte. Death : sursaut, les genoux lâchent, puis bascule mollement sur le côté comme une peluche vide.
+- Référence réelle : *Tyrannosaurus rex* — https://en.wikipedia.org/wiki/Tyrannosaurus
+  - À garder : crâne énorme et large, grande gueule aux dents triangulaires, bras minuscules, cuisses massives, queue épaisse (ici posée au sol, comme une peluche assise).
+- Couche thématique : coutures en relief (trait rose foncé + points blancs en travers) du museau à la nuque, sur la queue et en anneau sur le bras gauche ; 2 gros boutons à 8 pans (Ø 0,4–0,5) cousus en croix à l'épaule et à la hanche droites ; fermeture éclair sur le ventre (bande blanche ≈ 0,18 × 1,0, crans sombres, tirette dorée qui pendouille, os Zip) ; 7 pointes de feutre vert en plaques plates ; paupières lourdes inclinées, air grognon, iris vert ; 2 éclats dorés au fond de la gueule ; griffes sombres, dents blanches triangulaires.

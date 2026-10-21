@@ -8,7 +8,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Shared = ReplicatedStorage.Shared
 local Dice = require(Shared.Config.Dice)
-local Dinos = require(Shared.Config.Dinos)
+local Odds = require(Shared.Odds)
 local Types = require(Shared.Types)
 local Upgrades = require(Shared.Config.Upgrades)
 
@@ -56,7 +56,7 @@ local STATS: { { label: string, value: (data: Types.ProfileData) -> string } } =
 	{
 		label = "📖 Espèces trouvées",
 		value = function(data)
-			return `{count(data.Index.Found)} / {#Dinos}`
+			return `{count(data.Index.Found)} / {Odds.rollableCount}`
 		end,
 	},
 	{
