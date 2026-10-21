@@ -1,7 +1,8 @@
 --!strict
 -- Sac à dos : grille des dinos (filtre de rareté, tri), sélection multiple pour vendre (SellDinos),
 -- fiche du dino choisi : verrou (ToggleLock), Poser sur un socle libre (PlaceDino) / Reprendre (RemoveDino),
--- relances (écran Reroll), et « Équiper les meilleurs » (EquipBest). Le serveur vérifie tout.
+-- relances (écran Reroll), et « Équiper les meilleurs » (EquipBest, débloqué par le nœud equip_best de l'arbre).
+-- Le serveur vérifie tout.
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -18,6 +19,7 @@ local Types = require(Shared.Types)
 
 local Controllers = script.Parent.Parent.Parent.Controllers
 local DataController = require(Controllers.DataController)
+local NotificationController = require(Controllers.NotificationController)
 local UIController = require(Controllers.UIController)
 
 local DinoView = require(script.Parent.Parent.DinoView)
@@ -363,6 +365,9 @@ function Screen.build(win: Window.Window, selectedUuid: string?)
 		sellButton.Visible = selecting
 		sellButton.Parent.Visible = selecting
 		sellButton.Text = `Vendre ({selectedCount})`
+		local bestUnlocked = Bonuses.upgradeStat(data.Upgrades, "equipBest") >= 1
+		bestButton.Text = if bestUnlocked then "ÉQUIPER MEILLEURS" else "🔒 ÉQUIPER MEILLEURS"
+		Kit.paint(bestButton, if bestUnlocked then Theme.Amber else Theme.Disabled)
 
 		for i, entry in list do
 			local rarity = Kit.rarityOf(entry.instance.dinoId)
@@ -481,6 +486,13 @@ function Screen.build(win: Window.Window, selectedUuid: string?)
 		renderGrid()
 	end))
 	win.maid:add(bestButton.Activated:Connect(function()
+		if Bonuses.upgradeStat(data.Upgrades, "equipBest") < 1 then
+			NotificationController:Toast(
+				"Débloque « Équiper les meilleurs » dans l'arbre d'améliorations.",
+				"error"
+			)
+			return
+		end
 		Remotes.EquipBest:FireServer()
 	end))
 	win.maid:add(sellButton.Activated:Connect(function()

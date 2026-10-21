@@ -43,13 +43,17 @@ return table.freeze({
 	SellDinos = event("SellDinos"),
 	-- client -> serveur : (maxRarityOrder: number) vend tous les dinos non posés et non verrouillés jusqu'à cette rareté.
 	SellAllUnplaced = event("SellAllUnplaced"),
+	-- client -> serveur : (uuids: { string }) reliques à vendre au Comptoir (les équipées sont ignorées).
+	SellRelics = event("SellRelics"),
+	-- client -> serveur : ({ [potionId]: number }) vend des potions de réserve contre des Tickets.
+	SellPotions = event("SellPotions"),
 	-- client -> serveur : (uuid: string) verrouille / déverrouille un dino.
 	ToggleLock = event("ToggleLock"),
 	-- client -> serveur : (uuid: string, slot: number) pose un dino sur un socle de sa parcelle.
 	PlaceDino = event("PlaceDino"),
 	-- client -> serveur : (slot: number) reprend le dino du socle.
 	RemoveDino = event("RemoveDino"),
-	-- client -> serveur : pose automatiquement les dinos au meilleur revenu.
+	-- client -> serveur : pose automatiquement les dinos au meilleur revenu (nœud « Équiper les meilleurs » de l'arbre).
 	EquipBest = event("EquipBest"),
 	-- client -> serveur : (slot: number, amount: 1 | 5) monte le niveau d'un socle.
 	LevelUpSlot = event("LevelUpSlot"),

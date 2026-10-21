@@ -44,6 +44,9 @@ local STAT_TEXT: { [string]: (number, Upgrades.Upgrade) -> string } = {
 	autoRoll = function()
 		return "Débloque l'Auto-Lancer (bouton AUTO)"
 	end,
+	equipBest = function()
+		return "Débloque « Équiper les meilleurs » dans le sac à dos"
+	end,
 	diceUnlock = function(_, node)
 		local die = Kit.find(Dice, node.unlocksDie)
 		return if die

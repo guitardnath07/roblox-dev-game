@@ -1,15 +1,19 @@
 --!strict
 -- Sac à dos : ajout des dinos tirés, vente, verrouillage. Gel des dinos proposés en échange.
+-- Comptoir de vente (Workspace.Hub.Stations.SellCounter) : prompt « OpensScreen = Sell » ; on y vend aussi
+-- les Reliques (Fossiles) et les potions de réserve (Tickets d'Expédition).
 -- Toute entrée client est validée ici (type, longueur, appartenance, état du dino).
 
 local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
 
 local Shared = ReplicatedStorage.Shared
 local Bonuses = require(Shared.Bonuses)
 local Dinos = require(Shared.Config.Dinos)
 local Instincts = require(Shared.Config.Instincts)
+local Products = require(Shared.Config.Products)
 local Rarities = require(Shared.Config.Rarities)
 local Remotes = require(Shared.Net.Remotes)
 local Types = require(Shared.Types)
@@ -177,6 +181,81 @@ local function onSellAllUnplaced(player: Player, maxRarityOrder: any)
 	Remotes.Notify:FireClient(player, `Vendu pour {earned} Fossiles`, "info")
 end
 
+-- Vend les reliques valides (possédées, non équipées), ignore les autres. Renvoie le total gagné.
+function InventoryService:SellRelics(player: Player, uuids: { any }): number
+	local data = DataService:GetLoaded(player)
+	if not data then
+		return 0
+	end
+	local equipped: Types.Set = {}
+	for _, uuid in data.EquippedRelics do
+		equipped[uuid] = true
+	end
+	local total = 0
+	for _, uuid in uuids do
+		local owned = type(uuid) == "string" and not equipped[uuid] and data.Relics[uuid]
+		if owned then
+			total += Bonuses.relicSellPrice(owned.relicId)
+			DataService:Update(player, { "Relics", uuid }, function()
+				return nil
+			end)
+		end
+	end
+	if total > 0 then
+		CurrencyService:Add(player, total, "sell_relic")
+	end
+	return total
+end
+
+-- Vend des potions de réserve ({ [potionId] = nombre }) contre des Tickets. Renvoie les Tickets gagnés.
+function InventoryService:SellPotions(player: Player, counts: { [any]: any }): number
+	local data = DataService:GetLoaded(player)
+	if not data then
+		return 0
+	end
+	local tickets = 0
+	for _, potion in Products.potions do
+		local count = counts[potion.id]
+		if type(count) == "number" and count == math.floor(count) and count >= 1 then
+			local sold = math.min(count, data.Potions[potion.id] or 0)
+			if sold >= 1 then
+				DataService:Update(player, { "Potions", potion.id }, function(old: number)
+					return old - sold
+				end)
+				tickets += sold * potion.sellTickets
+			end
+		end
+	end
+	if tickets > 0 then
+		DataService:Increment(player, "Tickets", tickets)
+	end
+	return tickets
+end
+
+local function onSellRelics(player: Player, uuids: any)
+	if not sellLimiter:allow(player, SELL_INTERVAL) then
+		return
+	end
+	if type(uuids) ~= "table" or #uuids == 0 or #uuids > MAX_SELL_BATCH then
+		return
+	end
+	local list = table.move(uuids, 1, #uuids, 1, {})
+	local earned = InventoryService:SellRelics(player, list)
+	if earned > 0 then
+		Remotes.Notify:FireClient(player, `Vendu pour {earned} Fossiles`, "info")
+	end
+end
+
+local function onSellPotions(player: Player, counts: any)
+	if not sellLimiter:allow(player, SELL_INTERVAL) or type(counts) ~= "table" then
+		return
+	end
+	local tickets = InventoryService:SellPotions(player, counts)
+	if tickets > 0 then
+		Remotes.Notify:FireClient(player, `Vendu pour {tickets} Tickets d'Expédition`, "info")
+	end
+end
+
 local function onToggleLock(player: Player, uuid: any)
 	if not lockLimiter:allow(player, LOCK_INTERVAL) or type(uuid) ~= "string" or #uuid > 64 then
 		return
@@ -193,12 +272,34 @@ end
 function InventoryService:Init()
 	Remotes.SellDinos.OnServerEvent:Connect(onSellDinos)
 	Remotes.SellAllUnplaced.OnServerEvent:Connect(onSellAllUnplaced)
+	Remotes.SellRelics.OnServerEvent:Connect(onSellRelics)
+	Remotes.SellPotions.OnServerEvent:Connect(onSellPotions)
 	Remotes.ToggleLock.OnServerEvent:Connect(onToggleLock)
 	Players.PlayerRemoving:Connect(function(player)
 		frozen[player] = nil
 		sellLimiter:forget(player)
 		lockLimiter:forget(player)
 	end)
+end
+
+-- Le comptoir est un décor construit dans Studio : on lui ajoute le prompt qui ouvre l'écran de vente.
+function InventoryService:Start()
+	local hub = Workspace:WaitForChild("Hub", 30)
+	local stations = hub and hub:WaitForChild("Stations", 10)
+	local counter = stations and stations:WaitForChild("SellCounter", 10)
+	local stall = counter and (counter:FindFirstChild("Stall") or counter:FindFirstChildWhichIsA("BasePart", true))
+	if not stall or not stall:IsA("BasePart") then
+		warn("[InventoryService] Workspace.Hub.Stations.SellCounter introuvable : pas de Comptoir de vente")
+		return
+	end
+	local prompt = Instance.new("ProximityPrompt")
+	prompt.ActionText = "Vendre"
+	prompt.ObjectText = "Comptoir de vente"
+	prompt.HoldDuration = 0.2
+	prompt.MaxActivationDistance = 14
+	prompt.RequiresLineOfSight = false
+	prompt:SetAttribute("OpensScreen", "Sell")
+	prompt.Parent = stall
 end
 
 return InventoryService

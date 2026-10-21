@@ -340,7 +340,7 @@ end
 -- Pose les dinos au meilleur revenu propre sur les socles de plus haut niveau.
 function PlotService:EquipBest(player: Player)
 	local data = DataService:GetLoaded(player)
-	if not data then
+	if not data or Bonuses.upgradeStat(data.Upgrades, "equipBest") < 1 then
 		return
 	end
 	local candidates: { { uuid: string, income: number } } = {}

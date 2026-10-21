@@ -1,7 +1,7 @@
 --!strict
 -- Sanctuaire du Renouveau côté client : le totem (prompt « OpensRebirth ») ouvre l'écran Rebirth,
 -- la pierre de retour (prompt « ReturnToPlot ») demande au serveur de ramener le joueur à sa parcelle,
--- et après un rebirth le serveur demande la cinématique du Phénix (UI/RebirthCinematic).
+-- un prompt « OpensScreen = <nom> » ouvre cet écran (ex. le Comptoir de vente -> Sell), et après un rebirth le serveur demande la cinématique du Phénix (UI/RebirthCinematic).
 
 local ProximityPromptService = game:GetService("ProximityPromptService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -20,6 +20,8 @@ function ShrineController:Start()
 			UIController:Open("Rebirth")
 		elseif prompt:GetAttribute("ReturnToPlot") then
 			Remotes.ShrineTeleport:FireServer("Plot")
+		elseif type(prompt:GetAttribute("OpensScreen")) == "string" then
+			UIController:Open(prompt:GetAttribute("OpensScreen") :: string)
 		end
 	end)
 	Remotes.RebirthCinematic.OnClientEvent:Connect(function(rebirths: number)
