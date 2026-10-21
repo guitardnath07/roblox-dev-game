@@ -82,11 +82,22 @@ describe("tables de config", function()
 
 	it("les dés ont des id uniques, une chance et un prix croissants", function()
 		expectUniqueIds(Dice)
-		expect(#Dice).toBe(14)
 		expect(Dice[1].price).toBe(0)
-		for i = 2, #Dice do
-			expect(Dice[i].luck > Dice[i - 1].luck).toBe(true)
-			expect(Dice[i].price > Dice[i - 1].price).toBe(true)
+		-- Les dés offerts par l'arbre (treeOnly) ne sont pas vendus : prix 0, hors de la suite des prix.
+		local shop = {}
+		for i, die in Dice do
+			if i > 1 then
+				expect(die.luck > Dice[i - 1].luck).toBe(true)
+			end
+			if die.treeOnly then
+				expect(die.price).toBe(0)
+			else
+				table.insert(shop, die)
+			end
+		end
+		expect(#shop).toBe(14)
+		for i = 2, #shop do
+			expect(shop[i].price > shop[i - 1].price).toBe(true)
 		end
 	end)
 
