@@ -23,7 +23,7 @@ local DataService = require(script.Parent.DataService)
 local QuestService = require(script.Parent.QuestService)
 local RateLimit = require(script.Parent.Parent.Data.RateLimit)
 
-local MAX_SELL_BATCH = 200 -- au-delà du plus grand sac, une liste plus longue est forcément fausse
+local MAX_SELL_BATCH = 300 -- Sac V ; au-delà du plus grand sac, une liste plus longue est forcément fausse
 local SELL_INTERVAL = 0.5
 local LOCK_INTERVAL = 0.2
 

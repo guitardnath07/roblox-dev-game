@@ -1,5 +1,6 @@
 --!strict
--- Sac à dos : grille des dinos (filtre de rareté, tri), sélection multiple pour vendre (SellDinos),
+-- Sac à dos : grille des dinos (filtre de rareté, tri), sélection multiple pour vendre (SellDinos, « Tout »
+-- coche tous les dinos vendables du filtre),
 -- fiche du dino choisi : verrou (ToggleLock), Poser sur un socle libre (PlaceDino) / Reprendre (RemoveDino),
 -- relances (écran Reroll), et « Équiper les meilleurs » (EquipBest, débloqué par le nœud equip_best de l'arbre).
 -- Le serveur vérifie tout.
@@ -104,6 +105,7 @@ function Screen.build(win: Window.Window, selectedUuid: string?)
 	local selectButton = tool(3, 0.14, "Sélection", Theme.Neutral)
 	local sellButton = tool(4, 0.15, "Vendre", Theme.Lava)
 	local bestButton = tool(5, 0.22, "ÉQUIPER MEILLEURS", Theme.Amber)
+	local allButton = tool(6, 0.22, "TOUT SÉLECTIONNER", Theme.Sky)
 
 	-- Grille ---------------------------------------------------------------------------------------------------
 	local grid = Kit.scroll(win.content, {
@@ -365,6 +367,8 @@ function Screen.build(win: Window.Window, selectedUuid: string?)
 		sellButton.Visible = selecting
 		sellButton.Parent.Visible = selecting
 		sellButton.Text = `Vendre ({selectedCount})`
+		allButton.Parent.Visible = selecting
+		bestButton.Parent.Visible = not selecting
 		local bestUnlocked = Bonuses.upgradeStat(data.Upgrades, "equipBest") >= 1
 		bestButton.Text = if bestUnlocked then "ÉQUIPER MEILLEURS" else "🔒 ÉQUIPER MEILLEURS"
 		Kit.paint(bestButton, if bestUnlocked then Theme.Amber else Theme.Disabled)
@@ -483,6 +487,16 @@ function Screen.build(win: Window.Window, selectedUuid: string?)
 	win.maid:add(selectButton.Activated:Connect(function()
 		selecting = not selecting
 		table.clear(selection)
+		renderGrid()
+	end))
+	win.maid:add(allButton.Activated:Connect(function()
+		for _, entry in entries() do
+			local dino = Kit.dinoById[entry.instance.dinoId]
+			-- comme SellAllUnplaced : un exclusif payé en Robux ne part jamais en lot
+			if not entry.instance.locked and entry.placed == nil and not (dino and dino.exclusive) then
+				selection[entry.uuid] = true
+			end
+		end
 		renderGrid()
 	end))
 	win.maid:add(bestButton.Activated:Connect(function()

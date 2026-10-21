@@ -23,7 +23,7 @@ local Window = require(script.Parent.Parent.Window)
 
 local Screen = { title = "🏷️ Comptoir de vente" }
 
-local MAX_BATCH = 200 -- miroir de MAX_SELL_BATCH (InventoryService)
+local MAX_BATCH = 300 -- miroir de MAX_SELL_BATCH (InventoryService)
 
 type Tab = "dinos" | "relics" | "potions"
 local TABS: { { id: Tab, text: string } } = {
