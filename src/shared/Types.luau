@@ -101,7 +101,7 @@ export type ProfileData = {
 	TradeLog: { any }, -- 20 derniers échanges { with, gave, got, at }
 	VolcanoBestFloor: number, -- plus haut étage gagné (0 = aucun)
 	ProcessedPurchases: { string }, -- 100 derniers PurchaseId
-	Settings: { AutoRoll: boolean, HideReveal: boolean, Music: boolean, Sfx: boolean },
+	Settings: { AutoRoll: boolean, AutoEquip: boolean, HideReveal: boolean, Music: boolean, Sfx: boolean },
 	LastOnline: number, -- os.time() de la dernière sauvegarde
 	LastIncomePerSecond: number, -- revenu au moment du départ, pour les gains hors ligne
 	BestPull: { DinoId: string, OneIn: number },

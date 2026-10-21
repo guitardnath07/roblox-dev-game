@@ -16,7 +16,10 @@ local Mutations = require(Config.Mutations)
 local Rarities = require(Config.Rarities)
 local Relics = require(Config.Relics)
 local Upgrades = require(Config.Upgrades)
+local Bonuses = require(Shared.Bonuses)
 local Odds = require(Shared.Odds)
+local Products = require(Config.Products)
+local Quests = require(Config.Quests)
 
 local function sumPerMillion(list: { any }): number
 	local total = 0
@@ -151,6 +154,27 @@ describe("tables de config", function()
 				expect(adjacent(parent.q, parent.r, node.q, node.r)).toBe(true)
 			else
 				expect(adjacent(0, 0, node.q, node.r)).toBe(true)
+			end
+		end
+	end)
+end)
+
+describe("Comptoir de vente", function()
+	it("chaque relique a un prix, croissant avec le palier", function()
+		for _, relic in Relics.list do
+			expect(Bonuses.relicSellPrice(relic.id) > 0).toBe(true)
+		end
+		expect(Bonuses.relicSellPrice("inconnue")).toBe(0)
+		expect(Bonuses.relicSellPrice("fern_crown") < Bonuses.relicSellPrice("bone_helmet")).toBe(true)
+	end)
+
+	it("une potion se revend moins cher qu'elle ne s'achète en Tickets (pas de boucle infinie)", function()
+		for _, potion in Products.potions do
+			expect(potion.sellTickets >= 1).toBe(true)
+			for _, item in Quests.shop do
+				if item.potionId == potion.id then
+					expect(potion.sellTickets < item.priceTickets).toBe(true)
+				end
 			end
 		end
 	end)

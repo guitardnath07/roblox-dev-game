@@ -169,6 +169,20 @@ function Bonuses.backpackSize(data: Types.ProfileData): number
 	return Bonuses.upgradeStat(data.Upgrades, "backpackSize")
 end
 
+-- Prix de vente d'une relique au Comptoir : selon son palier (Config/Relics.tiers), 0 si inconnue.
+function Bonuses.relicSellPrice(relicId: string): number
+	for _, relic in Relics.list do
+		if relic.id == relicId then
+			for _, tier in Relics.tiers do
+				if tier.tier == relic.tier then
+					return tier.sellFossils
+				end
+			end
+		end
+	end
+	return 0
+end
+
 -- Prix de vente d'un exemplaire : revenu de base × Economy.sellValueSeconds × arbre (Vente).
 function Bonuses.sellPrice(data: Types.ProfileData, dinoId: string): number
 	local dino = byId(Dinos, dinoId)

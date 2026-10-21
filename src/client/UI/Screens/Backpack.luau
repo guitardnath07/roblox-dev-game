@@ -1,7 +1,9 @@
 --!strict
--- Sac à dos : grille des dinos (filtre de rareté, tri), sélection multiple pour vendre (SellDinos),
+-- Sac à dos : grille des dinos (filtre de rareté, tri), sélection multiple pour vendre (SellDinos, « Tout »
+-- coche tous les dinos vendables du filtre),
 -- fiche du dino choisi : verrou (ToggleLock), Poser sur un socle libre (PlaceDino) / Reprendre (RemoveDino),
--- relances (écran Reroll), et « Équiper les meilleurs » (EquipBest). Le serveur vérifie tout.
+-- relances (écran Reroll), « Équiper les meilleurs » (EquipBest) et l'interrupteur « AUTO » (réglage AutoEquip,
+-- débloqué par le nœud auto_equip de l'arbre). Le serveur vérifie tout.
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -18,6 +20,8 @@ local Types = require(Shared.Types)
 
 local Controllers = script.Parent.Parent.Parent.Controllers
 local DataController = require(Controllers.DataController)
+local NotificationController = require(Controllers.NotificationController)
+local SettingsController = require(Controllers.SettingsController)
 local UIController = require(Controllers.UIController)
 
 local DinoView = require(script.Parent.Parent.DinoView)
@@ -101,7 +105,9 @@ function Screen.build(win: Window.Window, selectedUuid: string?)
 	local sortButton = tool(2, 0.15, "", Theme.NavyLight)
 	local selectButton = tool(3, 0.14, "Sélection", Theme.Neutral)
 	local sellButton = tool(4, 0.15, "Vendre", Theme.Lava)
-	local bestButton = tool(5, 0.22, "ÉQUIPER MEILLEURS", Theme.Amber)
+	local bestButton = tool(5, 0.2, "ÉQUIPER MEILLEURS", Theme.Amber)
+	local autoButton = tool(6, 0.13, "", Theme.Leaf)
+	local allButton = tool(7, 0.2, "TOUT SÉLECTIONNER", Theme.Sky)
 
 	-- Grille ---------------------------------------------------------------------------------------------------
 	local grid = Kit.scroll(win.content, {
@@ -363,6 +369,15 @@ function Screen.build(win: Window.Window, selectedUuid: string?)
 		sellButton.Visible = selecting
 		sellButton.Parent.Visible = selecting
 		sellButton.Text = `Vendre ({selectedCount})`
+		allButton.Parent.Visible = selecting
+		bestButton.Parent.Visible = not selecting
+		autoButton.Parent.Visible = not selecting
+		local autoOn = SettingsController:Get("AutoEquip")
+		autoButton.Text = if not SettingsController:AutoEquipUnlocked()
+			then "🔒 AUTO"
+			elseif autoOn then "AUTO ✓"
+			else "AUTO ✗"
+		Kit.paint(autoButton, if autoOn then Theme.Leaf else Theme.Disabled)
 
 		for i, entry in list do
 			local rarity = Kit.rarityOf(entry.instance.dinoId)
@@ -480,8 +495,30 @@ function Screen.build(win: Window.Window, selectedUuid: string?)
 		table.clear(selection)
 		renderGrid()
 	end))
+	win.maid:add(allButton.Activated:Connect(function()
+		for _, entry in entries() do
+			local dino = Kit.dinoById[entry.instance.dinoId]
+			-- comme SellAllUnplaced : un exclusif payé en Robux ne part jamais en lot
+			if not entry.instance.locked and entry.placed == nil and not (dino and dino.exclusive) then
+				selection[entry.uuid] = true
+			end
+		end
+		renderGrid()
+	end))
 	win.maid:add(bestButton.Activated:Connect(function()
 		Remotes.EquipBest:FireServer()
+	end))
+	win.maid:add(autoButton.Activated:Connect(function()
+		if not SettingsController:AutoEquipUnlocked() then
+			NotificationController:Toast("Débloque l'Équipement auto dans l'arbre d'améliorations.", "error")
+			return
+		end
+		local on = not SettingsController:Get("AutoEquip")
+		SettingsController:Set("AutoEquip", on)
+		if on then
+			Remotes.EquipBest:FireServer() -- applique tout de suite, puis le serveur suit chaque tirage
+		end
+		renderGrid()
 	end))
 	win.maid:add(sellButton.Activated:Connect(function()
 		local list: { string } = {}
