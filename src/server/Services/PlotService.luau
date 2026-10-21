@@ -340,7 +340,7 @@ end
 -- Pose les dinos au meilleur revenu propre sur les socles de plus haut niveau.
 function PlotService:EquipBest(player: Player)
 	local data = DataService:GetLoaded(player)
-	if not data or Bonuses.upgradeStat(data.Upgrades, "equipBest") < 1 then
+	if not data then
 		return
 	end
 	local candidates: { { uuid: string, income: number } } = {}
@@ -372,6 +372,34 @@ function PlotService:EquipBest(player: Player)
 	DataService:Update(player, { "PlotSlots" }, function()
 		return placed
 	end)
+end
+
+-- Équipement auto (nœud auto_equip + réglage AutoEquip) : après un tirage, rééquipe seulement si le nouveau
+-- dino rapporte plus que le moins bon dino posé, ou si un socle est libre.
+function PlotService:AutoEquip(player: Player, uuid: string)
+	local data = DataService:GetLoaded(player)
+	local instance = data and data.Dinos[uuid]
+	if
+		not data
+		or not instance
+		or not data.Settings.AutoEquip
+		or Bonuses.upgradeStat(data.Upgrades, "autoEquip") < 1
+	then
+		return
+	end
+	local income = Bonuses.instanceIncome(instance)
+	local used = 0
+	for _, placed in data.PlotSlots do
+		used += 1
+		local other = data.Dinos[placed]
+		if not other or Bonuses.instanceIncome(other) < income then
+			self:EquipBest(player)
+			return
+		end
+	end
+	if used < Plots.pedestalCount(data.Rebirths) then
+		self:EquipBest(player)
+	end
 end
 
 function PlotService:LevelUp(player: Player, slotArg: any, amount: any)

@@ -53,7 +53,7 @@ return table.freeze({
 	PlaceDino = event("PlaceDino"),
 	-- client -> serveur : (slot: number) reprend le dino du socle.
 	RemoveDino = event("RemoveDino"),
-	-- client -> serveur : pose automatiquement les dinos au meilleur revenu (nœud « Équiper les meilleurs » de l'arbre).
+	-- client -> serveur : pose automatiquement les dinos au meilleur revenu.
 	EquipBest = event("EquipBest"),
 	-- client -> serveur : (slot: number, amount: 1 | 5) monte le niveau d'un socle.
 	LevelUpSlot = event("LevelUpSlot"),
@@ -71,7 +71,7 @@ return table.freeze({
 	RerollGrade = func("RerollGrade"),
 	-- client -> serveur, renvoie Types.RerollResponse : (uuid) relance l'Empreinte (Fossiles, rebirth 5+).
 	RerollImprint = func("RerollImprint"),
-	-- client -> serveur : (key: string, value: boolean) enregistre un réglage (AutoRoll, HideReveal, Music, Sfx).
+	-- client -> serveur : (key: string, value: boolean) enregistre un réglage (AutoRoll, AutoEquip, HideReveal, Music, Sfx).
 	SetSetting = event("SetSetting"),
 	-- client -> serveur, renvoie { total, factors: { Bonuses.Factor }, cooldown, incomePerSecond }.
 	GetLuckBreakdown = func("GetLuckBreakdown"),

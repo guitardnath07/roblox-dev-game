@@ -20,6 +20,7 @@ local AnnounceService = require(script.Parent.AnnounceService)
 local DataService = require(script.Parent.DataService)
 local InventoryService = require(script.Parent.InventoryService)
 local LuckService = require(script.Parent.LuckService)
+local PlotService = require(script.Parent.PlotService)
 local QuestService = require(script.Parent.QuestService)
 local RateLimit = require(script.Parent.Parent.Data.RateLimit)
 
@@ -77,6 +78,7 @@ local function rollOnce(player: Player, data: Types.ProfileData): Types.RollResu
 		return nil
 	end
 
+	PlotService:AutoEquip(player, uuid)
 	DataService:Increment(player, "TotalRolls", 1)
 	QuestService:Progress(player, "rolls", 1)
 	QuestService:Progress(player, "roll_rarity", 1, dino.rarity)

@@ -2,7 +2,7 @@
 -- Arbre d'améliorations (façon Slime RNG) : un centre, des branches en étoile, une couleur vive par catégorie.
 -- Acheté avec des Fossiles. Chaque branche agit sur UNE stat ; `value` = valeur TOTALE de la stat quand ce nœud est
 -- le plus haut acheté de sa branche (ex. Chance III = x1,5 au total). Sac : `value` = nombre de places.
--- Nœuds spéciaux : stat « autoRoll » (débloque l'Auto-Lancer), « equipBest » (débloque « Équiper les meilleurs » du sac) et « diceUnlock » (`unlocksDie` = dé offert, Config/Dice).
+-- Nœuds spéciaux : stat « autoRoll » (débloque l'Auto-Lancer), « autoEquip » (débloque l'Équipement auto du sac) et « diceUnlock » (`unlocksDie` = dé offert, Config/Dice).
 -- `prerequisite` = nœud à posséder avant ; nil = relié au centre (q = 0, r = 0, sans nœud).
 -- Position en coordonnées hexagonales axiales (q, r). `id` ne change jamais (sauvegardé dans le profil).
 -- Prix calés sur la progression simulée (VERIFICATION.md) : dé 5 ≈ 17 min, dé 7 ≈ 1 h, dé 9 ≈ 3 h 20, dé 10 ≈ 6 h.
@@ -23,7 +23,7 @@ export type Stat =
 	| "skinMutationMultiplier"
 	| "offlineRate"
 	| "autoRoll"
-	| "equipBest"
+	| "autoEquip"
 	| "diceUnlock"
 
 export type Branch =
@@ -103,7 +103,7 @@ local Upgrades: { Upgrade } = {
 	-- 🤖 Auto-Lancer (rose) : juste à côté de Chance I. ~8 min de jeu : le premier vrai objectif.
 	node("auto_roll", "Auto-Lancer", "auto", 10_000, "autoRoll", 1, "luck_1", -1, -1),
 	-- shortcut: prix proposé (dans les 5 premières minutes), à ajuster après les tests.
-	node("equip_best", "Équiper les meilleurs", "auto", 3_000, "equipBest", 1, "backpack_1", 1, -2),
+	node("auto_equip", "Équipement auto", "auto", 3_000, "autoEquip", 1, "backpack_1", 1, -2),
 
 	-- ⚡ Vitesse de lancer (cyan) : greffée sur Chance II, vers le nord.
 	node("roll_speed_1", "Vitesse I", "roll_speed", 20_000, "rollSpeedMultiplier", 1.15, "luck_2", -2, -1),
@@ -174,7 +174,7 @@ local baseValues: { [Stat]: number } = {
 	skinMutationMultiplier = 1,
 	offlineRate = Economy.offlineRate,
 	autoRoll = 0, -- 1 = débloqué
-	equipBest = 0, -- 1 = débloqué
+	autoEquip = 0, -- 1 = débloqué
 	diceUnlock = 0,
 }
 

@@ -35,7 +35,7 @@ local template: Types.ProfileData = {
 	TradeLog = {},
 	VolcanoBestFloor = 0,
 	ProcessedPurchases = {},
-	Settings = { AutoRoll = false, HideReveal = false, Music = true, Sfx = true },
+	Settings = { AutoRoll = false, AutoEquip = false, HideReveal = false, Music = true, Sfx = true },
 	LastOnline = 0,
 	LastIncomePerSecond = 0,
 	BestPull = { DinoId = "", OneIn = 0 },
