@@ -7,6 +7,7 @@ export type DinoLook = { colors: { main: string, belly: string, accent: string, 
 
 local DinoLooks: { [string]: DinoLook } = {
 	chronoraptor = { colors = { main = "#B0BEC5", belly = "#FFE27A", accent = "#FFB300", glow = "#00E5FF", back = "#546E7A" } },
+	moussecrete = { colors = { main = "#5DBB63", belly = "#F2E8C9", accent = "#2E7D32", glow = "#C6FF6B", back = "#3F9A48" } },
 }
 
 for _, look in DinoLooks do
