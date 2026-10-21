@@ -61,14 +61,14 @@ end
 function Hud.create(root: Frame)
 	local secondary: { GuiObject } = {}
 
-	-- Bandeau d'événement (provisoire : lit l'attribut « ServerEvent » du Workspace).
-	local bannerHolder, bannerBody = Kit.panel(root, {
-		AnchorPoint = Vector2.new(0.5, 0),
-		Position = UDim2.new(0.5, 0, 0.075, 10),
-		Size = UDim2.fromScale(0.32, 0.065),
+	-- Bandeau d'événement, coin haut droit au-dessus des Réglages (lit l'attribut « ServerEvent » du Workspace).
+	local _, bannerBody = Kit.panel(root, {
+		Name = "EventBanner",
+		AnchorPoint = Vector2.new(1, 0),
+		Position = UDim2.new(1, -6, 0, 4),
+		Size = UDim2.fromOffset(220, 22),
 	}, Theme.ParchmentDark, 0.5)
-	Kit.limit(bannerHolder, nil, Vector2.new(360, 26))
-	local bannerText = Kit.title(bannerBody, "", { TextColor3 = Theme.InkSoft }, 18)
+	local bannerText = Kit.title(bannerBody, "", { TextColor3 = Theme.InkSoft }, 14)
 	local function clock(at: any): string
 		local left = if type(at) == "number" then math.max(0, at - Workspace:GetServerTimeNow()) else 0
 		return string.format("%d:%02d", left // 60, left % 60)
@@ -108,7 +108,7 @@ function Hud.create(root: Frame)
 			Name = item.name,
 			BackgroundTransparency = 1,
 			AnchorPoint = Vector2.new(1, 0),
-			Position = UDim2.new(1, -6 - (i - 1) * 56, 0, 4),
+			Position = UDim2.new(1, -6 - (i - 1) * 56, 0, 30),
 			Size = UDim2.fromScale(0.13, 0.13),
 			Parent = root,
 		})

@@ -197,7 +197,7 @@ local function buildBar(root: Frame, data: Types.ProfileData): { [string]: (numb
 		Name = "GoldenRolls",
 		BackgroundTransparency = 1,
 		AnchorPoint = Vector2.new(1, 0),
-		Position = UDim2.new(1, -8, 0, 64),
+		Position = UDim2.new(1, -8, 0, 88),
 		Size = UDim2.fromOffset(132, 44),
 		Parent = root,
 	})

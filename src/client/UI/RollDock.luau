@@ -210,7 +210,7 @@ function RollDock.create(root: Frame)
 		Name = "Luck",
 		BackgroundTransparency = 1,
 		AnchorPoint = Vector2.new(1, 0),
-		Position = UDim2.new(1, -8, 0, 116),
+		Position = UDim2.new(1, -8, 0, 140),
 		Size = UDim2.fromOffset(132, 44),
 		Parent = root,
 	})
