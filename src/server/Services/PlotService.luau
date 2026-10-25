@@ -374,6 +374,34 @@ function PlotService:EquipBest(player: Player)
 	end)
 end
 
+-- Équipement auto (nœud auto_equip + réglage AutoEquip) : après un tirage, rééquipe seulement si le nouveau
+-- dino rapporte plus que le moins bon dino posé, ou si un socle est libre.
+function PlotService:AutoEquip(player: Player, uuid: string)
+	local data = DataService:GetLoaded(player)
+	local instance = data and data.Dinos[uuid]
+	if
+		not data
+		or not instance
+		or not data.Settings.AutoEquip
+		or Bonuses.upgradeStat(data.Upgrades, "autoEquip") < 1
+	then
+		return
+	end
+	local income = Bonuses.instanceIncome(instance)
+	local used = 0
+	for _, placed in data.PlotSlots do
+		used += 1
+		local other = data.Dinos[placed]
+		if not other or Bonuses.instanceIncome(other) < income then
+			self:EquipBest(player)
+			return
+		end
+	end
+	if used < Plots.pedestalCount(data.Rebirths) then
+		self:EquipBest(player)
+	end
+end
+
 function PlotService:LevelUp(player: Player, slotArg: any, amount: any)
 	local data = DataService:GetLoaded(player)
 	local slot = data and validSlot(data, slotArg)

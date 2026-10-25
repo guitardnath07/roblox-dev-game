@@ -11,6 +11,9 @@ export type Potion = {
 	stat: PotionStat,
 	multiplier: number,
 	durationSeconds: number,
+	-- Prix au Comptoir de vente, en Tickets d'Expédition (jamais en Fossiles : une potion achetée en Robux
+	-- revendue en Fossiles serait une vente de Fossiles déguisée). Moitié du prix de la boutique de quêtes.
+	sellTickets: number,
 }
 
 export type ProductKind = "amber" | "bones" | "potion" | "dino"
@@ -27,10 +30,10 @@ export type Product = {
 
 -- stylua: ignore
 local Potions: { Potion } = {
-	{ id = "luck_potion", displayName = "Potion de Chance", stat = "luck", multiplier = 2, durationSeconds = 15 * 60 },
-	{ id = "super_luck_potion", displayName = "Super Potion de Chance", stat = "luck", multiplier = 3, durationSeconds = 15 * 60 },
-	{ id = "coins_potion", displayName = "Potion de Fossiles", stat = "coins", multiplier = 2, durationSeconds = 15 * 60 },
-	{ id = "speed_potion", displayName = "Potion de Vitesse", stat = "rollSpeed", multiplier = 1.5, durationSeconds = 15 * 60 },
+	{ id = "luck_potion", displayName = "Potion de Chance", stat = "luck", multiplier = 2, durationSeconds = 15 * 60, sellTickets = 5 },
+	{ id = "super_luck_potion", displayName = "Super Potion de Chance", stat = "luck", multiplier = 3, durationSeconds = 15 * 60, sellTickets = 8 },
+	{ id = "coins_potion", displayName = "Potion de Fossiles", stat = "coins", multiplier = 2, durationSeconds = 15 * 60, sellTickets = 5 },
+	{ id = "speed_potion", displayName = "Potion de Vitesse", stat = "rollSpeed", multiplier = 1.5, durationSeconds = 15 * 60, sellTickets = 4 },
 }
 
 -- stylua: ignore

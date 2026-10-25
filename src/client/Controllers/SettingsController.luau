@@ -1,5 +1,5 @@
 --!strict
--- Réglages du joueur (Auto-Lancer, Masquer, Musique, Effets). Valeurs de départ = profil (Settings).
+-- Réglages du joueur (Auto-Lancer, Équipement auto, Masquer, Musique, Effets). Valeurs de départ = profil (Settings).
 -- Chaque changement est envoyé au serveur (SetSetting), qui le sauvegarde dans le profil.
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -9,9 +9,10 @@ local Remotes = require(ReplicatedStorage.Shared.Net.Remotes)
 local Types = require(ReplicatedStorage.Shared.Types)
 local DataController = require(script.Parent.DataController)
 
-export type Key = "AutoRoll" | "HideReveal" | "Music" | "Sfx"
+export type Key = "AutoRoll" | "AutoEquip" | "HideReveal" | "Music" | "Sfx"
 
-local values: { [string]: boolean } = { AutoRoll = false, HideReveal = false, Music = true, Sfx = true }
+local values: { [string]: boolean } =
+	{ AutoRoll = false, AutoEquip = false, HideReveal = false, Music = true, Sfx = true }
 local listeners: { (key: string, value: boolean) -> () } = {}
 
 local SettingsController = {}
@@ -26,11 +27,20 @@ function SettingsController:AutoRollUnlocked(): boolean
 	return Bonuses.upgradeStat(data.Upgrades, "autoRoll") >= 1
 end
 
+-- Vrai si l'Équipement auto est débloqué dans l'arbre d'améliorations (le serveur vérifie aussi).
+function SettingsController:AutoEquipUnlocked(): boolean
+	local data: Types.ProfileData = DataController:Get()
+	return Bonuses.upgradeStat(data.Upgrades, "autoEquip") >= 1
+end
+
 function SettingsController:Set(key: Key, value: boolean)
 	if values[key] == value then
 		return
 	end
 	if key == "AutoRoll" and value and not self:AutoRollUnlocked() then
+		return
+	end
+	if key == "AutoEquip" and value and not self:AutoEquipUnlocked() then
 		return
 	end
 	values[key] = value
@@ -58,6 +68,7 @@ function SettingsController:Start()
 		values.HideReveal = saved.HideReveal == true
 		values.Music = saved.Music ~= false
 		values.Sfx = saved.Sfx ~= false
+		values.AutoEquip = saved.AutoEquip == true
 		if saved.AutoRoll == true then
 			self:Set("AutoRoll", true) -- relance la boucle d'Auto-Lancer (RollController écoute)
 		end

@@ -43,6 +43,10 @@ return table.freeze({
 	SellDinos = event("SellDinos"),
 	-- client -> serveur : (maxRarityOrder: number) vend tous les dinos non posés et non verrouillés jusqu'à cette rareté.
 	SellAllUnplaced = event("SellAllUnplaced"),
+	-- client -> serveur : (uuids: { string }) reliques à vendre au Comptoir (les équipées sont ignorées).
+	SellRelics = event("SellRelics"),
+	-- client -> serveur : ({ [potionId]: number }) vend des potions de réserve contre des Tickets.
+	SellPotions = event("SellPotions"),
 	-- client -> serveur : (uuid: string) verrouille / déverrouille un dino.
 	ToggleLock = event("ToggleLock"),
 	-- client -> serveur : (uuid: string, slot: number) pose un dino sur un socle de sa parcelle.
@@ -67,7 +71,7 @@ return table.freeze({
 	RerollGrade = func("RerollGrade"),
 	-- client -> serveur, renvoie Types.RerollResponse : (uuid) relance l'Empreinte (Fossiles, rebirth 5+).
 	RerollImprint = func("RerollImprint"),
-	-- client -> serveur : (key: string, value: boolean) enregistre un réglage (AutoRoll, HideReveal, Music, Sfx).
+	-- client -> serveur : (key: string, value: boolean) enregistre un réglage (AutoRoll, AutoEquip, HideReveal, Music, Sfx).
 	SetSetting = event("SetSetting"),
 	-- client -> serveur, renvoie { total, factors: { Bonuses.Factor }, cooldown, incomePerSecond }.
 	GetLuckBreakdown = func("GetLuckBreakdown"),

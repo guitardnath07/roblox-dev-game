@@ -172,6 +172,10 @@ function ProgressionService:Init()
 			if key == "AutoRoll" and value and Bonuses.upgradeStat(data.Upgrades, "autoRoll") < 1 then
 				return
 			end
+			-- L'Équipement auto aussi.
+			if key == "AutoEquip" and value and Bonuses.upgradeStat(data.Upgrades, "autoEquip") < 1 then
+				return
+			end
 			DataService:Update(player, { "Settings", key }, function()
 				return value
 			end)

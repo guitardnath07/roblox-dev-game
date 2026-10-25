@@ -14,6 +14,7 @@ export type Tier = {
 	tier: number,
 	fromFloor: number,
 	dropPerMillion: number,
+	sellFossils: number, -- prix au Comptoir de vente
 }
 
 export type RelicStat = "luckBonus" | "coinsBonus" | "damageBonus" | "healthBonus" | "rollSpeedBonus"
@@ -38,9 +39,10 @@ local Slots: { Slot } = {
 
 -- stylua: ignore
 local Tiers: { Tier } = {
-	{ tier = 1, fromFloor = 25, dropPerMillion = 5_000 }, -- 0,5 %
-	{ tier = 2, fromFloor = 60, dropPerMillion = 2_500 }, -- 0,25 %
-	{ tier = 3, fromFloor = 90, dropPerMillion = 200 }, -- 0,02 %
+	-- shortcut: prix de vente proposés, à ajuster après les tests.
+	{ tier = 1, fromFloor = 25, dropPerMillion = 5_000, sellFossils = 50_000 }, -- 0,5 %
+	{ tier = 2, fromFloor = 60, dropPerMillion = 2_500, sellFossils = 5e6 }, -- 0,25 %
+	{ tier = 3, fromFloor = 90, dropPerMillion = 200, sellFossils = 500e6 }, -- 0,02 %
 }
 
 -- stylua: ignore
