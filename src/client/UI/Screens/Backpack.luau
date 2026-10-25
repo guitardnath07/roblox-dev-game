@@ -375,8 +375,8 @@ function Screen.build(win: Window.Window, selectedUuid: string?)
 		local autoOn = SettingsController:Get("AutoEquip")
 		autoButton.Text = if not SettingsController:AutoEquipUnlocked()
 			then "🔒 AUTO"
-			elseif autoOn then "AUTO ✓"
-			else "AUTO ✗"
+			elseif autoOn then "AUTO ON"
+			else "AUTO OFF"
 		Kit.paint(autoButton, if autoOn then Theme.Leaf else Theme.Disabled)
 
 		for i, entry in list do
